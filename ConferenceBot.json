@@ -1,0 +1,230 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "ConferenceBot",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "FindTalk"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Events.Name",
+      "inherits": {
+        "domain_name": "Events",
+        "model_name": "Name"
+      }
+    },
+    {
+      "name": "next"
+    },
+    {
+      "name": "room color"
+    },
+    {
+      "name": "speaker"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetimeV2"
+  ],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "next",
+      "mode": true,
+      "words": "next,following,after,coming,soon,subsequent",
+      "activated": true
+    },
+    {
+      "name": "place",
+      "mode": true,
+      "words": "where,location",
+      "activated": true
+    },
+    {
+      "name": "subject",
+      "mode": true,
+      "words": "what,what kind of,which,wat,wut,what type",
+      "activated": true
+    },
+    {
+      "name": "time",
+      "mode": true,
+      "words": "when,before",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "what's next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "when is the next session?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "what is next on green room?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "room color",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "who is talking at red room?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "room color",
+          "startPos": 19,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "which talk will happen at 9:00 on green room?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "room color",
+          "startPos": 35,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "which talk will happen at 9:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is talking next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "who is talking at 9:00 on green room?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "room color",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "who is talking at 9:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the next talk about subject?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 12,
+          "endPos": 15
+        },
+        {
+          "entity": "Events.Name",
+          "startPos": 28,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "who will talk about subject?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "where is next luiz's talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 9,
+          "endPos": 12
+        },
+        {
+          "entity": "speaker",
+          "startPos": 14,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "where is next luiz talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 9,
+          "endPos": 12
+        },
+        {
+          "entity": "speaker",
+          "startPos": 14,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "who will talk next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 14,
+          "endPos": 17
+        }
+      ]
+    }
+  ]
+}
