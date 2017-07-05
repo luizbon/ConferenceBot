@@ -13,6 +13,9 @@ namespace ConferenceBot.Data
         public static Conference Data => ToConference(JsonConvert.DeserializeObject<DDDSydney17>(File.ReadAllText(
             HttpContext.Current.Request.MapPath("~\\Data\\dddSydney17.json"))));
 
+        public static string Lat = "-33.883228";
+        public static string Long = "151.201808";
+
         private static Conference ToConference(DDDSydney17 dddSydney)
         {
             return new Conference
