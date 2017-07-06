@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
+using ConferenceBot.Cards;
 using ConferenceBot.Data;
 using ConferenceBot.Extensions;
+using ConferenceBot.Services;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
-using Newtonsoft.Json;
 
 namespace ConferenceBot.Dialogs
 {
@@ -22,10 +23,15 @@ namespace ConferenceBot.Dialogs
         private const string NextFilter = "next";
         private const string RoomFilter = "room color";
         private const string SpeakerFilter = "speaker";
+        private const string KeynoteFilter = "keynote";
+        private const string LocknoteFilter = "locknote";
 
-        public LuisDialog()
+        public LuisDialog(bool staging)
             : base(new LuisService(new LuisModelAttribute(ConfigurationManager.AppSettings["ConferenceModelID"],
-                ConfigurationManager.AppSettings["LuisSubscriptionID"])))
+                ConfigurationManager.AppSettings["LuisSubscriptionID"])
+            {
+                Staging = staging
+            }))
         {
         }
 
@@ -42,11 +48,21 @@ namespace ConferenceBot.Dialogs
         {
             if (!result.Entities.Any())
             {
-                await None(context, result);
+                await context.PostAsync("Your need to be a bit more specific");
+                await ShowHelp(context);
                 return;
             }
 
+            await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
+            await context.SendTyping();
+
             var timeslots = DDDSydney17.Data.Timeslots;
+
+            if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
+                timeslots = timeslots.FindKeynote();
+
+            if (result.TryFindEntity(LocknoteFilter, out EntityRecommendation _))
+                timeslots = timeslots.FindLocknote();
 
             if (result.TryFindEntity(SpeakerFilter, out EntityRecommendation speaker))
                 timeslots = timeslots.FindSpeaker(speaker.Entity);
@@ -62,14 +78,16 @@ namespace ConferenceBot.Dialogs
 
             if (!timeslots.Any())
             {
-                await context.PostAsync("There's no scheduled talks");
+                await context.PostAsync("Sorry, but I could not find what you are looking for"); ;
+                await SearchWeb(context, result.Query);
             }
             else
             {
-                var message = context.MakeMessage();
-                message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
-                message.Attachments = Cards.AdaptiveCards.GetSessionCards(timeslots).ToList();
-                Console.WriteLine(JsonConvert.SerializeObject(message.Attachments[0]));
+                if (timeslots.SelectMany(x => x.Sessions).Count() > 1)
+                    await context.PostAsync("Good news, I found some talks");
+                else
+                    await context.PostAsync("Good news, I found one talk");
+                var message = context.CreateMessage(SessionCard.GetSessionCards(timeslots).ToList());
                 await context.PostAsync(message);
             }
             context.Wait(MessageReceived);
@@ -89,10 +107,8 @@ namespace ConferenceBot.Dialogs
                 Value = $"What is schedule for {room} room?"
             }).ToList();
 
-            var message = context.MakeMessage();
-            message.AttachmentLayout = AttachmentLayoutTypes.List;
-            message.Type = ActivityTypes.Message;
-            message.TextFormat = TextFormatTypes.Plain;
+            var message = context.CreateMessage();
+
             message.Text = "Here is a list of available rooms:";
             message.SuggestedActions = new SuggestedActions
             {
@@ -117,10 +133,8 @@ namespace ConferenceBot.Dialogs
                 Value = $"When is {speaker}'s talk?"
             }).ToList();
 
-            var message = context.MakeMessage();
-            message.AttachmentLayout = AttachmentLayoutTypes.List;
-            message.Type = ActivityTypes.Message;
-            message.TextFormat = TextFormatTypes.Plain;
+            var message = context.CreateMessage();
+
             message.Text = "This is the list of speakers we have this year:";
             message.SuggestedActions = new SuggestedActions
             {
@@ -135,8 +149,20 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("BingSearch")]
         public async Task BingSearch(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync(JsonConvert.SerializeObject(result));
+            await context.PostAsync("Wait a sec while I search more about it.");
+            await SearchWeb(context, result.Query);
             context.Wait(MessageReceived);
+        }
+
+        private static async Task SearchWeb(IDialogContext context, string query)
+        {
+            await context.SendTyping();
+            var search = new BindSearchService();
+            var searchResult = await search.Search($"DDD Sydney 2017: {query}");
+            var attachments = BingSearchCard.GetSearchCards(searchResult);
+
+            await context.PostAsync("Here it goes, this is what I found.");
+            await context.PostAsync(context.CreateMessage(attachments.ToList()));
         }
 
         [LuisIntent("FindVenue")]
@@ -166,16 +192,7 @@ namespace ConferenceBot.Dialogs
                 }
             };
 
-            var message = context.MakeMessage();
-            message.AttachmentLayout = AttachmentLayoutTypes.List;
-            message.Type = ActivityTypes.Message;
-            message.TextFormat = TextFormatTypes.Plain;
-            message.Attachments = new List<Attachment>
-            {
-                card.ToAttachment()
-            };
-
-            await context.PostAsync(message);
+            await context.PostAsync(context.CreateMessage(card.ToAttachment()));
 
             context.Wait(MessageReceived);
         }

@@ -18,7 +18,7 @@ namespace ConferenceBot.Controllers
         public async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
             if (activity.Type == ActivityTypes.Message)
-                await Conversation.SendAsync(activity, () => new LuisDialog());
+                await Conversation.SendAsync(activity, () => new LuisDialog(Request.IsLocal()));
             else
                 HandleSystemMessage(activity);
             var response = Request.CreateResponse(HttpStatusCode.OK);

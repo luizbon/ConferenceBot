@@ -3,11 +3,10 @@ using System.Linq;
 using AdaptiveCards;
 using ConferenceBot.Model;
 using Microsoft.Bot.Connector;
-using Fact = AdaptiveCards.Fact;
 
 namespace ConferenceBot.Cards
 {
-    public static class AdaptiveCards
+    public static class SessionCard
     {
         public static IEnumerable<Attachment> GetSessionCards(IEnumerable<Timeslot> timeslots)
         {
@@ -53,33 +52,37 @@ namespace ConferenceBot.Cards
                 }
             };
 
-            var factSet = new FactSet
+            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=dddsyd&related=dddsydney";
+            if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
+                twitterUrl += $",{presenter.TwitterAlias}";
+
+            var actions = new ActionSet
             {
-                Facts = new List<Fact>()
+                Actions = new List<ActionBase>
+                {
+                    new OpenUrlAction
+                    {
+                        Title = "Tweet",
+                        Url = twitterUrl
+                    }
+                }
             };
 
-            if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
-                factSet.Facts.Add(new Fact
-                {
-                    Title = "Twitter",
-                    Value = presenter.TwitterAlias
-                });
-
             if (!string.IsNullOrWhiteSpace(presenter.Website))
-                factSet.Facts.Add(new Fact
+                actions.Actions.Add(new OpenUrlAction
                 {
                     Title = "Website",
-                    Value = presenter.Website
+                    Url = presenter.Website
                 });
 
             if (!string.IsNullOrWhiteSpace(presenter.Email))
-                factSet.Facts.Add(new Fact
+                actions.Actions.Add(new OpenUrlAction
                 {
                     Title = "Email",
-                    Value = presenter.Email
+                    Url = $"mailto:{presenter.Email}"
                 });
 
-            container.Items.Add(factSet);
+            container.Items.Add(actions);
 
             return container;
         }

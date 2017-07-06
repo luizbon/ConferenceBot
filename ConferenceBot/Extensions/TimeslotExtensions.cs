@@ -48,5 +48,15 @@ namespace ConferenceBot.Extensions
 
             return result.ToArray();
         }
+
+        public static Timeslot[] FindKeynote(this Timeslot[] timeslots)
+        {
+            return new[] { timeslots.First() };
+        }
+
+        public static Timeslot[] FindLocknote(this Timeslot[] timeslots)
+        {
+            return new[] { timeslots.Last() };
+        }
     }
 }

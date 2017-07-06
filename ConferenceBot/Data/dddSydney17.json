@@ -9,7 +9,7 @@
           "SessionAbstract": "This year, we celebrate 10 years of the iPhone: a device that remodelled awkward business PDAs into pervasive internet access. For a significant portion of society, they're now embedded into everything we do. I struggle to buy a coffee now if my phone is flat, and no coffee = no function. In this talk, we'll explore what the next wave of technology upsets might be, and what skills we'll need to level up at to stay on the front of that wave.",
           "PresenterBio": "With experience ranging from his own small businesses, to large multi-year multi-vendor banking programs, Tatham has developed a deep understanding of the complete lifecycle of IT programs and their surrounding business drivers. He is a regular presenter at conferences and events throughout Australia, North America, and Europe. In his role as Readify's CIO, Tatham helps Readify improve its own processes, as well as those of our customers.",
           "PresenterTwitterAlias": "tathamoddie",
-          "PresenterWebsite": "tath.am/"
+          "PresenterWebsite": "https://tath.am/"
         }
       ] 
     },
@@ -24,7 +24,7 @@
           "PresenterTwitterAlias": "hadi_es",
           "RecommendedAudience": "The example shown in this talk leverage ASP.NET Core and Google Polymer. Understanding of web and Microservices is helpful.",
           "PresenterBio": "Hadi is a Software Engineer at Particular Software, creators of NServiceBus.",
-          "PresenterWebsite": "www.seesharpsoftware.com.au/",
+          "PresenterWebsite": "http://www.seesharpsoftware.com.au/",
           "RoomColor": "Green",
           "Room": "CB06.03.28 - GUTHRIE THEATRE"
         },
@@ -36,7 +36,7 @@
           "PresenterTwitterAlias": "azadehkhojandi",
           "RecommendedAudience": "intermediate level, Familiar with using rest APIs",
           "PresenterBio": "Microsoft Technical Evangelist and Sitecore MVP with more than 10 years experience across a range of diverse and exciting web and mobile solutions. Az is co-organiser of girls geek dinner and sydney sitecore user group. She recently started Girls .Net user group. Az has worked with clients including Vodafone, KFC Australia, Sydney Airport, Lend Lease, Sydney Olympic Park.",
-          "PresenterWebsite": "azadehkhojandi.blogspot.com/",
+          "PresenterWebsite": "http://azadehkhojandi.blogspot.com.au/",
           "RoomColor": "Blue",
           "Room": "CB06.03.022 - LECTURE THEATRE"
         },
@@ -48,7 +48,7 @@
           "PresenterTwitterAlias": "meligy",
           "RecommendedAudience": "Intermediate JavaScript Developers",
           "PresenterBio": "Meligy is a consultant and mentor in the web space. He is mostly focused on helping developers using Angular with .NET.",
-          "PresenterWebsite": "www.gurustop.net",
+          "PresenterWebsite": "https://www.gurustop.net/",
           "RoomColor": "Red",
           "Room": "CB06.03.056 - COLLABORATIVE THEATRE"
         }
@@ -69,7 +69,7 @@
           "PresenterTwitterAlias": "dizhang",
           "RecommendedAudience": "medium",
           "PresenterBio": "Senior Software Developer at Domain",
-          "PresenterWebsite": "medium.com/@zhangdijohn",
+          "PresenterWebsite": "https://medium.com/@zhangdijohn",
           "RoomColor": "Green",
           "Room": "CB06.03.28 - GUTHRIE THEATRE"
         },
@@ -81,7 +81,7 @@
           "PresenterTwitterAlias": "dominikran",
           "RecommendedAudience": "machine learning, software developers",
           "PresenterBio": "Lead Consultant @ Readify",
-          "PresenterWebsite": "devblog.xyz/",
+          "PresenterWebsite": "http://devblog.xyz/",
           "RoomColor": "Blue",
           "Room": "CB06.03.022 - LECTURE THEATRE"
         },
@@ -115,7 +115,7 @@
           "PresenterTwitterAlias": "jstangroome",
           "RecommendedAudience": "Developers who care about their code running correctly in Production",
           "PresenterBio": "Jason was a developer, sysadmin and Continuous Delivery advocate on the Windows platform for 15 years but switched to the Linux platform in 2014 where he now focuses on security and Site Reliability Engineering.",
-          "PresenterWebsite": "blog.stangroome.com",
+          "PresenterWebsite": "https://blog.stangroome.com/",
           "RoomColor": "Green",
           "Room": "CB06.03.28 - GUTHRIE THEATRE"
         },
@@ -127,7 +127,7 @@
           "PresenterTwitterAlias": "thenickrandolph",
           "RecommendedAudience": "This is an overview session covering the fundamentals of Fluent Design as it applies to the UWP platform. Prior knowledge of the UWP platform, or other XAML based technology (eg Silverlight/WPF), is useful. Samples and Demos will use a mix of XAML and C# code.",
           "PresenterBio": "Nick currently runs Built to Roam which focuses on building rich mobile applications. Nick has been identified as a Microsoft MVP in recognition of his work and expertise with the Microsoft mobile platforms. He is still an active contributor in the device application development space via his blog at http://nicksnettravels.builttoroam.com and Visual Studio Magazine (http://visualstudiomagazine.com/Articles/List/Mobile-Corner.aspx). Nick has been invited to present at a variety of events including Tech Ed and Ignite Australia & NZ, DDD and local user groups. He has also authored multiple books with the latest being Professional Visual Studio 2010 and Professional Development for Windows Phone, and helped judge multiple world finals for the Imagine Cup. Nick has worked on numerous mobile applications and has helped hundreds of developers build their own mobile applications. Nick has been involved with applications for well-known brands such as Domain.com.au, ninemsn, AFL, NRL, Qantas, JB Hi-Fi, NAB, Stan and Boost Juice",
-          "PresenterWebsite": "nicksnettravels.builttoroam.com",
+          "PresenterWebsite": "https://nicksnettravels.builttoroam.com/",
           "RoomColor": "Blue",
           "Room": "CB06.03.022 - LECTURE THEATRE"
         },
@@ -139,7 +139,7 @@
           "PresenterTwitterAlias": "justinchronicle",
           "RecommendedAudience": "Developers having basic knowledge about Azure Functions and/or Logic Apps (level 300)",
           "PresenterBio": "Developer, Consultant, Technical Architect, Speaker, Writer & Microsoft MVP",
-          "PresenterWebsite": "devkimchi.com",
+          "PresenterWebsite": "http://devkimchi.com/",
           "RoomColor": "Red",
           "Room": "CB06.03.056 - COLLABORATIVE THEATRE"
         }
@@ -160,7 +160,7 @@
           "PresenterTwitterAlias": "agc93",
           "RecommendedAudience": "This talk will be focussing almost exclusively on developing on Linux so is perfect for .NET developers new to the platform as well as Linux gurus who may not have gotten their hands dirty with .NET Core yet.",
           "PresenterBio": "Alistair Chapman is an Australian InfoSec engineer, .NET developer and technical architect. While he’s currently working at Red Hat, he’s also spent years doing everything from network engineering to DevOps consulting, governance research to embedded development. Currently, his passion is security architecture, cross-platform .NET and containerisation.",
-          "PresenterWebsite": "blog.agchapman.com/",
+          "PresenterWebsite": "https://blog.agchapman.com/",
           "RoomColor": "Green",
           "Room": "CB06.03.28 - GUTHRIE THEATRE"
         },
@@ -172,7 +172,7 @@
           "PresenterTwitterAlias": "danijelmalik",
           "RecommendedAudience": "Anyone with some basic understanding of DevOps",
           "PresenterBio": "Danijel is a DevOps mastermind with a broad range of technical skills and a deep desire to understand the client's business first. In his career, which includes more than 10 years of professional experience, he has built Desktop, Mobile & Web projects, many of them at the Enterprise level. With an eye on the bleeding edge technologies, he is always one step ahead and loves sharing his experience at user groups and conferences. In 2013, Danijel was awarded Microsoft MVP status for Visual Studio ALM (now Visual Studio and Development Technologies) for his contributions to the community, which he has maintained every year since.",
-          "PresenterWebsite": "danijelmalik.com",
+          "PresenterWebsite": "http://danijelmalik.com/",
           "RoomColor": "Blue",
           "Room": "CB06.03.022 - LECTURE THEATRE"
         },
@@ -206,7 +206,7 @@
           "PresenterTwitterAlias": "heshamamin",
           "RecommendedAudience": "Basic knowledge of docker is preferable.",
           "PresenterBio": "Senior consultant. I'm interested in cloud computing and Agile methodologies.",
-          "PresenterWebsite": "heshamamin.com/",
+          "PresenterWebsite": "http://blog.heshamamin.com/",
           "RoomColor": "Green",
           "Room": "CB06.03.28 - GUTHRIE THEATRE"
         },
@@ -218,7 +218,7 @@
           "PresenterTwitterAlias": "glav",
           "RecommendedAudience": "azure, level 300",
           "PresenterBio": "Paul is an old nerd, ex MVP of 13 years, ASPInsider, readify principal consultant, book author, code monkey and likes long walks on the beach.",
-          "PresenterWebsite": "weblogs.asp.net/pglavich",
+          "PresenterWebsite": "https://weblogs.asp.net/pglavich",
           "RoomColor": "Blue",
           "Room": "CB06.03.022 - LECTURE THEATRE"
         },
@@ -230,7 +230,7 @@
           "PresenterTwitterAlias": "jasongtau",
           "RecommendedAudience": "200 – knowledge of ASP.NET / EF / C#",
           "PresenterBio": "Jason is an SSW Solution Architect and full stack developer with over 15 years professional experience. He is currently specialising in teaching and building awesome applications utilising ASP.NET Core, EF Core and Angular. Jason loves a challenge and is skilled at progressing from a proposal into a well-defined, coded, and tested solution.",
-          "PresenterWebsite": "www.codingflow.net",
+          "PresenterWebsite": "http://www.codingflow.net/",
           "RoomColor": "Red",
           "Room": "CB06.03.056 - COLLABORATIVE THEATRE"
         }
@@ -245,7 +245,7 @@
           "SessionAbstract": "JavaScript is an incredibly powerful language, and thanks to its renaissance, it now has uses that extend beyond the browser. However, being a language that's extremely accessible, with a shallow learning curve and large userbase, it's the subject of - at times - vitriolic abuse from other language communities. Yes, JavaScript was created in a very short timeframe, and there are inherent issues with some very early design decisions that can cause some grief to developers. However, as the engine that powers the web, it's able to prove it's versatility and usefulness.So why the hate? In this talk, we will discuss the history of JavaScript, it's future, and how some it's 'wat's can be avoided in everyday use in other to leverage the power of this universal language.We will also take a short tour through over a dozen other languages and some of their quirks, to prove how no language is without fault.",
           "PresenterBio": "Katie has worn many different hats over the years. She has been a software developer for many languages, systems administrator for multiple operating systems, and speaker on many different topics. When she's not changing the world, she enjoys cooking, making tapestries, and yelling at JavaScript and its attempt at global variables.",
           "PresenterTwitterAlias": "glasnt",
-          "PresenterWebsite": "glasnt.com"
+          "PresenterWebsite": "http://glasnt.com/"
         }
       ]
     }
