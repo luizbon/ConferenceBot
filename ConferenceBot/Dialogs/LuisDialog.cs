@@ -48,7 +48,7 @@ namespace ConferenceBot.Dialogs
         {
             if (!result.Entities.Any())
             {
-                await context.PostAsync("Your need to be a bit more specific");
+                await context.PostAsync("You need to be a bit more specific");
                 await ShowHelp(context);
                 return;
             }
