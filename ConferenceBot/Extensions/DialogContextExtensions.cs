@@ -11,7 +11,10 @@ namespace ConferenceBot.Extensions
         public static IMessageActivity CreateMessage(this IDialogContext context)
         {
             var message = context.MakeMessage();
-            message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+            if (context.Activity.ChannelId != "facebook")
+            {
+                message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+            }
             message.Type = ActivityTypes.Message;
             message.TextFormat = TextFormatTypes.Plain;
 
