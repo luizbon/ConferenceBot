@@ -48,6 +48,8 @@ namespace ConferenceBot.Dialogs
         {
             if (!result.Entities.Any())
             {
+                if (await SearchQnA(context, result.Query)) return;
+
                 await context.PostAsync("You need to be a bit more specific");
                 await ShowHelp(context);
                 return;
@@ -156,6 +158,9 @@ namespace ConferenceBot.Dialogs
 
         private static async Task SearchWeb(IDialogContext context, string query)
         {
+            if (await SearchQnA(context, query))
+                return;
+
             await context.SendTyping();
             var search = new BindSearchService();
             var searchResult = await search.Search($"DDD Sydney 2017: {query}");
@@ -163,6 +168,18 @@ namespace ConferenceBot.Dialogs
 
             await context.PostAsync("Here it goes, this is what I found.");
             await context.PostAsync(context.CreateMessage(attachments.ToList()));
+        }
+
+        private static async Task<bool> SearchQnA(IDialogContext context, string query)
+        {
+            await context.SendTyping();
+            var qnA = new QnAService();
+            var searchResult = await qnA.Search(query);
+
+            if (searchResult == null || Math.Abs(searchResult.Score) < double.Epsilon) return false;
+
+            await context.PostAsync(searchResult.Answer);
+            return true;
         }
 
         [LuisIntent("FindVenue")]
