@@ -1,0 +1,1266 @@
+{
+    "timeslots": [
+        {
+            "date": "2017-08-16",
+            "time": "09:00",
+            "sessions": [
+                {
+                    "title": "Using EEG and Machine Learning to Perform Lie Detection",
+                    "abstract": "Using an EPOC headset from Emotiv, I have captured 14 channels of EEG (brain waves) while subjects lied and answered truthfully to a series of questions.\n\nI fed this labelled dataset into Azure Machine Learning to build a classifier which predicts whether a subject is telling the truth or lying. In this session, I will share my results on this “lie detector” experiment. I will show my machine learning model, data cleaning process, and results, along with discussing the limitations of my approach and next steps/resources. Attendees will gain exposure to the Emotiv EPOC headset and Azure Machine Learning.",
+                    "presenters": [
+                        {
+                            "name": "Jennifer Marsman",
+                            "bio": "Passionate about machine learning and big data. Using EEG and ML to perform lie detection. Employed as a Developer Evangelist for Microsoft.",
+                            "twitterAlias": "jennifermarsman",
+                            "website": "https://blogs.msdn.microsoft.com/jennifer/"
+                        }
+                    ],
+                    "room": "Room 1"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "10:20",
+            "sessions": [
+                {
+                    "title": "Confusion In The Land Of The Serverless",
+                    "abstract": "Serverless computing is the hot new thing. Like any hyped technology, it promises a lot. However questions remain around concept and implementation, especially when you start to compare how we've built systems in the past, and what serverlessoffers us now. Is Serverless the future, or just the emperor's new clothes?\n\nThis talk will very briefly introduce serverless computing, but will then dive into some of the questions that aren't always asked in conjunction with this technology. Topics will include:\n\n\n\n* How does your attitude to security change?\n\n* Is it easier, or harder, to create reliable, resilient systems? \n\n* Do patterns like Circuit breakers and connection pools make sense any more?\n\n* Is vendor lock-in a problem?\n\n* Is serverless computing only for microservice architectures?\n\n* Which problems fit serverless computing?\n\n\n\nBy the end of the talk you should have a firm grasp of what serverless computing really can offer, cut through some of the hype, and get an understanding about where and how you can use it in your own organisations.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Serverless",
+                        "Microservices",
+                        "Architecture"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Sam Newman",
+                            "bio": "Sam Newman is interested in technology at the intersection of things, from development, to ops, to security, usability and organisations. After over a decade at ThoughtWorks he is now an independent consultant. Sam is the author of \"Building Microservices\" from O'Reilly. He has worked with a variety of companies in multiple domains around the world, often with one foot in the developer world, and another in the IT operations space. If you asked him what he does, he’d say ‘I work with people to build better software systems’. He has written articles, presented at conferences, and sporadically commits to open source projects. While Java used to be his bread and butter, he also spends time with Ruby, Python, Javascript, and Clojure, Infrastructure Automation and Cloud systems.",
+                            "twitterAlias": "samnewman",
+                            "website": "http://samnewman.io/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "The Code Behind The Vulnerability",
+                    "abstract": "OWASP illustrates that developers keep making the same mistakes over and over again, but what about more esoteric vulnerabilities?\n\nIn this session Barry will take you beyond SQL injection covering some of the code behind now fixed ASP.NET vulnerabilities. By the end of the session you should be poring through your own code looking for problems with dictionaries, compression, encryption and more.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Microsoft",
+                        "Security",
+                        "Web"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Barry Dorrans",
+                            "bio": "Barry is the security czar for ASP.NET which means he gets to look at the framework, tools and template code, searching for potential insecurities and sometimes even fixing them. He also triages publically and privately reported vulnerabilities before getting someone else to fix them which means he gets all of the fun and none of the responsibility.",
+                            "twitterAlias": "blowdart",
+                            "website": "https://idunno.org/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "An Introduction Into Using Angular’s Material Design",
+                    "abstract": "Angular Material has been evolving over the course of the past year, and it has finally become stable enough to use in production.\n\nGet familiar with the various components of Angular Material, how to use them in your app, and a few tips and tricks to getting started.",
+                    "level": "Beginner",
+                    "tags": [
+                        "JavaScript",
+                        "Web"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Tracy Lee"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "A teams transition to Continuous Delivery",
+                    "abstract": "Continuous Delivery is a popular term in Buzzword Bingo, but in this talk we'll look behind the curtain at how a small team in a large enterprise took a complex cloud based application that built and deployed in days, to building and deploying in an hour.\n\nWe'll look at the problems we faced and overcame, how we used automated acceptance tests to give us confidence in our deliveries, and what challenges we still have on our Continuous Delivery Journey.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Continuous Delivery",
+                        "DevOps"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Ashley Noble",
+                            "bio": "Ashley is an Architect who is a developer at heart with nearly 20 years of experience building software products in variety of domains from Building Control to Industrial Automation. He has spent many years helping teams transition from waterfall to agile and building quality in up front. His current passion is helping teams learn how to go faster using continuous delivery.",
+                            "twitterAlias": "anobleperson"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "What’s New in Visual Studio 2017 and VS Code",
+                    "abstract": "Visual Studio 2017 contains many new and exciting features, new C# 7 language features and IDE productivity enhancements to support web and cloud development, Windows app development, cross-platform mobile development and more.\n\nThe latest version of Visual Studio provides cutting-edge tools and technologies to create apps that take advantage of the latest platform capabilities, whether Windows, Android, iOS, or Linux. It's fastest, leanest version of Visual Studio ever.\n\n\n\nVS Code is Visual Studio 2017’s little brother. It’s lightweight, it’s free, it runs on Windows, Mac and Linux, and it’s a little rambunctious. VS Code aims to provide just the tools a developer needs for a quick code-build-debug cycle and leaves more complex workflows to its big brother. Being lighter doesn’t mean it’s not better. Most of the serious Angular 2 devs at SSW already choose VS Code as their weapon of choice. Watch as Adam Cogan gives you a tour of these great IDEs and expands your development horizons. This session is guaranteed to make you even more productive and highlight why the Visual Studio family is awesome for developing software.",
+                    "level": "Intermediate",
+                    "tags": [
+                        ".NET",
+                        "Microsoft"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Adam Cogan",
+                            "bio": "Adam Cogan blogs at www.adamcogan.com and interviews for SSW TV. Adam is the Chief Architect at SSW, a Microsoft Certified Gold Partner specializing in custom enterprise .NET solutions mostly using An\n\n\n\nAdam Cogan blogs at www.adamcogan.com and interviews for SSW TV. Adam is the Chief Architect at SSW, a Microsoft Certified Gold Partner specializing in custom enterprise .NET solutions mostly using Angular and React. His solutions also involve Office365, SharePoint, Business Intelligence, and CRM solutions.\n\n\n\nAdam is a Certified Scrum Trainer with scrum.org, trains developers in Australia, the US, UK and Europe, and contributes to scrum.org thinking. He consults with development teams on improving their scrum process through mentoring and being a solution architect and scrum master. He has written many rules around scrum best practices.\n\n\n\nAdam is one of only 3 Microsoft Regional Directors in Australia. In this role, he regularly presents in conferences such as TechEd (USA, Australia, New Zealand, Europe and Malaysia). A couple of times a year, he visits Microsoft headquarters in Seattle to learn the latest on Microsoft strategic directions and to undertake training in development technologies. His favourite Microsoft teams that he loves to work with are Brian Harry’s TFS team, James Phillips Power BI team and Jeff Teper’s SharePoint team.",
+                            "twitterAlias": "AdamCogan",
+                            "website": "https://adamcogan.com/"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "Machine Learning with F#, Redux",
+                    "abstract": "Machine learning and data science are currently red-hot topics. Yet, while practitioners typically use a wide range of tools and languages, .NET is conspicuously absent from the conversation. Does this mean it isn't suitable, and that we should all move to Python?\n\nIn this talk, I'll argue that the .NET ecosystem has a compelling language for machine learning and data science, namely F#. I will give a general tour of what machine learning is about, and illustrate along the way how F# fits the domain beautifully, showcasing some recent developments in the ecosystem.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Machine Learning",
+                        "Functional Programming"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Mathias Brandewinder",
+                            "bio": "Mathias Brandewinder has been developing software on .NET for about 10 years, and loving every minute of it, except maybe for a few release days. His language of choice was C#, until he discovered F# and fell in love with it. He enjoys arguing about code and how to make it better, and gets very excited when discussing TDD or F#. His other professional interests include forecasting models, machine learning and applying math to solve business problems. Mathias is a Microsoft F# MVP and the founder of Clear Lines Consulting. He is based in San Francisco, blogs at www.clear-lines.com/blog",
+                            "twitterAlias": "brandewinder",
+                            "website": "http://brandewinder.com/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "Lightning Talks",
+                    "abstract": "Talk 1: Gang up on difficult problems with Mob Programming - Jim Pelletier\n\nTalk 2: Congratulations, You're an Architect - Stephen Kennedy\n\nTalk 3: Simplified Unit Testing with the Entity Framework Core InMemory Provider - Jason Taylor\n\nTalk 4: UX design lessons from fighting games - Xharmagne Carandang\n\nTalk: 5 WSL - Windows Subsystem for Linux - Jorge Arteiro",
+                    "level": "Intermediate",
+                    "tags": [],
+                    "presenters": [
+                        {
+                            "name": "Xharmagne Carandang",
+                            "bio": "A software engineer with a passion for bridging the gap between people and technology via innovations in user experience design and implementation. Loves designing, building and debugging magic. Plays fighting games competitively.",
+                            "twitterAlias": "xharmagne"
+                        },
+                        {
+                            "name": "Jorge Arteiro",
+                            "bio": "Jorge is an experienced Consultant, Speaker, Azure MVP and Azure/.Net MCP based in Melbourne with software development/Architecture, cloud integration, DevOps and technical pre-sales background, working for enterprises and software companies. He has over 16 years experience in the IT industry in Australia and Brazil. Blogs at https://blog.kloud.com.au/author/jorgearteiro/ and http://azuretar.com @azuretar @jorgearteiro",
+                            "twitterAlias": "JorgeArteiro"
+                        },
+                        {
+                            "name": "Jason Taylor",
+                            "bio": "Jason is an SSW Solution Architect and full stack developer with over 15 years professional experience. He is currently specialising in teaching and building awesome applications utilising ASP.NET Core, EF Core and Angular. Jason loves a challenge and is skilled at progressing from a proposal into a well-defined, coded, and tested solution.",
+                            "twitterAlias": "jasongtau"
+                        },
+                        {
+                            "name": "Stephen Kennedy",
+                            "bio": "Stephen has over 15 years of experience in the software industry, across a multitude of different development and leadership roles. He's lead teams in organisations from fledgling start-ups to large corporate enterprises across both greenfield and brownfield projects.\n\n\n\nWhen he's allowed to write code, Stephen considers himself more a backend specialist as he tends to break out in hives whenever he has to touch JavaScript.\n\n\n\nHe currently exists as a Principal Consultant for Readify, based in Melbourne.",
+                            "twitterAlias": "DevEnable"
+                        },
+                        {
+                            "name": "Jim Pelletier",
+                            "bio": "Jim has been talking about microservices since back before they got that small and event driven architectures before we had a cloud to build them on. Organiser of the Melbourne ALT.NET user group and part of the DDD Melbourne conference crew. He's now spending his time building and enabling autonomous teams at Page Up as well as helping build Melbourne's development community.",
+                            "twitterAlias": "pjimmy"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "11:40",
+            "sessions": [
+                {
+                    "title": "Docker, FROM scratch",
+                    "abstract": "Docker's popularity has exploded over the last couple of years, especially in the DevOps space, but unless you've spent a lot of time in that area it can be a confusing technology to wrap your head around.\n\nSo let's step back and start looking at Docker from, well, FROM scratch (and we'll understand just what that means).\n\n\n\nWith minimal starting knowledge of Docker we'll look into what it is, cover off all the core concepts from images to containers, volumes to networks, and how we can compose environments. We'll also look at how to use Docker in Dev, not just DevOps and how containers can be useful tools without being something to run production infrastructure on.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Continuous Delivery"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Aaron Powell",
+                            "bio": "Aaron is a Principal Consultant at Readify and Microsoft Front End Web Dev MVP. By day he spends his time in all facets of .NET development and by night he explores crazy ideas like writing your own implementation of numbers in .NET, creating IoC in JavaScript or implementing tic-tac-toe using git commits.",
+                            "twitterAlias": "slace",
+                            "website": "http://www.aaron-powell.com/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "The (Awesome) Future of Web Apps",
+                    "abstract": "The web is becoming more and more powerful everyday, especially with the launch of Progressive Web Apps. PWAs are experiences that combine the best of the web and the best of apps. You can now build web apps that run from your home screen, receive push notifications & work offline.\n\nWe will start with a PWA refresher and dive deeper into modern best practices for modern web apps. Then, we will learn about the future of the Web through modern Web APIs.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "JavaScript",
+                        "Web",
+                        "UX",
+                        "Mobile"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Jad Joubran",
+                            "bio": "Jad is a fullstack teacher and an active conference speaker.\n\n\n\nHe's on a mission to inspire developers around the world by coaching at Le Wagon coding bootcamp in Europe and regularly speaking at international conferences.\n\n\n\nLately, Jad's focus lies on spreading knowledge about Progressive Web Apps and mentoring developers through online courses, blog articles and workshops for startups & enterprises.",
+                            "twitterAlias": "JoubranJad",
+                            "website": "https://jadjoubran.io/"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "Technical Debt",
+                    "abstract": "",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Soft skills"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Richard Banks",
+                            "bio": "Richard Banks has developed software for the last 20 years for a wide range of industries and development platforms and over the years and has filled many roles including developer, team lead, project manager and CIO/CTO. He is a Professional Scrum Trainer, author of both the Visual Studio 2012 Cookbook and the 2013 Coobook, runs the Sydney Alt.Net user group and hosted the Talking Shop Down Under podcast. He also contributes to open source projects and has spoken at Microsoft Tech.Ed, Scrum Australia and a number of other conferences and user groups around the country. For some strange reason he gets a real kick out of helping development teams produce great software and improve both their skills and the way they work. If you want to get in touch he tweets at @rbanks54 and blogs at http://www.richard-banks.org/. He currently works as a Principal Consultant for Readify and is a Microsoft Visual Studio ALM MVP.",
+                            "twitterAlias": "rbanks54",
+                            "website": "https://www.richard-banks.org/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Take your ASP.NET apps to the next level with Google Cloud Platform",
+                    "abstract": "With high performance Virtual Machines (VM) and networking, blazing fast VM provisioning, per-minute billing and rich set of services, Google Cloud is a great platform to deploy and run your ASP.NET apps.\n\nIn this hands-on session, we will start with the classic Contoso University ASP.NET MVC5 app and move it to the cloud. Once in the cloud, we will take our app to the next level with Machine Learning APIs, Cloud Storage, Stackdriver error reporting and other services provided by Google. In the end, you will see how easy it is to create a production ready ASP.NET app on Google Cloud.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Machine Learning",
+                        "DevOps",
+                        ".NET",
+                        "Cloud"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Mete Atamel",
+                            "bio": "I'm a Developer Advocate at Google, currently focused on helping developers with Google Cloud Platform. As a long-time Java and a recent C# developer, I like to compare the two ecosystems. Prior to Google, I worked at Microsoft, Skype, Adobe, EMC, and Nokia building apps and services on various web, mobile and cloud platforms. Originally from Cyprus, I currently live in Greenwich, not too far away from the prime meridian.",
+                            "twitterAlias": "meteatamel",
+                            "website": "https://meteatamel.wordpress.com/"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "What can we learn from 750 billion GitHub events and 42 TB of code",
+                    "abstract": "\"Data gives us insights into how people build software, and the activities of open source communities on GitHub represent one of the richest datasets ever created of people working together at scale.\" --GitHub Universe 2016\n\nWe are going to analyze - live on stage - 5 years of GitHub metadata and 42 TB code stored in it to answer questions like:\n\n\n\n- How is this run\n\n- How coding patterns have changed through time.\n\n- Guiding your project design decisions based on actual usage of your APIs.\n\n- How to request features based on data.\n\n- The most effective phrasing to request changes.\n\n- Effects of social media on a project's popularity.\n\n- Who starred your project - and what other projects interest them.\n\n- Measuring community health.\n\n- Running static code analysis at scale.\n\n- Tabs or spaces?",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Languages",
+                        "Fun",
+                        "Database",
+                        "Cloud"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Felipe Hoffa",
+                            "bio": "In 2011 Felipe Hoffa moved from Chile to San Francisco to join Google as a Software Engineer. Since 2013 he's been a Developer Advocate on big data - to inspire developers around the world to leverage the Google Cloud Platform tools to analyze and understand their data in ways they could never before. You can find him in several YouTube videos, blog posts, and conferences around the world.",
+                            "twitterAlias": "felipehoffa",
+                            "website": "http://lanyrd.com/profile/felipehoffa/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "HTTP/2 - The future of the web today",
+                    "abstract": "Client side web technologies continue to advance at breakneck speed. The quest to deliver richer user experiences is relentless and due to the limitations of HTTP/1.x, we have been forced to develop various workarounds (domain sharding, spriting, resource concatenation and inlining) in a bid to optimize performance.\n\nHTTP/2 has been designed with the modern web in mind and eliminates the need for such compensating hacks. In this session we'll take an in-depth look at web performance optimization; the best practices that have evolved; the game changing new features of HTTP/2; and most importantly what you need to do to deliver a world class HTTP/2 experience:\n\n\n\n- Why domain sharding, resource concatenation and image sprites are now anti-patterns\n\n- How server push is effectively resource inlining on steroids\n\n- What new best practices are possible with HTTP/2\n\n- What techniques to apply during the transitional period from HTTP/1.x to HTTP/2\n\n\n\nAdditionally, we will look at the tooling available for working with HTTP/2 traffic and how we can ensure that we're getting the full benefit of HTTP/2 both client and server side.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Web",
+                        "Architecture"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Rob Crowley",
+                            "bio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. As the Technical Lead for APIs at Bankwest, Rob works with delivery teams on transforming the bank’s technology landscape to realise its digital strategy.",
+                            "twitterAlias": "robdcrowley"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "13:40",
+            "sessions": [
+                {
+                    "title": "What’s new in ASP.NET Core 2.0",
+                    "abstract": "ASP.NET Core has a new major version!\n\nIn this talk you’ll learn about major new features like Razor Pages and .NET Standard 2.0, as well as about the smaller but no less useful changes and improvements across the stack.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Microsoft",
+                        "Web",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Damian Edwards",
+                            "bio": "Damian Edwards is a Principal Program Manager on the ASP.NET team, responsible for the core ASP.NET runtime and Web Forms. He's also an active open source participant, as the creator of the Web Forms MVP and SignalR open source ASP.NET projects, as well as various jQuery plugins.",
+                            "twitterAlias": "DamianEdwards",
+                            "website": "https://damianedwards.wordpress.com/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "Implementing authorization in web applications and APIs",
+                    "abstract": "Authentication is easy – authorization is the hard part. This might sound daunting, but since every application is different, there is no single recipe for how authorization has to work.\n\nDominick walk you through a couple of approaches and pitfalls and use the new ASP.NET Core authorization API (which has been back-ported to standard .NET) as an example of a decent abstraction layer for clean authorization for your applications. But we will also learn that that regardless of your approach, there is no one size that fits all – that’s why it important to understand your options.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Security",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Dominick Baier",
+                            "bio": "Dominick Baier is an independent consultant specializing in identity & access control. He helps companies around the world designing & implementing authentication and authorization for their distributed web and native applications. He’s the co-author of the popular OpenID Connect & OAuth 2.0 framework called IdentityServer (http://identityserver.io) , has written a couple of books, blogs at http://leastprivilege.com and tweets as @leastprivilege.",
+                            "twitterAlias": "leastprivilege",
+                            "website": "https://leastprivilege.com/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Your Customers Hate You (And Other Lies)",
+                    "abstract": "When you release your software and products into the world, you open yourself up to the gamut of possibilities. This includes negative feedback from customers that can leave even the most experienced developer unprepared.\n\nThis is something that applies to every developer and unfortunately usually doesn’t get addressed until it is too late, causing entire product pivots for non-issues.\n\n\n\nHow can you stay on track when everything you hear tells you you’re wrong?\n\n\n\nObjectives:\n\nProvide developers with a framework for filtering customer requests while still keeping them engaged\n\nProvide teams with a perspective on how to understand their customer",
+                    "level": "Beginner",
+                    "tags": [
+                        "Agile"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Heather Wilde",
+                            "bio": "Heather Wilde is CTO of ROCeteer, and is also known as the “Unicorn Whisperer” due to her special focus on entrepreneurs. She is a personal and professional growth expert, executive coach, author, and speaker. As a founding employee of Evernote, she oversaw the company’s growth from thousands to 100,000,000 customers. Among her other awards, Senate Minority Leader Harry Reid selected her for a commendation for her work in increasing STEM education.\n\nWilde's writing as a columnist for Inc and Forbes spans social media, entrepreneurialism, startups, leadership, fundraising, and diversity issues.\n\nShe currently lives in Las Vegas, NV.",
+                            "twitterAlias": "heathriel",
+                            "website": "https://en.wikipedia.org/wiki/Heather_Wilde_(author)"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "Life is like a Box of Chocolate(y)",
+                    "abstract": "DevOps begins at home when you script your own desktop. Learn from experienced package author, Chocolatey.org moderator and project contributor David how to automate the installation and configuration of all the software you need to get your job done with open source tools Chocolatey and Boxstarter. Take a vanilla Windows install from zero to fully configured developer environment in minutes*!\n\nFind out how to wrap each of your tools and applications in a well-specified Chocolatey package. Learn about common pitfalls and get an inside perspective on the package moderation process so that you can publish to the public repository on Chocolatey.org with confidence.\n\n\n\nLearn how to orchestrate the installation of all your packages (including reboots) with Boxstarter. Build up a fully configured developer machine from scratch, or redeploy your test environment with ease and reliability.\n\n\n\nBut this is not just for rebuilding your dev boxes, these same techniques can be used to help your customers download, install and upgrade your software with ease.\n\n\n\nThis talk is rated 200-300 with a target audience of all Windows-based developers who want to spend more time coding and less time reinstalling software.\n\n\n\n* Obviously the more tools you need, the more minutes it will take!",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Microsoft",
+                        "DevOps",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "David Gardiner",
+                            "bio": "David Gardiner has been creating software for over 20 years. He has a passion for continual learning and improving quality, and enjoys being in and creating environments where these happen. A Microsoft MVP (Visual Studio and Development Technologies), he run the Adelaide .NET User Group.\n\n\n\nBy day, he works as a Senior Software Developer at RL Solutions on healthcare software. In his spare time he contributes to numerous open source projects (including some of his own), and is a package moderator at Chocolatey.org",
+                            "twitterAlias": "DavidRGardiner",
+                            "website": "https://david.gardiner.net.au/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Scaling Docker Containers using Kubernetes and Azure Container Service",
+                    "abstract": "The Azure Container Service offers simple deployments of Kubernetes, an open source container orchestration solution, designed to help manage running containers at scale.\n\nIn this session, Ben will demonstrate the benefits of deploying Containers to Kubernetes and how to ensure your system remains reliable and scalable by building on top of the Azure Container Service.\n\n\n\nTopics and discussion points will include:\n\n- Introduction into Containers\n\n- Scaling considerations\n\n- Deploying Kubernetes\n\n- Migrating Application to Kubernetes and Azure Container Service\n\n- Scaling to meet application demands\n\n\n\nBy the end, attendees should understand the benefits of using a Container Orchestration system, where Kubernetes fits into the eco-system and how it can be combined with the Azure Container Service.\n\nMore information on Kubernetes and Azure can be found at https://msopentech.com/opentech-projects/kubernetes/",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Cloud",
+                        "DevOps"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Ben Hall",
+                            "bio": "Ben is the founder of Ocelot Uproar, a company focused on training and building products loved by users. Ben enjoys looking for the next challenges to solve, usually over an occasional beer. Ocelot Uproar recently launched Katacoda (Katacoda.com), an interactive learning environment for software engineers. Tweets at @Ben_Hall and blogs at blog.benhall.me.uk",
+                            "twitterAlias": "Ben_Hall",
+                            "website": "http://blog.benhall.me.uk/"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "Data Cleansing With SQL And R",
+                    "abstract": "On a given project, data scientists can spend upwards of 80% of their time preparing, cleaning, and correcting data.\n\nIn this session, we will look at different data cleansing and preparation techniques using both SQL Server and R. We will investigate the concept of tidy data and see how we can use tools in both languages to simplify research and analysis of a small but realistic data set.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Database"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Kevin Feasel",
+                            "bio": "Kevin Feasel is a Data Platform MVP and Engineering Manager of the Predictive Analytics team at ChannelAdvisor, where he specializes in T-SQL and R development, fighting with Kafka, and pulling rabbits out of hats on demand. He is the lead contributor to Curated SQL (curatedsql.com) and a contributing author to Tribal SQL (www.tribalsql.com). A resident of Durham, North Carolina, he can be found cycling the trails along the triangle whenever the weather's nice enough.",
+                            "twitterAlias": "feaselkl",
+                            "website": "http://catallaxyservices.com/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "Imposter Syndrome: Overcoming Self-Doubt in Success",
+                    "abstract": "Impostor Syndrome is the domain of the high achiever. Those who set the bar low are rarely it’s victim. What matters most is not whether we fear failing, looking foolish or not being enough; it’s whether we give those fears the power to keep us from taking the actions needed to achieve our goals and highest aspirations.\n\nIn this session we will bring this sensitive subject to light by exploring:\n\n\n\nWhy having this mindset is detrimental to your career\n\nIdentifying the differences between healthy concern and illogical doubt\n\nWhat it actually means to ‘fake it till you make it’\n\nHow believing something negative about yourself can make it really happen\n\nWays to cope once you experience a sincere failure\n\nLearning to graciously express confidence",
+                    "level": "Beginner",
+                    "tags": [
+                        "People"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Heather Downing",
+                            "bio": "Climbing the technology mountain and halfway up the side. Experience in .Net, mobile applications and more recently voice interface development. Dabbles in iOT & AR/VR. Focusing on coding for humans and choosing the right tool for the job.\n\n\n\nHeather is a passionate coder and entrepreneur. She has experience working with Fortune 500 companies building enterprise level mobile and .Net applications. She spends her spare time at tech conferences supporting the growth of new developers of all genders, ages and backgrounds. When not coding, Heather spends her time as a competitive equestrian and learning the art of mounted archery.",
+                            "twitterAlias": "quorralyne",
+                            "website": "https://www.quorralyne.com/"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "15:00",
+            "sessions": [
+                {
+                    "title": "How to start and run a software lifestyle business",
+                    "abstract": "While startups can be great for venture capitalists, they're usually a poor deal for the participants. After working crazy hours for months or years, you face depressingly low odds of success. But there's another way: By finding a niche and deliberately staying small, you can dramatically up the chance of success - while balancing income, hours and lifestyle. Without having to answer to investors or an employer.\n\nThe rules for a software lifestyle business are very different to the rules for a start-up. In this session, I'll share what I've learned over the past 10 years, writing and selling a successful programming utility. We'll cover both technical and business topics, including idea incubation, marketing, competitive analysis and monetization, as well as practical tips on payment processing, dealing with large corporations and resellers, providing support, and maximizing productivity and happiness while sole-programming.",
+                    "level": "All Levels",
+                    "tags": [
+                        "Soft skills"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Joe Albahari",
+                            "bio": "Joe Albahari is an O'Reilly author and the inventor of LINQPad. He's written seven books on C# and LINQ, including the upcoming \"C# 7.0 in a Nutshell\". He speaks regularly at conferences and user groups, and has been a C# MVP for nine years running.",
+                            "twitterAlias": "linqpad",
+                            "website": "http://www.linqpad.net/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "C# Language Internals",
+                    "abstract": "Ever wanted to know how your favorite C# language features come to life, what the performance implications are, etc.?\n\nThen this 100% hardcore demo session is for you! Fasten your seatbelts for a browse through the Roslyn compiler code, inspection of generated IL code, and the occasional dive into WinDbg to inspect JITted code.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Microsoft",
+                        ".NET",
+                        "Languages"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Bart De Smet",
+                            "bio": "Bart De Smet is a Principal Software Development Engineer working on large scale stream processing systems in the Applications and Services Division at Microsoft Corporation, a course and book author, and a popular speaker on various international conferences. In his current role at Microsoft, he’s overseeing the architecture, design, and implementation of event processing systems that run at massive scale in data centers, as well as on cloud-connected devices. One of the publicly visible technologies powered by this infrastructure is Cortana. Prior to joining the Applications and Services Division, Bart was involved with the design and implementation of Reactive Extensions for .NET (Rx) and on an extended “LINQ to Anything” mission back in the SQL organization. Going even further, you could have found Bart in the Developer Division hacking away on the Application Model feature area in the Windows Presentation Foundation (WPF) in the .NET 3.5 and 4.0 days. His main interests include programming languages, runtimes, functional programming, and all sorts of theoretical foundations. Before joining the company, Bart was a C# MVP for four years, while completing his Master of Civil Engineering and Computer Science studies at Ghent University, Belgium. Bart is also the author of the C# 5.0 Unleashed book (and its predecessor) by SAMS, and an author of online courses at Pluralsight for topics such as C# language internals."
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Redux, beyond React",
+                    "abstract": "Redux has grown in popularity within the React community as an alternative to Flux and a powerful way to manage within your application. From its focus on immutability, pure functions or time traveling, it's become a popular way to back your React applications.\n\nBut Redux is more than a React library, it's a powerful pattern for data management in any kind of application.\n\n\n\nIn this session we're going to dive deeply into how Redux works, look at why it's so popular with React, how it can work with any front-end framework and even beyond JavaScript.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "JavaScript",
+                        "Web",
+                        "Architecture"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Aaron Powell",
+                            "bio": "Aaron is a Principal Consultant at Readify and Microsoft Front End Web Dev MVP. By day he spends his time in all facets of .NET development and by night he explores crazy ideas like writing your own implementation of numbers in .NET, creating IoC in JavaScript or implementing tic-tac-toe using git commits.",
+                            "twitterAlias": "slace",
+                            "website": "http://www.aaron-powell.com/"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "When Feature Flags Go Bad",
+                    "abstract": "Feature flags are a valuable DevOps technique to deliver better, more reliable software faster. Feature flags can be used for both release management (dark launches, canary rollouts, betas) as well as long term control (entitlement management, user segmentation personalization).\n\nHowever, if not managed properly, feature flags can be very destructive technical debt. Feature flags need to be managed properly with visibility and control to both engineering and business users.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Continuous Delivery",
+                        "Microservices",
+                        "Agile"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Edith Harbaugh",
+                            "bio": "Edith Harbaugh is CEO & co-founder of LaunchDarkly. She has more than 15 years of experience in software engineering, including at the #1 travel app, TripIt. She is cohost of \"To Be Continuous\", a podcast on software trends by devops.com and a columnist for ReadWrite. She holds two patents in deployment. Edith earned a BS, Engineering from Harvey Mudd College.",
+                            "twitterAlias": "edith_h",
+                            "website": "https://launchdarkly.com/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Developing Object Recognition for HoloLens",
+                    "abstract": "From modern art to asset management and everything in between, the object recognition market is poised to be worth billions of dollars in coming years.\n\nIn this presentation, Stephen will introduce you to developing object recognition for HoloLens using the Vuforia Augmented Reality SDK.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Microsoft",
+                        "Fun"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Stephen Carter",
+                            "bio": "Stephen is the VIC State Manager and a Senior Software Architect for SSW with a diverse background in business, rail, insurance, utilities and emergency services managing the end-to-end delivery of technology projects. \n\n\n\nStephen started his IT career in the late 80’s developing insurance applications in Pascal and since then has ridden the crest of numerous technological tsunamis, from the birth of the internet in the early 90’s, through to the introduction of mobile phones and mobile internet.\n\n\n\nStephen believes we are on the crest of another technological revolution with the release of HoloLens, and he is champing at the bit to explore the world of mixed reality and to share his learnings with developers, business, and enthusiasts alike.",
+                            "twitterAlias": "StravrosTheGeek"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "Peanut Butter and Chocolate: Integrating Hadoop with SQL Server",
+                    "abstract": "So you jumped on the bandwagon and set up a Hadoop cluster…but now what? Your database developers and app developers know how to integrate with and develop against SQL Server, but the Hadoop world is a completely different experience.\n\nThis talk will help bridge the gap between SQL Server and Hadoop, using tools such as SQL Server Integration Services and Sqoop to migrate data between a Hadoop cluster and a SQL Server instance, as well as PolyBase to integrate the two like never before.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Cross-Platform",
+                        ".NET",
+                        "Database"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Kevin Feasel",
+                            "bio": "Kevin Feasel is a Data Platform MVP and Engineering Manager of the Predictive Analytics team at ChannelAdvisor, where he specializes in T-SQL and R development, fighting with Kafka, and pulling rabbits out of hats on demand. He is the lead contributor to Curated SQL (curatedsql.com) and a contributing author to Tribal SQL (www.tribalsql.com). A resident of Durham, North Carolina, he can be found cycling the trails along the triangle whenever the weather's nice enough.",
+                            "twitterAlias": "feaselkl",
+                            "website": "http://catallaxyservices.com/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": ".NET Data Security : Hope is not a Strategy",
+                    "abstract": "Not encrypting your data is a risky move and just relying on hope that you won't get hacked and compromised is not a strategy.\n\nAs a software developer you have a duty to your employer to secure and protect their data. In this talk, you will learn how to use the .NET Framework to protect your data to satisfy confidentiality, integrity, non-repudiation, and authentication.\n\n\n\nThis talk covers random number generation, hashing, authenticated hashing, and password based key derivation functions. The talk also covers both symmetric and asymmetric encryption using DES, Triple DES, AES, and RSA. You then learn how to combine these all together to product a hybrid encryption scheme which includes AES, RSA, HMACS, and Digital Signatures.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Security",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Stephen Haunts",
+                            "bio": "Stephen Haunts is the Head of Development for Buying Butler Ltd and RightIndem Ltd in the United Kingdom where he runs multiple development teams building products for the global insurance industry and online car sales marketplace.\n\n\n\nHe is also an experienced software developer with a focus on .NET technologies and security for back end enterprise systems. He is also a Pluralsight author, blogger atwww.stephenhaunts.com and international conference speaker, speaking at events like NDC London, NDC Oslo, Techorama and SDD Conf. He also co runs a user group calledDerbyshire Dot Net."
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "16:20",
+            "sessions": [
+                {
+                    "title": "Designing Wonderful .NET APIs",
+                    "abstract": "There are .NET libraries that are complex to setup, hard to understand, difficult to debug, and impossible to extend. And then there are .NET libraries for the same task that wonderfully just work. Why do some libraries succeed where others fail?\n\n\n\nIn this session we will discuss what makes a well designed API, from high level design principles like The Pit of Success, The Wall of Complexity, and The Power of Sameness, to applying those concepts in low level .NET class design, with the goal of creating .NET libraries that developers love to use.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Craftmanship",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "James Newton-King",
+                            "bio": "James Newton-King is a .NET developer and Microsoft MVP from Wellington, New Zealand. He is the creator of Json.NET, one of .NET's most popular software libraries.",
+                            "twitterAlias": "JamesNK",
+                            "website": "http://james.newtonking.com/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "Asynchronous Programming From The Ground Up",
+                    "abstract": "We've all experienced deadlocks, and we all hate them, but how do we prevent (and potentially fix) them?\n\nThat's right, no one likes applications crashing or giving users an unexpected behaviour. Introducing asynchronous patterns is so much more than just applying async and await to your methods; you really, I mean really, need to understand what's going on.In this session, we'll make sure you know how to avoid crashing your applications, and how to adhear to best practices when applying asynchronous patterns in our .NET applications.",
+                    "level": "Intermediate",
+                    "tags": [
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Filip Ekberg",
+                            "bio": "Filip is the author of C# Smorgasbord and a handful of Pluralsight courses, speaker at events and user groups around the globe, Microsoft and Xamarin MVP. He loves teaching fellow developers how to master C# by understanding important concepts such asynchronous programming, MSIL and much more.",
+                            "twitterAlias": "fekberg",
+                            "website": "https://www.filipekberg.se/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Software & the art of bicycle maintenance",
+                    "abstract": "Software projects are hard. Biking across the United States has surprising lessons on how to build better software.\n\nLearn how to plan, manage, get organized and find the right tools. And most importantly, why every day starts at zero.",
+                    "level": "Beginner",
+                    "tags": [],
+                    "presenters": [
+                        {
+                            "name": "Edith Harbaugh",
+                            "bio": "Edith Harbaugh is CEO & co-founder of LaunchDarkly. She has more than 15 years of experience in software engineering, including at the #1 travel app, TripIt. She is cohost of \"To Be Continuous\", a podcast on software trends by devops.com and a columnist for ReadWrite. She holds two patents in deployment. Edith earned a BS, Engineering from Harvey Mudd College.",
+                            "twitterAlias": "edith_h",
+                            "website": "https://launchdarkly.com/"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "Techniques and practices for testing Angular",
+                    "abstract": "Writing frontend tests has always been hard, let us show you how to make testing easier in your Angular applications.\n\nFrom unit testing components and services to end-to-end testing your entire application, we will give you tips and techniques for testing in the latest versions of Angular.",
+                    "level": "Advanced",
+                    "tags": ["JavaScript", "Web", "Testing"],
+                    "presenters": [
+                        {
+                            "name": "Duncan Hunter",
+                            "bio": "Duncan loves working in passionate teams to make awesome software. His focus is on helping teams implement the latest best practices in front-end web development. Duncan has been teaching and building Angular 2 applications around the world from early alpha releases. He is a Senior Software Architect at SSW.com, an Angular mentor at FireBootCamp.com and a passionate rock climber.",
+                            "twitterAlias": "dunchunter",
+                            "website": "https://duncanhunter.com.au/"
+                        },
+                        {
+                            "name": "Adam Stephensen",
+                            "bio": "Adam loves building awesome teams and shipping great software.\n\n\n\nHe loves to talk. You'll hear him around the place sharing his passion for patterns, processes and technology: Angular 2.0, .NET Core, Azure, Scrum, clean code, dependency injection, tests and continuous delivery.\n\n\n\nAdam believes communication and agility lead to success: 'fail fast', inspect, adapt, have a lot of fun.",
+                            "twitterAlias": "adamstephensen",
+                            "website": "https://adamstephensen.com/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Prescriptive Architecture Guidance for Cloud Applications",
+                    "abstract": "As more and more people are starting to deploy their application to the cloud, new architectural patterns have emerged, and some old ones have resurfaced or become more prominent.\n\nIn this session, Mahesh Krishnan, Azure veteran runs through a catalog of patterns that you will find useful if you are building applications on Azure.",
+                    "level": "Beginner",
+                    "tags": ["Design", "Architecture", "Cloud"],
+                    "presenters": [
+                        {
+                            "name": "Mahesh Krishnan",
+                            "bio": "Mahesh Krishnan, from Melbourne Australia, is a regular speaker at technology conferences and has written a couple of technical books. In his current role as CTO at HealthConnex, Mahesh leads IT, development, QA and user experience teams across a portfolio of innovative software solutions for the health sector. He is also a Microsoft Azure MVP, and takes a keen interest on cloud and web technologies as well as architecture.",
+                            "twitterAlias": "MaheshKrishnan",
+                            "website": "http://mahe.sh/"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "Top Ten Worst Repositories to host on GitHub",
+                    "abstract": "At GitHub we host a large number of wildly different projects and are the de-facto destination for many people. This means we see a lot of different use-cases come through our services. Sometimes it's the shape of the data, sometimes its size, sometimes it's an unexpected combination of both for a novel use-case that makes it harder to host.\n\nIn this talk we'll see how GitHub has developed projects like Spokes and Lariat to make sure we can host these Git repositories reliably, from replication and heuristics to caching and application of quotas, they help make sure a project with over-eager CI systems or expensive Git processing requirements does not endanger the overall reliability of the system.",
+                    "level": "Intermediate",
+                    "tags": ["Architecture", "Cloud"],
+                    "presenters": [
+                        {
+                            "name": "Carlos Martín Nieto",
+                            "bio": "Carlos works in the Git Infrastructure team at GitHub, responsible for keeping the Git data safe and accessible. He's been around Git for nearly ten years.",
+                            "twitterAlias": "carlosmn",
+                            "website": "http://dwim.me/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "From Rogue One to Rebel Alliance: Building Developers into Security Champions",
+                    "abstract": "Are you responsible for more than just AppSec? What do you do when you have more teams to support than security experts? How can you make security champions out of dissenters in the development team?\n\nThere just aren’t enough security experts to go around. You have to support the multitude of Agile and DevOps teams that are making production software changes anywhere from once a month to several times a day? The lack of resources coupled with the ever increasing responsibilities can make you feel like a rouge warrior in the battle against cybercrime. What’s a security professional to do? Whether you are a team of one or five, there aren’t enough hours in the day and even if there was more budget, good luck finding someone to fill that security role. What if I told you that through careful selection and good training it is possible to build your own army from the very people who own the development process?\n\n\n\nWhat you will learn: \n\n1. Who to recruit as security champions \n\n2. How to train these champions in productive application security \n\n3. How to measure success \n\n4. How to build a scalable security program \n\n5. What to expect from champions (responsibilities)",
+                    "level": "Advanced",
+                    "tags": ["Security", "People"],
+                    "presenters": [
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-16",
+            "time": "17:40",
+            "sessions": [
+                {
+                    "title": "C# Scripting in the .NET Core world",
+                    "abstract": "While still being relatively niche, over the recent years C# scripting has grown to become a first class citizen in the Roslyn compiler and can now be enjoyed and applied in your applications in various ways.\n\nTogether, we will dissect what’s going on under the hood in C# scripting and how you can make use of it in the cross platform, lightweight, .NET Core world (which, by the way, creates a perfect environment for low ceremony C# scripting). \n\n\n\nWe'll also have a look at scripting via the new .NET CLI, how you can integrate it into your everyday development workflows and how you can debug the script assemblies.",
+                    "level": "Intermediate",
+                    "tags": [".NET", "Cross-Platform", "Microsoft"],
+                    "presenters": [
+                        {
+                            "name": "Filip W",
+                            "bio": "Filip is a popular .NET blogger, author, prolific open source contributor and a Microsoft MVP. Over the past few years, his blog has been one of the most popular ASP.NET resources on the internet. Filip specializes in the Roslyn compiler, cross platform .NET development, modern web technologies and is experienced in delivering robust web solutions. He worked on projects in many corners of the world (Canada, Switzerland, Finland, Poland, Scotland). Follow him on Twitter @filip_woj.",
+                            "twitterAlias": "filip_woj",
+                            "website": "https://www.strathweb.com/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "Continuous Delivery in Azure",
+                    "abstract": "All those Azure demos look great, get up and running in seconds, never leaving the comfort of your IDE! But real life is more complicated. We have a mix of VMs, databases, web sites, and of course someone is playing around with microservices and App Fabric. Deploying from Visual Studio was easy at first, but now carpal tunnel is setting in.\n\nThere are better ways! In this session, we'll take a complex Azure deployment and introduce automated builds, packaging, deployments, an entire continuous delivery pipeline. We'll also look at Azure Resource Manager, converting our topology to infrastructure-as-code, providing even greater insight and control over our deployments. Finally, we'll look at more exotic deployment scenarios such as blue-green deployments and feature flags for a first-class deployment experience.",
+                    "level": "Intermediate",
+                    "tags": [".NET", "Continuous Delivery"],
+                    "presenters": [
+                        {
+                            "name": "Jimmy Bogard",
+                            "bio": "Jimmy is a member of the ASPInsiders group, the C# Insiders group, and received the \"Microsoft Most Valuable Professional\" (MVP) award for ASP.NET in 2009-2016. Jimmy is also the creator and maintainer of the popular OSS library AutoMapper.",
+                            "twitterAlias": "jbogard",
+                            "website": "https://jimmybogard.com/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Virtual reality for web developers",
+                    "abstract": "Augmented and virtual realities are here to stay and offer awesome opportunities in many diverse areas.\n\nBut did you know you can develop these experiences using nothing more than good old JavaScript & HTML that you know and love?\n\n\n\nIn this course we’ll get you up to speed on the current state of Web based VR development looking at the upcoming WebVR specification and frameworks such as AFrame and ReactVR.",
+                    "level": "Intermediate",
+                    "tags": ["JavaScript", "Web"],
+                    "presenters": [
+                        {
+                            "name": "Alex Mackey",
+                            "bio": "Alex works as a Practice Lead for Xero and is interested in anything web related (particularly HTML 5 & JavaScript) and he also meddles with AI & WebGL.\n\n\n\nAlex has done talks on various programming/web related topics, written a pluralsight course onWebGL/three.jsand Microsoft Edge for Developers, run a non profit conference and wrote books on .net.\n\n\n\nWebsite :http://simpleisbest.co.uk/speaking",
+                            "twitterAlias": "alexjmackey",
+                            "website": "https://www.simpleisbest.co.uk/"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "DevOps For Dishwashers - Bringing grown up practices to the Internet of Things",
+                    "abstract": "The Internet of Things is undeniably here. In the last year we have heard tell of of security cameras, dishwashers and even ovens roaming the internet unsupervised.\n\nAs a consultant and writer specialising in the Internet of Things, I have worked to bring my experience from 20 years in manufacturing and internet security to the IoT world. This presentation will cover the tools and techniques I use to build secure, reliable and rapidly updatable IoT devices.\n\n\n\nThe techniques covered are applicable to both the simplest embedded devices with no general-purpose OS, and more powerful devices running Linux or Windows.\n\n\n\nPart 1, architecture and coding:\n\n\n\n* Using containers (docker) in the embedded world (and simple equivalents for less capable platforms)\n\n* Applying Continuous Integration and automated testing to embedded devices\n\n\n\nPart 2, deployment and maintenance:\n\n\n\n* Using the open-source SaltStack platform to provision IoT devices. I introduce a framework (https://github.com/unixbigot/kevin) which has been developed for use in my IoT projects\n\n* Examples of using cloud frameworks for IoT management: Amazon AWS, Resin.io, Google Android Things\n\n\n\nPart 3, Monitoring, Command and Control:\n\n\n\n* Tracking your device behaviour with SaltStack and Elastic Search\n\n* Updating your devices in the field\n\n* Tips and techniques for device longevity",
+                    "level": "Intermediate",
+                    "tags": ["Microservices", "Embedded", "IoT", "Cloud"],
+                    "presenters": [
+                        {
+                            "name": "Christopher Biggs",
+                            "bio": "Christopher Biggs has been into Open Systems since the early 90s and was there at the birth of Linux and 386BSD. His interest in electronics and connected devices goes back even further.\n\n\n\nHe has worked as a developer, System Architect and Engineering Manager. He was founding Vice President of HUMBUG, the Brisbane open systems user group, and built and managed a diverse, inclusive team of over 60 developers at a leading Brisbane IT company.\n\n\n\nChristopher has presented at conferences and user groups around Australia, and convened a weekly technology lecture series for the entire technology department at a previous workplace.\n\n\n\nChristopher is the principal of Accelerando Consulting, a boutique consultancy specialising in IoT and Cloud Data. In his spare time he builds and blogs robots and adds to the growing Internet of Things.",
+                            "twitterAlias": "unixbigot",
+                            "website": "http://christopher.biggs.id.au/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Deep dive into building Bots with the Microsoft Bot Framework and Cognitive Services",
+                    "abstract": "At Microsoft, we have first-hand experience writing bots and building artificial intelligence systems, so we’ve shared our services and tools so you can use them to add conversations to your own products.\n\nIn this session, we will take a deep dive into Microsoft’s Conversations as a Platform and look in Microsoft Bot Framework, Cognitive Services and other Azure services to graduate your app from small talk into truly insightful conversations.",
+                    "level": "Intermediate",
+                    "tags": ["Cross-Platform", ".NET"],
+                    "presenters": [
+                        {
+                            "name": "Vishesh Oberoi",
+                            "bio": "Vishesh is a Technical Evangelist at Microsoft focused on driving early adoption of Microsoft’s emerging technologies by building solutions directly with Software Startups, Independent Software Vendors (ISVs) and Large Companies across New Zealand. He currently leads all the developer effort across NZ around Bots, Cognitive Services and Azure IoT Suite.",
+                            "twitterAlias": "ovishesh",
+                            "website": "http://visheshoberoi.com/"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "Tales of a Unicorn Herder - Security in Startups and Disruptive Teams",
+                    "abstract": "So your team is part of a highly innovative, totally disruptive company/organisation/team/university department/cult and you're going to conquer the world? Wonderful. I'm happy for you.\n\nI'm the security person that unicorns call when they need to survive the dark and nasty side effects of becoming \"the next big thing\".\n\n\n\nWith lessons learned from helping disruptive and fast paced (often low resourced) teams in 7 countries, let me share with you the reality of security when you are living on the bleeding edge of business and technology.\n\n\n\nThis is more than just software security, this is survival.",
+                    "level": "Beginner",
+                    "tags": ["Security"],
+                    "presenters": [
+                        {
+                            "name": "Laura Bell",
+                            "bio": "With almost a decade of experience in software development and information security, Laura Bell specializes in bringing security survival skills, practices, and culture into fast paced organisations of every shape and size.\n\nAn experienced conference speaker, trainer, and regular panel member, Laura has spoken at a range of events such as BlackHat USA, Velocity, OSCON, Kiwicon, Linux Conf AU, and Microsoft TechEd on the subjects of privacy, covert communications, agile security, and security mindset.\n\n\n\nLaura is the founder of SafeStack, a specialist security training, development, and consultancy firm. She lives in Auckland, New Zealand with her husband and daughter.",
+                            "twitterAlias": "lady_nerd",
+                            "website": "https://www.safestack.io/"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "09:00",
+            "sessions": [
+                {
+                    "title": "Pushing C# to the limit",
+                    "abstract": "C# is a language of breadth. At one end it allows low-level programming with pointers and lock-free synchronization; at the other end, it sports high-level features such as closures, expressions trees and asynchronous functions.\n\nWhich leads us to a challenge: can we write a non-contrived program that uses all of the above? The answer is \"of course!\", and I'm going to walk you through a practical example: a high-speed communications library built on shared memory (and used in production!)\n\n\n\nCome and join the author of C# 7 in a Nutshell and LINQPad in an advanced session, where we step outside the box and play with all of C#'s best toys at once.",
+                    "level": "Advanced",
+                    "tags": [
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Joe Albahari",
+                            "bio": "Joe Albahari is an O'Reilly author and the inventor of LINQPad. He's written seven books on C# and LINQ, including the upcoming \"C# 7.0 in a Nutshell\". He speaks regularly at conferences and user groups, and has been a C# MVP for nine years running.",
+                            "twitterAlias": "linqpad",
+                            "website": "http://www.linqpad.net/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "Accessing Accessible Accessibility",
+                    "abstract": "The World Health Organization states that one billion people live with disabilities. And estimates put internet usage with a screen reader as high as 3.4% of all internet traffic around the world. Web accessibility can help.\n\nSo what is web accessibility and who needs it? Is engineering accessibility enough? How do you build an cross-functional accessibility culture? And what can you do to prevent accessibility regressions?\n\n\n\nI had all the same questions… and only four months to guarantee all our consumer user flows were accessible. Well, what happened? Come learn what it takes to lead a web accessibility movement within your company!",
+                    "level": "Beginner",
+                    "tags": ["Soft skills", "Craftmanship", "Design", "UX", "Web", "People", "Fun"],
+                    "presenters": [
+                        {
+                            "name": "Jennifer Wong",
+                            "bio": "Jennifer Wong is a self-taught software engineer at Eventbrite where she spends her days making the web a prettier and more user-friendly place. She has written for Net Magazine and had projects covered by Mashable, Engadget, Gizmodo, and more. Jenn is an avid conference speaker and loves eating, coding, and sleeping.",
+                            "twitterAlias": "mybluewristband",
+                            "website": "http://mochimachine.org/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Programming Robots – Making Friends with Cozmo",
+                    "abstract": "Have you met Cozmo? The little robot with a huge attitude? He is ready to be part of your life, if only you will play with him and give him some attention. Cozmo has a mind of his own and his personality will constantly keep you surprised.\n\nIn this talk you will learn about tracking obstacles in real time, planning paths, facial recognition and third party APIs by building a simple game in Python. Learn about the future of consumer robotics in a connected world, and how these devices can make a difference.\n\n\n\nThis talk will be a joint presentation with Cozmo on stage charming his way into your hearts (before he has a temper tantrum).",
+                    "level": "Beginner",
+                    "tags": ["Embedded", "IoT", "Fun"],
+                    "presenters": [
+                        {
+                            "name": "Lars Klint",
+                            "bio": "Lars is an author, trainer, Microsoft MVP, community leader, authority on all things Windows Platform and part time crocodile wrangler. He is heavily involved in the space of HoloLens and mixed reality, as well as a published Pluralsight author, freelance solution architect and writer for numerous publications. He has been a part of the software development community for the past 20 years and co-organises the DDD Melbourne community conference, organises developer events with Microsoft, and also runs a part time car restoration business. He has spoken at numerous technical events around the world and is an expert in Australian Outback Internet.",
+                            "twitterAlias": "larsklint",
+                            "website": "https://larsklint.com/"
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "Embracing Docker simplicity - while harnessing platform power",
+                    "abstract": "Docker enables microservice architectures and is the leader in containerization technology. On one hand, working with Docker greatly simplifies development and DevOps workflows. On the other hand, to achieve distribution and scale we need to take advantage of orchestration platforms - which are many.\n\nThis session will take you on a tour from the fundamentals of Docker, to the important concepts that support enterprise deployments including service distribution and scheduling, resource constraints, server density, scale, self-healing, diagnostics and management. While illustrating these features, you'll get a high level tour of several Docker platforms including Docker Swarm, Docker Data Center, Azure Container Service, Mesophere DC/OS, Kubernetes and Amazon EC2 Container Services (ECS).",
+                    "level": "",
+                    "tags": ["DevOps"],
+                    "presenters": [
+                        {
+                            "name": "Michele Bustamante",
+                            "bio": "Michele Leroux Bustamante is a founder and CIO of Solliance (solliance.net), founder of Snapboard.com, a Microsoft Regional Director and Microsoft Azure MVP. Additionally she has been awarded Azure Elite and Azure Insider status as well as the ASP.NET Insider designation. Michele is a thought leader recognized in many fields including software architecture and design, identity and access management, cloud computing technologies , security and compliance, and DevOps. During the past 20 years, Michele has held senior executive positions at several corporations, assembled teams, implemented development process, and facilitated numerous successful large-scale enterprise application deployments. Michele has also been active in the startup community with a keen understanding of the technical and business needs of a startups . She shares experiences through presentations and keynotes all over the world and has been publishing regularly her entire career. Michele wrote the best-selling book ''Learning WCF'' (O'Reilly 2007) and Developing Microsoft Azure Solutions (MS Press 2015).",
+                            "twitterAlias": "michelebusta",
+                            "website": "https://about.me/michelebusta"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "APIs with Microsoft Azure PaaS Services",
+                    "abstract": "In this session I will look how developers can leverage the Microsoft Azure PaaS services to compose, publish and expose their APIs to their target audience, be it internal, external or a mix.\n\nI will look at Azure API Management, Azure API Apps, Azure Logic Apps and Azure Functions as components that developer can leverage in their API strategies.",
+                    "level": "Advanced",
+                    "tags": ["Serverless", "Microsoft", "Cloud"],
+                    "presenters": [
+                        {
+                            "name": "Bill Chesnut",
+                            "bio": "Bill Chesnut is the Cloud Platform & API Evangelist at SixPivot with 33 years of experience across multiple industries, including Government, Financial Services, Manufacturing, Logistics and Utilities. He has been involved in all aspects of Integration from architecture, solution design, implementation, solution development and environment support using both BizTalk and Azure. He is also a Azure Microsoft Valuable Professional (MVP). Bill has been involved with Azure, BizTalk and BizTalk Training since the BizTalk 2000 release and has designed, implemented and mentored on numerous BizTalk and Azure projects throughout Australia and New Zealand."
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "TensorFlow in Three Sentences",
+                    "abstract": "TensorFlow is growing in popularity as the go-to tool for Deep Learning and building complex AI systems. But there is also a lot of misconception about the capabilities of the platform and how and by whom it can be used in the most efficient way.\n\nIs TensorFlow the silver bullet of AI? Does one need to gain a lot of preliminary knowledge before starting to use the library or can it just be treated as a black box?\n\nIn this talk, Barbara will start with three statements and drill down into each of them to reveal the holistic view on what TensorFlow is capable of, what are the limitations and what is needed to start working with the library. The session will cover the following areas:\n\n- Required experience and knowledge when approaching TensorFlow\n\n- Principal concepts and components of the library (Tensors, GPU computing, Deep Learning)\n\n- Methods and applications in the AI field\n\nAfter the session, the audience will have a clear idea what TensorFlow is and what it is not. The attendees will be able to start their journey with the library and apply it to tackle problems like Computer Vision or Natural Language Processing.",
+                    "level": "Beginner",
+                    "tags": ["Machine Learning"],
+                    "presenters": [
+                        {
+                            "name": "Barbara Fusinska",
+                            "bio": "Barbara is a software developer and mentor to inspiring developers. Working with a range of different companies, Barbara gained experience with team dynamics. This has lead to her strong belief in shaping a proper working environment. She trusts this allows high-functional teams to reach their full qualities.\n\n\n\nAlongside building passionate teams, Barbara enjoys collaborating around architectures. Currently speaking at conferences in-between working in London. Tweets at @BasiaFusinska and blogs on http://barbarafusinska.com.",
+                            "twitterAlias": "BasiaFusinska",
+                            "website": "http://barbarafusinska.com"
+                        }
+                    ],
+                    "room": "Room 6"
+                },
+                {
+                    "title": "Running a Bug Bounty Program @ SEEK",
+                    "abstract": "What would happen if we allowed 50 hackers from around the world to hack into our web applications? Is this a crazy idea? We don’t think so, as that’s exactly what we did and it was a great success!\n\nIts called a bug bounty program, and is quite a new concept in the industry but gaining traction as it significantly reduces the cost of performing security testing on websites, increases the quality of bugs identified and provides a way to continuously test web apps! In this talk I will take you through an overview of how the program went, lessons learnt and how this program fits into SEEK’s wider application security vision.",
+                    "level": "Intermediate",
+                    "tags": ["Security", "Testing"],
+                    "presenters": [
+                        {
+                            "name": "Julian Berton",
+                            "bio": "Julian is an Application Security Engineer at SEEK and a chapter lead of the OWASP Melbourne chapter where he volunteers his time to organise application security events. He also regularly gives application security related presentations aimed to educate developers and the wider security community. A few recent presentations have been at WAHCKon, DDD Melbourne, ASIA, OWASP Melbourne and Node.js meetups.",
+                            "twitterAlias": "JulianBerton",
+                            "website": "http://bertonjulian.github.io/"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "10:20",
+            "sessions": [
+                {
+                    "title": "Deploying Applications as Containers on Windows Server 2016",
+                    "abstract": "Docker has changed the way we deploy applications onto Linux and ARM based systems. Windows Server 2016 introduces first class container support to the Windows Kernel.\n\nIn this session Ben will explore how Docker and Windows will work together, the impact it will have and how you can get started.\n\n\n\nKey talking points will include:\n\n- Deploying applications using Windows containers\n\n- Managing Windows containers using tools from the Docker ecosystem \n\n- Combining Linux and Windows containers\n\n- Difference between Nano containers and Server Core containers\n\n- Why Hyper-V isolation exists\n\n- Windows Container Security Model\n\n\n\nAt the end attendees will understand how containers on Windows will work and the problems they’ll solve.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Continuous Delivery",
+                        "DevOps"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Ben Hall",
+                            "bio": "Ben is the founder of Ocelot Uproar, a company focused on training and building products loved by users. Ben enjoys looking for the next challenges to solve, usually over an occasional beer. Ocelot Uproar recently launched Katacoda (Katacoda.com), an interactive learning environment for software engineers. Tweets at @Ben_Hall and blogs at blog.benhall.me.uk",
+                            "twitterAlias": "Ben_Hall",
+                            "website": "http://blog.benhall.me.uk/"
+                        }
+                    ],
+                    "room": "Room 4"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "11:40",
+            "sessions": [
+                {
+                    "title": "Security And Microservices",
+                    "abstract": "Microservices are all the rage, and so are security breaches! Learn what you can do to create one without the other.\n\nMicroservices give us many options. We can pick different technologies, mix synchronous and asynchronous integration techniques or embrace different deployment patterns. But they also give us different options for how we think about securing our systems. Done right, and microservices can increase the security of your vital data and processes. Done wrong, and you can increase the surface area of attack. This talk will discuss the importance of defence in depth, discussing the many different ways in which you can secure your fine-grained, distributed architectures.\n\n\n\nAudience\n\nDevelopers, architects, technical leaders, operations engineers and anybody interested in the design and architecture of services and components.\n\n\n\nWhat You Will Learn\n\nThe audience should come away with a working framework for thinking about AppSec, and also understand how microservices can help (or hinder) building a secure system.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Security",
+                        "Microservices",
+                        "Architecture"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Sam Newman",
+                            "bio": "Sam Newman is interested in technology at the intersection of things, from development, to ops, to security, usability and organisations. After over a decade at ThoughtWorks he is now an independent consultant. Sam is the author of \"Building Microservices\" from O'Reilly. He has worked with a variety of companies in multiple domains around the world, often with one foot in the developer world, and another in the IT operations space. If you asked him what he does, he’d say ‘I work with people to build better software systems’. He has written articles, presented at conferences, and sporadically commits to open source projects. While Java used to be his bread and butter, he also spends time with Ruby, Python, Javascript, and Clojure, Infrastructure Automation and Cloud systems.",
+                            "twitterAlias": "samnewman",
+                            "website": "http://samnewman.io/"
+                        }
+                    ],
+                    "room": "Room 1"
+                },
+                {
+                    "title": "Writing high performance code in .NET",
+                    "abstract": "Come and hear some tales from the trenches on building highly scalable services with .NET powering various Bing services. The good, the bad, and the ugly!\n\nIn this talk, we’ll focus on best practices to build high performance code, to instrument the code for deep analysis, and how to use various tools to help achieve your performance goals and drive down costs.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Microsoft",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Bart De Smet",
+                            "bio": "Bart De Smet is a Principal Software Development Engineer working on large scale stream processing systems in the Applications and Services Division at Microsoft Corporation, a course and book author, and a popular speaker on various international conferences. In his current role at Microsoft, he’s overseeing the architecture, design, and implementation of event processing systems that run at massive scale in data centers, as well as on cloud-connected devices. One of the publicly visible technologies powered by this infrastructure is Cortana. Prior to joining the Applications and Services Division, Bart was involved with the design and implementation of Reactive Extensions for .NET (Rx) and on an extended “LINQ to Anything” mission back in the SQL organization. Going even further, you could have found Bart in the Developer Division hacking away on the Application Model feature area in the Windows Presentation Foundation (WPF) in the .NET 3.5 and 4.0 days. His main interests include programming languages, runtimes, functional programming, and all sorts of theoretical foundations. Before joining the company, Bart was a C# MVP for four years, while completing his Master of Civil Engineering and Computer Science studies at Ghent University, Belgium. Bart is also the author of the C# 5.0 Unleashed book (and its predecessor) by SAMS, and an author of online courses at Pluralsight for topics such as C# language internals."
+                        }
+                    ],
+                    "room": "Room 2"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "13:40",
+            "sessions": [
+                {
+                    "title": "Choice is Overrated - Designing Products That Know What You Want Before You Do",
+                    "abstract": "According to CEO Aaron Shapiro, the next big breakthrough in design and technology will be the creation of products, services, and experiences that eliminate the needless choices from our lives and make ones on our behalf, freeing us up for the ones we really care about: “Anticipatory design”. Rather than traditional UI/UX, where the tendency is to provide options in a participatory manner to determine a result, here you remove all choices from the user, and use predictive modeling to give an outcome to liberate them from so-called “decision fatigue,”\n\n“Flow not friction,” “convenience not choice,” and “efficiency not freedom” are the mantras of anticipatory design.\n\n\n\nIn this talk, we’ll explore some implementations of anticipatory design, discuss areas where it is done well, and issues with the overall movement.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Machine Learning",
+                        "Design",
+                        "IoT",
+                        "UX",
+                        "UI"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Heather Wilde",
+                            "bio": "Heather Wilde is CTO of ROCeteer, and is also known as the “Unicorn Whisperer” due to her special focus on entrepreneurs. She is a personal and professional growth expert, executive coach, author, and speaker. As a founding employee of Evernote, she oversaw the company’s growth from thousands to 100,000,000 customers. Among her other awards, Senate Minority Leader Harry Reid selected her for a commendation for her work in increasing STEM education.\n\nWilde's writing as a columnist for Inc and Forbes spans social media, entrepreneurialism, startups, leadership, fundraising, and diversity issues.\n\nShe currently lives in Las Vegas, NV.",
+                            "twitterAlias": "heathriel",
+                            "website": "https://en.wikipedia.org/wiki/Heather_Wilde_(author)"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Growing Serverless code with Azure Functions and F#",
+                    "abstract": "In essence, Azure Functions give you the ability to take a small piece of code, and painlessly deploy and run it in the cloud. Not surprisingly, then, Functions shine for \"programming in the small\", for instance scripting automated tasks. But what if you wanted to build a serious application, Serverless style?\n\nUnless you are careful, you will probably quickly end up with a spaghetti of functions on your hands. Azure Functions make some problems disappear, but also introduce issues of their own, without much guidance available. In this talk, we'll explore what types of challenges can arise and why, and present some techniques to help you grow Serverless code and staying sane.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Serverless",
+                        "Functional Programming",
+                        ".NET"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Mathias Brandewinder",
+                            "bio": "Mathias Brandewinder has been developing software on .NET for about 10 years, and loving every minute of it, except maybe for a few release days. His language of choice was C#, until he discovered F# and fell in love with it. He enjoys arguing about code and how to make it better, and gets very excited when discussing TDD or F#. His other professional interests include forecasting models, machine learning and applying math to solve business problems. Mathias is a Microsoft F# MVP and the founder of Clear Lines Consulting. He is based in San Francisco, blogs at www.clear-lines.com/blog",
+                            "twitterAlias": "brandewinder",
+                            "website": "http://brandewinder.com/"
+                        }
+                    ],
+                    "room": "Room 5"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "15:00",
+            "sessions": [
+                {
+                    "title": "UX Patterns for Web Developers",
+                    "abstract": "Are you willing to go the extra mile to make your UX shiny and joyful? Most of us web developers underestimate the importance of the Human-Computer Interaction. Join this talk for developer-friendly UX patterns that you can start using in your everyday code.\n\nIn this talk, Nicole will talk about the best practices that developers should consider when building a product from a UX point of view and Jad will explain the technical perspective behind it. We will cover topics like performance, mobile optimization, smooth transitions, offline experiences & more.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Design",
+                        "Web",
+                        "UX",
+                        "UI"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Jad Joubran",
+                            "bio": "Jad is a fullstack teacher and an active conference speaker.\n\n\n\nHe's on a mission to inspire developers around the world by coaching at Le Wagon coding bootcamp in Europe and regularly speaking at international conferences.\n\n\n\nLately, Jad's focus lies on spreading knowledge about Progressive Web Apps and mentoring developers through online courses, blog articles and workshops for startups & enterprises.",
+                            "twitterAlias": "JoubranJad",
+                            "website": "https://jadjoubran.io/"
+                        },
+                        {
+                            "name": "Nicole Saidy",
+                            "bio": "Nicole is a UI/UX designer & digital nomad. She spends most of her time on the road with a mission to inspire people about design by speaking at international conferences and coaching at Le Wagon coding bootcamp in cities like Amsterdam, Copenhagen and London.",
+                            "twitterAlias": "nicolesaidy",
+                            "website": "https://nicolesaidy.com/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Ionic, ngrx and Angular: building web and mobile apps with one code base",
+                    "abstract": "Ionic is amazing and boringly easy. If you already know Angular, you can get an app on the App Store in record time.\n\nCome learn how to build an Angular web app, an Ionic mobile app and maximise the code re-use between the two with ngrx and custom npm packages. We will help you get your head around ngrx and the redux pattern and share with you a bunch of tips and tricks to save you time and avoid common pitfalls. At the end of this talk you will know how to create web and mobile apps with maximum code reuse.",
+                    "level": "Beginner",
+                    "tags": ["JavaScript", "Web", "Mobile"],
+                    "presenters": [
+                        {
+                            "name": "Duncan Hunter",
+                            "bio": "Duncan loves working in passionate teams to make awesome software. His focus is on helping teams implement the latest best practices in front-end web development. Duncan has been teaching and building Angular 2 applications around the world from early alpha releases. He is a Senior Software Architect at SSW.com, an Angular mentor at FireBootCamp.com and a passionate rock climber.",
+                            "twitterAlias": "dunchunter",
+                            "website": "https://duncanhunter.com.au/"
+                        },
+                        {
+                            "name": "Adam Stephensen",
+                            "bio": "Adam loves building awesome teams and shipping great software.\n\n\n\nHe loves to talk. You'll hear him around the place sharing his passion for patterns, processes and technology: Angular 2.0, .NET Core, Azure, Scrum, clean code, dependency injection, tests and continuous delivery.\n\n\n\nAdam believes communication and agility lead to success: 'fail fast', inspect, adapt, have a lot of fun.",
+                            "twitterAlias": "adamstephensen",
+                            "website": "https://adamstephensen.com/"
+                        }
+                    ],
+                    "room": "Room 5"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-17",
+            "time": "17:40",
+            "sessions": [
+                {
+                    "title": "Building Docker Applications with .NET - tooling, cross platform support and migration",
+                    "abstract": "Docker enables .NET developers to build containerized applications for Windows or Linux. Windows containers support full .NET Framework applications, which makes for a great migration story. With AspNetCore developers can target both Linux-based Docker containers or Windows containers. In either case you can now develop your applications on Windows using your favorite .NET developer tools - then build Docker images and run them as containers on Windows Server or Linux machines.\n\nIn this session, you will learn to build AspNetCore applications that can target either Windows or Linux containers, without any changes to your code. You will also learn how to build or migrate full .NET Framework applications and deploy them as Windows Containers. Topics include common considerations as you work locally, running local Docker containers, preserving as environment settings, choosing the right base image, working with IIS or Kestrel, composing multiple containers, and working with a Docker Registry.",
+                    "level": "",
+                    "tags": [".NET", "DevOps", "Cross-Platform"],
+                    "presenters": [
+                        {
+                            "name": "Michele Bustamante",
+                            "bio": "Michele Leroux Bustamante is a founder and CIO of Solliance (solliance.net), founder of Snapboard.com, a Microsoft Regional Director and Microsoft Azure MVP. Additionally she has been awarded Azure Elite and Azure Insider status as well as the ASP.NET Insider designation. Michele is a thought leader recognized in many fields including software architecture and design, identity and access management, cloud computing technologies , security and compliance, and DevOps. During the past 20 years, Michele has held senior executive positions at several corporations, assembled teams, implemented development process, and facilitated numerous successful large-scale enterprise application deployments. Michele has also been active in the startup community with a keen understanding of the technical and business needs of a startups . She shares experiences through presentations and keynotes all over the world and has been publishing regularly her entire career. Michele wrote the best-selling book ''Learning WCF'' (O'Reilly 2007) and Developing Microsoft Azure Solutions (MS Press 2015).",
+                            "twitterAlias": "michelebusta",
+                            "website": "https://about.me/michelebusta"
+                        }
+                    ],
+                    "room": "Room 2"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-18",
+            "time": "09:00",
+            "sessions": [
+                {
+                    "title": "Six Little Lines of Fail",
+                    "abstract": "It seemed like an easy feature to implement, a checkout page to place an order. But this payment gateway has a simple API, so we added that. And this email service provider makes it possible to send an email with one line of code! Finally we can notify downstream systems via a message queue. The code looks simple, 6 little lines of distributed systems code.\n\nBut those lines hid a dark secret that we only found after launching. Customers complained they didn't get their email. The back end system wasn't getting updated from our messages. And by far the worst of all, customers complained they saw an error page but still got charged!\n\nClearly it wasn't as easy as calling a few APIs and shipping, we actually need to worry about those other systems. In this session, we'll look at taking our 6 lines of distributed systems fail, examining the inevitable failures that arise, and possible mitigating scenarios. We'll also look at the coupling our code contains, and the ways we can address it. Finally, we'll refactor towards a truly resilient checkout process that embraces, instead of ignoring, the fallacies of distributed computing.",
+                    "level": "Intermediate",
+                    "tags": ["Web", "Architecture", "Cloud"],
+                    "presenters": [
+                        {
+                            "name": "Jimmy Bogard",
+                            "bio": "Jimmy is a member of the ASPInsiders group, the C# Insiders group, and received the \"Microsoft Most Valuable Professional\" (MVP) award for ASP.NET in 2009-2016. Jimmy is also the creator and maintainer of the popular OSS library AutoMapper.",
+                            "twitterAlias": "jbogard",
+                            "website": "https://jimmybogard.com/"
+                        }
+                    ],
+                    "room": "Room 3"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-18",
+            "time": "10:20",
+            "sessions": [
+                {
+                    "title": "Interactive C# Development with Roslyn",
+                    "abstract": "It’s fair to say that most software developers value very highly the productivity boost that comes with being able to work in a development environment that provides a real-time feedback loop. Historically, C# has been far from that - as typically developers had to rebuild their projects after every change, and the process of finding issues in the code has always felt extremely heavy.\n\nRoslyn compiler and latest Visual Studio introduced a lot exciting tools, improvements and APIs that help in this area. In this talk, we will look at various techniques to leverage these interactive capabilities. We’ll look at the REPL and Interactive Window, scripting APIs, live Roslyn analyzers, a much improved Edit-and-Continue support and interactive testing, all of which will hopefully help your development workflow be much more productive.",
+                    "level": "Intermediate",
+                    "tags": [".NET", "Testing", "Microsoft"],
+                    "presenters": [
+                        {
+                            "name": "Filip W",
+                            "bio": "Filip is a popular .NET blogger, author, prolific open source contributor and a Microsoft MVP. Over the past few years, his blog has been one of the most popular ASP.NET resources on the internet. Filip specializes in the Roslyn compiler, cross platform .NET development, modern web technologies and is experienced in delivering robust web solutions. He worked on projects in many corners of the world (Canada, Switzerland, Finland, Poland, Scotland). Follow him on Twitter @filip_woj.",
+                            "twitterAlias": "filip_woj",
+                            "website": "https://www.strathweb.com/"
+                        }
+                    ],
+                    "room": "Room 4"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-18",
+            "time": "13:40",
+            "sessions": [
+                {
+                    "title": "Security in ASP.NET Core 2.0",
+                    "abstract": "ASP.NET Core has presented us with the opportunity to improve our security story, throw away the mistakes of the past and introduce new features to make life easier for all.\n\nASP.NET Core now has a new authentication & authorization stack and different ways to load balance cryptographic keys. This session will demonstrate the new features introduced in Core, the changes we made in 2.0, the new service we’ve added in 2.0 then walk you through building a flexible authorization system to help you secure your web apps.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Microsoft",
+                        "Security",
+                        "Web"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Barry Dorrans",
+                            "bio": "Barry is the security czar for ASP.NET which means he gets to look at the framework, tools and template code, searching for potential insecurities and sometimes even fixing them. He also triages publically and privately reported vulnerabilities before getting someone else to fix them which means he gets all of the fun and none of the responsibility.",
+                            "twitterAlias": "blowdart",
+                            "website": "https://idunno.org/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "Hacking Humans : Social Engineering Techniques and How to Protect Against Them",
+                    "abstract": "Social engineering is one of the biggest threats to our organisations as attackers use manipulation techniques to coerce people into revealing secrets about our companies to allow attackers to gain access to critical systems.\n\nIn this talk we will look at some of the techniques used in social engineering and look at how to guard yourself against them. We will cover subjects like pre-texting, elicitation and body language as techniques for manipulating people.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Security"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Stephen Haunts",
+                            "bio": "Stephen Haunts is the Head of Development for Buying Butler Ltd and RightIndem Ltd in the United Kingdom where he runs multiple development teams building products for the global insurance industry and online car sales marketplace.\n\n\n\nHe is also an experienced software developer with a focus on .NET technologies and security for back end enterprise systems. He is also a Pluralsight author, blogger atwww.stephenhaunts.com and international conference speaker, speaking at events like NDC London, NDC Oslo, Techorama and SDD Conf. He also co runs a user group calledDerbyshire Dot Net."
+                        }
+                    ],
+                    "room": "Room 3"
+                },
+                {
+                    "title": "Designing Great Progressive Web Apps",
+                    "abstract": "Designing web apps is now more challenging than ever. With their potential ability to behave like native apps, PWAs have a more intimate user experience, they’re more responsive and much more powerful.\n\nIn this talk, you will learn the characteristics of PWAs from a design perspective, and guidelines for designing great PWAs. We will cover topics like app shell, touch guidelines, responsiveness, offline experiences & more.",
+                    "level": "Intermediate",
+                    "tags": [
+                        "Design",
+                        "Web",
+                        "UX",
+                        "UI",
+                        "Mobile"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Nicole Saidy",
+                            "bio": "Nicole is a UI/UX designer & digital nomad. She spends most of her time on the road with a mission to inspire people about design by speaking at international conferences and coaching at Le Wagon coding bootcamp in cities like Amsterdam, Copenhagen and London.",
+                            "twitterAlias": "nicolesaidy",
+                            "website": "https://nicolesaidy.com/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "Building for Alexa with Web API",
+                    "abstract": "Amazon Echo, Amazon Tap and Echo Dot have brought voice interfaces to life for the home. We will discuss ways to integrate your existing software or database into an Alexa Skill, allowing for voice-activated, meaningful interaction with a user.\n\nUsing this SAAS approach, with Web API hosted on Azure can make this process easy for rapid prototyping. We will build and deploy a skill that you can use immediately with your Alexa enabled device, and discuss the challenges of the publishing journey to get in Alexa's Skill Store.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Machine Learning"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Heather Downing",
+                            "bio": "Climbing the technology mountain and halfway up the side. Experience in .Net, mobile applications and more recently voice interface development. Dabbles in iOT & AR/VR. Focusing on coding for humans and choosing the right tool for the job.\n\n\n\nHeather is a passionate coder and entrepreneur. She has experience working with Fortune 500 companies building enterprise level mobile and .Net applications. She spends her spare time at tech conferences supporting the growth of new developers of all genders, ages and backgrounds. When not coding, Heather spends her time as a competitive equestrian and learning the art of mounted archery.",
+                            "twitterAlias": "quorralyne",
+                            "website": "https://www.quorralyne.com/"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-18",
+            "time": "15:00",
+            "sessions": [
+                {
+                    "title": "HoloLens Development: The Next Steps",
+                    "abstract": "So, you know how to start developing a mixed reality experience, but want to take it further and master more of the details that make it more immersive, more natural, more believable? This talk will introduce new concepts and build on existing ones for doing just that.\n\nLearn how to take advantage of advanced gestures such as hold and manipulate, how to expand on voice commands, learn to master the developer tools such as the emulator and perception simulation, and much more. Get to grips with the development cycle and get into the details of the HoloLens development experience.\n\nAt the end of this talk you will have the tools and knowledge to build more immersive and natural holographic experiences that take full advantage of mixed reality and isn’t merely an augmented or virtual experience.",
+                    "level": "Intermediate",
+                    "tags": ["Microsoft", ".NET"],
+                    "presenters": [
+                        {
+                            "name": "Lars Klint",
+                            "bio": "Lars is an author, trainer, Microsoft MVP, community leader, authority on all things Windows Platform and part time crocodile wrangler. He is heavily involved in the space of HoloLens and mixed reality, as well as a published Pluralsight author, freelance solution architect and writer for numerous publications. He has been a part of the software development community for the past 20 years and co-organises the DDD Melbourne community conference, organises developer events with Microsoft, and also runs a part time car restoration business. He has spoken at numerous technical events around the world and is an expert in Australian Outback Internet.",
+                            "twitterAlias": "larsklint",
+                            "website": "https://larsklint.com/"
+                        }
+                    ],
+                    "room": "Room 4"
+                },
+                {
+                    "title": "GraphQL - A query language to empower your API consumers",
+                    "abstract": "The API economy is here, fueling disruption across many established industries. REST, as specified in Roy Fielding’s seminal dissertation, has become the architectural pattern of choice for APIs and when applied correctly allows for clients and servers to evolve in a loosely coupled manner. There are areas however where REST can deliver less than ideal client experiences. Often many HTTP requests are required to render a single view.\n\nWhile this may be a minor concern for a web app running on a WAN with low latency and high bandwidth, it can yield poor client experiences for mobile clients in particular. GraphQL is Facebook’s response to this challenge and it is quickly proving itself as an exciting alternative to RESTful APIs for a wide range of contexts. GraphQL is a query language that provides a clean and simple syntax for consumers to interrogate your APIs. These queries are strongly types, hierarchical and enable clients to retrieve only the data they need.\n\n\n\nIn this session, we will take a hands-on look at GraphQL and see how it can be used to build APIs that are a joy to use.",
+                    "level": "Beginner",
+                    "tags": [
+                        "Web",
+                        "Architecture",
+                        "Mobile",
+                        "Languages"
+                    ],
+                    "presenters": [
+                        {
+                            "name": "Rob Crowley",
+                            "bio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. As the Technical Lead for APIs at Bankwest, Rob works with delivery teams on transforming the bank’s technology landscape to realise its digital strategy.",
+                            "twitterAlias": "robdcrowley"
+                        }
+                    ],
+                    "room": "Room 5"
+                },
+                {
+                    "title": "Continuous Security",
+                    "abstract": "Agile development is a powerful tool for the creation of high-quality software products. It has however scared the life out of many security managers and risk leaders. Once the job of a dedicated security team, security is now the responsibility of all members of our Agile teams.\n\nSo how do we bring continuous security to our lifecycles without compromising velocity and innovation? What tools and techniques do we need and when should we apply them?\n\n\n\nIn this talk, we will examine why security is the new key skills for successful Agile development teams and what you can do to bring it to your teams.\n\n\n\nThis is a talk of war stories from the SCRUM team trenches and real world tools, techniques and processes that are less about 'managing' security than they are about building amazing(secure) things, fast.",
+                    "level": "Beginner",
+                    "tags": ["Security", "DevOps", "Agile"],
+                    "presenters": [
+                        {
+                            "name": "Laura Bell",
+                            "bio": "With almost a decade of experience in software development and information security, Laura Bell specializes in bringing security survival skills, practices, and culture into fast paced organisations of every shape and size.\n\nAn experienced conference speaker, trainer, and regular panel member, Laura has spoken at a range of events such as BlackHat USA, Velocity, OSCON, Kiwicon, Linux Conf AU, and Microsoft TechEd on the subjects of privacy, covert communications, agile security, and security mindset.\n\n\n\nLaura is the founder of SafeStack, a specialist security training, development, and consultancy firm. She lives in Auckland, New Zealand with her husband and daughter.",
+                            "twitterAlias": "lady_nerd",
+                            "website": "https://www.safestack.io/"
+                        }
+                    ],
+                    "room": "Room 7"
+                }
+            ]
+        },
+        {
+            "date": "2017-08-18",
+            "time": "16:20",
+            "sessions": [                
+                {
+                    "title": "Xamarin Test Cloud",
+                    "abstract": "",
+                    "level": "Beginner",
+                    "tags": ["Mobile"],
+                    "presenters": [
+                        {
+                            "name": "Filip Ekberg",
+                            "bio": "Filip is the author of C# Smorgasbord and a handful of Pluralsight courses, speaker at events and user groups around the globe, Microsoft and Xamarin MVP. He loves teaching fellow developers how to master C# by understanding important concepts such asynchronous programming, MSIL and much more.",
+                            "twitterAlias": "fekberg",
+                            "website": "https://www.filipekberg.se/"
+                        }
+                    ],
+                    "room": "Room 2"
+                },
+                {
+                    "title": "The Art of Coding a Conversation: Designing Bots",
+                    "abstract": "While top apps on your App Store are Messaging Apps, and conversational canvases becoming more ubiquitous, there is a certain hype around building bots.\n\nAlthough there might be a lot of you who still haven’t jumped on the Bot hype, but you might certainly be going through the app fatigue. Learn about building bots the right way with more meaningful interactive experiences for your users and why is there such a hype around them.",
+                    "level": "Intermediate",
+                    "tags": ["Cross-Platform", "Design", "UX", "Mobile"],
+                    "presenters": [
+                        {
+                            "name": "Vishesh Oberoi",
+                            "bio": "Vishesh is a Technical Evangelist at Microsoft focused on driving early adoption of Microsoft’s emerging technologies by building solutions directly with Software Startups, Independent Software Vendors (ISVs) and Large Companies across New Zealand. He currently leads all the developer effort across NZ around Bots, Cognitive Services and Azure IoT Suite.",
+                            "twitterAlias": "ovishesh",
+                            "website": "http://visheshoberoi.com/"
+                        }
+                    ],
+                    "room": "Room 5"
+                }
+            ]
+        }
+    ]
+}
