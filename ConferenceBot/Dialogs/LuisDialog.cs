@@ -58,7 +58,7 @@ namespace ConferenceBot.Dialogs
             await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
             await context.SendTyping();
 
-            var timeslots = DDDSydney17.Data.Timeslots;
+            var timeslots = DDDPerth17.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
                 timeslots = timeslots.FindKeynote();
@@ -98,7 +98,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var rooms = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions)
+            var rooms = DDDPerth17.Data.Timeslots.SelectMany(t => t.Sessions)
                 .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).OrderBy(s => s.Room.Name).Select(s => s.Room.Name)
                 .Distinct();
 
@@ -125,7 +125,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var speakers = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
+            var speakers = DDDPerth17.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
                 .Select(s => s.Presenter.Name).Distinct();
 
             var actions = speakers.Select(speaker => new CardAction
@@ -162,8 +162,8 @@ namespace ConferenceBot.Dialogs
                 return;
 
             await context.SendTyping();
-            var search = new BindSearchService();
-            var searchResult = await search.Search($"DDD Sydney 2017: {query}");
+            var search = new BingSearchService();
+            var searchResult = await search.Search($"DDD Perth 2017: {query}");
             var attachments = BingSearchCard.GetSearchCards(searchResult);
 
             await context.PostAsync("Here it goes, this is what I found.");
@@ -185,13 +185,12 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindVenue")]
         public async Task FindVenue(IDialogContext context, LuisResult result)
         {
-            var location = $"{DDDSydney17.Lat},{DDDSydney17.Long}";
+            var location = $"{DDDPerth17.Lat},{DDDPerth17.Long}";
             var googleApiKey = ConfigurationManager.AppSettings["GoogleApiKey"];
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
 
-            var card = new HeroCard("DDD Sydney", "UTS",
-                "DDD Sydney will be held at UTS CBD campus, on Level 3 of the Peter Johnson Building, CB06 (entrance via Harris Street)")
+            var card = new HeroCard("DDD Perth", "Perth Convention and Exhibition Centre")
             {
                 Images = new List<CardImage>
                 {
@@ -204,7 +203,7 @@ namespace ConferenceBot.Dialogs
                         Title = "Get Directions",
                         Type = ActionTypes.OpenUrl,
                         Value =
-                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDSydney17.Lat}!4d{DDDSydney17.Long}"
+                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDPerth17.Lat}!4d{DDDPerth17.Long}"
                     }
                 }
             };

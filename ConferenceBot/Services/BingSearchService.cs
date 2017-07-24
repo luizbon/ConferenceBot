@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 
 namespace ConferenceBot.Services
 {
-    public class BindSearchService
+    public class BingSearchService
     {
         private const string Endpoint = "https://api.cognitive.microsoft.com/bing/v5.0/search";
         private readonly string _bingSearchApiKey;
 
-        public BindSearchService()
+        public BingSearchService()
         {
             _bingSearchApiKey = ConfigurationManager.AppSettings["BingSearchApiKey"];
         }

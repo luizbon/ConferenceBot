@@ -52,7 +52,7 @@ namespace ConferenceBot.Cards
                 }
             };
 
-            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=dddsyd&related=dddsydney";
+            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=dddperth&related=dddperth";
             if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
                 twitterUrl += $",{presenter.TwitterAlias}";
 
