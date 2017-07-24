@@ -1,0 +1,2096 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "DDDSydney17",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "BingSearch"
+    },
+    {
+      "name": "FindTalk"
+    },
+    {
+      "name": "FindVenue"
+    },
+    {
+      "name": "Greetings"
+    },
+    {
+      "name": "ListRooms"
+    },
+    {
+      "name": "ListSpeakers"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Events.Name",
+      "inherits": {
+        "domain_name": "Events",
+        "model_name": "Name"
+      }
+    },
+    {
+      "name": "keynote"
+    },
+    {
+      "name": "locknote"
+    },
+    {
+      "name": "near"
+    },
+    {
+      "name": "next"
+    }
+  ],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "room color",
+      "subLists": [
+        {
+          "canonicalForm": "green",
+          "list": []
+        },
+        {
+          "canonicalForm": "red",
+          "list": []
+        },
+        {
+          "canonicalForm": "blue",
+          "list": []
+        }
+      ]
+    },
+    {
+      "name": "speaker",
+      "subLists": [
+        {
+          "canonicalForm": "Tatham Oddie",
+          "list": [
+            "tatham",
+            "oddie"
+          ]
+        },
+        {
+          "canonicalForm": "Hadi Eskandari",
+          "list": [
+            "hadi",
+            "eskandari"
+          ]
+        },
+        {
+          "canonicalForm": "Azadeh Khojandi",
+          "list": [
+            "Azadeh",
+            "Khojandi",
+            "az",
+            "azadeh",
+            "khojandi"
+          ]
+        },
+        {
+          "canonicalForm": "Meligy",
+          "list": []
+        },
+        {
+          "canonicalForm": "John Di Zhang",
+          "list": [
+            "john",
+            "di zhang",
+            "zhang"
+          ]
+        },
+        {
+          "canonicalForm": "Dom Raniszewski",
+          "list": [
+            "Dom",
+            "Raniszewski",
+            "Dominik",
+            "dom",
+            "raniszewski",
+            "dominik"
+          ]
+        },
+        {
+          "canonicalForm": "Hossam Barakat",
+          "list": [
+            "hossam",
+            "barakat"
+          ]
+        },
+        {
+          "canonicalForm": "Jason Stangroome",
+          "list": [
+            "jason",
+            "stangroome"
+          ]
+        },
+        {
+          "canonicalForm": "Nick Randolph",
+          "list": [
+            "nick",
+            "randolph"
+          ]
+        },
+        {
+          "canonicalForm": "Justin Yoo",
+          "list": [
+            "justin",
+            "yoo"
+          ]
+        },
+        {
+          "canonicalForm": "Alistair Chapman",
+          "list": [
+            "alistair",
+            "chapman"
+          ]
+        },
+        {
+          "canonicalForm": "Danjel Malik",
+          "list": [
+            "danjel",
+            "malik"
+          ]
+        },
+        {
+          "canonicalForm": "Klee Thomas & Anjali Wadhwa",
+          "list": [
+            "klee",
+            "klee thomas",
+            "thomas",
+            "anjali wadhwa",
+            "anjali",
+            "wadhwa"
+          ]
+        },
+        {
+          "canonicalForm": "Hesham Amin",
+          "list": [
+            "hesham",
+            "amin"
+          ]
+        },
+        {
+          "canonicalForm": "Paul Glavich",
+          "list": [
+            "paul",
+            "glavich"
+          ]
+        },
+        {
+          "canonicalForm": "Jason Taylor",
+          "list": [
+            "jason",
+            "taylor"
+          ]
+        }
+      ]
+    }
+  ],
+  "bing_entities": [
+    "datetimeV2"
+  ],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "keynote",
+      "mode": true,
+      "words": "keynote,keynotes,first,open,opening",
+      "activated": true
+    },
+    {
+      "name": "locknote",
+      "mode": true,
+      "words": "locknote,last,close,closing",
+      "activated": true
+    },
+    {
+      "name": "near",
+      "mode": true,
+      "words": "near,close,nearby,around,nearly,towards",
+      "activated": true
+    },
+    {
+      "name": "next",
+      "mode": true,
+      "words": "next,following,after,coming,soon,subsequent",
+      "activated": true
+    },
+    {
+      "name": "place",
+      "mode": true,
+      "words": "where,location",
+      "activated": true
+    },
+    {
+      "name": "subject",
+      "mode": true,
+      "words": "what,what kind of,which,wat,wut,what type",
+      "activated": true
+    },
+    {
+      "name": "time",
+      "mode": true,
+      "words": "when,before",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "hello",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hi there",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "jason",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "yo",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "1pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "good morning",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hello!",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "what's next",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "where are you?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hey there",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "how much does it cost?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what are you?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "hi!",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "room",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "hi buddy",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "blue",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "hello?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "what are you",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "how do i get there?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "what is the address",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "when does it start?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what time is lunch",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "green",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's for lunch?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what's next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "is there a party?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is the keynote?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "who is speaking?",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "where is the party?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is the party?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "who is presenting the keynote?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "hey bot",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "how do i get there",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "hello there!",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "what is next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 8,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "speaker",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "what is a chatbot",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "next talks",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "list rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "where is the after party?",
+      "intent": "BingSearch",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "where is registration",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when does the day start?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "at 3pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what rooms are available",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "what rooms are available?",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "what room",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "3pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "hey, you're live. are you there?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hey bot, can you hear me?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hey you're live",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "what's on next",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "what is the keynote?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "what's going on tomorrow",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "show me all rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "who is talking about azure?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "who is speaking",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "speaker list",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "list speakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "where is the venue?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "give me room",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "hey bot, how are ya?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "10am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "11am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is green room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what speakers are on?",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "guthrie",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "show me the agenda",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what is john talking about?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "knock knock?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "4pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is the best speaker?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "list all speakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "when is the next session?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "what's on now",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "can you tell jokes?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what are the room names?",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "show me all speakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "who is presenting the keynote",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "blue room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "room list",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "9am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is next on green room?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 8,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "who is talking at red room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "which talk will happen at 9:00 on green room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "which talk will happen at 9:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is talking next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "who is talking at 9:00 on green room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is talking at 9:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the next talk about subject?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 12,
+          "endPos": 15
+        },
+        {
+          "entity": "Events.Name",
+          "startPos": 28,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "who will talk about subject?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "where is next amin's talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 9,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "where is next amin talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 9,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "who will talk next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 14,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "where is tatham talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "wheres amin talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's the keynote?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is jason talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what talks are available about azure?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 31,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "what is happening at 15:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is currently on the blue track?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where's amin?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "at 3pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is jason talk",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's happening on red room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "give me a list of talks",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "give me a list of speakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "where is amin's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is amin talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who will be talking next?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 20,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "where is the next jason's talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "what room does hossam speak in?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are the talks available?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "i want to see meligy",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "wheres tatham?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where amin will talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what will happen at 3pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is talking at 11am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where's tatham talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is amin talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats happening at 3:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where's amin talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is speaking on green room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "find near restaurants",
+      "intent": "BingSearch",
+      "entities": [
+        {
+          "entity": "near",
+          "startPos": 5,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "when tatham will talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's happening on green?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who speaks at green room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "what's happening on red?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "at 15?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "tell me a room",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "where is amin",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is the topic on 12:30",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is the talk at 9:00",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "azadeh khojandi",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats happening on green?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "i want to see brendan",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what's on at 10am",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "at 10?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "nick randolph",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what will happen at 15:00?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's happening on green room\\?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are machine learning talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 9,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "what's going on at 3pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "give me a list of rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "what's happening at 1 pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are the rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "who's the most populat speaker?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what talk is in the green room at 3pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is tatham?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is the talk at 10:00",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "speaker aaron powell",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is tatham's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's on at 9am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is the talk at 13:00",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats on at 10am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "get dominik's session",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where dominik will talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when azadeh speaks?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what room is dom in?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "i want to see brendan forster",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "is there a docker talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 11,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "nick randoplh",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who will talk about chatbot?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "how i get at uts?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "show me directions to the venue",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "what is schedule on green room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "how i get there?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "what is on at 9am?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "list me the skpeakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "list me the speakers",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "what is tatham speaking about?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "all rooms",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "2pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is tatham oddie talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "where is azadeh khojandi talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is azadeh khojandi's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "are there any machine learning talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 14,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "is there a talk about machine learning?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 22,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "is there a machine learning talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 11,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "are there azure function talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 10,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "is there any machine learning talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 13,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "is there any talk about machine learning?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 24,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "are there any testing talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "are there testing talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "when is the session on machine learning?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 23,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "is there any talk about machine learning",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 24,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "is there any talk about testing?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 24,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "who is hadi?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats happening at 6pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "is there a testing talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "what rooms are there",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "are there machine learning talks?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 10,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "who is talking today?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are the availabe rooms?",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "anything about angular ?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 15,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "what going on at 12 pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what topics have bots?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "when is the angular talk",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "when is john tlaking?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what tatham will talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what about tatham?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats at 9am",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are machine learning talks planned?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 9,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "who is talking about bots?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 21,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "who will be presenting at 10",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is tatham's talk/",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when dom is talking?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what rooms are there?",
+      "intent": "ListRooms",
+      "entities": []
+    },
+    {
+      "text": "where is the red room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is dom's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are the talks on bots",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 22,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "is there any azure functions talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 13,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "6pm?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is schedule for green room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is tatham talking about?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "is there a talk about azure functions?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 22,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "where are near restaurants?",
+      "intent": "BingSearch",
+      "entities": [
+        {
+          "entity": "near",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "when is the locknote?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "locknote",
+          "startPos": 12,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i want to find near restaurants",
+      "intent": "BingSearch",
+      "entities": [
+        {
+          "entity": "near",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "talks on green",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "talks about machine learning",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 12,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "when is hesham amin's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "find bots talk",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 5,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "find talks about machine learning",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 17,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "find red room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "find tatham talk",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is hadi eskandari's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's going on on red room?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "whats going on at 1pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "tell me more about tatham oddie",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is azadeh's talk ?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what are the talks on microservices?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 22,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "what is the address for ddd",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "where are the drinks?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is brendan's talk?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what is happening on red room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is jason's talk?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what is justin yoo presenting?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who's going to talk about docker?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 26,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "who is talking about azure functions:",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 21,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "where to park?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is jason's talk",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "what's going on at 3am ?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the coolest serverless presentation?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 20,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "what's going today?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when does ddd start?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "who is giving a talk",
+      "intent": "ListSpeakers",
+      "entities": []
+    },
+    {
+      "text": "any presentation about serverless?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 23,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "what talk is hadi giving",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is justin speaking?",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the registration?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what's the coolest serverless presentation at dddsydney?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 19,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "keynote?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "where is ddd?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "where is the conference location?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "where is the ddd coference?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "when is tiago's talk",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "any serverless presentation?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 4,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "whats going on on red room",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the first talk?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "keynote",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "how to go to the event from bankstown?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "chill out mate take it easy it's straya",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "when is ssw talk?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "where is ddd",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "who is talking about azure functions?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 21,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "what time start?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "where is ddd sydney?",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "what's on at 4pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "any talks on architecture",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 13,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "what are the best sessions?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "bot talks",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "ddd directions from central sration",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "whats going on at 3pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is speaking about chat bots?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 22,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "i'm hungry, is there any lunch?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "how many breaks will have?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "where is ddd sydney",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "where is the next session",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "next",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "where is the chippo hotel?",
+      "intent": "BingSearch",
+      "entities": []
+    },
+    {
+      "text": "what's on at 3pm",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "who is jason stangroome",
+      "intent": "FindTalk",
+      "entities": []
+    },
+    {
+      "text": "when is the chatbot talk on?",
+      "intent": "FindTalk",
+      "entities": [
+        {
+          "entity": "Events.Name",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "how to get to uts from central",
+      "intent": "FindVenue",
+      "entities": []
+    },
+    {
+      "text": "when is johns talk?",
+      "intent": "BingSearch",
+      "entities": []
+    }
+  ]
+}
