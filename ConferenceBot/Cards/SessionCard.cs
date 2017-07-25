@@ -151,13 +151,6 @@ namespace ConferenceBot.Cards
                                 }
                             }
                         }
-                    },
-                    new TextBlock
-                    {
-                        Text = room.Reference,
-                        Wrap = true,
-                        Separation = SeparationStyle.None,
-                        IsSubtle = true
                     }
                 }
             };

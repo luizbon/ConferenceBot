@@ -55,8 +55,7 @@ namespace ConferenceBot.Data
                 },
                 Room = new Room
                 {
-                    Name = session.RoomColor ?? " ",
-                    Reference = session.Room ?? " ",
+                    Name = session.Room ?? " ",
                     BackgroundImage = session.RoomBackground
                 }
             };
@@ -90,26 +89,8 @@ namespace ConferenceBot.Data
             public string RecommendedAudience { get; set; }
             public string PresenterBio { get; set; }
             public string PresenterWebsite { get; set; }
-            public string RoomColor { get; set; }
             public string Room { get; set; }
-
-            public string RoomBackground
-            {
-                get
-                {
-                    switch (RoomColor)
-                    {
-                        case "Green":
-                            return "http://www.colorhexa.com/4dad4a.png";
-                        case "Blue":
-                            return "http://www.colorhexa.com/54a6d6.png";
-                        case "Red":
-                            return "http://www.colorhexa.com/ad4a54.png";
-                        default:
-                            return "http://www.colorhexa.com/ffffff.png";
-                    }
-                }
-            }
+            public string RoomBackground => "http://www.colorhexa.com/ffffff.png";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace ConferenceBot.Dialogs
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
         private const string NextFilter = "next";
-        private const string RoomFilter = "room color";
+        private const string RoomFilter = "room";
         private const string SpeakerFilter = "speaker";
         private const string KeynoteFilter = "keynote";
         private const string LocknoteFilter = "locknote";
@@ -225,9 +225,9 @@ namespace ConferenceBot.Dialogs
         private static async Task ShowHelp(IBotToUser context)
         {
             await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +
-                                    "Try asking: When is Tatham's talk?\n\n" +
+                                    "Try asking: When is Gojko's talk?\n\n" +
                                     "or\n\n" +
-                                    "What's happening on Red room?\n\n" +
+                                    "What's happening on room 1?\n\n" +
                                     "or\n\n" +
                                     "What's going on at 3PM?");
         }
