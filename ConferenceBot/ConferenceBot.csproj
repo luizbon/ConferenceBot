@@ -116,7 +116,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Cards\BingSearchCard.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
-    <Compile Include="Data\DDDSydney17.cs" />
+    <Compile Include="Data\NdcSydney17.cs" />
     <Compile Include="Dialogs\LuisDialog.cs" />
     <Compile Include="Cards\SessionCard.cs" />
     <Compile Include="Extensions\DialogContextExtensions.cs" />
@@ -143,10 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Data\dddSydney17.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Data\NDCSydney17.json" />
+    <None Include="Properties\PublishProfiles\DDDPerth17 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\dddSydney17 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\NDCSydney17 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

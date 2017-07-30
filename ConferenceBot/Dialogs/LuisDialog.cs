@@ -20,8 +20,9 @@ namespace ConferenceBot.Dialogs
     {
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
+        private const string DateFilter = "builtin.datetimeV2.date";
         private const string NextFilter = "next";
-        private const string RoomFilter = "room color";
+        private const string RoomFilter = "room";
         private const string SpeakerFilter = "speaker";
         private const string KeynoteFilter = "keynote";
         private const string LocknoteFilter = "locknote";
@@ -58,7 +59,7 @@ namespace ConferenceBot.Dialogs
             await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
             await context.SendTyping();
 
-            var timeslots = DDDSydney17.Data.Timeslots;
+            var timeslots = NdcSydney17.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
                 timeslots = timeslots.FindKeynote();
@@ -75,8 +76,8 @@ namespace ConferenceBot.Dialogs
             if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
                 timeslots = timeslots.FindRoom(room.Entity);
 
-            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
-                timeslots = timeslots.FindTime(time);
+            if (result.TryFindTime(TimeFilter, DateFilter, NextFilter, out DateTime start, out DateTime end))
+                timeslots = timeslots.FindTime(start, end);
 
             if (!timeslots.Any())
             {
@@ -98,11 +99,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var rooms = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions)
-                .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).OrderBy(s => s.Room.Name).Select(s => s.Room.Name)
-                .Distinct();
-
-            var actions = rooms.Select(room => new CardAction
+            var actions = NdcSydney17.Rooms.Select(room => new CardAction
             {
                 Title = room,
                 Type = ActionTypes.ImBack,
@@ -125,10 +122,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var speakers = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
-                .Select(s => s.Presenter.Name).Distinct();
-
-            var actions = speakers.Select(speaker => new CardAction
+            var actions = NdcSydney17.Speakers.Select(speaker => new CardAction
             {
                 Title = speaker,
                 Type = ActionTypes.ImBack,
@@ -163,7 +157,7 @@ namespace ConferenceBot.Dialogs
 
             await context.SendTyping();
             var search = new BindSearchService();
-            var searchResult = await search.Search($"DDD Sydney 2017: {query}");
+            var searchResult = await search.Search($"NDC Sydney 2017: {query}");
             var attachments = BingSearchCard.GetSearchCards(searchResult);
 
             await context.PostAsync("Here it goes, this is what I found.");
@@ -185,13 +179,13 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindVenue")]
         public async Task FindVenue(IDialogContext context, LuisResult result)
         {
-            var location = $"{DDDSydney17.Lat},{DDDSydney17.Long}";
+            var location = $"{NdcSydney17.Lat},{NdcSydney17.Long}";
             var googleApiKey = ConfigurationManager.AppSettings["GoogleApiKey"];
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
 
-            var card = new HeroCard("DDD Sydney", "UTS",
-                "DDD Sydney will be held at UTS CBD campus, on Level 3 of the Peter Johnson Building, CB06 (entrance via Harris Street)")
+            var card = new HeroCard("NDC Sydney", "Holton Sydney",
+                "NDC Sydney 2017 is set to happen 14-18 August at Hilton Sydney.")
             {
                 Images = new List<CardImage>
                 {
@@ -204,7 +198,7 @@ namespace ConferenceBot.Dialogs
                         Title = "Get Directions",
                         Type = ActionTypes.OpenUrl,
                         Value =
-                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDSydney17.Lat}!4d{DDDSydney17.Long}"
+                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{NdcSydney17.Lat}!4d{NdcSydney17.Long}"
                     }
                 }
             };
@@ -225,10 +219,12 @@ namespace ConferenceBot.Dialogs
 
         private static async Task ShowHelp(IBotToUser context)
         {
+            var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
+            var roomIndex = new Random().Next(0, NdcSydney17.Rooms.Length);
             await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +
-                                    "Try asking: When is Tatham's talk?\n\n" +
+                                    $"Try asking: When is {NdcSydney17.Speakers[speakerIndex]}'s talk?\n\n" +
                                     "or\n\n" +
-                                    "What's happening on Red room?\n\n" +
+                                    $"What's happening on {NdcSydney17.Rooms[roomIndex]}?\n\n" +
                                     "or\n\n" +
                                     "What's going on at 3PM?");
         }

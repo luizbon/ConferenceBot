@@ -4,7 +4,7 @@ namespace ConferenceBot.Model
 {
     public class Timeslot
     {
-        public TimeSpan Time { get; set; }
+        public DateTime Date { get; set; }
 
         public bool Break { get; set; }
 

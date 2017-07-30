@@ -9,31 +9,35 @@ namespace ConferenceBot.Extensions
 {
     public static class LuisResultExtensions
     {
-        public static bool TryFindTime(this LuisResult result, string timeFilter, string nextFilter, out TimeSpan time)
+        public static bool TryFindTime(this LuisResult result, string timeFilter, string dateFilter, string nextFilter, out DateTime start, out DateTime end)
         {
-            time = TimeSpan.Zero;
-            if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
+            start = DateTime.MinValue;
+            end = DateTime.MinValue;
+            if (result.TryFindEntity(nextFilter, out EntityRecommendation dateEntity))
             {
-                var currentTimeSpan = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
-                    .TimeOfDay;
+                var currentDateTime = TimeZoneInfo
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));
 
-                var firstOrDefault = DDDSydney17.Data.Timeslots
-                    .FirstOrDefault(x => x.Time >= currentTimeSpan);
+                var firstOrDefault = NdcSydney17.Data.Timeslots
+                    .FirstOrDefault(x => x.Date >= currentDateTime);
 
-                time = firstOrDefault?.Time ?? currentTimeSpan;
+                start = firstOrDefault?.Date ?? currentDateTime;
+                end = firstOrDefault?.Date ?? currentDateTime.AddHours(2);
                 return true;
             }
 
-            if (!result.TryFindEntity(timeFilter, out timeEntity)) return false;
+            if (!result.TryFindEntity(timeFilter, out dateEntity))
+                if (!result.TryFindEntity(dateFilter, out dateEntity))
+                    return false;
 
             var parser = new Parser();
 
-            var dateTime = parser.Parse(timeEntity.Entity).Start;
+            var parsedDateTime = parser.Parse(dateEntity.Entity);
 
-            if (dateTime == null) return false;
+            if (parsedDateTime == null) return false;
 
-            time = dateTime.Value.TimeOfDay;
+            if (parsedDateTime.Start != null) start = parsedDateTime.Start.Value;
+            if (parsedDateTime.End != null) end = parsedDateTime.End.Value;
             return true;
         }
     }

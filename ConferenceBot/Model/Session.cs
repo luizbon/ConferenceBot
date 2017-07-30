@@ -4,7 +4,7 @@ namespace ConferenceBot.Model
     {
         public string Title { get; set; }
         public string Abstract { get; set; }
-        public Presenter Presenter { get; set; }
+        public Presenter[] Presenters { get; set; }
         public Room Room { get; set; }
     }
 }
