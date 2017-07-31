@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ConferenceBot.Cards;
 using ConferenceBot.Data;
 using ConferenceBot.Extensions;
+using ConferenceBot.Model;
 using ConferenceBot.Services;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
@@ -76,24 +77,62 @@ namespace ConferenceBot.Dialogs
             if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
                 timeslots = timeslots.FindRoom(room.Entity);
 
-            if (result.TryFindTime(TimeFilter, DateFilter, NextFilter, out DateTime start, out DateTime end))
-                timeslots = timeslots.FindTime(start, end);
+            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
+                timeslots = timeslots.FindTime(time);
+
+            if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
+            {
+                timeslots = timeslots.FindDate(startDate, endDate);
+            }
 
             if (!timeslots.Any())
             {
                 await context.PostAsync("Sorry, but I could not find what you are looking for"); ;
                 await SearchWeb(context, result.Query);
+                context.Wait(MessageReceived);
             }
             else
             {
-                if (timeslots.SelectMany(x => x.Sessions).Count() > 1)
-                    await context.PostAsync("Good news, I found some talks");
-                else
-                    await context.PostAsync("Good news, I found one talk");
-                var message = context.CreateMessage(SessionCard.GetSessionCards(timeslots).ToList());
-                await context.PostAsync(message);
+                var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
+                if (totalSessions > 7)
+                    if (timeslots.Select(t => t.Date.DayOfWeek).Distinct().Count() > 1)
+                    {
+                        context.Call(new WeekdayChooseDialog(timeslots), WeekdayChooseResumeAsync);
+                        return;
+                    }
+                //TODO: add RoomChooseDialog
+
+                await SendTalks(context, timeslots);
             }
+        }
+
+        private async Task SendTalks(IDialogContext context, Timeslot[] timeslots)
+        {
+            if (timeslots.SelectMany(x => x.Sessions).Count() > 1)
+                await context.PostAsync("Good news, I found some talks");
+            else
+                await context.PostAsync("Good news, I found one talk");
+            var message = context.CreateMessage(SessionCard.GetSessionCards(timeslots).ToList());
+            await context.PostAsync(message);
             context.Wait(MessageReceived);
+        }
+
+        private async Task WeekdayChooseResumeAsync(IDialogContext context, IAwaitable<Timeslot[]> result)
+        {
+            try
+            {
+                var timeslots = await result;
+
+                await SendTalks(context, timeslots);
+            }
+            catch (Exception e)
+            {
+                await context.PostAsync(e.Message);
+                await context.PostAsync(e.StackTrace);
+                await context.PostAsync("I'm sorry, I'm having issues understanding you. Let's try again.");
+
+                await ShowHelp(context);
+            }
         }
 
         [LuisIntent("ListRooms")]

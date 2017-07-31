@@ -1,5 +1,8 @@
+using System;
+
 namespace ConferenceBot.Model
 {
+    [Serializable]
     public class Session
     {
         public string Title { get; set; }

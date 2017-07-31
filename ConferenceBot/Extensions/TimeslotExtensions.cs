@@ -37,22 +37,26 @@ namespace ConferenceBot.Extensions
             return timeslots;
         }
 
-        public static Timeslot[] FindTime(this Timeslot[] timeslots, DateTime start, DateTime end)
+        public static Timeslot[] FindTime(this Timeslot[] timeslots, TimeSpan time)
         {
             var result = new List<Timeslot>();
-            var dayOfWeek = start.DayOfWeek;
 
-            var slots = timeslots.Where(t =>
-                t.Date >= start &&
-                t.Date.DayOfWeek == dayOfWeek &&
-                t.Sessions.Any()).ToList();
+            var days = timeslots.Select(t => t.Date.Date).Distinct();
 
-            if (slots.Any(s => s.Date < end))
-                slots = slots.Where(s => s.Date <= end).ToList();
+            foreach (var day in days)
+            {
+                var timeslot = timeslots.Where(t => t.Date.Date == day).FirstOrDefault(t => t.Date.TimeOfDay >= time && t.Sessions.Any());
 
-            result.AddRange(slots);
+                if (timeslot != null)
+                    result.Add(timeslot);
+            }
 
             return result.ToArray();
+        }
+
+        public static Timeslot[] FindDate(this Timeslot[] timeslots, DateTime startDate, DateTime endDate)
+        {
+            return timeslots.Where(t => t.Date >= startDate && t.Date <= endDate && t.Sessions.Any()).ToArray();
         }
 
         public static Timeslot[] FindKeynote(this Timeslot[] timeslots)

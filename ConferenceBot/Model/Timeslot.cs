@@ -2,6 +2,7 @@
 
 namespace ConferenceBot.Model
 {
+    [Serializable]
     public class Timeslot
     {
         public DateTime Date { get; set; }

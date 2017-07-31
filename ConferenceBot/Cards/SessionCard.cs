@@ -34,8 +34,7 @@ namespace ConferenceBot.Cards
 
             return new AdaptiveCard
             {
-                Body = body,
-                BackgroundImage = session.Room.BackgroundImage
+                Body = body
             };
         }
 
@@ -160,13 +159,6 @@ namespace ConferenceBot.Cards
                                 }
                             }
                         }
-                    },
-                    new TextBlock
-                    {
-                        Text = room.Reference,
-                        Wrap = true,
-                        Separation = SeparationStyle.None,
-                        IsSubtle = true
                     }
                 }
             };

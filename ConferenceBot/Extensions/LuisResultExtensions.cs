@@ -9,35 +9,55 @@ namespace ConferenceBot.Extensions
 {
     public static class LuisResultExtensions
     {
-        public static bool TryFindTime(this LuisResult result, string timeFilter, string dateFilter, string nextFilter, out DateTime start, out DateTime end)
+        public static bool TryFindTime(this LuisResult result, string timeFilter, string nextFilter, out TimeSpan time)
         {
-            start = DateTime.MinValue;
-            end = DateTime.MinValue;
-            if (result.TryFindEntity(nextFilter, out EntityRecommendation dateEntity))
+            time = TimeSpan.Zero;
+            if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
             {
-                var currentDateTime = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));
+                var currentTimeSpan = TimeZoneInfo
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
+                    .TimeOfDay;
 
                 var firstOrDefault = NdcSydney17.Data.Timeslots
-                    .FirstOrDefault(x => x.Date >= currentDateTime);
+                    .FirstOrDefault(x => x.Date.TimeOfDay >= currentTimeSpan);
 
-                start = firstOrDefault?.Date ?? currentDateTime;
-                end = firstOrDefault?.Date ?? currentDateTime.AddHours(2);
+                time = firstOrDefault?.Date.TimeOfDay ?? currentTimeSpan;
                 return true;
             }
 
-            if (!result.TryFindEntity(timeFilter, out dateEntity))
-                if (!result.TryFindEntity(dateFilter, out dateEntity))
-                    return false;
+            if (!result.TryFindEntity(timeFilter, out timeEntity)) return false;
 
             var parser = new Parser();
 
-            var parsedDateTime = parser.Parse(dateEntity.Entity);
+            var dateTime = parser.Parse(timeEntity.Entity).Start;
 
-            if (parsedDateTime == null) return false;
+            if (dateTime == null) return false;
 
-            if (parsedDateTime.Start != null) start = parsedDateTime.Start.Value;
-            if (parsedDateTime.End != null) end = parsedDateTime.End.Value;
+            time = dateTime.Value.TimeOfDay;
+            return true;
+        }
+
+        public static bool TryFindDate(this LuisResult result, string dateFilter, out DateTime startDate,
+            out DateTime endDate)
+        {
+            startDate = DateTime.MinValue;
+            endDate = DateTime.MinValue;
+
+            if (!result.TryFindEntity(dateFilter, out EntityRecommendation dateEntity))
+                return false;
+            
+            var options = new Options
+            {
+                Clock = () => NdcSydney17.Data.Timeslots.Min(t => t.Date.Date).AddDays(-1)
+            };
+
+            var parser = new Parser(options);
+
+            var dateTime = parser.Parse(dateEntity.Entity);
+
+            if (dateTime.Start != null) startDate = dateTime.Start.Value;
+            if (dateTime.End != null) endDate = dateTime.End.Value;
+
             return true;
         }
     }
