@@ -115,9 +115,10 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Cards\BingSearchCard.cs" />
+    <Compile Include="Cards\SerializableCardAction.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Data\NdcSydney17.cs" />
-    <Compile Include="Dialogs\WeekdayChooseDialog.cs" />
+    <Compile Include="Dialogs\TimeslotFilterDialog.cs" />
     <Compile Include="Dialogs\LuisDialog.cs" />
     <Compile Include="Cards\SessionCard.cs" />
     <Compile Include="Extensions\DialogContextExtensions.cs" />

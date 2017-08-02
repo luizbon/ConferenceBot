@@ -13,6 +13,7 @@ using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
+using CardAction = Microsoft.Bot.Connector.CardAction;
 
 namespace ConferenceBot.Dialogs
 {
@@ -95,12 +96,10 @@ namespace ConferenceBot.Dialogs
             {
                 var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
                 if (totalSessions > 7)
-                    if (timeslots.Select(t => t.Date.DayOfWeek).Distinct().Count() > 1)
-                    {
-                        context.Call(new WeekdayChooseDialog(timeslots), WeekdayChooseResumeAsync);
-                        return;
-                    }
-                //TODO: add RoomChooseDialog
+                {
+                    context.Call(new TimeslotFilterDialog(timeslots), FilterResumeAsync);
+                    return;
+                }
 
                 await SendTalks(context, timeslots);
             }
@@ -117,7 +116,7 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        private async Task WeekdayChooseResumeAsync(IDialogContext context, IAwaitable<Timeslot[]> result)
+        private async Task FilterResumeAsync(IDialogContext context, IAwaitable<Timeslot[]> result)
         {
             try
             {
@@ -125,10 +124,8 @@ namespace ConferenceBot.Dialogs
 
                 await SendTalks(context, timeslots);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                await context.PostAsync(e.Message);
-                await context.PostAsync(e.StackTrace);
                 await context.PostAsync("I'm sorry, I'm having issues understanding you. Let's try again.");
 
                 await ShowHelp(context);
