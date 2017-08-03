@@ -86,7 +86,9 @@ namespace ConferenceBot.Dialogs
                 timeslots = timeslots.FindDate(startDate, endDate);
             }
 
-            if (!timeslots.Any())
+            var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
+
+            if (totalSessions <= 0)
             {
                 await context.PostAsync("Sorry, but I could not find what you are looking for"); ;
                 await SearchWeb(context, result.Query);
@@ -94,7 +96,6 @@ namespace ConferenceBot.Dialogs
             }
             else
             {
-                var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
                 if (totalSessions > 7)
                 {
                     context.Call(new TimeslotFilterDialog(timeslots), FilterResumeAsync);
