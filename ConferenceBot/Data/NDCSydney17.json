@@ -71,7 +71,10 @@
           ],
           "presenters": [
             {
-              "name": "Tracy Lee"
+              "name": "Tracy Lee",
+              "bio": "Tracy is a Google Developer Expert, JavaScript developer, and serial entrepreneur. She is the Co-Founder of This Dot Labs, a framework agnostic agency helping mentor teams build ambitious apps.\n\nAfter the acquisition of her last startup, Dishcrawl, where she served as Founder & CEO, she discovered JavaScript and spends her time exploring code and building the JS community.\n\nTracy is also the creator of This.JavaScript, ng-cruise, Modern.Web podcast, RxWorkshop, Contributor Days, and Venture Hacked.\n\nShe has been featured in multiple news and media publications including Fox News, ABC, Huffington Post, NBC, Vice, Cooking Channel, Food Network, KQED, and more.",
+              "twitterAlias": "ladyleet",
+              "website": "https://www.thisdot.co/"
             }
           ],
           "room": "Room 3"
