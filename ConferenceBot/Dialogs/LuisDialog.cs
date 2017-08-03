@@ -209,7 +209,7 @@ namespace ConferenceBot.Dialogs
 
             if (searchResult == null || Math.Abs(searchResult.Score) < double.Epsilon) return false;
 
-            await context.PostAsync(searchResult.Answer);
+            await context.PostAsync(searchResult.Answer.Replace("\\n", "\n"));
             return true;
         }
 
