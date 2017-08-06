@@ -134,6 +134,7 @@
     <Compile Include="Model\Bing\WebPages.cs" />
     <Compile Include="Model\Bing\WebResult.cs" />
     <Compile Include="Model\Conference.cs" />
+    <Compile Include="Data\Farewell.cs" />
     <Compile Include="Model\Presenter.cs" />
     <Compile Include="Model\QnA\QnAMakerResult.cs" />
     <Compile Include="Model\Room.cs" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Data\NDCSydney17.json" />
+    <Content Include="Data\FarewellMessages.json" />
     <None Include="Properties\PublishProfiles\DDDPerth17 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\dddSydney17 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NDCSydney17 - Web Deploy.pubxml" />

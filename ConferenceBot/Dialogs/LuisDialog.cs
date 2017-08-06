@@ -254,6 +254,14 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("Farewell")]
+        public async Task Farewell(IDialogContext context, LuisResult result)
+        {
+            await context.PostAsync(Data.Farewell.Random());
+
+            context.Wait(MessageReceived);
+        }
+
         private static async Task ShowHelp(IBotToUser context)
         {
             var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
