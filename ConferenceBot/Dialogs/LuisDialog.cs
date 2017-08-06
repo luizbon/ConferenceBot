@@ -248,16 +248,17 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("Greetings")]
         public async Task Greetings(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync("Hi there!\n\n" +
-                                    "I'm here to help you\n\n");
+            await context.PostAsync(Messages.Greetings());
+
             await ShowHelp(context);
+
             context.Wait(MessageReceived);
         }
 
         [LuisIntent("Farewell")]
         public async Task Farewell(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync(Data.Farewell.Random());
+            await context.PostAsync(Messages.Farewell());
 
             context.Wait(MessageReceived);
         }
