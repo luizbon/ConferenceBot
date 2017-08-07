@@ -90,7 +90,7 @@ namespace ConferenceBot.Dialogs
 
             if (totalSessions <= 0)
             {
-                await context.PostAsync("Sorry, but I could not find what you are looking for"); ;
+                await context.PostAsync("Sorry, but I could not find what you are looking for");
                 await SearchWeb(context, result.Query);
                 context.Wait(MessageReceived);
             }
@@ -159,22 +159,15 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var actions = NdcSydney17.Speakers.Select(speaker => new CardAction
+            var initials = NdcSydney17.Speakers.GroupBy(s => s.ToLower()[0]);
+
+            await context.PostAsync($"There are {NdcSydney17.Speakers.Length} speakers, I'll group them by initials");
+
+            foreach (var initial in initials)
             {
-                Title = speaker,
-                Type = ActionTypes.ImBack,
-                Value = $"When is {speaker}'s talk?"
-            }).ToList();
-
-            var message = context.CreateMessage();
-
-            message.Text = "This is the list of speakers we have this year:";
-            message.SuggestedActions = new SuggestedActions
-            {
-                Actions = actions
-            };
-
-            await context.PostAsync(message);
+                await context.SendTyping();
+                await context.PostAsync(string.Join("\n\n", initial));
+            }
 
             context.Wait(MessageReceived);
         }

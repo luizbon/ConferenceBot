@@ -18,12 +18,11 @@ namespace ConferenceBot.Data
         public static string Long = "151.2078864";
 
         public static string[] Speakers = Data.Timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters)
-            .OrderBy(p => p.Name)
-            .Select(p => p.Name).Distinct().ToArray();
+            .Select(p => p.Name).Distinct().OrderBy(speaker => speaker.Replace(" ", "")).ToArray();
 
         public static string[] Rooms = Data.Timeslots.SelectMany(t => t.Sessions)
-            .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).OrderBy(s => s.Room.Name).Select(s => s.Room.Name)
-            .Distinct().ToArray();
+            .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).Select(s => s.Room.Name)
+            .Distinct().OrderBy(room => room).ToArray();
 
         private static Conference ToConference(NdcSydney17 dddSydney)
         {
