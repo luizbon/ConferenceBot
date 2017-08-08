@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using ConferenceBot.Cards;
 using ConferenceBot.Data;
 using ConferenceBot.Extensions;
+using ConferenceBot.Model;
 using ConferenceBot.Services;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
+using CardAction = Microsoft.Bot.Connector.CardAction;
 
 namespace ConferenceBot.Dialogs
 {
@@ -20,6 +22,7 @@ namespace ConferenceBot.Dialogs
     {
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
+        private const string DateFilter = "builtin.datetimeV2.date";
         private const string NextFilter = "next";
         private const string RoomFilter = "room";
         private const string SpeakerFilter = "speaker";
@@ -78,31 +81,62 @@ namespace ConferenceBot.Dialogs
             if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
                 timeslots = timeslots.FindTime(time);
 
-            if (!timeslots.Any())
+            if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
             {
-                await context.PostAsync("Sorry, but I could not find what you are looking for"); ;
+                timeslots = timeslots.FindDate(startDate, endDate);
+            }
+
+            var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
+
+            if (totalSessions <= 0)
+            {
+                await context.PostAsync("Sorry, but I could not find what you are looking for");
                 await SearchWeb(context, result.Query);
+                context.Wait(MessageReceived);
             }
             else
             {
-                if (timeslots.SelectMany(x => x.Sessions).Count() > 1)
-                    await context.PostAsync("Good news, I found some talks");
-                else
-                    await context.PostAsync("Good news, I found one talk");
-                var message = context.CreateMessage(SessionCard.GetSessionCards(timeslots).ToList());
-                await context.PostAsync(message);
+                if (totalSessions > 7)
+                {
+                    context.Call(new TimeslotFilterDialog(timeslots), FilterResumeAsync);
+                    return;
+                }
+
+                await SendTalks(context, timeslots);
             }
+        }
+
+        private async Task SendTalks(IDialogContext context, Timeslot[] timeslots)
+        {
+            if (timeslots.SelectMany(x => x.Sessions).Count() > 1)
+                await context.PostAsync("Good news, I found some talks");
+            else
+                await context.PostAsync("Good news, I found one talk");
+            var message = context.CreateMessage(SessionCard.GetSessionCards(timeslots).ToList());
+            await context.PostAsync(message);
             context.Wait(MessageReceived);
+        }
+
+        private async Task FilterResumeAsync(IDialogContext context, IAwaitable<Timeslot[]> result)
+        {
+            try
+            {
+                var timeslots = await result;
+
+                await SendTalks(context, timeslots);
+            }
+            catch (Exception)
+            {
+                await context.PostAsync("I'm sorry, I'm having issues understanding you. Let's try again.");
+
+                await ShowHelp(context);
+            }
         }
 
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var rooms = DDDPerth17.Data.Timeslots.SelectMany(t => t.Sessions)
-                .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).OrderBy(s => s.Room.Name).Select(s => s.Room.Name)
-                .Distinct();
-
-            var actions = rooms.Select(room => new CardAction
+            var actions = DDDPerth17.Rooms.Select(room => new CardAction
             {
                 Title = room,
                 Type = ActionTypes.ImBack,
@@ -125,25 +159,15 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var speakers = DDDPerth17.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
-                .Select(s => s.Presenter.Name).Distinct();
+            var initials = DDDPerth17.Speakers.GroupBy(s => s.ToLower()[0]);
 
-            var actions = speakers.Select(speaker => new CardAction
+            await context.PostAsync($"There are {DDDPerth17.Speakers.Length} speakers, I'll group them by initials");
+
+            foreach (var initial in initials)
             {
-                Title = speaker,
-                Type = ActionTypes.ImBack,
-                Value = $"When is {speaker}'s talk?"
-            }).ToList();
-
-            var message = context.CreateMessage();
-
-            message.Text = "This is the list of speakers we have this year:";
-            message.SuggestedActions = new SuggestedActions
-            {
-                Actions = actions
-            };
-
-            await context.PostAsync(message);
+                await context.SendTyping();
+                await context.PostAsync(string.Join("\n\n", initial));
+            }
 
             context.Wait(MessageReceived);
         }
@@ -162,7 +186,7 @@ namespace ConferenceBot.Dialogs
                 return;
 
             await context.SendTyping();
-            var search = new BingSearchService();
+            var search = new BindSearchService();
             var searchResult = await search.Search($"DDD Perth 2017: {query}");
             var attachments = BingSearchCard.GetSearchCards(searchResult);
 
@@ -178,7 +202,7 @@ namespace ConferenceBot.Dialogs
 
             if (searchResult == null || Math.Abs(searchResult.Score) < double.Epsilon) return false;
 
-            await context.PostAsync(searchResult.Answer);
+            await context.PostAsync(searchResult.Answer.Replace("\\n", "\n"));
             return true;
         }
 
@@ -216,18 +240,29 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("Greetings")]
         public async Task Greetings(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync("Hi there!\n\n" +
-                                    "I'm here to help you\n\n");
+            await context.PostAsync(Messages.Greetings());
+
             await ShowHelp(context);
+
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("Farewell")]
+        public async Task Farewell(IDialogContext context, LuisResult result)
+        {
+            await context.PostAsync(Messages.Farewell());
+
             context.Wait(MessageReceived);
         }
 
         private static async Task ShowHelp(IBotToUser context)
         {
+            var speakerIndex = new Random().Next(0, DDDPerth17.Speakers.Length);
+            var roomIndex = new Random().Next(0, DDDPerth17.Rooms.Length);
             await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +
-                                    "Try asking: When is Gojko's talk?\n\n" +
+                                    $"Try asking: When is {DDDPerth17.Speakers[speakerIndex]}'s talk?\n\n" +
                                     "or\n\n" +
-                                    "What's happening on room 1?\n\n" +
+                                    $"What's happening on {DDDPerth17.Rooms[roomIndex]}?\n\n" +
                                     "or\n\n" +
                                     "What's going on at 3PM?");
         }

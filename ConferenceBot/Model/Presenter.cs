@@ -1,5 +1,8 @@
+using System;
+
 namespace ConferenceBot.Model
 {
+    [Serializable]
     public class Presenter
     {
         public string Name { get; set; }

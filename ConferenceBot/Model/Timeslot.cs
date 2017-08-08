@@ -2,9 +2,10 @@
 
 namespace ConferenceBot.Model
 {
+    [Serializable]
     public class Timeslot
     {
-        public TimeSpan Time { get; set; }
+        public DateTime Date { get; set; }
 
         public bool Break { get; set; }
 

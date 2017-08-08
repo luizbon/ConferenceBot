@@ -115,10 +115,13 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Cards\BingSearchCard.cs" />
+    <Compile Include="Cards\SerializableCardAction.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Data\DDDPerth17.cs" />
+    <Compile Include="Data\Messages.cs" />
     <Compile Include="Dialogs\LuisDialog.cs" />
     <Compile Include="Cards\SessionCard.cs" />
+    <Compile Include="Dialogs\TimeslotFilterDialog.cs" />
     <Compile Include="Extensions\DialogContextExtensions.cs" />
     <Compile Include="Extensions\LuisResultExtensions.cs" />
     <Compile Include="Extensions\TimeslotExtensions.cs" />
@@ -148,6 +151,8 @@
     <Content Include="Data\dddPerth17.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\FarewellMessages.json" />
+    <Content Include="Data\GreetingMessages.json" />
     <None Include="Properties\PublishProfiles\DDDPerth17 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

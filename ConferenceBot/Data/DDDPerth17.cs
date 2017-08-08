@@ -16,15 +16,18 @@ namespace ConferenceBot.Data
         public static Conference Data => ToConference(JsonConvert.DeserializeObject<DDDPerth17>(File.ReadAllText(
             HttpContext.Current.Request.MapPath("~\\Data\\dddPerth17.json"))));
 
+        public static string[] Speakers = Data.Timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters)
+            .Select(p => p.Name).Distinct().OrderBy(speaker => speaker.Replace(" ", "")).ToArray();
 
-        [JsonProperty("timeslots")]
-        public Timeslot[] Timeslots { get; set; }
+        public static string[] Rooms = Data.Timeslots.SelectMany(t => t.Sessions)
+            .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).Select(s => s.Room.Name)
+            .Distinct().OrderBy(room => room).ToArray();
 
-        private static Conference ToConference(DDDPerth17 conference)
+        private static Conference ToConference(DDDPerth17 dddPerth)
         {
             return new Conference
             {
-                Timeslots = conference.Timeslots.Select(ToTimeslot).ToArray()
+                Timeslots = dddPerth.Timeslots.Select(ToTimeslot).ToArray()
             };
         }
 
@@ -33,7 +36,7 @@ namespace ConferenceBot.Data
             return new Model.Timeslot
             {
                 Break = timeslot.Break,
-                Time = timeslot.Time,
+                Date = timeslot.Date.Add(timeslot.Time),
                 Title = timeslot.Title,
                 Sessions = timeslot.Sessions.Select(ToSession).ToArray()
             };
@@ -43,23 +46,29 @@ namespace ConferenceBot.Data
         {
             return new Model.Session
             {
-                Title = session.SessionTitle,
-                Abstract = session.SessionAbstract,
-                Presenter = new Presenter
-                {
-                    Name = session.PresenterName,
-                    Bio = session.PresenterBio,
-                    Email = session.PresenterEmail,
-                    TwitterAlias = session.PresenterTwitterAlias,
-                    Website = session.PresenterWebsite
-                },
+                Title = session.Tittle,
+                Abstract = session.Abstract,
+                Presenters = session.Presenters.Select(ToPresenter).ToArray(),
                 Room = new Room
                 {
-                    Name = session.Room ?? " ",
-                    BackgroundImage = session.RoomBackground
+                    Name = session.Room ?? " "
                 }
             };
         }
+
+        private static Model.Presenter ToPresenter(Presenter presenter)
+        {
+            return new Model.Presenter
+            {
+                Name = presenter.Name,
+                Bio = presenter.Bio,
+                TwitterAlias = presenter.TwitterAlias,
+                Website = presenter.Website
+            };
+        }
+
+        [JsonProperty("timeslots")]
+        public Timeslot[] Timeslots { get; set; }
 
         public class Timeslot
         {
@@ -68,6 +77,9 @@ namespace ConferenceBot.Data
 
             [JsonIgnore]
             public TimeSpan Time => TimeSpan.Parse(JsonTime, new CultureInfo("en-au"));
+
+            [JsonProperty]
+            public DateTime Date { get; set; }
 
             [JsonProperty("sessions")]
             public Session[] Sessions { get; set; } = { };
@@ -81,16 +93,30 @@ namespace ConferenceBot.Data
 
         public class Session
         {
-            public string SessionTitle { get; set; }
-            public string PresenterName { get; set; }
-            public string SessionAbstract { get; set; }
-            public string PresenterEmail { get; set; }
-            public string PresenterTwitterAlias { get; set; }
-            public string RecommendedAudience { get; set; }
-            public string PresenterBio { get; set; }
-            public string PresenterWebsite { get; set; }
+            [JsonProperty("title")]
+            public string Tittle { get; set; }
+            [JsonProperty("abstract")]
+            public string Abstract { get; set; }
+            [JsonProperty("level")]
+            public string Level { get; set; }
+            [JsonProperty("tags")]
+            public string[] Tags { get; set; }
+            [JsonProperty("room")]
             public string Room { get; set; }
-            public string RoomBackground => "http://www.colorhexa.com/ffffff.png";
+            [JsonProperty("presenters")]
+            public Presenter[] Presenters { get; set; }
+        }
+
+        public class Presenter
+        {
+            [JsonProperty("name")]
+            public string Name { get; set; }
+            [JsonProperty("bio")]
+            public string Bio { get; set; }
+            [JsonProperty("twitterAlias")]
+            public string TwitterAlias { get; set; }
+            [JsonProperty("website")]
+            public string Website { get; set; }
         }
     }
 }

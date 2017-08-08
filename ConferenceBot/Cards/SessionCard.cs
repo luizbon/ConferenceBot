@@ -12,22 +12,29 @@ namespace ConferenceBot.Cards
         {
             return from timeslot in timeslots
                 from session in timeslot.Sessions
-                select new AdaptiveCard
-                {
-                    Body = new List<CardElement>
-                    {
-                        AddRoomContainer(session.Room, timeslot),
-                        AddSessionContainer(session),
-                        AddSpeakerContainer(session.Presenter)
-                    },
-                    BackgroundImage = session.Room.BackgroundImage
-                }
+                select CreateAdaptiveCard(session, timeslot)
                 into card
                 select new Attachment
                 {
                     ContentType = AdaptiveCard.ContentType,
                     Content = card
                 };
+        }
+
+        private static AdaptiveCard CreateAdaptiveCard(Session session, Timeslot timeslot)
+        {
+            var body = new List<CardElement>
+            {
+                AddRoomContainer(session.Room, timeslot),
+                AddSessionContainer(session)
+            };
+
+            body.AddRange(session.Presenters.Select(AddSpeakerContainer));
+
+            return new AdaptiveCard
+            {
+                Body = body
+            };
         }
 
         private static Container AddSpeakerContainer(Presenter presenter)
@@ -143,7 +150,7 @@ namespace ConferenceBot.Cards
                                 {
                                     new TextBlock
                                     {
-                                        Text = $"{timeslot.Time:hh\\:mm}",
+                                        Text = $"{timeslot.Date:ddd HH\\:mm}",
                                         HorizontalAlignment = HorizontalAlignment.Right,
                                         Weight = TextWeight.Bolder,
                                         Size = TextSize.ExtraLarge

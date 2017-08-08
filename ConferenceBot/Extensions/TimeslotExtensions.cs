@@ -10,9 +10,9 @@ namespace ConferenceBot.Extensions
         public static Timeslot[] FindSpeaker(this Timeslot[] timeslots, string speaker)
         {
             foreach (var timeslot in timeslots)
-                timeslot.Sessions = timeslot.Sessions.Where(s => s.Presenter.Name.IndexOf(speaker,
-                                                                     StringComparison
-                                                                         .InvariantCultureIgnoreCase) >= 0).ToArray();
+                timeslot.Sessions = timeslot.Sessions.Where(s => s.Presenters.Any(p => p.Name.IndexOf(speaker,
+                                                                                           StringComparison
+                                                                                               .InvariantCultureIgnoreCase) >= 0)).ToArray();
 
             return timeslots;
         }
@@ -41,12 +41,22 @@ namespace ConferenceBot.Extensions
         {
             var result = new List<Timeslot>();
 
-            var timeslot = timeslots.FirstOrDefault(t => t.Time >= time && t.Sessions.Any());
+            var days = timeslots.Select(t => t.Date.Date).Distinct();
 
-            if (timeslot != null)
-                result.Add(timeslot);
+            foreach (var day in days)
+            {
+                var timeslot = timeslots.Where(t => t.Date.Date == day).FirstOrDefault(t => t.Date.TimeOfDay >= time && t.Sessions.Any());
+
+                if (timeslot != null)
+                    result.Add(timeslot);
+            }
 
             return result.ToArray();
+        }
+
+        public static Timeslot[] FindDate(this Timeslot[] timeslots, DateTime startDate, DateTime endDate)
+        {
+            return timeslots.Where(t => t.Date >= startDate && t.Date <= endDate && t.Sessions.Any()).ToArray();
         }
 
         public static Timeslot[] FindKeynote(this Timeslot[] timeslots)

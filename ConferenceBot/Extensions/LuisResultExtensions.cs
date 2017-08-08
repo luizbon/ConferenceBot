@@ -15,13 +15,13 @@ namespace ConferenceBot.Extensions
             if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
             {
                 var currentTimeSpan = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Western Standard Time"))
                     .TimeOfDay;
 
                 var firstOrDefault = DDDPerth17.Data.Timeslots
-                    .FirstOrDefault(x => x.Time >= currentTimeSpan);
+                    .FirstOrDefault(x => x.Date.TimeOfDay >= currentTimeSpan);
 
-                time = firstOrDefault?.Time ?? currentTimeSpan;
+                time = firstOrDefault?.Date.TimeOfDay ?? currentTimeSpan;
                 return true;
             }
 
@@ -34,6 +34,30 @@ namespace ConferenceBot.Extensions
             if (dateTime == null) return false;
 
             time = dateTime.Value.TimeOfDay;
+            return true;
+        }
+
+        public static bool TryFindDate(this LuisResult result, string dateFilter, out DateTime startDate,
+            out DateTime endDate)
+        {
+            startDate = DateTime.MinValue;
+            endDate = DateTime.MinValue;
+
+            if (!result.TryFindEntity(dateFilter, out EntityRecommendation dateEntity))
+                return false;
+
+            var options = new Options
+            {
+                Clock = () => DDDPerth17.Data.Timeslots.Min(t => t.Date.Date).AddDays(-1)
+            };
+
+            var parser = new Parser(options);
+
+            var dateTime = parser.Parse(dateEntity.Entity);
+
+            if (dateTime.Start != null) startDate = dateTime.Start.Value;
+            if (dateTime.End != null) endDate = dateTime.End.Value;
+
             return true;
         }
     }
