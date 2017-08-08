@@ -3,8 +3,39 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <link href="https://unpkg.com/botframework-webchat/botchat.css" rel="stylesheet" />
+    <link href="https://unpkg.com/botframework-webchat/botchat-fullwindow.css" rel="stylesheet" />
+
 </head>
 <body style="font-family: 'Segoe UI'">
-<iframe width="100%" height="600" src='https://webchat.botframework.com/embed/DDDPerth17?s=8JEk7hxQi0g.cwA.7cI.nVftlagr_0xtsqqNGIr70pDtXpECrktLQiQp1tI1mjo'></iframe>
+<div id="bot"></div>
+<script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+<script>
+    BotChat.App({
+        directLine: {
+            secret: '8JEk7hxQi0g.cwA.7cI.nVftlagr_0xtsqqNGIr70pDtXpECrktLQiQp1tI1mjo',
+            domain: 'https://webchat.botframework.com/v3/directline',
+            webSocket: false
+        },
+        user: {
+            id: Math.random().toString(16).slice(2).toString(),
+            name: "You"
+        },
+        bot: {
+            id: 'DDDPerth17',
+            name: "DDD Perth Bot"
+        },
+        resize: 'window'
+    }, document.getElementById("bot"));
+</script>
 </body>
 </html>
