@@ -26,8 +26,14 @@
                 domain: 'https://webchat.botframework.com/v3/directline',
                 webSocket: false
             },
-            user: { id: Math.random().toString(16).slice(2).toString() },
-            bot: { id: 'ndc-sydney' },
+            user: {
+                id: Math.random().toString(16).slice(2).toString(),
+                name: "You"
+            },
+            bot: {
+                id: 'ndc-sydney',
+                name: "NDC Sydney Bot"
+            },
             resize: 'window'
         }, document.getElementById("bot"));
     </script>
