@@ -214,7 +214,7 @@ namespace ConferenceBot.Dialogs
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
 
-            var card = new HeroCard("NDC Sydney", "Holton Sydney",
+            var card = new HeroCard("NDC Sydney", "Hilton Sydney",
                 "NDC Sydney 2017 is set to happen 14-18 August at Hilton Sydney.")
             {
                 Images = new List<CardImage>
