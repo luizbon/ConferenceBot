@@ -22,6 +22,7 @@ namespace ConferenceBot.Dialogs
     {
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
+        private const string TimeRangeFilter = "builtin.datetimeV2.datetimerange";
         private const string DateFilter = "builtin.datetimeV2.date";
         private const string NextFilter = "next";
         private const string RoomFilter = "room";
@@ -80,6 +81,9 @@ namespace ConferenceBot.Dialogs
 
             if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
                 timeslots = timeslots.FindTime(time);
+
+            if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTime, out DateTime endDateTime))
+                timeslots = timeslots.FindDate(startDateTime, endDateTime);
 
             if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
             {

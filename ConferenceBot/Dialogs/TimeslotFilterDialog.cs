@@ -41,7 +41,7 @@ namespace ConferenceBot.Dialogs
             {
                 var message = context.CreateMessage();
 
-                message.Text = "How do you want to filter sessions?";
+                message.Text = "How would you like to filter sessions?";
                 message.SuggestedActions = new SuggestedActions
                 {
                     Actions = FilterActions.Select(a => new CardAction(ActionTypes.ImBack, a.Key, value: a.Key)).ToList()
