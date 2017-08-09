@@ -256,6 +256,14 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("FindWorkshop")]
+        public async Task FindWorkshop(IDialogContext context, LuisResult result)
+        {
+            await context.PostAsync("Humm, I don't have any information about workshops yet.\n\nMy lazy developer didn't input the data.\n\nPlease visit the official web-page to get more info on http://ndcsydney.com/workshops/");
+
+            context.Wait(MessageReceived);
+        }
+
         private static async Task ShowHelp(IBotToUser context)
         {
             var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
