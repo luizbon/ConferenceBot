@@ -173,6 +173,9 @@ namespace ConferenceBot.Dialogs
                 await context.PostAsync(string.Join("\n\n", initial));
             }
 
+            var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
+            await context.PostAsync($"Try asking: When is {NdcSydney17.Speakers[speakerIndex]}'s talk?");
+
             context.Wait(MessageReceived);
         }
 
@@ -191,7 +194,7 @@ namespace ConferenceBot.Dialogs
 
             await context.SendTyping();
             var search = new BindSearchService();
-            var searchResult = await search.Search($"NDC Sydney 2017: {query}");
+            var searchResult = await search.Search(query);
             var attachments = BingSearchCard.GetSearchCards(searchResult);
 
             await context.PostAsync("Here it goes, this is what I found.");
