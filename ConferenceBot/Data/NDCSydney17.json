@@ -190,6 +190,24 @@
           "room": "Room 1"
         },
         {
+          "title": "Web Apps can’t really do *that*, can they?",
+          "abstract": "The web platform never stops. Every few months, the W3C and browser vendors unload great big bundles of shiny new toys for web developers everywhere.\n\nNew JavaScript API standards emerging in 2017 make the web suitable for truly slick applications, having access to many of the same OS and hardware features as native apps, offline or online.\n\nThis talk will be an almost-continuous series of demos of recent and upcoming JavaScript APIs and features. You'll learn of new possibilities that will hopefully be relevant to the apps you build, including opportunities you might never have considered, such as running .NET directly in the browser on WebAssembly, and using fingerprint authentication for taking payments from your web app users.",
+          "level": "",
+          "tags": [
+            "JavaScript",
+            "Web"
+          ],
+          "presenters": [
+            {
+              "name": "Steve Sanderson",
+              "bio": "Steve is working as a developer for Microsoft in the team that brings you the ASP.NET technology stack, IIS, and other web things. Previously he developed .NET software as a contractor/consultant for clients in Bristol and beyond, plus wrote some books for Apress, such as Pro ASP.NET MVC Framework. From time to time, he speaks at user groups and conferences, and recently have been running a bunch of training courses on topics such as C#, SQL Server, and of course ASP.NET MVC.",
+              "twitterAlias": "stevensanderson",
+              "website": "http://blog.stevensanderson.com/"
+            }
+          ],
+          "room": "Room 2"
+        },
+        {
           "title": "The (Awesome) Future of Web Apps",
           "abstract": "The web is becoming more and more powerful everyday, especially with the launch of Progressive Web Apps. PWAs are experiences that combine the best of the web and the best of apps. You can now build web apps that run from your home screen, receive push notifications & work offline.\n\nWe will start with a PWA refresher and dive deeper into modern best practices for modern web apps. Then, we will learn about the future of the Web through modern Web APIs.",
           "level": "Intermediate",
@@ -210,18 +228,19 @@
           "room": "Room 3"
         },
         {
-          "title": "Technical Debt",
-          "abstract": "",
-          "level": "Intermediate",
+          "title": "Implementing authorization in web applications and APIs",
+          "abstract": "Authentication is easy – authorization is the hard part. This might sound daunting, but since every application is different, there is no single recipe for how authorization has to work.\n\nDominick walk you through a couple of approaches and pitfalls and use the new ASP.NET Core authorization API (which has been back-ported to standard .NET) as an example of a decent abstraction layer for clean authorization for your applications. But we will also learn that that regardless of your approach, there is no one size that fits all – that’s why it important to understand your options.",
+          "level": "Beginner",
           "tags": [
-            "Soft skills"
+            "Security",
+            ".NET"
           ],
           "presenters": [
             {
-              "name": "Richard Banks",
-              "bio": "Richard Banks has developed software for the last 20 years for a wide range of industries and development platforms and over the years and has filled many roles including developer, team lead, project manager and CIO/CTO. He is a Professional Scrum Trainer, author of both the Visual Studio 2012 Cookbook and the 2013 Coobook, runs the Sydney Alt.Net user group and hosted the Talking Shop Down Under podcast. He also contributes to open source projects and has spoken at Microsoft Tech.Ed, Scrum Australia and a number of other conferences and user groups around the country. For some strange reason he gets a real kick out of helping development teams produce great software and improve both their skills and the way they work. If you want to get in touch he tweets at @rbanks54 and blogs at http://www.richard-banks.org/. He currently works as a Principal Consultant for Readify and is a Microsoft Visual Studio ALM MVP.",
-              "twitterAlias": "rbanks54",
-              "website": "https://www.richard-banks.org/"
+              "name": "Dominick Baier",
+              "bio": "Dominick Baier is an independent consultant specializing in identity & access control. He helps companies around the world designing & implementing authentication and authorization for their distributed web and native applications. He’s the co-author of the popular OpenID Connect & OAuth 2.0 framework called IdentityServer (http://identityserver.io) , has written a couple of books, blogs at http://leastprivilege.com and tweets as @leastprivilege.",
+              "twitterAlias": "leastprivilege",
+              "website": "https://leastprivilege.com/"
             }
           ],
           "room": "Room 4"
@@ -267,18 +286,20 @@
           "room": "Room 6"
         },
         {
-          "title": "HTTP/2 - The future of the web today",
-          "abstract": "Client side web technologies continue to advance at breakneck speed. The quest to deliver richer user experiences is relentless and due to the limitations of HTTP/1.x, we have been forced to develop various workarounds (domain sharding, spriting, resource concatenation and inlining) in a bid to optimize performance.\n\nHTTP/2 has been designed with the modern web in mind and eliminates the need for such compensating hacks. In this session we'll take an in-depth look at web performance optimization; the best practices that have evolved; the game changing new features of HTTP/2; and most importantly what you need to do to deliver a world class HTTP/2 experience:\n\n- Why domain sharding, resource concatenation and image sprites are now anti-patterns\n\n- How server push is effectively resource inlining on steroids\n\n- What new best practices are possible with HTTP/2\n\n- What techniques to apply during the transitional period from HTTP/1.x to HTTP/2\n\nAdditionally, we will look at the tooling available for working with HTTP/2 traffic and how we can ensure that we're getting the full benefit of HTTP/2 both client and server side.",
+          "title": "When Feature Flags Go Bad",
+          "abstract": "Feature flags are a valuable DevOps technique to deliver better, more reliable software faster. Feature flags can be used for both release management (dark launches, canary rollouts, betas) as well as long term control (entitlement management, user segmentation personalization).\n\nHowever, if not managed properly, feature flags can be very destructive technical debt. Feature flags need to be managed properly with visibility and control to both engineering and business users.",
           "level": "Intermediate",
           "tags": [
-            "Web",
-            "Architecture"
+            "Continuous Delivery",
+            "Microservices",
+            "Agile"
           ],
           "presenters": [
             {
-              "name": "Rob Crowley",
-              "bio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. As the Technical Lead for APIs at Bankwest, Rob works with delivery teams on transforming the bank’s technology landscape to realise its digital strategy.",
-              "twitterAlias": "robdcrowley"
+              "name": "Edith Harbaugh",
+              "bio": "Edith Harbaugh is CEO & co-founder of LaunchDarkly. She has more than 15 years of experience in software engineering, including at the #1 travel app, TripIt. She is cohost of \"To Be Continuous\", a podcast on software trends by devops.com and a columnist for ReadWrite. She holds two patents in deployment. Edith earned a BS, Engineering from Harvey Mudd College.",
+              "twitterAlias": "edith_h",
+              "website": "https://launchdarkly.com/"
             }
           ],
           "room": "Room 7"
@@ -309,19 +330,20 @@
           "room": "Room 1"
         },
         {
-          "title": "Implementing authorization in web applications and APIs",
-          "abstract": "Authentication is easy – authorization is the hard part. This might sound daunting, but since every application is different, there is no single recipe for how authorization has to work.\n\nDominick walk you through a couple of approaches and pitfalls and use the new ASP.NET Core authorization API (which has been back-ported to standard .NET) as an example of a decent abstraction layer for clean authorization for your applications. But we will also learn that that regardless of your approach, there is no one size that fits all – that’s why it important to understand your options.",
+          "title": "Technical Debt",
+          "abstract": "Don’t worry, It’s more common than you think, and while the symptoms can be terrible the good news is that help is available. You needn’t suffer in silence any more. You can regain a healthy codebase from the comfort of your own home, or surfing a desk chair in an open plan office!\n\nLet’s clarify what technical debt is, how we can measure it, and then give you some practical steps and techniques for reducing it.\n\nRemember that no matter how large you think the problem is, or how bad you think things are, there are small steps and simple changes you can take to improve your situation and get you back to enjoying your development work, not enduring it.",
           "level": "Beginner",
           "tags": [
-            "Security",
-            ".NET"
+            "Craftsmanship",
+            "People",
+            "Agile"
           ],
           "presenters": [
             {
-              "name": "Dominick Baier",
-              "bio": "Dominick Baier is an independent consultant specializing in identity & access control. He helps companies around the world designing & implementing authentication and authorization for their distributed web and native applications. He’s the co-author of the popular OpenID Connect & OAuth 2.0 framework called IdentityServer (http://identityserver.io) , has written a couple of books, blogs at http://leastprivilege.com and tweets as @leastprivilege.",
-              "twitterAlias": "leastprivilege",
-              "website": "https://leastprivilege.com/"
+              "name": "Richard Banks",
+              "bio": "Richard Banks has developed software for the last 20 years for a wide range of industries and development platforms and over the years and has filled many roles including developer, team lead, project manager and CIO/CTO. He is a Professional Scrum Trainer, author of both the Visual Studio 2012 Cookbook and the 2013 Coobook, runs the Sydney Alt.Net user group and hosted the Talking Shop Down Under podcast. He also contributes to open source projects and has spoken at Microsoft Tech.Ed, Scrum Australia and a number of other conferences and user groups around the country. For some strange reason he gets a real kick out of helping development teams produce great software and improve both their skills and the way they work. If you want to get in touch he tweets at @rbanks54 and blogs at http://www.richard-banks.org/. He currently works as a Principal Consultant for Readify and is a Microsoft Visual Studio ALM MVP.",
+              "twitterAlias": "rbanks54",
+              "website": "https://www.richard-banks.org/"
             }
           ],
           "room": "Room 2"
@@ -344,20 +366,16 @@
           "room": "Room 3"
         },
         {
-          "title": "Life is like a Box of Chocolate(y)",
-          "abstract": "DevOps begins at home when you script your own desktop. Learn from experienced package author, Chocolatey.org moderator and project contributor David how to automate the installation and configuration of all the software you need to get your job done with open source tools Chocolatey and Boxstarter. Take a vanilla Windows install from zero to fully configured developer environment in minutes*!\n\nFind out how to wrap each of your tools and applications in a well-specified Chocolatey package. Learn about common pitfalls and get an inside perspective on the package moderation process so that you can publish to the public repository on Chocolatey.org with confidence.\n\nLearn how to orchestrate the installation of all your packages (including reboots) with Boxstarter. Build up a fully configured developer machine from scratch, or redeploy your test environment with ease and reliability.\n\nBut this is not just for rebuilding your dev boxes, these same techniques can be used to help your customers download, install and upgrade your software with ease.\n\nThis talk is rated 200-300 with a target audience of all Windows-based developers who want to spend more time coding and less time reinstalling software.\n\n* Obviously the more tools you need, the more minutes it will take!",
-          "level": "Intermediate",
+          "title": "A lap around Microsoft Cognitive Services Vision API",
+          "abstract": "How would you like to learn how to leverage machine learning in countless Computer Vision use cases the easy way? Recently, Computer Vision Technologies have skyrocketed. Why? Machine Learning and a number of brilliant people working on Computer Vision.\n\nMachine Learning is currently a hot topic and holds a bold promise yet to be truly exploited. But, no matter what your level of understanding of Machine Learning is, we all can agree that it is a broad technology whose pioneers and leaders have a very specific expertise in. In other words, it just does not make sense for all developers to be experts in machine learning. It is more important for developers to understand how to leverage machine learning in your applications.\n\nThe Vision APIs of Microsoft Cognitive Services are easy to implement, free to prototype and inexpensive to scale in production. There is a rich set of services and a comprehensive SDK. And best of all the Vision APIs leverage billions of dollars spent in Microsoft Research and cloud infrastructure.\n\nThe Vision of Microsoft Cognitive Services (formerly Project Oxford) is for more personal computing experiences and enhanced productivity aided by systems that increasingly can see, hear, speak, understand and even begin to reason.\n\nMicrosoft Cognitive Services are a set of APIs, SDKs and services available to developers to make their applications more intelligent, engaging and discoverable. Microsoft Cognitive Services expands on Microsoft’s evolving portfolio of machine learning APIs and enables developers to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into their applications.\n\nTake a lap around the features and functionality of the Microsoft Cognitive Services Vision APIs with Tim Huckaby to see how powerful these services are and how easy they are to implement in your own applications.",
+          "level": "Beginner",
           "tags": [
-            "Microsoft",
-            "DevOps",
-            ".NET"
+            "Machine Learning"
           ],
           "presenters": [
             {
-              "name": "David Gardiner",
-              "bio": "David Gardiner has been creating software for over 20 years. He has a passion for continual learning and improving quality, and enjoys being in and creating environments where these happen. A Microsoft MVP (Visual Studio and Development Technologies), he run the Adelaide .NET User Group.\n\nBy day, he works as a Senior Software Developer at RL Solutions on healthcare software. In his spare time he contributes to numerous open source projects (including some of his own), and is a package moderator at Chocolatey.org",
-              "twitterAlias": "DavidRGardiner",
-              "website": "https://david.gardiner.net.au/"
+              "name": "Tim Huckaby",
+              "bio": "More info coming."
             }
           ],
           "room": "Room 4"
@@ -474,20 +492,18 @@
           "room": "Room 3"
         },
         {
-          "title": "When Feature Flags Go Bad",
-          "abstract": "Feature flags are a valuable DevOps technique to deliver better, more reliable software faster. Feature flags can be used for both release management (dark launches, canary rollouts, betas) as well as long term control (entitlement management, user segmentation personalization).\n\nHowever, if not managed properly, feature flags can be very destructive technical debt. Feature flags need to be managed properly with visibility and control to both engineering and business users.",
-          "level": "Intermediate",
+          "title": "Introduction to ASP.NET Core Razor Pages",
+          "abstract": "ASP.NET Core 2.0 introduces a new page-based programming model in MVC, optimized for building client-facing, server-rendered HTML, while maintaining separation of concerns, testability, and access to the great MVC features you use today, like Action Results, Filters, Model Binding & Validation, Tag Helpers, Routing & URL Generation, and much more.",
+          "level": "Beginner",
           "tags": [
-            "Continuous Delivery",
-            "Microservices",
-            "Agile"
+            ".NET"
           ],
           "presenters": [
             {
-              "name": "Edith Harbaugh",
-              "bio": "Edith Harbaugh is CEO & co-founder of LaunchDarkly. She has more than 15 years of experience in software engineering, including at the #1 travel app, TripIt. She is cohost of \"To Be Continuous\", a podcast on software trends by devops.com and a columnist for ReadWrite. She holds two patents in deployment. Edith earned a BS, Engineering from Harvey Mudd College.",
-              "twitterAlias": "edith_h",
-              "website": "https://launchdarkly.com/"
+              "name": "Damian Edwards",
+              "bio": "Damian Edwards is a Principal Program Manager on the ASP.NET team, responsible for the core ASP.NET runtime and Web Forms. He's also an active open source participant, as the creator of the Web Forms MVP and SignalR open source ASP.NET projects, as well as various jQuery plugins.",
+              "twitterAlias": "DamianEdwards",
+              "website": "https://damianedwards.wordpress.com/"
             }
           ],
           "room": "Room 4"
@@ -652,10 +668,10 @@
           "room": "Room 6"
         },
         {
-          "title": "From Rogue One to Rebel Alliance: Building Developers into Security Champions",
-          "abstract": "Are you responsible for more than just AppSec? What do you do when you have more teams to support than security experts? How can you make security champions out of dissenters in the development team?\n\nThere just aren’t enough security experts to go around. You have to support the multitude of Agile and DevOps teams that are making production software changes anywhere from once a month to several times a day? The lack of resources coupled with the ever increasing responsibilities can make you feel like a rouge warrior in the battle against cybercrime. What’s a security professional to do? Whether you are a team of one or five, there aren’t enough hours in the day and even if there was more budget, good luck finding someone to fill that security role. What if I told you that through careful selection and good training it is possible to build your own army from the very people who own the development process?\n\nWhat you will learn: \n\n1. Who to recruit as security champions \n\n2. How to train these champions in productive application security \n\n3. How to measure success \n\n4. How to build a scalable security program \n\n5. What to expect from champions (responsibilities)",
-          "level": "Advanced",
-          "tags": [ "Security", "People" ],
+          "title": "HTTP/2 - The future of the web today",
+          "abstract": "Client side web technologies continue to advance at breakneck speed. The quest to deliver richer user experiences is relentless and due to the limitations of HTTP/1.x, we have been forced to develop various workarounds (domain sharding, spriting, resource concatenation and inlining) in a bid to optimize performance.\n\nHTTP/2 has been designed with the modern web in mind and eliminates the need for such compensating hacks. In this session we'll take an in-depth look at web performance optimization; the best practices that have evolved; the game changing new features of HTTP/2; and most importantly what you need to do to deliver a world class HTTP/2 experience:\n\n- Why domain sharding, resource concatenation and image sprites are now anti-patterns\n\n- How server push is effectively resource inlining on steroids\n\n- What new best practices are possible with HTTP/2\n\n- What techniques to apply during the transitional period from HTTP/1.x to HTTP/2\n\nAdditionally, we will look at the tooling available for working with HTTP/2 traffic and how we can ensure that we're getting the full benefit of HTTP/2 both client and server side.",
+          "level": "Intermediate",
+          "tags": [ "Web", "Architecture" ],
           "presenters": [
             {
               "name": "Rob Crowley",
@@ -709,7 +725,7 @@
           "presenters": [
             {
               "name": "Alex Mackey",
-              "bio": "Alex works as a Practice Lead for Xero and is interested in anything web related (particularly HTML 5 & JavaScript) and he also meddles with AI & WebGL.\n\nAlex has done talks on various programming/web related topics, written a pluralsight course onWebGL/three.jsand Microsoft Edge for Developers, run a non profit conference and wrote books on .net.\n\nWebsite :http://simpleisbest.co.uk/speaking",
+              "bio": "Alex works as a Lead Consultant for Readify and is interested in anything web related (particularly three.js & WebVR).\n\nAlex has done talks on various programming/web related topics, written a few Pluralsight courses and .net books and runs the non profit dddmelbourne conference.",
               "twitterAlias": "alexjmackey",
               "website": "https://www.simpleisbest.co.uk/"
             }
@@ -730,6 +746,19 @@
             }
           ],
           "room": "Room 4"
+        },
+        {
+          "title": "The Vision of Computer Vision: The bold promise of teaching computers to understand the visual world",
+          "abstract": "How is Computer vision, machine learning, and mixed reality designed into innovative software built on the latest and greatest emerging experiences?\n\nJoin Tim Huckaby in a session focused on the power of Computer Vision: Designing, developing, and putting interactive vision based software systems into production.\n\nThis talk will explain the components of computer vision like machine learning and demonstrate the use cases where computer vision solutions are happening. In addition, those coming in the immediate future. Moreover, speculate on the computer vision solutions of the future.\n\nThis demo-heavy session will show you a number of real interactive solutions in the realm of 2D & 3D cameras in addition to mixed reality devices that produce interactive holographic experiences.",
+          "level": "Intermediate",
+          "tags": [],
+          "presenters": [
+            {
+              "name": "Tim Huckaby",
+              "bio": "More info coming."
+            }
+          ],
+          "room": "Room 5"
         },
         {
           "title": "Deep dive into building Bots with the Microsoft Bot Framework and Cognitive Services",
@@ -800,10 +829,10 @@
           "room": "Room 2"
         },
         {
-          "title": "Programming Robots – Making Friends with Cozmo",
-          "abstract": "Have you met Cozmo? The little robot with a huge attitude? He is ready to be part of your life, if only you will play with him and give him some attention. Cozmo has a mind of his own and his personality will constantly keep you surprised.\n\nIn this talk you will learn about tracking obstacles in real time, planning paths, facial recognition and third party APIs by building a simple game in Python. Learn about the future of consumer robotics in a connected world, and how these devices can make a difference.\n\nThis talk will be a joint presentation with Cozmo on stage charming his way into your hearts (before he has a temper tantrum).",
-          "level": "Beginner",
-          "tags": [ "Embedded", "IoT", "Fun" ],
+          "title": "HoloLens Development: The Next Steps",
+          "abstract": "So, you know how to start developing a mixed reality experience, but want to take it further and master more of the details that make it more immersive, more natural, more believable? This talk will introduce new concepts and build on existing ones for doing just that.\n\nLearn how to take advantage of advanced gestures such as hold and manipulate, how to expand on voice commands, learn to master the developer tools such as the emulator and perception simulation, and much more. Get to grips with the development cycle and get into the details of the HoloLens development experience.\n\nAt the end of this talk you will have the tools and knowledge to build more immersive and natural holographic experiences that take full advantage of mixed reality and isn’t merely an augmented or virtual experience.",
+          "level": "Intermediate",
+          "tags": [ "Microsoft", ".NET" ],
           "presenters": [
             {
               "name": "Lars Klint",
@@ -898,14 +927,20 @@
           "room": "Room 1"
         },
         {
-          "title": "Real World Emerging Experiences",
-          "abstract": "How is natural & intuitive interactive functionality & usability designed into the latest and greatest emerging experiences?\n\nJoin Tim Huckaby in a discussion & demonstration of the lessons learned in ~10 years of putting high profile interactive software systems into production for customers like CNN, Microsoft, Nike and many others. All the bad; all the good; the cutting edge and the tools, tips and tricks learned along the way that will help you in designing great natural interactive usability into your own software. \n\nTechnology has evolved to the point that the software and systems which have become necessary parts of our daily lives need to know more about us in order to help us in smarter ways. The environment that encapsulates the digital experience is just as important as the software. The entirety is the experience. The user shouldn’t feel the technology in the experience. Emerging Experiences should extend real world metaphors into software so that it blends together seamlessly. Emerging Experiences demand good Interaction Design.\n\nThis demo focused session will take an impressive look at some of the best software being built today and into the immediate future that leverages the Emerging Experiences.",
+          "title": "Life is like a Box of Chocolate(y)",
+          "abstract": "DevOps begins at home when you script your own desktop. Learn from experienced package author, Chocolatey.org moderator and project contributor David how to automate the installation and configuration of all the software you need to get your job done with open source tools Chocolatey and Boxstarter. Take a vanilla Windows install from zero to fully configured developer environment in minutes*!\n\nFind out how to wrap each of your tools and applications in a well-specified Chocolatey package. Learn about common pitfalls and get an inside perspective on the package moderation process so that you can publish to the public repository on Chocolatey.org with confidence.\n\nLearn how to orchestrate the installation of all your packages (including reboots) with Boxstarter. Build up a fully configured developer machine from scratch, or redeploy your test environment with ease and reliability.\n\nBut this is not just for rebuilding your dev boxes, these same techniques can be used to help your customers download, install and upgrade your software with ease.\n\nThis talk is rated 200-300 with a target audience of all Windows-based developers who want to spend more time coding and less time reinstalling software.\n\n* Obviously the more tools you need, the more minutes it will take!",
           "level": "Intermediate",
-          "tags": [],
+          "tags": [
+            "Microsoft",
+            "DevOps",
+            ".NET"
+          ],
           "presenters": [
             {
-              "name": "Tim Huckaby",
-              "bio": "More info coming."
+              "name": "David Gardiner",
+              "bio": "David Gardiner has been creating software for over 20 years. He has a passion for continual learning and improving quality, and enjoys being in and creating environments where these happen. A Microsoft MVP (Visual Studio and Development Technologies), he run the Adelaide .NET User Group.\n\nBy day, he works as a Senior Software Developer at RL Solutions on healthcare software. In his spare time he contributes to numerous open source projects (including some of his own), and is a package moderator at Chocolatey.org",
+              "twitterAlias": "DavidRGardiner",
+              "website": "https://david.gardiner.net.au/"
             }
           ],
           "room": "Room 2"
@@ -1193,8 +1228,8 @@
           "room": "Room 3"
         },
         {
-          "title": "Octopus Deploying to Transient Infrastructure",
-          "abstract": "The days of managing a fixed set of servers is numbered. Now new machines may appear without human intervention. Perhaps they were created by AWS auto scaling, or they appear on a network as the truck rolls into the yard. Your application may not suitable for containerisation, or you are not quite there yet. Getting the right versions of your software running on these machines is a challenge.\n\nIn this session we will look at how Octopus Deploy can be used to perform on demand deployments to Windows and Linux machines. We will cover creation and management of VM templates, auto registration, auto deployment and responding to deployment events. I will also show how to use the Octopus API to customise your deployment workflow.",
+          "title": "Transient Test Environments with Octopus",
+          "abstract": "If you have just a handful of interelated applications, or a whole host of microservices, creating and maintaining a realistic integration test environment can be time consuming. Would it not be great to have a new, clean, repeatable test environment for every commit?\n\nIn this session, Robert will demonstrate how to create integration test environments on the fly. He will cover how to create VM templates, create environments on demand, and deploy the right version of your dependencies, stringing it all together with Octopus Deploy and it's API. Finally he will demonstrate how to automatically deploy an application when auto-scaling occurs.",
           "level": "Intermediate",
           "tags": [
             "DevOps"
@@ -1432,21 +1467,6 @@
             }
           ],
           "room": "Room 1"
-        },
-        {
-          "title": "Optimism and the Growth Mindset",
-          "abstract": "Hacking our own minds is the ultimate meta-programming.\n\nIn this very personal talk, we will look at Dr. Martin Seligman's work on \"Optimism,\" Dr. Carol Dreck's work on \"Mindsets,\" and explore specific actions we can take to be happier, more effective, and build stronger communities.",
-          "level": "Beginner",
-          "tags": [ "Soft Skills", "People" ],
-          "presenters": [
-            {
-              "name": "Reginald Braithwaite",
-              "bio": "Reg “raganwald” Braithwaite is proof that somewhere, a combinatory forest is missing its Idiot Bird. His interests include constructing surreal numbers, deconstructing hopelessly egocentric nulls, and celebrating the joy of programming. He is the author of JavaScript Allongé, CoffeeScript Ristretto and raganwald.com. He develops user experiences at PagerDuty.\n\nHis other works are on GitHub and Leanpub, you can follow him on Twitter as @raganwald, and from time to time he speaks at conferences. His email is reg@braythwayt.com, although most of it falls into the spam filter black hole.",
-              "twitterAlias": "raganwald",
-              "website": "http://raganwald.com/"
-            }
-          ],
-          "room": "Room 2"
         },
         {
           "title": "Accessibility for UX: Don't worry, it's much worse than you think",
@@ -1712,6 +1732,21 @@
             }
           ],
           "room": "Room 6"
+        },
+        {
+          "title": "10 Things I learnt from my first HoloLens app",
+          "abstract": "I’ll walk through some of the things I learnt while building Paddle Bounce.\n\nTopics Include:\n\nGetting started with HoloToolkit components\n\nDebugging the app\n\nBasic physics\n\nUsing assets and the asset store for sounds and images\n\nBuilding UI\n\nPublishing to the store.\n\nApp in the store: https://www.microsoft.com/en-au/store/p/paddle-bounce/9nz8jl7tfsh8?rtc=1\n\nSource: https://github.com/hannesne/PaddleBounce/",
+          "level": "Beginner",
+          "tags": [ "Microsoft" ],
+          "presenters": [
+            {
+              "name": "Hannes Nel",
+              "bio": "Hannes works for Microsoft in New Zealand, as a Technical Evangelist. He takes care of the relationship between Microsoft and developers, focusing on the developer experience.\n\nHannes has had a varied career developing software for a number of systems integration companies and a government department. These projects include work on ERP systems, web applications, and line-of-business apps. He is passionate about creating great user experiences, that really makes the underlying software shine.\n\nApart from developing software and supporting Microsoft’s many partners, he enjoys mountain biking and snowboarding. Hannes also loves a good braai!",
+              "twitterAlias": "HannesN",
+              "website": "https://about.me/hannesnel"
+            }
+          ],
+          "room": "Room 7"
         }
       ]
     },
@@ -1835,19 +1870,6 @@
             }
           ],
           "room": "Room 1"
-        },
-        {
-          "title": "More Personal Computing through Engaged User Experiences",
-          "abstract": "The combination of primary tenants of an engaging user experience and the revolution in the Natural User Interface (NUI) provides a great opportunity to enhance the overall user experience of applications.\n\nAs the world of NUI evolves, and revolutionary devices like Kinect for Windows pave the path for gesture and voice controlled interfaces, there is a demand for developers to create increasingly sophisticated user experiences in their applications. A touch, gesture or voice optimized experience requires developers to think of visual design in a whole new way and demands a new set of usability skills. This demo focused keynote will take an amusing look at the past and take an impressive look at some of the best NUI software being built today and into the immediate future and will even delve into the NUI of the future.\n\nOver 7 years ago, in 2009, I “tongue and cheeked” a prediction: ‘We are within a Decade of Building the “Holodeck.”’ And the press picked up on that quote. Now here we are with a Microsoft Hololens device that manifests environments which span the chasm between physical and virtual; The ultimate Emerging Experience.",
-          "level": "Beginner",
-          "tags": [ "UX" ],
-          "presenters": [
-            {
-              "name": "Tim Huckaby",
-              "bio": "More info coming"
-            }
-          ],
-          "room": "Room 2"
         },
         {
           "title": "Effective Eventual Consistency with Actor Models + Amazon Web Services",
@@ -1976,25 +1998,6 @@
       "date": "2017-08-18",
       "time": "13:40",
       "sessions": [
-        {
-          "title": "JavaScript Combinators, The 2017 Edition",
-          "abstract": "JavaScript's first-class functions are the basis for nearly everything in the language, including methods and constructors.\n\nIn this talk, we'll explore functions that consume and return functions, and see how they can be used to build expressive programs that hew closely to JavaScript's natural style, while taking advantage of ES6/ECMAScript 2015’s new features.",
-          "level": "Beginner",
-          "tags": [
-            "Languages",
-            "JavaScript",
-            "Web"
-          ],
-          "presenters": [
-            {
-              "name": "Reginald Braithwaite",
-              "bio": "Reg “raganwald” Braithwaite is proof that somewhere, a combinatory forest is missing its Idiot Bird. His interests include constructing surreal numbers, deconstructing hopelessly egocentric nulls, and celebrating the joy of programming. He is the author of JavaScript Allongé, CoffeeScript Ristretto and raganwald.com. He develops user experiences at PagerDuty.\n\nHis other works are on GitHub and Leanpub, you can follow him on Twitter as @raganwald, and from time to time he speaks at conferences. His email is reg@braythwayt.com, although most of it falls into the spam filter black hole.",
-              "twitterAlias": "raganwald",
-              "website": "http://raganwald.com/"
-            }
-          ],
-          "room": "Room 1"
-        },
         {
           "title": "Security in ASP.NET Core 2.0",
           "abstract": "ASP.NET Core has presented us with the opportunity to improve our security story, throw away the mistakes of the past and introduce new features to make life easier for all.\n\nASP.NET Core now has a new authentication & authorization stack and different ways to load balance cryptographic keys. This session will demonstrate the new features introduced in Core, the changes we made in 2.0, the new service we’ve added in 2.0 then walk you through building a flexible authorization system to help you secure your web apps.",
@@ -2129,10 +2132,10 @@
           "room": "Room 3"
         },
         {
-          "title": "HoloLens Development: The Next Steps",
-          "abstract": "So, you know how to start developing a mixed reality experience, but want to take it further and master more of the details that make it more immersive, more natural, more believable? This talk will introduce new concepts and build on existing ones for doing just that.\n\nLearn how to take advantage of advanced gestures such as hold and manipulate, how to expand on voice commands, learn to master the developer tools such as the emulator and perception simulation, and much more. Get to grips with the development cycle and get into the details of the HoloLens development experience.\n\nAt the end of this talk you will have the tools and knowledge to build more immersive and natural holographic experiences that take full advantage of mixed reality and isn’t merely an augmented or virtual experience.",
-          "level": "Intermediate",
-          "tags": [ "Microsoft", ".NET" ],
+          "title": "Programming Robots – Making Friends with Cozmo",
+          "abstract": "Have you met Cozmo? The little robot with a huge attitude? He is ready to be part of your life, if only you will play with him and give him some attention. Cozmo has a mind of his own and his personality will constantly keep you surprised.\n\nIn this talk you will learn about tracking obstacles in real time, planning paths, facial recognition and third party APIs by building a simple game in Python. Learn about the future of consumer robotics in a connected world, and how these devices can make a difference.\n\nThis talk will be a joint presentation with Cozmo on stage charming his way into your hearts (before he has a temper tantrum).",
+          "level": "Beginner",
+          "tags": [ "Embedded", "IoT", "Fun" ],
           "presenters": [
             {
               "name": "Lars Klint",
@@ -2197,8 +2200,8 @@
       "time": "16:20",
       "sessions": [
         {
-          "title": "Xamarin Test Cloud",
-          "abstract": "",
+          "title": "Successful Code Sharing Principles for Mobile Development",
+          "abstract": "Building mobile apps is hard work, getting code shared across the different platforms is even harder. Honestly, I’m lazy and I don’t want to repeat myself so I do whatever I can to only write code once, and have it work everywhere.\n\nIf you’re like me and want to optimize your time and be more efficient building mobile apps, join this session where we’ll explore some good, and bad, practices to get code shared across different mobile platforms when using C#.",
           "level": "Beginner",
           "tags": [ "Mobile" ],
           "presenters": [

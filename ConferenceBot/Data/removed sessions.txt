@@ -1,0 +1,117 @@
+        {
+          "title": "From Rogue One to Rebel Alliance: Building Developers into Security Champions",
+          "abstract": "Are you responsible for more than just AppSec? What do you do when you have more teams to support than security experts? How can you make security champions out of dissenters in the development team?\n\nThere just aren’t enough security experts to go around. You have to support the multitude of Agile and DevOps teams that are making production software changes anywhere from once a month to several times a day? The lack of resources coupled with the ever increasing responsibilities can make you feel like a rouge warrior in the battle against cybercrime. What’s a security professional to do? Whether you are a team of one or five, there aren’t enough hours in the day and even if there was more budget, good luck finding someone to fill that security role. What if I told you that through careful selection and good training it is possible to build your own army from the very people who own the development process?\n\nWhat you will learn: \n\n1. Who to recruit as security champions \n\n2. How to train these champions in productive application security \n\n3. How to measure success \n\n4. How to build a scalable security program \n\n5. What to expect from champions (responsibilities)",
+          "level": "Advanced",
+          "tags": [ "Security", "People" ],
+          "presenters": [
+            {
+              "name": "Rob Crowley",
+              "bio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. As the Technical Lead for APIs at Bankwest, Rob works with delivery teams on transforming the bank’s technology landscape to realise its digital strategy.",
+              "twitterAlias": "robdcrowley"
+            }
+          ],
+          "room": "Room 7"
+        }
+
+        {
+          "title": "Real World Emerging Experiences",
+          "abstract": "How is natural & intuitive interactive functionality & usability designed into the latest and greatest emerging experiences?\n\nJoin Tim Huckaby in a discussion & demonstration of the lessons learned in ~10 years of putting high profile interactive software systems into production for customers like CNN, Microsoft, Nike and many others. All the bad; all the good; the cutting edge and the tools, tips and tricks learned along the way that will help you in designing great natural interactive usability into your own software. \n\nTechnology has evolved to the point that the software and systems which have become necessary parts of our daily lives need to know more about us in order to help us in smarter ways. The environment that encapsulates the digital experience is just as important as the software. The entirety is the experience. The user shouldn’t feel the technology in the experience. Emerging Experiences should extend real world metaphors into software so that it blends together seamlessly. Emerging Experiences demand good Interaction Design.\n\nThis demo focused session will take an impressive look at some of the best software being built today and into the immediate future that leverages the Emerging Experiences.",
+          "level": "Intermediate",
+          "tags": [],
+          "presenters": [
+            {
+              "name": "Tim Huckaby",
+              "bio": "More info coming."
+            }
+          ],
+          "room": "Room 2"
+        },
+		
+		
+        {
+          "title": "Octopus Deploying to Transient Infrastructure",
+          "abstract": "The days of managing a fixed set of servers is numbered. Now new machines may appear without human intervention. Perhaps they were created by AWS auto scaling, or they appear on a network as the truck rolls into the yard. Your application may not suitable for containerisation, or you are not quite there yet. Getting the right versions of your software running on these machines is a challenge.\n\nIn this session we will look at how Octopus Deploy can be used to perform on demand deployments to Windows and Linux machines. We will cover creation and management of VM templates, auto registration, auto deployment and responding to deployment events. I will also show how to use the Octopus API to customise your deployment workflow.",
+          "level": "Intermediate",
+          "tags": [
+            "DevOps"
+          ],
+          "presenters": [
+            {
+              "name": "Robert Wagner",
+              "bio": "Robert is a team lead at Octopus Deploy, and is focused on the magic that happens after you click Deploy. He loves helping organisations reduce risk and help his fellow developer get a good night’s rest and by making deployments reliable and mundane. He believes DevOps is a skill, not a job title. He has previously worked in organisations large and small, developing software and coaching them to deliver software faster and more effectively.",
+              "twitterAlias": "droyad",
+              "website": "http://www.makingsoftware.net/"
+            }
+          ],
+          "room": "Room 4"
+        },
+		
+		
+        {
+          "title": "Optimism and the Growth Mindset",
+          "abstract": "Hacking our own minds is the ultimate meta-programming.\n\nIn this very personal talk, we will look at Dr. Martin Seligman's work on \"Optimism,\" Dr. Carol Dreck's work on \"Mindsets,\" and explore specific actions we can take to be happier, more effective, and build stronger communities.",
+          "level": "Beginner",
+          "tags": [ "Soft Skills", "People" ],
+          "presenters": [
+            {
+              "name": "Reginald Braithwaite",
+              "bio": "Reg “raganwald” Braithwaite is proof that somewhere, a combinatory forest is missing its Idiot Bird. His interests include constructing surreal numbers, deconstructing hopelessly egocentric nulls, and celebrating the joy of programming. He is the author of JavaScript Allongé, CoffeeScript Ristretto and raganwald.com. He develops user experiences at PagerDuty.\n\nHis other works are on GitHub and Leanpub, you can follow him on Twitter as @raganwald, and from time to time he speaks at conferences. His email is reg@braythwayt.com, although most of it falls into the spam filter black hole.",
+              "twitterAlias": "raganwald",
+              "website": "http://raganwald.com/"
+            }
+          ],
+          "room": "Room 2"
+        },
+		
+		
+        {
+          "title": "More Personal Computing through Engaged User Experiences",
+          "abstract": "The combination of primary tenants of an engaging user experience and the revolution in the Natural User Interface (NUI) provides a great opportunity to enhance the overall user experience of applications.\n\nAs the world of NUI evolves, and revolutionary devices like Kinect for Windows pave the path for gesture and voice controlled interfaces, there is a demand for developers to create increasingly sophisticated user experiences in their applications. A touch, gesture or voice optimized experience requires developers to think of visual design in a whole new way and demands a new set of usability skills. This demo focused keynote will take an amusing look at the past and take an impressive look at some of the best NUI software being built today and into the immediate future and will even delve into the NUI of the future.\n\nOver 7 years ago, in 2009, I “tongue and cheeked” a prediction: ‘We are within a Decade of Building the “Holodeck.”’ And the press picked up on that quote. Now here we are with a Microsoft Hololens device that manifests environments which span the chasm between physical and virtual; The ultimate Emerging Experience.",
+          "level": "Beginner",
+          "tags": [ "UX" ],
+          "presenters": [
+            {
+              "name": "Tim Huckaby",
+              "bio": "More info coming"
+            }
+          ],
+          "room": "Room 2"
+        },
+		
+		
+        {
+          "title": "JavaScript Combinators, The 2017 Edition",
+          "abstract": "JavaScript's first-class functions are the basis for nearly everything in the language, including methods and constructors.\n\nIn this talk, we'll explore functions that consume and return functions, and see how they can be used to build expressive programs that hew closely to JavaScript's natural style, while taking advantage of ES6/ECMAScript 2015’s new features.",
+          "level": "Beginner",
+          "tags": [
+            "Languages",
+            "JavaScript",
+            "Web"
+          ],
+          "presenters": [
+            {
+              "name": "Reginald Braithwaite",
+              "bio": "Reg “raganwald” Braithwaite is proof that somewhere, a combinatory forest is missing its Idiot Bird. His interests include constructing surreal numbers, deconstructing hopelessly egocentric nulls, and celebrating the joy of programming. He is the author of JavaScript Allongé, CoffeeScript Ristretto and raganwald.com. He develops user experiences at PagerDuty.\n\nHis other works are on GitHub and Leanpub, you can follow him on Twitter as @raganwald, and from time to time he speaks at conferences. His email is reg@braythwayt.com, although most of it falls into the spam filter black hole.",
+              "twitterAlias": "raganwald",
+              "website": "http://raganwald.com/"
+            }
+          ],
+          "room": "Room 1"
+        },
+		
+		
+        {
+          "title": "Xamarin Test Cloud",
+          "abstract": "",
+          "level": "Beginner",
+          "tags": [ "Mobile" ],
+          "presenters": [
+            {
+              "name": "Filip Ekberg",
+              "bio": "Filip is the author of C# Smorgasbord and a handful of Pluralsight courses, speaker at events and user groups around the globe, Microsoft and Xamarin MVP. He loves teaching fellow developers how to master C# by understanding important concepts such asynchronous programming, MSIL and much more.",
+              "twitterAlias": "fekberg",
+              "website": "https://www.filipekberg.se/"
+            }
+          ],
+          "room": "Room 2"
+        },
