@@ -94,7 +94,7 @@ namespace ConferenceBot.Dialogs
 
             if (totalSessions <= 0)
             {
-                await context.PostAsync("Sorry, but I could not find what you are looking for");
+                await context.PostAsync("Hang on a sec while I check for you");
                 await SearchWeb(context, result.Query);
                 context.Wait(MessageReceived);
             }
@@ -179,7 +179,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("BingSearch")]
         public async Task BingSearch(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync("Wait a sec while I search more about it.");
+            await context.PostAsync("Hang on a sec while I check for you");
             await SearchWeb(context, result.Query);
             context.Wait(MessageReceived);
         }
