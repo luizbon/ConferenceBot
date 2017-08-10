@@ -14,7 +14,23 @@
     </style>
     <link href="https://unpkg.com/botframework-webchat/botchat.css" rel="stylesheet" />
     <link href="https://unpkg.com/botframework-webchat/botchat-fullwindow.css" rel="stylesheet" />
+    <style>
+        .wc-header span {
+            display: none;
+        }
 
+        .wc-header:before {
+            content: "NCDSydney Bot"
+        }
+        
+        .wc-upload {
+            visibility: hidden;
+        }
+
+        .wc-textbox {
+            left: 5px;
+        }
+    </style>
 </head>
 <body style="font-family: 'Segoe UI'">
     <div id="bot"></div>
