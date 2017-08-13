@@ -12,5 +12,9 @@ namespace ConferenceBot.Model
         public string Title { get; set; }
 
         public Session[] Sessions { get; set; }
+
+        public bool IsKeynote { get; set; }
+
+        public bool IsLocknote { get; set; }
     }
 }

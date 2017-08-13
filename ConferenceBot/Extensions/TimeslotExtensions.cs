@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Chronic;
 using ConferenceBot.Model;
 
 namespace ConferenceBot.Extensions
@@ -61,12 +62,41 @@ namespace ConferenceBot.Extensions
 
         public static Timeslot[] FindKeynote(this Timeslot[] timeslots)
         {
-            return new[] { timeslots.First() };
+            return timeslots.Where(t => t.IsKeynote).ToArray();
         }
 
         public static Timeslot[] FindLocknote(this Timeslot[] timeslots)
         {
-            return new[] { timeslots.Last() };
+            return timeslots.Where(t => t.IsLocknote).ToArray();
+        }
+
+        public static SessionIdentifier[] ToSessionIdentifiers(this Timeslot[] timeslots)
+        {
+            return (from timeslot in timeslots
+                    from session in timeslot.Sessions
+                    select new SessionIdentifier
+                    {
+                        DateTime = timeslot.Date,
+                        Room = session.Room.Name
+                    }).ToArray();
+        }
+
+        public static Timeslot[] FromSessionIdentifiers(this Timeslot[] timeslots,
+            SessionIdentifier[] sessionIdentifiers)
+        {
+            return (from timeslot in timeslots
+                    from sessionIdentifier in sessionIdentifiers
+                    where timeslot.Date == sessionIdentifier.DateTime
+                    let sessions = timeslot.Sessions.Where(s => s.Room.Name == sessionIdentifier.Room)
+                    select new Timeslot
+                    {
+                        Date = timeslot.Date,
+                        IsKeynote = timeslot.IsKeynote,
+                        Title = timeslot.Title,
+                        Sessions = sessions.ToArray(),
+                        Break = timeslot.Break,
+                        IsLocknote = timeslot.IsLocknote
+                    }).ToArray();
         }
     }
 }

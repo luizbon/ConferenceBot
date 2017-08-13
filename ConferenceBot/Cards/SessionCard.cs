@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AdaptiveCards;
-using Chronic;
 using ConferenceBot.Model;
 using Microsoft.Bot.Connector;
 
@@ -27,7 +26,7 @@ namespace ConferenceBot.Cards
             var body = new List<CardElement>
             {
                 AddRoomContainer(session.Room, timeslot),
-                AddSessionContainer(session),
+                AddSessionContainer(session)
             };
 
             body.AddRange(session.Presenters.Select(AddSpeakerContainer));
@@ -43,22 +42,55 @@ namespace ConferenceBot.Cards
             var container = new Container
             {
                 Speak = presenter.Name,
+                Separation = SeparationStyle.Strong,
                 Items = new List<CardElement>
                 {
-                    new TextBlock
+                    new ColumnSet
                     {
-                        Text = presenter.Name,
-                        Weight = TextWeight.Bolder
-                    },
-                    new TextBlock
-                    {
-                        Text = presenter.Bio,
-                        Wrap = true,
-                        Separation = SeparationStyle.None,
-                        IsSubtle = true
+                        Columns = new List<Column>
+                        {
+                            new Column
+                            {
+                                Size = ColumnSize.Auto,
+                                Items = new List<CardElement>
+                                {
+                                    new Image
+                                    {
+                                        Url = presenter.ImageUrl,
+                                        Style = ImageStyle.Person
+                                    }
+                                }
+                            },
+                            new Column
+                            {
+                                Size = ColumnSize.Stretch,
+                                Items = new List<CardElement>
+                                {
+                                    new TextBlock
+                                    {
+                                        Text = presenter.Name,
+                                        Weight = TextWeight.Bolder
+                                    },
+                                    new TextBlock
+                                    {
+                                        Text = presenter.Tag,
+                                        IsSubtle = true
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             };
+
+            foreach (var bioLine in presenter.Bio)
+                container.Items.Add(new TextBlock
+                {
+                    Text = bioLine,
+                    Wrap = true,
+                    Separation = SeparationStyle.Default,
+                    IsSubtle = true
+                });
 
             var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney";
             if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
@@ -97,7 +129,7 @@ namespace ConferenceBot.Cards
 
         private static Container AddSessionContainer(Session session)
         {
-            return new Container
+            var container = new Container
             {
                 Speak = session.Title,
                 Items = new List<CardElement>
@@ -108,16 +140,27 @@ namespace ConferenceBot.Cards
                         Weight = TextWeight.Bolder,
                         Size = TextSize.Medium,
                         Wrap = true
-                    },
-                    new TextBlock
-                    {
-                        Text = session.Abstract,
-                        Wrap = true,
-                        Separation = SeparationStyle.None,
-                        IsSubtle = true
                     }
                 }
             };
+            
+            for (var i = 0; i < session.Abstract.Length; i++)
+            {
+                var separation = SeparationStyle.Default;
+                if (i > 0 && session.Abstract[i].StartsWith("*") && session.Abstract[i - 1].StartsWith("*"))
+                    separation = SeparationStyle.None;
+
+                container.Items.Add(new TextBlock
+                {
+                    Text = session.Abstract[i],
+                    Weight = i > 0 && session.Abstract.Length > 1 ? TextWeight.Normal : TextWeight.Bolder,
+                    Wrap = true,
+                    Separation = separation,
+                    IsSubtle = i > 0
+                });
+            }
+
+            return container;
         }
 
         private static Container AddRoomContainer(Room room, Timeslot timeslot)

@@ -59,9 +59,6 @@ namespace ConferenceBot.Dialogs
                 return;
             }
 
-            await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
-            await context.SendTyping();
-
             var timeslots = NdcSydney17.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
@@ -100,9 +97,12 @@ namespace ConferenceBot.Dialogs
             }
             else
             {
+                await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
+                await context.SendTyping();
+
                 if (totalSessions > 7)
                 {
-                    context.Call(new TimeslotFilterDialog(timeslots), FilterResumeAsync);
+                    context.Call(new TimeslotFilterDialog(timeslots.ToSessionIdentifiers()), FilterResumeAsync);
                     return;
                 }
 
@@ -121,13 +121,13 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        private async Task FilterResumeAsync(IDialogContext context, IAwaitable<Timeslot[]> result)
+        private async Task FilterResumeAsync(IDialogContext context, IAwaitable<SessionIdentifier[]> result)
         {
             try
             {
-                var timeslots = await result;
+                var sessionIdentifiers = await result;
 
-                await SendTalks(context, timeslots);
+                await SendTalks(context, NdcSydney17.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
             }
             catch (Exception)
             {

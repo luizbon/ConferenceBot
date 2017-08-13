@@ -39,7 +39,9 @@ namespace ConferenceBot.Data
                 Break = timeslot.Break,
                 Date = timeslot.Date.Add(timeslot.Time),
                 Title = timeslot.Title,
-                Sessions = timeslot.Sessions.Select(ToSession).ToArray()
+                Sessions = timeslot.Sessions.Select(ToSession).ToArray(),
+                IsKeynote = timeslot.IsKeynote,
+                IsLocknote = timeslot.IsLocknote
             };
         }
 
@@ -52,7 +54,9 @@ namespace ConferenceBot.Data
                 Presenters = session.Presenters.Select(ToPresenter).ToArray(),
                 Room = new Room
                 {
-                    Name = session.Room ?? " "                }
+                    Name = session.Room ?? " "
+                },
+                
             };
         }
 
@@ -63,7 +67,9 @@ namespace ConferenceBot.Data
                 Name = presenter.Name,
                 Bio = presenter.Bio,
                 TwitterAlias = presenter.TwitterAlias,
-                Website = presenter.Website
+                Website = presenter.Website,
+                ImageUrl = presenter.ImageUrl,
+                Tag = presenter.Tag
             };
         }
 
@@ -89,6 +95,12 @@ namespace ConferenceBot.Data
 
             [JsonProperty("title")]
             public string Title { get; set; }
+
+            [JsonProperty("isKeynote")]
+            public bool IsKeynote { get; set; }
+
+            [JsonProperty("isLocknote")]
+            public bool IsLocknote { get; set; }
         }
 
         public class Session
@@ -96,7 +108,7 @@ namespace ConferenceBot.Data
             [JsonProperty("title")]
             public string Tittle { get; set; }
             [JsonProperty("abstract")]
-            public string Abstract { get; set; }
+            public string[] Abstract { get; set; }
             [JsonProperty("level")]
             public string Level { get; set; }
             [JsonProperty("tags")]
@@ -112,11 +124,15 @@ namespace ConferenceBot.Data
             [JsonProperty("name")]
             public string Name { get; set; }
             [JsonProperty("bio")]
-            public string Bio { get; set; }
+            public string[] Bio { get; set; }
             [JsonProperty("twitterAlias")]
             public string TwitterAlias { get; set; }
             [JsonProperty("website")]
             public string Website { get; set; }
+            [JsonProperty("imageUrl")]
+            public string ImageUrl { get; set; }
+            [JsonProperty("tag")]
+            public string Tag { get; set; }
         }
     }
 }

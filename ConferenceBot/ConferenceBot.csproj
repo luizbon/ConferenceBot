@@ -139,6 +139,7 @@
     <Compile Include="Model\QnA\QnAMakerResult.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\SessionIdentifier.cs" />
     <Compile Include="Model\Timeslot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BindSearchService.cs" />

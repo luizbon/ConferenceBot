@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConferenceBot.Cards;
+using ConferenceBot.Data;
 using ConferenceBot.Extensions;
 using ConferenceBot.Model;
 using Microsoft.Bot.Builder.Dialogs;
@@ -11,19 +12,22 @@ using Microsoft.Bot.Connector;
 namespace ConferenceBot.Dialogs
 {
     [Serializable]
-    public class TimeslotFilterDialog : IDialog<Timeslot[]>
+    public class TimeslotFilterDialog : IDialog<SessionIdentifier[]>
     {
-        private Timeslot[] _timeslots;
+        private readonly SessionIdentifier[] _sessionIdentifiers;
+
+        private Timeslot[] Timeslots => NdcSydney17.Data.Timeslots.FromSessionIdentifiers(_sessionIdentifiers);
+
         public readonly Dictionary<string, IList<SerializableCardAction>> FilterActions = new Dictionary<string, IList<SerializableCardAction>>();
 
-        public TimeslotFilterDialog(Timeslot[] timeslots)
+        public TimeslotFilterDialog(SessionIdentifier[] sessionIdentifiers)
         {
-            _timeslots = timeslots;
+            _sessionIdentifiers = sessionIdentifiers;
         }
 
         public async Task StartAsync(IDialogContext context)
         {
-            var sessionCount = _timeslots.SelectMany(t => t.Sessions).Count();
+            var sessionCount = Timeslots.SelectMany(t => t.Sessions).Count();
             await context.PostAsync($"I found {sessionCount} sessions, let me see if is possible to narrow this down");
             if (FilterWeekdays() | FilterRooms() | FilterTimes())
             {
@@ -32,7 +36,7 @@ namespace ConferenceBot.Dialogs
             }
 
             await context.PostAsync("What a shame, I couldn't help you filter the sessions");
-            context.Done(_timeslots);
+            context.Done(Timeslots);
         }
 
         private async Task ActionChooser(IDialogContext context)
@@ -79,7 +83,7 @@ namespace ConferenceBot.Dialogs
 
         private bool FilterWeekdays()
         {
-            var weekdays = _timeslots.Select(t => t.Date.DayOfWeek).Distinct().ToList();
+            var weekdays = Timeslots.Select(t => t.Date.DayOfWeek).Distinct().ToList();
 
             if (weekdays.Count <= 1) return false;
 
@@ -95,7 +99,7 @@ namespace ConferenceBot.Dialogs
 
         private bool FilterRooms()
         {
-            var rooms = _timeslots.SelectMany(t => t.Sessions).Select(s => s.Room.Name).Distinct().ToList();
+            var rooms = Timeslots.SelectMany(t => t.Sessions).Select(s => s.Room.Name).Distinct().ToList();
 
             if (rooms.Count <= 1) return false;
 
@@ -111,7 +115,7 @@ namespace ConferenceBot.Dialogs
 
         private bool FilterTimes()
         {
-            var times = _timeslots.Select(t => t.Date.TimeOfDay).Distinct().ToList();
+            var times = Timeslots.Select(t => t.Date.TimeOfDay).Distinct().ToList();
 
             if (times.Count <= 1) return false;
 
@@ -129,20 +133,22 @@ namespace ConferenceBot.Dialogs
         {
             var message = await result;
 
+            var timeslots = Timeslots;
+
             if (Enum.TryParse(message.Text, out DayOfWeek selectedDate))
             {
-                _timeslots = _timeslots.Where(s => s.Date.DayOfWeek == selectedDate).ToArray();
+                timeslots = timeslots.Where(s => s.Date.DayOfWeek == selectedDate).ToArray();
             }
             else if (TimeSpan.TryParse(message.Text, out TimeSpan selectedTime))
             {
-                _timeslots = _timeslots.Where(s => s.Date.TimeOfDay == selectedTime).ToArray();
+                timeslots = timeslots.Where(s => s.Date.TimeOfDay == selectedTime).ToArray();
             }
             else
             {
-                foreach (var timeslot in _timeslots)
+                foreach (var timeslot in timeslots)
                     timeslot.Sessions = timeslot.Sessions.Where(s => s.Room.Name == message.Text).ToArray();
             }
-            context.Done(_timeslots);
+            context.Done(timeslots.ToSessionIdentifiers());
         }
     }
 }
