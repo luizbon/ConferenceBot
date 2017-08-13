@@ -11,14 +11,14 @@ namespace ConferenceBot.Cards
         public static IEnumerable<Attachment> GetSessionCards(IEnumerable<Timeslot> timeslots)
         {
             return from timeslot in timeslots
-                from session in timeslot.Sessions
-                select CreateAdaptiveCard(session, timeslot)
+                   from session in timeslot.Sessions
+                   select CreateAdaptiveCard(session, timeslot)
                 into card
-                select new Attachment
-                {
-                    ContentType = AdaptiveCard.ContentType,
-                    Content = card
-                };
+                   select new Attachment
+                   {
+                       ContentType = AdaptiveCard.ContentType,
+                       Content = card
+                   };
         }
 
         private static AdaptiveCard CreateAdaptiveCard(Session session, Timeslot timeslot)
@@ -69,12 +69,8 @@ namespace ConferenceBot.Cards
                                     new TextBlock
                                     {
                                         Text = presenter.Name,
-                                        Weight = TextWeight.Bolder
-                                    },
-                                    new TextBlock
-                                    {
-                                        Text = presenter.Tag,
-                                        IsSubtle = true
+                                        Weight = TextWeight.Bolder,
+                                        Size = TextSize.Medium
                                     }
                                 }
                             }
@@ -83,13 +79,23 @@ namespace ConferenceBot.Cards
                 }
             };
 
+            container.Items.Add(
+                new TextBlock
+                {
+                    Text = presenter.Tag,
+                    IsSubtle = true,
+                    Separation = SeparationStyle.None,
+                    HorizontalAlignment = HorizontalAlignment.Right
+                });
+
             foreach (var bioLine in presenter.Bio)
                 container.Items.Add(new TextBlock
                 {
                     Text = bioLine,
                     Wrap = true,
                     Separation = SeparationStyle.Default,
-                    IsSubtle = true
+                    IsSubtle = true,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
                 });
 
             var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney";
@@ -143,7 +149,7 @@ namespace ConferenceBot.Cards
                     }
                 }
             };
-            
+
             for (var i = 0; i < session.Abstract.Length; i++)
             {
                 var separation = SeparationStyle.Default;
@@ -156,7 +162,8 @@ namespace ConferenceBot.Cards
                     Weight = i > 0 && session.Abstract.Length > 1 ? TextWeight.Normal : TextWeight.Bolder,
                     Wrap = true,
                     Separation = separation,
-                    IsSubtle = i > 0
+                    IsSubtle = i > 0,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
                 });
             }
 
