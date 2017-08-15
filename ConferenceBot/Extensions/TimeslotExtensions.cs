@@ -46,7 +46,10 @@ namespace ConferenceBot.Extensions
 
             if (isNext)
             {
-                days = days.Where(d => d.Date == DateTime.Now.Date);
+                var today = TimeZoneInfo
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
+                    .Date;
+                days = days.Where(d => d.Date == today);
             }
 
             foreach (var day in days)
