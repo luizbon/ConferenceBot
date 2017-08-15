@@ -38,11 +38,16 @@ namespace ConferenceBot.Extensions
             return timeslots;
         }
 
-        public static Timeslot[] FindTime(this Timeslot[] timeslots, TimeSpan time)
+        public static Timeslot[] FindTime(this Timeslot[] timeslots, TimeSpan time, bool isNext)
         {
             var result = new List<Timeslot>();
 
             var days = timeslots.Select(t => t.Date.Date).Distinct();
+
+            if (isNext)
+            {
+                days = days.Where(d => d.Date == DateTime.Now.Date);
+            }
 
             foreach (var day in days)
             {

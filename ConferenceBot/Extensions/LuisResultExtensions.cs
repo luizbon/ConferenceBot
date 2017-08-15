@@ -9,7 +9,7 @@ namespace ConferenceBot.Extensions
 {
     public static class LuisResultExtensions
     {
-        public static bool TryFindTime(this LuisResult result, string timeFilter, string nextFilter, out TimeSpan time)
+        public static bool TryFindTime(this LuisResult result, string timeFilter, string nextFilter, out TimeSpan time, out bool isNext)
         {
             time = TimeSpan.Zero;
             if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
@@ -22,8 +22,11 @@ namespace ConferenceBot.Extensions
                     .FirstOrDefault(x => x.Date.TimeOfDay >= currentTimeSpan);
 
                 time = firstOrDefault?.Date.TimeOfDay ?? currentTimeSpan;
+                isNext = true;
                 return true;
             }
+
+            isNext = false;
 
             if (!result.TryFindEntity(timeFilter, out timeEntity)) return false;
 

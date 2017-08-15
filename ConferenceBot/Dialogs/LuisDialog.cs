@@ -76,8 +76,8 @@ namespace ConferenceBot.Dialogs
             if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
                 timeslots = timeslots.FindRoom(room.Entity);
 
-            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
-                timeslots = timeslots.FindTime(time);
+            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time, out bool isNext))
+                timeslots = timeslots.FindTime(time, isNext);
 
             if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTime, out DateTime endDateTime))
                 timeslots = timeslots.FindDate(startDateTime, endDateTime);
@@ -89,10 +89,15 @@ namespace ConferenceBot.Dialogs
 
             var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
 
-            if (totalSessions <= 0)
+            if (totalSessions <= 0 && !isNext)
             {
                 await context.PostAsync("Hang on a sec while I check for you");
                 await SearchWeb(context, result.Query);
+                context.Wait(MessageReceived);
+            }
+            else if (totalSessions <= 0 && isNext)
+            {
+                await context.PostAsync("Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
                 context.Wait(MessageReceived);
             }
             else
