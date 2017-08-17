@@ -352,16 +352,26 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        private static async Task ShowHelp(IBotToUser context)
+        private static async Task ShowHelp(IDialogContext context)
         {
             var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
             var roomIndex = new Random().Next(0, NdcSydney17.Rooms.Length);
-            await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +
-                                    $"Try asking: When is {NdcSydney17.Speakers[speakerIndex]}'s talk?\n\n" +
-                                    "or\n\n" +
-                                    $"What's happening on {NdcSydney17.Rooms[roomIndex]}?\n\n" +
-                                    "or\n\n" +
-                                    "What's going on at 3PM?");
+
+
+            var message = context.CreateMessage();
+
+            message.Text = "You can ask me about talks, rooms and speakers.\n\nHere are some examples of what you can ask.";
+            message.SuggestedActions = new SuggestedActions
+            {
+                Actions = new List<CardAction>
+                {
+                    new CardAction(ActionTypes.ImBack, $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?", value: $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?"),
+                    new CardAction(ActionTypes.ImBack, $"What's happening on {NdcSydney17.Rooms[roomIndex]}?", value: $"What's happening on {NdcSydney17.Rooms[roomIndex]}?"),
+                    new CardAction(ActionTypes.ImBack, "What's going on at 3PM?", value: "What's going on at 3PM?")
+                }
+            };
+
+            await context.PostAsync(message);
         }
     }
 }
