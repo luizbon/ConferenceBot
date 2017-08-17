@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
+using AdaptiveCards;
 using ConferenceBot.Cards;
 using ConferenceBot.Data;
 using ConferenceBot.Extensions;
 using ConferenceBot.Model;
 using ConferenceBot.Services;
 using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
-using CardAction = Microsoft.Bot.Connector.CardAction;
 
 namespace ConferenceBot.Dialogs
 {
@@ -60,9 +59,11 @@ namespace ConferenceBot.Dialogs
 
             if (totalPresenters <= 0 && isNext)
             {
-                await context.PostAsync("Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
+                await context.PostAsync(
+                    "Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
                 context.Wait(MessageReceived);
-            } else if (totalPresenters <= 0)
+            }
+            else if (totalPresenters <= 0)
             {
                 await context.PostAsync("Hang on a sec while I check for you");
                 await SearchWeb(context, result.Query);
@@ -87,7 +88,7 @@ namespace ConferenceBot.Dialogs
         public async Task FindTalk(IDialogContext context, LuisResult result)
         {
             if (await NoEntities(context, result)) return;
-            
+
             var timeslots = FilterTimeslots(result, out bool isNext);
 
             var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
@@ -100,7 +101,8 @@ namespace ConferenceBot.Dialogs
             }
             else if (totalSessions <= 0 && isNext)
             {
-                await context.PostAsync("Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
+                await context.PostAsync(
+                    "Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
                 context.Wait(MessageReceived);
             }
             else
@@ -156,9 +158,7 @@ namespace ConferenceBot.Dialogs
                 timeslots = timeslots.FindDate(startDateTime, endDateTime);
 
             if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
-            {
                 timeslots = timeslots.FindDate(startDate, endDate);
-            }
             return timeslots;
         }
 
@@ -183,7 +183,7 @@ namespace ConferenceBot.Dialogs
 
                 await SendPresenters(context, NdcSydney17.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
             }
-            catch (Exception )
+            catch (Exception)
             {
                 await context.PostAsync("I'm sorry, I'm having issues understanding you. Let's try again.");
 
@@ -347,7 +347,8 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindWorkshop")]
         public async Task FindWorkshop(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync("Humm, I don't have any information about workshops yet.\n\nMy lazy developer didn't input the data.\n\nPlease visit the official web-page to get more info on http://ndcsydney.com/workshops/");
+            await context.PostAsync(
+                "Humm, I don't have any information about workshops yet.\n\nMy lazy developer didn't input the data.\n\nPlease visit the official web-page to get more info on http://ndcsydney.com/workshops/");
 
             context.Wait(MessageReceived);
         }
@@ -360,14 +361,47 @@ namespace ConferenceBot.Dialogs
 
             var message = context.CreateMessage();
 
-            message.Text = "You can ask me about talks, rooms and speakers.\n\nHere are some examples of what you can ask.";
-            message.SuggestedActions = new SuggestedActions
+            var card = new AdaptiveCard
             {
-                Actions = new List<CardAction>
+                Body = new List<CardElement>
                 {
-                    new CardAction(ActionTypes.ImBack, $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?", value: $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?"),
-                    new CardAction(ActionTypes.ImBack, $"What's happening on {NdcSydney17.Rooms[roomIndex]}?", value: $"What's happening on {NdcSydney17.Rooms[roomIndex]}?"),
-                    new CardAction(ActionTypes.ImBack, "What's going on at 3PM?", value: "What's going on at 3PM?")
+                    new TextBlock
+                    {
+                        Text = "Please ask me about talks, rooms and speakers.",
+                        Size = TextSize.Medium
+                    },
+                    new TextBlock
+                    {
+                        Text = "Here are some examples of what you can ask.",
+                        Size = TextSize.Medium
+                    }
+                },
+                Actions = new List<ActionBase>
+                {
+                    new SubmitAction
+                    {
+                        Title = $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?",
+                        Data = $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?"
+                    },
+                    new SubmitAction
+                    {
+                        Title = $"What's happening on {NdcSydney17.Rooms[roomIndex]}?",
+                        Data = $"What's happening on {NdcSydney17.Rooms[roomIndex]}?"
+                    },
+                    new SubmitAction
+                    {
+                        Title = "What's going on at 3PM?",
+                        Data = "What's going on at 3PM?"
+                    }
+                }
+            };
+
+            message.Attachments = new List<Attachment>
+            {
+                new Attachment
+                {
+                    ContentType = AdaptiveCard.ContentType,
+                    Content = card
                 }
             };
 
