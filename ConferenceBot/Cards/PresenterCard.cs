@@ -124,7 +124,7 @@ namespace ConferenceBot.Cards
 
             var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney";
             if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
-                twitterUrl += $",{presenter.TwitterAlias}";
+                twitterUrl += $"&screen_name={presenter.TwitterAlias}";
 
             var actions = new ActionSet
             {
