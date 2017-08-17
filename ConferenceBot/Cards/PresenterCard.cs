@@ -122,7 +122,7 @@ namespace ConferenceBot.Cards
                     HorizontalAlignment = HorizontalAlignment.Stretch
                 });
 
-            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney";
+            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney&via=luizbon";
             if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
                 twitterUrl += $"&screen_name={presenter.TwitterAlias}";
 
