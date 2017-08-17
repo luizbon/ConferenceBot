@@ -1542,25 +1542,24 @@
           "room": "Room 2"
         },
         {
-          "title": "Debugging and Profiling .NET Core Apps on Linux",
+          "title": "C#: Change, Openness, and Innovation",
           "abstract": [
-            "OK, great, you can now run your favorite ASP.NET app or console application on Linux using .NET Core. What happens next? In fact, what happens straight after deployment, when you discover memory leaks, surprising crashes, performance problems, and other woes -- in the production environment?",
-            "The tools and profilers you're used to from Windows don't work on Linux, and a lot of them don't have easy-to-use alternatives. In this talk, we will review the current landscape of profiling and debugging .NET Core apps on Linux. We will talk about performance investigations using `perf`, the Linux performance multi-tool, which can collect stack traces of CPU samples and other interesting events from .NET Core applications. We will review LTTNG and how it's used by .NET Core as a replacement for Windows ETW events, and see how to collect LTTNG traces efficiently and extract useful insights from them. We will also talk about core dumps, how to generate them on Linux, and how to get .NET-specific information out of a core dump using lldb and SOS. Prepare for a bumpy ride of half-baked tools and command-line magic, with -- hopefully -- a rewarding end!"
+            "The C# team has continued to strive for openness since first making the Roslyn repository open source on CodePlex 3 years ago. There are features in the language that have been developed entirely by community members.",
+            "The C# language spec (draft) is published on GitHub. There's an entire repository dedicated to language proposal discussions. In this session, you'll learn how these changes should affect your relationship with the language, how to keep up with changes, and how to participate. We'll also survey significant upcoming changes to the C# language."
           ],
-          "level": "Advanced",
+          "level": "Beginner",
           "tags": [
-            "Debugging",
-            "DevOps",
+            "Languages",
             ".NET"
           ],
           "presenters": [
             {
-              "name": "Sasha Goldshtein",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Sasha_Goldshtein.jpeg",
-              "tag": "CTO at Sela Group, C# MVP, Pluralsight author",
-              "bio": [ "Sasha Goldshtein is the CTO of Sela Group, a Microsoft C# MVP, a Pluralsight author, and an international consultant and trainer. Sasha is the author of \"Introducing Windows 7 for Developers\" (Microsoft Press, 2009) and \"Pro .NET Performance\" (Apress, 2012), a prolific blogger and open source contributor, and author of numerous training courses including .NET Debugging, .NET Performance, Android Application Development, and Modern C++. His consulting work revolves mainly around distributed architecture, production debugging and performance diagnostics, and mobile application development." ],
-              "twitterAlias": "goldshtn",
-              "website": "http://blogs.microsoft.co.il/sasha/"
+              "name": "Bill Wagner",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Bill_Wagner.png",
+              "tag": "Senior Content Developer C#",
+              "bio": [ "Bill Wagner is one of the world's foremost C# developers and a member of the ECMA C# Standards Committee. He is President of the Humanitarian Toolbox, has been awarded Microsoft Regional Director and .NET MVP for 10+years, and was recently appointed to the .NET Foundation Advisory Council. He is currently with Microsoft, working on the .NET Core content team. He creates learning materials for developers interested in the C# language and .NET Core. Reach Bill at wiwagn@microsoft.com" ],
+              "twitterAlias": "billwagner",
+              "website": "http://www.thebillwagner.com/"
             }
           ],
           "room": "Room 3"
@@ -1589,24 +1588,25 @@
           "room": "Room 4"
         },
         {
-          "title": "C#: Change, Openness, and Innovation",
+          "title": "Debugging and Profiling .NET Core Apps on Linux",
           "abstract": [
-            "The C# team has continued to strive for openness since first making the Roslyn repository open source on CodePlex 3 years ago. There are features in the language that have been developed entirely by community members.",
-            "The C# language spec (draft) is published on GitHub. There's an entire repository dedicated to language proposal discussions. In this session, you'll learn how these changes should affect your relationship with the language, how to keep up with changes, and how to participate. We'll also survey significant upcoming changes to the C# language."
+            "OK, great, you can now run your favorite ASP.NET app or console application on Linux using .NET Core. What happens next? In fact, what happens straight after deployment, when you discover memory leaks, surprising crashes, performance problems, and other woes -- in the production environment?",
+            "The tools and profilers you're used to from Windows don't work on Linux, and a lot of them don't have easy-to-use alternatives. In this talk, we will review the current landscape of profiling and debugging .NET Core apps on Linux. We will talk about performance investigations using `perf`, the Linux performance multi-tool, which can collect stack traces of CPU samples and other interesting events from .NET Core applications. We will review LTTNG and how it's used by .NET Core as a replacement for Windows ETW events, and see how to collect LTTNG traces efficiently and extract useful insights from them. We will also talk about core dumps, how to generate them on Linux, and how to get .NET-specific information out of a core dump using lldb and SOS. Prepare for a bumpy ride of half-baked tools and command-line magic, with -- hopefully -- a rewarding end!"
           ],
-          "level": "Beginner",
+          "level": "Advanced",
           "tags": [
-            "Languages",
+            "Debugging",
+            "DevOps",
             ".NET"
           ],
           "presenters": [
             {
-              "name": "Bill Wagner",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Bill_Wagner.png",
-              "tag": "Senior Content Developer C#",
-              "bio": [ "Bill Wagner is one of the world's foremost C# developers and a member of the ECMA C# Standards Committee. He is President of the Humanitarian Toolbox, has been awarded Microsoft Regional Director and .NET MVP for 10+years, and was recently appointed to the .NET Foundation Advisory Council. He is currently with Microsoft, working on the .NET Core content team. He creates learning materials for developers interested in the C# language and .NET Core. Reach Bill at wiwagn@microsoft.com" ],
-              "twitterAlias": "billwagner",
-              "website": "http://www.thebillwagner.com/"
+              "name": "Sasha Goldshtein",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Sasha_Goldshtein.jpeg",
+              "tag": "CTO at Sela Group, C# MVP, Pluralsight author",
+              "bio": [ "Sasha Goldshtein is the CTO of Sela Group, a Microsoft C# MVP, a Pluralsight author, and an international consultant and trainer. Sasha is the author of \"Introducing Windows 7 for Developers\" (Microsoft Press, 2009) and \"Pro .NET Performance\" (Apress, 2012), a prolific blogger and open source contributor, and author of numerous training courses including .NET Debugging, .NET Performance, Android Application Development, and Modern C++. His consulting work revolves mainly around distributed architecture, production debugging and performance diagnostics, and mobile application development." ],
+              "twitterAlias": "goldshtn",
+              "website": "http://blogs.microsoft.co.il/sasha/"
             }
           ],
           "room": "Room 5"
@@ -1644,6 +1644,36 @@
           "room": "Room 6"
         },
         {
+          "title": "Squashing JavaScript Bugs",
+          "abstract": [
+            "The web is a dirty place. Traces of stacks litter the floor; memory leaking from cracks in the ceiling. Someone lost their context in the corner. Load times are slowly crawling along the window.",
+            "Join me for a live debugging session as we find and squash different kinds of browser bugs. You leave armed to stomp out your own bugs and cleanup your JavaScript app."
+          ],
+          "level": "Intermediate",
+          "tags": [
+            "Debugging",
+            "JavaScript",
+            "Web"
+          ],
+          "presenters": [
+            {
+              "name": "Todd Gardner",
+              "imageUrl": "http://ndcsydney.com/images/speaker/ToddGardner.jpg",
+              "tag": "JavaScript Debugger",
+              "bio": [ "Todd H. Gardner is the president and co-founder of TrackJS (trackjs.com) and an independent software consultant. With over a decade of experience building software systems, Todd has built large enterprise systems, complex software products, and launched businesses. Todd is a veteran of software conferences and an international speaker." ],
+              "twitterAlias": "toddhgardner",
+              "website": "https://todd.mn/"
+            }
+          ],
+          "room": "Room 7"
+        }
+      ]
+    },
+    {
+      "date": "2017-08-17",
+      "time": "13:40",
+      "sessions": [
+        {
           "title": "ASP.NET Core for Angular, React, and Knockout developers",
           "abstract": [
             "ASP.NET Core strives to be the best server-side web platform for developers building rich Single Page Apps (SPAs) with frameworks such as Angular, React, and others.",
@@ -1669,36 +1699,6 @@
               "bio": [ "Steve is working as a developer for Microsoft in the team that brings you the ASP.NET technology stack, IIS, and other web things. Previously he developed .NET software as a contractor/consultant for clients in Bristol and beyond, plus wrote some books for Apress, such as Pro ASP.NET MVC Framework. From time to time, he speaks at user groups and conferences, and recently have been running a bunch of training courses on topics such as C#, SQL Server, and of course ASP.NET MVC." ],
               "twitterAlias": "stevensanderson",
               "website": "http://blog.stevensanderson.com/"
-            }
-          ],
-          "room": "Room 7"
-        }
-      ]
-    },
-    {
-      "date": "2017-08-17",
-      "time": "13:40",
-      "sessions": [
-        {
-          "title": "Squashing JavaScript Bugs",
-          "abstract": [
-            "The web is a dirty place. Traces of stacks litter the floor; memory leaking from cracks in the ceiling. Someone lost their context in the corner. Load times are slowly crawling along the window.",
-            "Join me for a live debugging session as we find and squash different kinds of browser bugs. You leave armed to stomp out your own bugs and cleanup your JavaScript app."
-          ],
-          "level": "Intermediate",
-          "tags": [
-            "Debugging",
-            "JavaScript",
-            "Web"
-          ],
-          "presenters": [
-            {
-              "name": "Todd Gardner",
-              "imageUrl": "http://ndcsydney.com/images/speaker/ToddGardner.jpg",
-              "tag": "JavaScript Debugger",
-              "bio": [ "Todd H. Gardner is the president and co-founder of TrackJS (trackjs.com) and an independent software consultant. With over a decade of experience building software systems, Todd has built large enterprise systems, complex software products, and launched businesses. Todd is a veteran of software conferences and an international speaker." ],
-              "twitterAlias": "toddhgardner",
-              "website": "https://todd.mn/"
             }
           ],
           "room": "Room 1"
@@ -1929,6 +1929,26 @@
           "room": "Room 1"
         },
         {
+          "title": "Building a development environment out of your production deployment",
+          "abstract": [
+            "Many “born in the cloud” organizations started and continue with “production only” deployments. This works fine in the early stages, but leads to complications later when a more robust set of processes must be put in place.",
+            "In this session you’ll learn how to transform your “born in the cloud” Azure environment to one which has a proper development and production environment, how to ensure that your workloads are backed up and recoverable, and how to ensure that permissions and roles are configured so that coworkers have the rights that they need, rather than everyone sharing a single administrative account."
+          ],
+          "level": "Advanced",
+          "tags": [ "DevOps", "Cloud" ],
+          "presenters": [
+            {
+              "name": "Orin Thomas",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Orin_Thomas.jpg",
+              "tag": "Microsoft Cloud/Datacenter Specialist. Author. Microsoft MVP & Regional Director. Technical Raconteur",
+              "bio": [ "Orin Thomas is an MVP, a Microsoft Regional Director, an MCT, and has a string of Microsoft MCSE and MCITP certifications. He has written more than 3 dozen books for Microsoft Press on topics including Windows Server, Windows Client, Azure, System Center, Exchange Server, Security, and SQL Server. He is an author at PluralSight and is a candidate in the Doctor of Information Technology program at Charles Sturt University. You can follow him on twitter at http://twitter.com/orinthomas" ],
+              "twitterAlias": "orinthomas",
+              "website": "http://orinthomas.com/"
+            }
+          ],
+          "room": "Room 2"
+        },
+        {
           "title": "UX Patterns for Web Developers",
           "abstract": [
             "Are you willing to go the extra mile to make your UX shiny and joyful? Most of us web developers underestimate the importance of the Human-Computer Interaction. Join this talk for developer-friendly UX patterns that you can start using in your everyday code.",
@@ -1963,7 +1983,7 @@
               "website": "https://nicolesaidy.com/"
             }
           ],
-          "room": "Room 2"
+          "room": "Room 3"
         },
         {
           "title": "\"The website's down!\" Stories and lessons on keeping your website up.",
@@ -1979,26 +1999,6 @@
               "imageUrl": "http://ndcsydney.com/images/speaker/Adrian_Ubalde.jpeg",
               "tag": "Site Reliability Engineer at Domain.com.au",
               "bio": [ "Adrian Ubalde is a Web Developer turned Site Reliability Engineer. When not figuring out how to make websites or services more reliable, he enjoys long walks on the beach and travelling the world." ]
-            }
-          ],
-          "room": "Room 3"
-        },
-        {
-          "title": "Building a development environment out of your production deployment",
-          "abstract": [
-            "Many “born in the cloud” organizations started and continue with “production only” deployments. This works fine in the early stages, but leads to complications later when a more robust set of processes must be put in place.",
-            "In this session you’ll learn how to transform your “born in the cloud” Azure environment to one which has a proper development and production environment, how to ensure that your workloads are backed up and recoverable, and how to ensure that permissions and roles are configured so that coworkers have the rights that they need, rather than everyone sharing a single administrative account."
-          ],
-          "level": "Advanced",
-          "tags": [ "DevOps", "Cloud" ],
-          "presenters": [
-            {
-              "name": "Orin Thomas",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Orin_Thomas.jpg",
-              "tag": "Microsoft Cloud/Datacenter Specialist. Author. Microsoft MVP & Regional Director. Technical Raconteur",
-              "bio": [ "Orin Thomas is an MVP, a Microsoft Regional Director, an MCT, and has a string of Microsoft MCSE and MCITP certifications. He has written more than 3 dozen books for Microsoft Press on topics including Windows Server, Windows Client, Azure, System Center, Exchange Server, Security, and SQL Server. He is an author at PluralSight and is a candidate in the Doctor of Information Technology program at Charles Sturt University. You can follow him on twitter at http://twitter.com/orinthomas" ],
-              "twitterAlias": "orinthomas",
-              "website": "http://orinthomas.com/"
             }
           ],
           "room": "Room 4"
@@ -2054,10 +2054,10 @@
           "room": "Room 6"
         },
         {
-          "title": "What is the Blockchain?",
+          "title": "Blockchain is Cyberpunk?",
           "abstract": [
-            "You keep hearing about the Blockchain, but do you really understand what it is, and the potential impact it will have on practically all industries?",
-            "This session will cover: What the Blockchain is, scenarios showing potential use cases to put it into context, differences between Blockchain 1.0 to 3.0, and resources that can be used help you get started today."
+            "Blockchain is totally Cyberpunk. It lets users cut out corporations by directly interacting and trading over the web, building up anonymous reputation scores and swapping credit sticks in person. Simultaneously it enables corporations to prove the origins and logistics channels of their products, and automatically penalising each other for breaking corporate agreements.",
+            "This session will give an introductory overview of What the Blockchain is, how it works, then spends the bulk of the time covering use cases to help you understand just how this transformational technology will impact EVERYTHING in our connected lives. With a little bit of futurism thrown in."
           ],
           "level": "Beginner",
           "tags": [ "Cloud" ],
@@ -2099,6 +2099,30 @@
             }
           ],
           "room": "Room 1"
+        },
+        {
+          "title": "Profiling Node Applications",
+          "abstract": [
+            "Node runs on a powerful JavaScript engine, but that same engine can complicate things when it comes to obtaining accurate information on your application's performance.",
+            "There are plenty of tools for profiling C++ or Java applications, but understanding JavaScript interactions with native code can be extremely challenging. In this talk we will discuss profiling options for Node.js, including perf_events, dtrace, the V8's engine built-in --prof switch, and tools based on the bleeding-edge kernel BPF technology. We will also talk about turning profiler results into flame graphs, an innovative visualization tool for understanding stack sample reports, and for figuring out the time split across the JavaScript and native parts of your application."
+          ],
+          "level": "Advanced",
+          "tags": [
+            "Debugging",
+            "DevOps",
+            "JavaScript"
+          ],
+          "presenters": [
+            {
+              "name": "Sasha Goldshtein",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Sasha_Goldshtein.jpeg",
+              "tag": "CTO at Sela Group, C# MVP, Pluralsight author",
+              "bio": [ "Sasha Goldshtein is the CTO of Sela Group, a Microsoft C# MVP, a Pluralsight author, and an international consultant and trainer. Sasha is the author of \"Introducing Windows 7 for Developers\" (Microsoft Press, 2009) and \"Pro .NET Performance\" (Apress, 2012), a prolific blogger and open source contributor, and author of numerous training courses including .NET Debugging, .NET Performance, Android Application Development, and Modern C++. His consulting work revolves mainly around distributed architecture, production debugging and performance diagnostics, and mobile application development." ],
+              "twitterAlias": "goldshtn",
+              "website": "http://blogs.microsoft.co.il/sasha/"
+            }
+          ],
+          "room": "Room 2"
         },
         {
           "title": "Accessibility for UX: Don't worry, it's much worse than you think",
@@ -2222,25 +2246,21 @@
       "time": "17:40",
       "sessions": [
         {
-          "title": "Profiling Node Applications",
+          "title": "Where's my free lunch?",
           "abstract": [
-            "Node runs on a powerful JavaScript engine, but that same engine can complicate things when it comes to obtaining accurate information on your application's performance.",
-            "There are plenty of tools for profiling C++ or Java applications, but understanding JavaScript interactions with native code can be extremely challenging. In this talk we will discuss profiling options for Node.js, including perf_events, dtrace, the V8's engine built-in --prof switch, and tools based on the bleeding-edge kernel BPF technology. We will also talk about turning profiler results into flame graphs, an innovative visualization tool for understanding stack sample reports, and for figuring out the time split across the JavaScript and native parts of your application."
+            "Have you ever thought about how many amazing things we get in this day and age for free? Think about it, whether it’s articles in daily newspapers, social media, your code repository, your continuous integration server as a service.",
+            "And that’s not even mentioning all the amazing open source libraries, frameworks that are all out there. It’s all free, and it’s awesomesauce! But (isn’t there always a but) in reality, someone is paying for all this. Sometimes it’s being paid for with cash, other times in the form of data and in many cases in the form of liabilities. Many of us choose to ignore this and gaze at the wonder of it all. One day however, we’ll wake up and ask where our free lunch has gone and surprised that things start crumbling down."
           ],
-          "level": "Advanced",
-          "tags": [
-            "Debugging",
-            "DevOps",
-            "JavaScript"
-          ],
+          "level": "Beginner",
+          "tags": [ "Soft Skills" ],
           "presenters": [
             {
-              "name": "Sasha Goldshtein",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Sasha_Goldshtein.jpeg",
-              "tag": "CTO at Sela Group, C# MVP, Pluralsight author",
-              "bio": [ "Sasha Goldshtein is the CTO of Sela Group, a Microsoft C# MVP, a Pluralsight author, and an international consultant and trainer. Sasha is the author of \"Introducing Windows 7 for Developers\" (Microsoft Press, 2009) and \"Pro .NET Performance\" (Apress, 2012), a prolific blogger and open source contributor, and author of numerous training courses including .NET Debugging, .NET Performance, Android Application Development, and Modern C++. His consulting work revolves mainly around distributed architecture, production debugging and performance diagnostics, and mobile application development." ],
-              "twitterAlias": "goldshtn",
-              "website": "http://blogs.microsoft.co.il/sasha/"
+              "name": "Hadi Hariri",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Hadi_Hariri_1.png",
+              "tag": "Never believed in elevator pitches",
+              "bio": [ "Developer and creator of many things OSS, his passions includes Web Development and Software Architecture. Has authored a couple of books, a few courses and has been speaking at industry events for nearly 15 years. Currently at JetBrains leading the Developer Advocacy team. Spends as much time as he can writing code." ],
+              "twitterAlias": "hhariri",
+              "website": "http://hadihariri.com/"
             }
           ],
           "room": "Room 1"
@@ -2354,26 +2374,6 @@
             }
           ],
           "room": "Room 6"
-        },
-        {
-          "title": "Where's my free lunch?",
-          "abstract": [
-            "Have you ever thought about how many amazing things we get in this day and age for free? Think about it, whether it’s articles in daily newspapers, social media, your code repository, your continuous integration server as a service.",
-            "And that’s not even mentioning all the amazing open source libraries, frameworks that are all out there. It’s all free, and it’s awesomesauce! But (isn’t there always a but) in reality, someone is paying for all this. Sometimes it’s being paid for with cash, other times in the form of data and in many cases in the form of liabilities. Many of us choose to ignore this and gaze at the wonder of it all. One day however, we’ll wake up and ask where our free lunch has gone and surprised that things start crumbling down."
-          ],
-          "level": "Beginner",
-          "tags": [ "Soft Skills" ],
-          "presenters": [
-            {
-              "name": "Hadi Hariri",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Hadi_Hariri_1.png",
-              "tag": "Never believed in elevator pitches",
-              "bio": [ "Developer and creator of many things OSS, his passions includes Web Development and Software Architecture. Has authored a couple of books, a few courses and has been speaking at industry events for nearly 15 years. Currently at JetBrains leading the Developer Advocacy team. Spends as much time as he can writing code." ],
-              "twitterAlias": "hhariri",
-              "website": "http://hadihariri.com/"
-            }
-          ],
-          "room": "Room 7"
         }
       ]
     },
@@ -2381,6 +2381,31 @@
       "date": "2017-08-18",
       "time": "09:00",
       "sessions": [
+        {
+          "title": "Serilog: Instrumentation that Works for You",
+          "abstract": [
+            "Collecting measurements and log events from your applications is not enough. Whether you need to tame unruly legacy code, get the jump on production errors from your web app, or just survive operating a large microservices architecture, it's important to record the right data in a format you can use efficiently when it counts.",
+            "This session will explore Serilog, a deceptively simple twist on application logging that's changed the way .NET applications are instrumented. You'll learn how to track complex application behavior through distributed and asynchronous systems, without sacrificing any of the development-time productivity of simple text logging.",
+            "Instrumentation is a critical part of application development that's too-often overlooked. For a small investment up-front, you can save a great deal of time (and stress) in production. Your future self will thank you for it!"
+          ],
+          "level": "Intermediate",
+          "tags": [ ".NET" ],
+          "presenters": [
+            {
+              "name": "Nicholas Blumhardt",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Nicholas_Blumhardt_1.jpg",
+              "tag": "Co-founder at Datalust",
+              "bio": [
+                "Nicholas Blumhardt is a keen developer, technologist and entrepreneur, with experience building large-scale platform software at Microsoft, developer tools including Seq and Octopus Deploy, and a wide range of consumer and enterprise software systems.",
+                "Nick has had a long involvement with open source software in .NET, by founding projects like Autofac, Serilog and Sprache, and working on some of the first open-source components of the .NET Base Class Library (BCL).",
+                "Nick is co-founder at Datalust and maintains a technical blog at nblumhardt.com."
+              ],
+              "twitterAlias": "nblumhardt",
+              "website": "https://nblumhardt.com/"
+            }
+          ],
+          "room": "Room 1"
+        },
         {
           "title": "Domain Modeling Made Functional",
           "abstract": [
@@ -2422,26 +2447,35 @@
           "room": "Room 3"
         },
         {
-          "title": "Serilog: Instrumentation that Works for You",
+          "title": "Algebraic Data Types for C#",
           "abstract": [
-            "Collecting measurements and log events from your applications is not enough. Whether you need to tame unruly legacy code, get the jump on production errors from your web app, or just survive operating a large microservices architecture, it's important to record the right data in a format you can use efficiently when it counts.",
-            "This session will explore Serilog, a deceptively simple twist on application logging that's changed the way .NET applications are instrumented. You'll learn how to track complex application behavior through distributed and asynchronous systems, without sacrificing any of the development-time productivity of simple text logging.",
-            "Instrumentation is a critical part of application development that's too-often overlooked. For a small investment up-front, you can save a great deal of time (and stress) in production. Your future self will thank you for it!"
+            "If you use C# in your day job, and hate having to leave your ADTs behind, you don't have to! Come and see how you can incorporate sum and product types into your existing C# projects.",
+            "A significant number of professional developers use C#, which does not natively support immutable sum and product types. Immutable algebraic data types are an invaluable tool for proper problem modeling, because they focus on keeping illegal states from being representable. This talk is about how to practically introduce ADTs into C# by the use of DSLs and code generation. We will dive into how ADTs can be represented, implemented with native C# constructs, and used with pattern matching and partial modification. We’ll conclude with the mechanics of parsing and code generation, look at an open source library and tool, and discuss practical integration of FP patterns into daily work in C#.",
+            "Immutable algebraic data types are an invaluable tool for proper problem modeling, because they focus on keeping illegal states from being representable. However, many programmers who use C# in their day jobs do not get the benefits of these types. This talk will:",
+            "1. Briefly introduce ADTs and their use (most people at LC would already know this).",
+            "2. Discuss how a Product and Union Type can each be implemented with classes.",
+            "3. Talk about Value Semantics and how to implement it with classes.",
+            "4. Introduce a code generator to generate the boilerplate.",
+            "5. Introduce a DSL to represent Product and Union Types and hook it up to the code generator.",
+            "6. Integrate the whole thing into Visual Studio to provide a seamless extension to allow using ADTs within existing C# projects.",
+            "7. Extend a DU defined in the DSL with C# to provide type-class support for Functor, Applicative and Monad, and integrate into LINQ to show that the generated code is extensible."
           ],
           "level": "Intermediate",
-          "tags": [ ".NET" ],
+          "tags": [ "Languages", "Functional Programming" ],
           "presenters": [
             {
-              "name": "Nicholas Blumhardt",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Nicholas_Blumhardt_1.jpg",
-              "tag": "Co-founder at Datalust",
+              "name": "John Azariah",
+              "imageUrl": "http://ndcsydney.com/images/speaker/John_Azariah.jpg",
+              "tag": "Cloud Architect. Antipodean Windows Azure MVP",
               "bio": [
-                "Nicholas Blumhardt is a keen developer, technologist and entrepreneur, with experience building large-scale platform software at Microsoft, developer tools including Seq and Octopus Deploy, and a wide range of consumer and enterprise software systems.",
-                "Nick has had a long involvement with open source software in .NET, by founding projects like Autofac, Serilog and Sprache, and working on some of the first open-source components of the .NET Base Class Library (BCL).",
-                "Nick is co-founder at Datalust and maintains a technical blog at nblumhardt.com."
+                "John is a passionate technologist with a strong foundation in Computer Science.",
+                "He has over 20 years of experience building world-class software in such companies as Microsoft and Oracle.",
+                "As Senior Architect at MYOB, he helped build one of the largest Azure projects in the world, and was a Microsoft Azure MVP in Australia for several years.",
+                "He frequently speaks at conferences such as TechEd and NDC on functional programming, cloud computing, computer science and software engineering.",
+                "He currently is a Principal Software Design Engineer with the Microsoft Azure team in Redmond, W"
               ],
-              "twitterAlias": "nblumhardt",
-              "website": "https://nblumhardt.com/"
+              "twitterAlias": "johnazariah",
+              "website": "http://johnazariah.github.io/"
             }
           ],
           "room": "Room 4"
@@ -2546,6 +2580,48 @@
           "room": "Room 1"
         },
         {
+          "title": "Interactive C# Development with Roslyn",
+          "abstract": [
+            "It’s fair to say that most software developers value very highly the productivity boost that comes with being able to work in a development environment that provides a real-time feedback loop. Historically, C# has been far from that - as typically developers had to rebuild their projects after every change, and the process of finding issues in the code has always felt extremely heavy.",
+            "Roslyn compiler and latest Visual Studio introduced a lot exciting tools, improvements and APIs that help in this area. In this talk, we will look at various techniques to leverage these interactive capabilities. We’ll look at the REPL and Interactive Window, scripting APIs, live Roslyn analyzers, a much improved Edit-and-Continue support and interactive testing, all of which will hopefully help your development workflow be much more productive."
+          ],
+          "level": "Intermediate",
+          "tags": [ ".NET", "Testing", "Microsoft" ],
+          "presenters": [
+            {
+              "name": "Filip W",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Filip_W.jpg",
+              "tag": ".NET blogger, author, prolific open source contributor and a Microsoft MVP",
+              "bio": [ "Filip is a popular .NET blogger, author, prolific open source contributor and a Microsoft MVP. Over the past few years, his blog has been one of the most popular ASP.NET resources on the internet. Filip specializes in the Roslyn compiler, cross platform .NET development, modern web technologies and is experienced in delivering robust web solutions. He worked on projects in many corners of the world (Canada, Switzerland, Finland, Poland, Scotland). Follow him on Twitter @filip_woj." ],
+              "twitterAlias": "filip_woj",
+              "website": "https://www.strathweb.com/"
+            }
+          ],
+          "room": "Room 2"
+        },
+        {
+          "title": "An Introduction to NativeScript",
+          "abstract": [
+            "NativeScript is an open source framework for building truly native mobile apps with Angular, TypeScript or JavaScript.",
+            "In this presentation, you’ll learn what NativeScript is, how it works, and why we built it. You’ll also see a bunch of demos and watch how to build an app from scratch. Visit nativescript.org to learn more!"
+          ],
+          "level": "Intermediate",
+          "tags": [ "Mobile" ],
+          "presenters": [
+            {
+              "name": "John Bristowe",
+              "imageUrl": "http://ndcsydney.com/images/speaker/John_Bristowe.jpg",
+              "tag": "Progress",
+              "bio": [
+                "John Bristowe is a member of the Developer Relations team at Progress. He works on various things, including Kendo UI, NativeScript, web apps, mobile apps, and much more. However, he enjoys taking long walks on the beach in the Gold Coast, where he lives, and avoiding getting on a ski jet with Troy Hunt."
+              ],
+              "twitterAlias": "JohnBristowe",
+              "website": "http://bristowe.com/"
+            }
+          ],
+          "room": "Room 3"
+        },
+        {
           "title": "New Features in TypeScript 2 and beyond",
           "abstract": [
             "TypeScript is quickly becoming the dominant way to write maintainable self documenting JavaScript.",
@@ -2564,26 +2640,6 @@
               ],
               "twitterAlias": "basarat",
               "website": "http://basarat.com/"
-            }
-          ],
-          "room": "Room 2"
-        },
-        {
-          "title": "Interactive C# Development with Roslyn",
-          "abstract": [
-            "It’s fair to say that most software developers value very highly the productivity boost that comes with being able to work in a development environment that provides a real-time feedback loop. Historically, C# has been far from that - as typically developers had to rebuild their projects after every change, and the process of finding issues in the code has always felt extremely heavy.",
-            "Roslyn compiler and latest Visual Studio introduced a lot exciting tools, improvements and APIs that help in this area. In this talk, we will look at various techniques to leverage these interactive capabilities. We’ll look at the REPL and Interactive Window, scripting APIs, live Roslyn analyzers, a much improved Edit-and-Continue support and interactive testing, all of which will hopefully help your development workflow be much more productive."
-          ],
-          "level": "Intermediate",
-          "tags": [ ".NET", "Testing", "Microsoft" ],
-          "presenters": [
-            {
-              "name": "Filip W",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Filip_W.jpg",
-              "tag": ".NET blogger, author, prolific open source contributor and a Microsoft MVP",
-              "bio": [ "Filip is a popular .NET blogger, author, prolific open source contributor and a Microsoft MVP. Over the past few years, his blog has been one of the most popular ASP.NET resources on the internet. Filip specializes in the Roslyn compiler, cross platform .NET development, modern web technologies and is experienced in delivering robust web solutions. He worked on projects in many corners of the world (Canada, Switzerland, Finland, Poland, Scotland). Follow him on Twitter @filip_woj." ],
-              "twitterAlias": "filip_woj",
-              "website": "https://www.strathweb.com/"
             }
           ],
           "room": "Room 4"
@@ -2692,6 +2748,32 @@
             }
           ],
           "room": "Room 1"
+        },
+        {
+          "title": "Continuous Security",
+          "abstract": [
+            "Agile development is a powerful tool for the creation of high-quality software products. It has however scared the life out of many security managers and risk leaders. Once the job of a dedicated security team, security is now the responsibility of all members of our Agile teams.",
+            "So how do we bring continuous security to our lifecycles without compromising velocity and innovation? What tools and techniques do we need and when should we apply them?",
+            "In this talk, we will examine why security is the new key skills for successful Agile development teams and what you can do to bring it to your teams.",
+            "This is a talk of war stories from the SCRUM team trenches and real world tools, techniques and processes that are less about 'managing' security than they are about building amazing(secure) things, fast."
+          ],
+          "level": "Beginner",
+          "tags": [ "Security", "DevOps", "Agile" ],
+          "presenters": [
+            {
+              "name": "Laura Bell",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Laura_Bell.jpeg",
+              "tag": "CEO of SafeStack",
+              "bio": [
+                "With almost a decade of experience in software development and information security, Laura Bell specializes in bringing security survival skills, practices, and culture into fast paced organisations of every shape and size.",
+                "An experienced conference speaker, trainer, and regular panel member, Laura has spoken at a range of events such as BlackHat USA, Velocity, OSCON, Kiwicon, Linux Conf AU, and Microsoft TechEd on the subjects of privacy, covert communications, agile security, and security mindset.",
+                "Laura is the founder of SafeStack, a specialist security training, development, and consultancy firm. She lives in Auckland, New Zealand with her husband and daughter."
+              ],
+              "twitterAlias": "lady_nerd",
+              "website": "https://www.safestack.io/"
+            }
+          ],
+          "room": "Room 2"
         },
         {
           "title": "Effective Eventual Consistency with Actor Models + Amazon Web Services",
@@ -2891,6 +2973,24 @@
       "time": "13:40",
       "sessions": [
         {
+          "title": "Functional Design Patterns",
+          "abstract": [
+            "In object-oriented development, we are all familiar with design patterns such as the Strategy pattern and Decorator pattern, and design principles such as SOLID.",
+            "The functional programming community has design patterns and principles as well. This talk provides an overview of some common FP patterns, from the basics of partial application and currying all the way to monads and monoids."
+          ],
+          "level": "Beginner",
+          "tags": [ "Functional Programming", ".NET" ],
+          "presenters": [
+            {
+              "name": "Scott Wlaschin",
+              "imageUrl": "http://ndcsydney.com/images/speaker/scott_Wlaschin-300_2.jpg",
+              "tag": "NET developer, architect and author",
+              "bio": [ "Scott Wlaschin is a .NET developer, architect and author. He has over 20 years experience in a wide variety of areas from high-level UX/UI to low-level database implementations. He loves learning programming languages, his favorites being Smalltalk, but also Prolog, Python, and more recently, F#, which he blogs about at fsharpforfunandprofit.com." ]
+            }
+          ],
+          "room": "Room 1"
+        },
+        {
           "title": "Security in ASP.NET Core 2.0",
           "abstract": [
             "ASP.NET Core has presented us with the opportunity to improve our security story, throw away the mistakes of the past and introduce new features to make life easier for all.",
@@ -2963,24 +3063,6 @@
           "room": "Room 4"
         },
         {
-          "title": "Functional Design Patterns",
-          "abstract": [
-            "In object-oriented development, we are all familiar with design patterns such as the Strategy pattern and Decorator pattern, and design principles such as SOLID.",
-            "The functional programming community has design patterns and principles as well. This talk provides an overview of some common FP patterns, from the basics of partial application and currying all the way to monads and monoids."
-          ],
-          "level": "Beginner",
-          "tags": [ "Functional Programming", ".NET" ],
-          "presenters": [
-            {
-              "name": "Scott Wlaschin",
-              "imageUrl": "http://ndcsydney.com/images/speaker/scott_Wlaschin-300_2.jpg",
-              "tag": "NET developer, architect and author",
-              "bio": [ "Scott Wlaschin is a .NET developer, architect and author. He has over 20 years experience in a wide variety of areas from high-level UX/UI to low-level database implementations. He loves learning programming languages, his favorites being Smalltalk, but also Prolog, Python, and more recently, F#, which he blogs about at fsharpforfunandprofit.com." ]
-            }
-          ],
-          "room": "Room 6"
-        },
-        {
           "title": "Building for Alexa with Web API",
           "abstract": [
             "Amazon Echo, Amazon Tap and Echo Dot have brought voice interfaces to life for the home. We will discuss ways to integrate your existing software or database into an Alexa Skill, allowing for voice-activated, meaningful interaction with a user.",
@@ -3003,7 +3085,33 @@
               "website": "https://www.quorralyne.com/"
             }
           ],
-          "room": "Room 7"
+          "room": "Room 5"
+        },
+        {
+          "title": "There is a better way",
+          "abstract": [
+            "Knowledge of reactive programming changes you as a developer, makes you better and aligns your career with where the industry is going. One of the cool things about reactive programming is that the knowledge is universal across programming languages.",
+            "When AngularJS was released, people adopted it, and then version v2.0 (cough 4.0) came out and all of that accumulated framework knowledge had to be thrown away; such a waste. Interesting enough, you now need to know reactive programming to be an Angular developer - that's what the breaking change was - the Angular team has embraced reactive programming (RxJS) and IObservable with open arms.",
+            "If you ever decide to move away from user interface development to backend development you'll need to know reactive programming as it is the staple tool of choice for stream processing and event based architectures. Likewise, if you decide it's time to move on from the .NET ecosystem then this knowledge is directly portable and can be directly applied in that ecosystem because there's an implementation for and vibrant community in that ecosystem.",
+            "If you are sick of investing time into learning transitory knowledge - then this is the session for you."
+          ],
+          "level": "All Levels",
+          "tags": [
+            "Cross-Platform",
+            ".NET",
+            "Mobile"
+          ],
+          "presenters": [
+            {
+              "name": "Geoffrey Huntley",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Geoffrey_Huntley.jpeg",
+              "tag": "Lead Consultant at Readify",
+              "bio": [
+                "Geoff is a Lead Consultant at Readify (readify.net). He is a Microsoft MVP and Xamarin MVP. He is the curator of the Weekly Xamarin Newsletter (weeklyxamarin.com) and a core maintainer of the open-source project ReactiveUI (reactiveui.net) which joined the .NET Foundation last week. Geoff's journey into open-source started two years ago after the ReactiveUI project lead departed to become the lead engineer that built the Slack desktop client. ReactiveUI is currently used in products shipped by GitHub, Slack, Amazon, Elastic Inc and more."
+              ]
+            }
+          ],
+          "room": "Room 6"
         }
       ]
     },
@@ -3144,32 +3252,6 @@
             }
           ],
           "room": "Room 6"
-        },
-        {
-          "title": "Continuous Security",
-          "abstract": [
-            "Agile development is a powerful tool for the creation of high-quality software products. It has however scared the life out of many security managers and risk leaders. Once the job of a dedicated security team, security is now the responsibility of all members of our Agile teams.",
-            "So how do we bring continuous security to our lifecycles without compromising velocity and innovation? What tools and techniques do we need and when should we apply them?",
-            "In this talk, we will examine why security is the new key skills for successful Agile development teams and what you can do to bring it to your teams.",
-            "This is a talk of war stories from the SCRUM team trenches and real world tools, techniques and processes that are less about 'managing' security than they are about building amazing(secure) things, fast."
-          ],
-          "level": "Beginner",
-          "tags": [ "Security", "DevOps", "Agile" ],
-          "presenters": [
-            {
-              "name": "Laura Bell",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Laura_Bell.jpeg",
-              "tag": "CEO of SafeStack",
-              "bio": [
-                "With almost a decade of experience in software development and information security, Laura Bell specializes in bringing security survival skills, practices, and culture into fast paced organisations of every shape and size.",
-                "An experienced conference speaker, trainer, and regular panel member, Laura has spoken at a range of events such as BlackHat USA, Velocity, OSCON, Kiwicon, Linux Conf AU, and Microsoft TechEd on the subjects of privacy, covert communications, agile security, and security mindset.",
-                "Laura is the founder of SafeStack, a specialist security training, development, and consultancy firm. She lives in Auckland, New Zealand with her husband and daughter."
-              ],
-              "twitterAlias": "lady_nerd",
-              "website": "https://www.safestack.io/"
-            }
-          ],
-          "room": "Room 7"
         }
       ]
     },
@@ -3177,6 +3259,26 @@
       "date": "2017-08-18",
       "time": "16:20",
       "sessions": [
+        {
+          "title": "The Art of Coding a Conversation: Designing Bots",
+          "abstract": [
+            "While top apps on your App Store are Messaging Apps, and conversational canvases becoming more ubiquitous, there is a certain hype around building bots.",
+            "Although there might be a lot of you who still haven’t jumped on the Bot hype, but you might certainly be going through the app fatigue. Learn about building bots the right way with more meaningful interactive experiences for your users and why is there such a hype around them."
+          ],
+          "level": "Intermediate",
+          "tags": [ "Cross-Platform", "Design", "UX", "Mobile" ],
+          "presenters": [
+            {
+              "name": "Vishesh Oberoi",
+              "imageUrl": "http://ndcsydney.com/images/speaker/Vishesh_Oberoi.jpeg",
+              "tag": "Technical Evangelist, Microsoft",
+              "bio": [ "Vishesh is a Technical Evangelist at Microsoft focused on driving early adoption of Microsoft’s emerging technologies by building solutions directly with Software Startups, Independent Software Vendors (ISVs) and Large Companies across New Zealand. He currently leads all the developer effort across NZ around Bots, Cognitive Services and Azure IoT Suite." ],
+              "twitterAlias": "ovishesh",
+              "website": "http://visheshoberoi.com/"
+            }
+          ],
+          "room": "Room 1"
+        },
         {
           "title": "Successful Code Sharing Principles for Mobile Development",
           "abstract": [
@@ -3251,60 +3353,6 @@
           "room": "Room 4"
         },
         {
-          "title": "The Art of Coding a Conversation: Designing Bots",
-          "abstract": [
-            "While top apps on your App Store are Messaging Apps, and conversational canvases becoming more ubiquitous, there is a certain hype around building bots.",
-            "Although there might be a lot of you who still haven’t jumped on the Bot hype, but you might certainly be going through the app fatigue. Learn about building bots the right way with more meaningful interactive experiences for your users and why is there such a hype around them."
-          ],
-          "level": "Intermediate",
-          "tags": [ "Cross-Platform", "Design", "UX", "Mobile" ],
-          "presenters": [
-            {
-              "name": "Vishesh Oberoi",
-              "imageUrl": "http://ndcsydney.com/images/speaker/Vishesh_Oberoi.jpeg",
-              "tag": "Technical Evangelist, Microsoft",
-              "bio": [ "Vishesh is a Technical Evangelist at Microsoft focused on driving early adoption of Microsoft’s emerging technologies by building solutions directly with Software Startups, Independent Software Vendors (ISVs) and Large Companies across New Zealand. He currently leads all the developer effort across NZ around Bots, Cognitive Services and Azure IoT Suite." ],
-              "twitterAlias": "ovishesh",
-              "website": "http://visheshoberoi.com/"
-            }
-          ],
-          "room": "Room 5"
-        },
-        {
-          "title": "Algebraic Data Types for C#",
-          "abstract": [
-            "If you use C# in your day job, and hate having to leave your ADTs behind, you don't have to! Come and see how you can incorporate sum and product types into your existing C# projects.",
-            "A significant number of professional developers use C#, which does not natively support immutable sum and product types. Immutable algebraic data types are an invaluable tool for proper problem modeling, because they focus on keeping illegal states from being representable. This talk is about how to practically introduce ADTs into C# by the use of DSLs and code generation. We will dive into how ADTs can be represented, implemented with native C# constructs, and used with pattern matching and partial modification. We’ll conclude with the mechanics of parsing and code generation, look at an open source library and tool, and discuss practical integration of FP patterns into daily work in C#.",
-            "Immutable algebraic data types are an invaluable tool for proper problem modeling, because they focus on keeping illegal states from being representable. However, many programmers who use C# in their day jobs do not get the benefits of these types. This talk will:",
-            "1. Briefly introduce ADTs and their use (most people at LC would already know this).",
-            "2. Discuss how a Product and Union Type can each be implemented with classes.",
-            "3. Talk about Value Semantics and how to implement it with classes.",
-            "4. Introduce a code generator to generate the boilerplate.",
-            "5. Introduce a DSL to represent Product and Union Types and hook it up to the code generator.",
-            "6. Integrate the whole thing into Visual Studio to provide a seamless extension to allow using ADTs within existing C# projects.",
-            "7. Extend a DU defined in the DSL with C# to provide type-class support for Functor, Applicative and Monad, and integrate into LINQ to show that the generated code is extensible."
-          ],
-          "level": "Intermediate",
-          "tags": [ "Languages", "Functional Programming" ],
-          "presenters": [
-            {
-              "name": "John Azariah",
-              "imageUrl": "http://ndcsydney.com/images/speaker/John_Azariah.jpg",
-              "tag": "Cloud Architect. Antipodean Windows Azure MVP",
-              "bio": [
-                "John is a passionate technologist with a strong foundation in Computer Science.",
-                "He has over 20 years of experience building world-class software in such companies as Microsoft and Oracle.",
-                "As Senior Architect at MYOB, he helped build one of the largest Azure projects in the world, and was a Microsoft Azure MVP in Australia for several years.",
-                "He frequently speaks at conferences such as TechEd and NDC on functional programming, cloud computing, computer science and software engineering.",
-                "He currently is a Principal Software Design Engineer with the Microsoft Azure team in Redmond, W"
-              ],
-              "twitterAlias": "johnazariah",
-              "website": "http://johnazariah.github.io/"
-            }
-          ],
-          "room": "Room 6"
-        },
-        {
           "title": "How one team built their first microservice",
           "abstract": [
             "Microservices are here. But you're still stuck in a monolith. This is one team's story of how we decided to stop contributing to a shared monolith and start building our own microservices.",
@@ -3322,7 +3370,7 @@
               "website": "http://www.thejimmyp.com/"
             }
           ],
-          "room": "Room 7"
+          "room": "Room 5"
         }
       ]
     }
