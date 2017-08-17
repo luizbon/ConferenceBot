@@ -47,45 +47,48 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("FindSpeaker")]
+        public async Task FindSpeaker(IDialogContext context, LuisResult result)
+        {
+            if (await NoEntities(context, result)) return;
+
+            var timeslots = FilterTimeslots(result, out bool isNext);
+
+            var presenters = timeslots.GetPresenters();
+
+            var totalPresenters = presenters.Length;
+
+            if (totalPresenters <= 0 && isNext)
+            {
+                await context.PostAsync("Sorry, but I'm afraid there are no more sessions for today. Please check again later.");
+                context.Wait(MessageReceived);
+            } else if (totalPresenters <= 0)
+            {
+                await context.PostAsync("Hang on a sec while I check for you");
+                await SearchWeb(context, result.Query);
+                context.Wait(MessageReceived);
+            }
+            else
+            {
+                await context.PostAsync("Let's see what I have here.");
+                await context.SendTyping();
+
+                if (totalPresenters > 7)
+                {
+                    context.Call(new TimeslotFilterDialog(timeslots.ToSessionIdentifiers()), PresentersResumeAsync);
+                    return;
+                }
+
+                await SendPresenters(context, timeslots);
+            }
+        }
+
         [LuisIntent("FindTalk")]
         public async Task FindTalk(IDialogContext context, LuisResult result)
         {
-            if (!result.Entities.Any())
-            {
-                if (await SearchQnA(context, result.Query)) return;
-
-                await context.PostAsync("You need to be a bit more specific");
-                await ShowHelp(context);
-                return;
-            }
-
-            var timeslots = NdcSydney17.Data.Timeslots;
-
-            if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
-                timeslots = timeslots.FindKeynote();
-
-            if (result.TryFindEntity(LocknoteFilter, out EntityRecommendation _))
-                timeslots = timeslots.FindLocknote();
-
-            if (result.TryFindEntity(SpeakerFilter, out EntityRecommendation speaker))
-                timeslots = timeslots.FindSpeaker(speaker.Entity);
-
-            if (result.TryFindEntity(TitleFilter, out EntityRecommendation title))
-                timeslots = timeslots.FindTitle(title.Entity);
-
-            if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
-                timeslots = timeslots.FindRoom(room.Entity);
-
-            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time, out bool isNext))
-                timeslots = timeslots.FindTime(time, isNext);
-
-            if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTime, out DateTime endDateTime))
-                timeslots = timeslots.FindDate(startDateTime, endDateTime);
-
-            if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
-            {
-                timeslots = timeslots.FindDate(startDate, endDate);
-            }
+            if (await NoEntities(context, result)) return;
+            
+            var timeslots = FilterTimeslots(result, out bool isNext);
 
             var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
 
@@ -107,11 +110,84 @@ namespace ConferenceBot.Dialogs
 
                 if (totalSessions > 7)
                 {
-                    context.Call(new TimeslotFilterDialog(timeslots.ToSessionIdentifiers()), FilterResumeAsync);
+                    context.Call(new TimeslotFilterDialog(timeslots.ToSessionIdentifiers()), TalksResumeAsync);
                     return;
                 }
 
                 await SendTalks(context, timeslots);
+            }
+        }
+
+        private static async Task<bool> NoEntities(IDialogContext context, LuisResult result)
+        {
+            if (result.Entities.Any()) return false;
+
+            if (await SearchQnA(context, result.Query)) return true;
+
+            await context.PostAsync("You need to be a bit more specific");
+            await ShowHelp(context);
+
+            return true;
+        }
+
+        private static Timeslot[] FilterTimeslots(LuisResult result, out bool isNext)
+        {
+            var timeslots = NdcSydney17.Data.Timeslots;
+
+            if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
+                timeslots = timeslots.FindKeynote();
+
+            if (result.TryFindEntity(LocknoteFilter, out EntityRecommendation _))
+                timeslots = timeslots.FindLocknote();
+
+            if (result.TryFindEntity(SpeakerFilter, out EntityRecommendation speaker))
+                timeslots = timeslots.FindSpeaker(speaker.Entity);
+
+            if (result.TryFindEntity(TitleFilter, out EntityRecommendation title))
+                timeslots = timeslots.FindTitle(title.Entity);
+
+            if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
+                timeslots = timeslots.FindRoom(room.Entity);
+
+            if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time, out isNext))
+                timeslots = timeslots.FindTime(time, isNext);
+
+            if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTime, out DateTime endDateTime))
+                timeslots = timeslots.FindDate(startDateTime, endDateTime);
+
+            if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
+            {
+                timeslots = timeslots.FindDate(startDate, endDate);
+            }
+            return timeslots;
+        }
+
+        private async Task SendPresenters(IDialogContext context, Timeslot[] timeslots)
+        {
+            var presenters = timeslots.GetPresenters();
+            if (presenters.Length > 0)
+                await context.PostAsync("Good news, I found some speakers");
+            else
+                await context.PostAsync("Good news, I found the speaker you looking after");
+
+            var message = context.CreateMessage(PresenterCard.GetPresenterCards(timeslots).ToList());
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+        }
+
+        private async Task PresentersResumeAsync(IDialogContext context, IAwaitable<SessionIdentifier[]> result)
+        {
+            try
+            {
+                var sessionIdentifiers = await result;
+
+                await SendPresenters(context, NdcSydney17.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
+            }
+            catch (Exception )
+            {
+                await context.PostAsync("I'm sorry, I'm having issues understanding you. Let's try again.");
+
+                await ShowHelp(context);
             }
         }
 
@@ -126,7 +202,7 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        private async Task FilterResumeAsync(IDialogContext context, IAwaitable<SessionIdentifier[]> result)
+        private async Task TalksResumeAsync(IDialogContext context, IAwaitable<SessionIdentifier[]> result)
         {
             try
             {

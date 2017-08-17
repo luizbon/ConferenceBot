@@ -106,5 +106,10 @@ namespace ConferenceBot.Extensions
                         IsLocknote = timeslot.IsLocknote
                     }).ToArray();
         }
+
+        public static Presenter[] GetPresenters(this Timeslot[] timeslots)
+        {
+            return timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters).Distinct().ToArray();
+        }
     }
 }

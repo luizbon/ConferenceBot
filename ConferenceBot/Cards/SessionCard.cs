@@ -29,115 +29,21 @@ namespace ConferenceBot.Cards
                 AddSessionContainer(session)
             };
 
-            body.AddRange(session.Presenters.Select(AddSpeakerContainer));
+            body.AddRange(session.Presenters.Select(PresenterCard.AddPresenterContainer));
 
             return new AdaptiveCard
             {
                 Body = body
             };
         }
+        
 
-        private static Container AddSpeakerContainer(Presenter presenter)
-        {
-            var container = new Container
-            {
-                Speak = presenter.Name,
-                Separation = SeparationStyle.Strong,
-                Items = new List<CardElement>
-                {
-                    new ColumnSet
-                    {
-                        Columns = new List<Column>
-                        {
-                            new Column
-                            {
-                                Size = ColumnSize.Auto,
-                                Items = new List<CardElement>
-                                {
-                                    new Image
-                                    {
-                                        Url = presenter.ImageUrl,
-                                        Style = ImageStyle.Person
-                                    }
-                                }
-                            },
-                            new Column
-                            {
-                                Size = ColumnSize.Stretch,
-                                Items = new List<CardElement>
-                                {
-                                    new TextBlock
-                                    {
-                                        Text = presenter.Name,
-                                        Weight = TextWeight.Bolder,
-                                        Size = TextSize.Medium
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            };
-
-            container.Items.Add(
-                new TextBlock
-                {
-                    Text = presenter.Tag,
-                    IsSubtle = true,
-                    Separation = SeparationStyle.None,
-                    HorizontalAlignment = HorizontalAlignment.Right
-                });
-
-            foreach (var bioLine in presenter.Bio)
-                container.Items.Add(new TextBlock
-                {
-                    Text = bioLine,
-                    Wrap = true,
-                    Separation = SeparationStyle.Default,
-                    IsSubtle = true,
-                    HorizontalAlignment = HorizontalAlignment.Stretch
-                });
-
-            var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney";
-            if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
-                twitterUrl += $",{presenter.TwitterAlias}";
-
-            var actions = new ActionSet
-            {
-                Actions = new List<ActionBase>
-                {
-                    new OpenUrlAction
-                    {
-                        Title = "Tweet",
-                        Url = twitterUrl
-                    }
-                }
-            };
-
-            if (!string.IsNullOrWhiteSpace(presenter.Website))
-                actions.Actions.Add(new OpenUrlAction
-                {
-                    Title = "Website",
-                    Url = presenter.Website
-                });
-
-            if (!string.IsNullOrWhiteSpace(presenter.Email))
-                actions.Actions.Add(new OpenUrlAction
-                {
-                    Title = "Email",
-                    Url = $"mailto:{presenter.Email}"
-                });
-
-            container.Items.Add(actions);
-
-            return container;
-        }
-
-        private static Container AddSessionContainer(Session session)
+        public static Container AddSessionContainer(Session session)
         {
             var container = new Container
             {
                 Speak = session.Title,
+                Separation = SeparationStyle.Strong,
                 Items = new List<CardElement>
                 {
                     new TextBlock
@@ -149,6 +55,35 @@ namespace ConferenceBot.Cards
                     }
                 }
             };
+
+            var fullContainer = AddExtraInfoSessionContainer(session);
+
+            var actions = new ActionSet
+            {
+                Actions = new List<ActionBase>
+                {
+                    new ShowCardAction
+                    {
+                        Title = "More Info",
+                        Card = new AdaptiveCard
+                        {
+                            Body = new List<CardElement>
+                            {
+                                fullContainer
+                            }
+                        }
+                    }
+                }
+            };
+
+            container.Items.Add(actions);
+
+            return container;
+        }
+
+        public static Container AddExtraInfoSessionContainer(Session session)
+        {
+            var container = new Container();
 
             for (var i = 0; i < session.Abstract.Length; i++)
             {
