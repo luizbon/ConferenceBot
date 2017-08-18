@@ -4,6 +4,7 @@ using Chronic;
 using ConferenceBot.Data;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
+using Newtonsoft.Json.Linq;
 
 namespace ConferenceBot.Extensions
 {
@@ -49,9 +50,13 @@ namespace ConferenceBot.Extensions
             if (!result.TryFindEntity(dateFilter, out EntityRecommendation dateEntity))
                 return false;
             
+            var today = TimeZoneInfo
+                .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
+                .Date;
+
             var options = new Options
             {
-                Clock = () => NdcSydney17.Data.Timeslots.Min(t => t.Date.Date).AddDays(-1)
+                Clock = () => NdcSydney17.Data.Timeslots.Where(t => t.Date.Date >= today).Min(t => t.Date.Date)
             };
 
             var parser = new Parser(options);
@@ -60,6 +65,21 @@ namespace ConferenceBot.Extensions
 
             if (dateTime.Start != null) startDate = dateTime.Start.Value;
             if (dateTime.End != null) endDate = dateTime.End.Value;
+
+            return true;
+        }
+
+        public static bool TryFindDateTime(this LuisResult result, string dateTimeFilter, out DateTime dateTime)
+        {
+            dateTime = DateTime.MinValue;
+            
+            if (!result.TryFindEntity(dateTimeFilter, out EntityRecommendation dateEntity))
+                return false;
+
+            var value = (string)JArray.Parse(dateEntity.Resolution["values"].ToString())[0]["value"];
+
+            dateTime = TimeZoneInfo
+                .ConvertTime(DateTime.Parse(value), TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));
 
             return true;
         }

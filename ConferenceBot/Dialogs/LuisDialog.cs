@@ -21,6 +21,7 @@ namespace ConferenceBot.Dialogs
     {
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
+        private const string DateTimeFilter = "builtin.datetimeV2.datetime";
         private const string TimeRangeFilter = "builtin.datetimeV2.datetimerange";
         private const string DateFilter = "builtin.datetimeV2.date";
         private const string NextFilter = "next";
@@ -154,11 +155,18 @@ namespace ConferenceBot.Dialogs
             if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time, out isNext))
                 timeslots = timeslots.FindTime(time, isNext);
 
-            if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTime, out DateTime endDateTime))
-                timeslots = timeslots.FindDate(startDateTime, endDateTime);
+            if (result.TryFindDate(TimeRangeFilter, out DateTime startDateTimeRange, out DateTime endDateTimeRange))
+                timeslots = timeslots.FindDate(startDateTimeRange, endDateTimeRange);
 
             if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
                 timeslots = timeslots.FindDate(startDate, endDate);
+
+            if (result.TryFindDateTime(DateTimeFilter, out DateTime dateTime))
+            {
+                timeslots = timeslots.FindTime(dateTime.TimeOfDay, false);
+                timeslots = timeslots.FindDate(dateTime.Date, dateTime.Date.AddDays(1));
+            }
+
             return timeslots;
         }
 
@@ -374,24 +382,25 @@ namespace ConferenceBot.Dialogs
                     {
                         Text = "Here are some examples of what you can ask.",
                         Size = TextSize.Medium
-                    }
+                    },
+                    
                 },
                 Actions = new List<ActionBase>
                 {
                     new SubmitAction
                     {
-                        Title = $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?",
+                        Title = "Speaker Example",
                         Data = $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?"
                     },
                     new SubmitAction
                     {
-                        Title = $"What's happening on {NdcSydney17.Rooms[roomIndex]}?",
-                        Data = $"What's happening on {NdcSydney17.Rooms[roomIndex]}?"
+                        Title = "Room Example",
+                        Data = $"What's happening on {NdcSydney17.Rooms[roomIndex]} today?"
                     },
                     new SubmitAction
                     {
-                        Title = "What's going on at 3PM?",
-                        Data = "What's going on at 3PM?"
+                        Title = "Time Example",
+                        Data = "What's going on at 3PM today?"
                     }
                 }
             };
