@@ -18,14 +18,15 @@
         .wc-header {
             background-color: #008000;
         }
-         .wc-header span {
-             display: none;
-         }
 
-        .wc-header:before {
-            content: "DDD Perth Bot"
-        }
-        
+            .wc-header span {
+                display: none;
+            }
+
+            .wc-header:before {
+                content: "DDD Perth Bot"
+            }
+
         .wc-upload {
             visibility: hidden;
         }
@@ -33,28 +34,48 @@
         .wc-textbox {
             left: 5px;
         }
+
+        .wc-message-from-me .wc-message-content {
+            background-color: #008000;
+        }
+
+        .wc-message-from-me svg.wc-message-callout path {
+            fill: #008800;
+        }
+
+        .wc-message-from-bot {
+            margin-left: 45px;
+        }
+
+            .wc-message-from-bot > .wc-message-content:before {
+                content: url('dddperth.png');
+                position: absolute;
+                left: -45px;
+                top: 10px;
+                float: left;
+            }
     </style>
 </head>
 <body style="font-family: 'Segoe UI'">
-<div id="bot"></div>
-<script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
-<script>
-    BotChat.App({
-        directLine: {
-            secret: '8JEk7hxQi0g.cwA.7cI.nVftlagr_0xtsqqNGIr70pDtXpECrktLQiQp1tI1mjo',
-            domain: 'https://webchat.botframework.com/v3/directline',
-            webSocket: false
-        },
-        user: {
-            id: Math.random().toString(16).slice(2).toString(),
-            name: "You"
-        },
-        bot: {
-            id: 'DDDPerth17',
-            name: "DDD Perth Bot"
-        },
-        resize: 'window'
-    }, document.getElementById("bot"));
-</script>
+    <div id="bot"></div>
+    <script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+    <script>
+        BotChat.App({
+            directLine: {
+                secret: '8JEk7hxQi0g.cwA.7cI.nVftlagr_0xtsqqNGIr70pDtXpECrktLQiQp1tI1mjo',
+                domain: 'https://webchat.botframework.com/v3/directline',
+                webSocket: false
+            },
+            user: {
+                id: Math.random().toString(16).slice(2).toString(),
+                name: "You"
+            },
+            bot: {
+                id: 'DDDPerth17',
+                name: "DDD Perth Bot"
+            },
+            resize: 'window'
+        }, document.getElementById("bot"));
+    </script>
 </body>
 </html>
