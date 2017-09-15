@@ -6,8 +6,8 @@
       "sessions": [
         {
           "SessionId": "44f64f98-53ef-4344-93f6-9d852f845ed2",
-          "title": "TBA",
-          "abstract": "TBA",
+          "title": "Five key challenges for software quality tomorrow",
+          "abstract": "With the advances in our industry we can build software faster and operate it cheaper while serving more platforms and solving more problems than ever before. This is not without it's complications though, this new landscape requires teams to change their approach to reduce risk and ensure quality in their software.\n\nIn this presentation, Gojko will look at five important software quality challenges facing delivery teams due to these shifting roles. He will also present some emerging ideas that will help address these challenges and inspire you to rethink your approach to testing.",
           "RecommendedAudience": "Everyone",
           "presenters": [
             {
@@ -314,6 +314,44 @@
             }
           ],
           "room": "Room 3"
+        }
+      ]
+    },
+    {
+      "date": "2017-09-16",
+      "time": "15:15",
+      "sessions": [
+        {
+          "SessionId": "d06d45de-de42-44da-83eb-ea1d9d14b6cc",
+          "title": "Speaker Panel",
+          "abstract": "Donna Edwards, Nathan Jones, Rami Ruhayel, Patima Tantiprasut\n\nJoin selected speakers during the afternoon tea break for an extended Q&A panel session. Ask more detailed questions on their topic, or ask the questions you didn’t get a chance to after their presentation.\n\nFormat will be an open Q&A session, so come with your coffee, grab a microphone and join in!",
+          "RecommendedAudience": "Everyone",
+          "presenters": [
+            {
+              "name": "Donna Edwards",
+              "twitterAlias": "",
+              "website": "http://www.linkedin.com/in/edwardsdonna",
+              "bio": "Donna has been building amazing teams for over seventeen years. Most recently she has grown Ignia from a 25 person locally-focussed development shop to one of the largest and most respected consultancies in Perth, now expanding globally through their acquisition by Insight.\n\nShe regularly speaks about employee engagement, talent management, recruitment and business growth, and is the Co-Chair of WAITTA Game Changers, a member of 100 Women and President of Central Communicator Toastmasters club."
+            },
+            {
+              "name": "Nathan Jones",
+              "twitterAlias": "the_nathanjones",
+              "website": "",
+              "bio": "I've been working in software development for over 10 years, the last 7 years as a consultant for ThoughtWorks, and am currently the Market Tech Principal for Perth. \n\nI've performed most of the roles on a software development team, but nowadays you'll usually find me in the role of a Tech Lead or providing advice on techncial strategy."
+            },
+            {
+              "name": "Rami Ruhayel",
+              "twitterAlias": "",
+              "website": "",
+              "bio": "Human computer scientist with an interest in mathematics, linguistics and web development. Holds a double degree with first class honors in computer science and information technology systems, and is currently completing  a part 1 qualification with the institute of actuaries."
+            },
+            {
+              "name": "Patima Tantiprasut",
+              "twitterAlias": "the_patima",
+              "website": "",
+              "bio": "Patima is a Creative Director with a background in both code and design, with over 15 years’ experience in the web. By day, she leads the team over at Bam Creative, a Perth-based award-winning digital agency. Her jam is to bring people together to achieve beautiful and meaningful things. \n\nShe specialises in experience design, brand development and quality assurance for digital projects. In her spare time, she’s also a co-founder of @team6Q, co-organiser for @MixinConf, founder and host of @LocalhostAU, previously an Australian Web Industry Association (AWIA) board member, a newbie speaker, writer, not-so-newbie gin drinker and dog lover."
+            }
+          ]
         }
       ]
     },

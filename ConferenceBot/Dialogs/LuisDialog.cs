@@ -169,8 +169,8 @@ namespace ConferenceBot.Dialogs
                 await context.PostAsync(string.Join("\n\n", initial));
             }
 
-            var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
-            await context.PostAsync($"Try asking: When is {NdcSydney17.Speakers[speakerIndex]}'s talk?");
+            var speakerIndex = new Random().Next(0, DDDPerth17.Speakers.Length);
+            await context.PostAsync($"Try asking: When is {DDDPerth17.Speakers[speakerIndex]}'s talk?");
 
             context.Wait(MessageReceived);
         }
