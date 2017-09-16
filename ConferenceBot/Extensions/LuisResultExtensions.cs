@@ -15,7 +15,7 @@ namespace ConferenceBot.Extensions
             if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
             {
                 var currentTimeSpan = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Western Standard Time"))
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Australia Standard Time"))
                     .TimeOfDay;
 
                 var firstOrDefault = DDDPerth17.Data.Timeslots
