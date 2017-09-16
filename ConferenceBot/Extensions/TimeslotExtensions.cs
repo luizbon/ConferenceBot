@@ -37,11 +37,19 @@ namespace ConferenceBot.Extensions
             return timeslots;
         }
 
-        public static Timeslot[] FindTime(this Timeslot[] timeslots, TimeSpan time)
+        public static Timeslot[] FindTime(this Timeslot[] timeslots, TimeSpan time, bool isNext)
         {
             var result = new List<Timeslot>();
 
             var days = timeslots.Select(t => t.Date.Date).Distinct();
+
+            if (isNext)
+            {
+                var today = TimeZoneInfo
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Australia Standard Time"))
+                    .Date;
+                days = days.Where(d => d.Date == today);
+            }
 
             foreach (var day in days)
             {

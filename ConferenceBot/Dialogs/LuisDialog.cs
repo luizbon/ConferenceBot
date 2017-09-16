@@ -23,6 +23,7 @@ namespace ConferenceBot.Dialogs
         private const string TitleFilter = "Events.Name";
         private const string TimeFilter = "builtin.datetimeV2.time";
         private const string DateFilter = "builtin.datetimeV2.date";
+        private const string DateTimeFilter = "builtin.datetimeV2.datetime";
         private const string NextFilter = "next";
         private const string RoomFilter = "room";
         private const string SpeakerFilter = "speaker";
@@ -79,11 +80,17 @@ namespace ConferenceBot.Dialogs
                 timeslots = timeslots.FindRoom(room.Entity);
 
             if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
-                timeslots = timeslots.FindTime(time);
+                timeslots = timeslots.FindTime(time, true);
 
             if (result.TryFindDate(DateFilter, out DateTime startDate, out DateTime endDate))
             {
                 timeslots = timeslots.FindDate(startDate, endDate);
+            }
+
+            if (result.TryFindDateTime(DateTimeFilter, out DateTime dateTime))
+            {
+                timeslots = timeslots.FindTime(dateTime.TimeOfDay, false);
+                timeslots = timeslots.FindDate(dateTime.Date, dateTime.Date.AddDays(1));
             }
 
             var totalSessions = timeslots.SelectMany(t => t.Sessions).Count();
