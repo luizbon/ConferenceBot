@@ -30,9 +30,9 @@ namespace ConferenceBot.Extensions
         public static Timeslot[] FindRoom(this Timeslot[] timeslots, string room)
         {
             foreach (var timeslot in timeslots)
-                timeslot.Sessions = timeslot.Sessions.Where(s => string.Equals(s.Room.Name, room,
-                    StringComparison
-                        .InvariantCultureIgnoreCase)).ToArray();
+                timeslot.Sessions = timeslot.Sessions.Where(s => s.Room.Name.IndexOf(room,
+                                                                     StringComparison
+                                                                         .InvariantCultureIgnoreCase) >= 0).ToArray();
 
             return timeslots;
         }
@@ -46,7 +46,7 @@ namespace ConferenceBot.Extensions
             if (isNext)
             {
                 var today = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Australia Standard Time"))
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
                     .Date;
                 days = days.Where(d => d.Date == today);
             }

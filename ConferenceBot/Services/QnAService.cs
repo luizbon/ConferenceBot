@@ -9,7 +9,7 @@ namespace ConferenceBot.Services
 {
     public class QnAService
     {
-        private readonly Uri _baseUri = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v1.0");
+        private readonly Uri _baseUri = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v2.0");
         private readonly UriBuilder _builder;
         private readonly string _qnamakerSubscriptionKey;
 

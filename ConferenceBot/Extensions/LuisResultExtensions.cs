@@ -16,10 +16,10 @@ namespace ConferenceBot.Extensions
             if (result.TryFindEntity(nextFilter, out EntityRecommendation timeEntity))
             {
                 var currentTimeSpan = TimeZoneInfo
-                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Australia Standard Time"))
+                    .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
                     .TimeOfDay;
 
-                var firstOrDefault = DDDPerth17.Data.Timeslots
+                var firstOrDefault = DDDBrisbane17.Data.Timeslots
                     .FirstOrDefault(x => x.Date.TimeOfDay >= currentTimeSpan);
 
                 time = firstOrDefault?.Date.TimeOfDay ?? currentTimeSpan;
@@ -49,7 +49,7 @@ namespace ConferenceBot.Extensions
 
             var options = new Options
             {
-                Clock = () => DDDPerth17.Data.Timeslots.Min(t => t.Date.Date).AddDays(-1)
+                Clock = () => DDDBrisbane17.Data.Timeslots.Min(t => t.Date.Date).AddDays(-1)
             };
 
             var parser = new Parser(options);
@@ -71,7 +71,7 @@ namespace ConferenceBot.Extensions
             var value = (string)JArray.Parse(dateEntity.Resolution["values"].ToString())[0]["value"];
 
             dateTime = TimeZoneInfo
-                .ConvertTime(DateTime.Parse(value), TimeZoneInfo.Utc, TimeZoneInfo.FindSystemTimeZoneById("W. Australia Standard Time"));
+                .ConvertTime(DateTime.Parse(value), TimeZoneInfo.Utc, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));
 
             return true;
         }

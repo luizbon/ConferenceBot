@@ -8,13 +8,13 @@ using Newtonsoft.Json;
 
 namespace ConferenceBot.Data
 {
-    public class DDDPerth17
+    public class DDDBrisbane17
     {
-        public static string Lat = "-31.9565073";
-        public static string Long = "115.8521610";
+        public static string Lat = "-27.4994588";
+        public static string Long = "153.0128562";
 
-        public static Conference Data => ToConference(JsonConvert.DeserializeObject<DDDPerth17>(File.ReadAllText(
-            HttpContext.Current.Request.MapPath("~\\Data\\dddPerth17.json"))));
+        public static Conference Data => ToConference(JsonConvert.DeserializeObject<DDDBrisbane17>(File.ReadAllText(
+            HttpContext.Current.Request.MapPath("~\\Data\\dddBrisbane17.json"))));
 
         public static string[] Speakers = Data.Timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters)
             .Select(p => p.Name).Distinct().OrderBy(speaker => speaker.Replace(" ", "")).ToArray();
@@ -23,11 +23,11 @@ namespace ConferenceBot.Data
             .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).Select(s => s.Room.Name)
             .Distinct().OrderBy(room => room).ToArray();
 
-        private static Conference ToConference(DDDPerth17 dddPerth)
+        private static Conference ToConference(DDDBrisbane17 dddBrisbane)
         {
             return new Conference
             {
-                Timeslots = dddPerth.Timeslots.Select(ToTimeslot).ToArray()
+                Timeslots = dddBrisbane.Timeslots.Select(ToTimeslot).ToArray()
             };
         }
 

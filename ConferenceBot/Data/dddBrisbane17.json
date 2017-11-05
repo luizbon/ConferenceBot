@@ -1,0 +1,297 @@
+﻿{
+  "timeslots": [
+    {
+      "date": "2017-12-02",
+      "time": "9:00",
+      "sessions": [
+        {
+          "title": "TBA",
+          "abstract": "TBA",
+          "presenters": [
+            {
+              "name": "TBA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "10:10",
+      "sessions": [
+        {
+          "title": "Seq Deep Dive",
+          "abstract": ".NET has moved on from log4net. Modern libraries like Serilog and ASP.NET Core produce richly-structured event streams for monitoring and diagnostics.\n\nThis talk is about the other end of the process: what can we do with all of this interesting data? Using Seq, we'll dig deeply into centralising, searching, querying and monitoring structured logs to improve quality in complex systems.",
+          "presenters": [
+            {
+              "name": "N Blumhardt",
+              "twitterAlias": "nblumhardt",
+              "website": "http://nblumhardt.com/",
+              "bio": "Founder at https://getseq.net; open source (Autofac, Serilog, Sprache); surf & MTB"
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "Building Single Page Applications with ASP.NET Core 2.0",
+          "abstract": "In this talk, we’ll look at using ASP.NET Core JavaScript Services to build single page applications using Angular, Aurelia, Knockout, React, React+Redux or Vue. With this approach you can develop on Windows, Mac, or Linux using your preferred source code editor. I’ll demonstrate server-side prerendering, webpack dev middleware, hot module replacement (HMR), efficient production builds and much more. You will walk away ready to create single page applications using your favourite client-side framework and ASP.NET Core.",
+          "presenters": [
+            {
+              "name": "J Taylor",
+              "twitterAlias": "jasongtau",
+              "website": "http://www.codingflow.net/",
+              "bio": "SSW Solution Architect - OO | Agile | TFS | .NET"
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "GraphQL - A query language to empower your API Consumers",
+          "abstract": "The shift to microservices, cloud native and rich web apps have made it challenging to deliver compelling API experiences. REST, as specified in Roy Fielding’s seminal dissertation, has become the architectural pattern of choice for APIs and when applied correctly allows for clients and servers to evolve in a loosely coupled manner. There are areas however where REST can deliver less than ideal client experiences. Often many HTTP requests are required to render a single view.\n\nWhile this may be a minor concern for a web app running on a WAN with low latency and high bandwidth, it can yield poor client experiences for mobile clients in particular. GraphQL is Facebook’s response to this challenge and it is quickly proving itself as an exciting alternative to RESTful APIs for a wide range of contexts. GraphQL is a query language that provides a clean and simple syntax for consumers to interrogate your APIs. These queries are strongly types, hierarchical and enable clients to retrieve only the data they need.\n\nIn this session, we will take a hands-on look at GraphQL and see how it can be used to build APIs that are a joy to use.",
+          "presenters": [
+            {
+              "name": "R Crowley",
+              "twitterAlias": "robdcrowley",
+              "website": "https://speakerdeck.com/robcrowley",
+              "bio": "Likes to solve problems, often does so with code. @DDDPerth co-organiser."
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "11:20",
+      "sessions": [
+        {
+          "title": "Avoid the microservice fallacy: put your domain back into the mighty monolith",
+          "abstract": "This talk will take you on a journey into the world of overly complicated and over engineered enterprise software and take you back to a saner and simpler world embracing the monolith first approach.\n\nIn this talk you will learn why it is worth considering refactoring your large overly complicated (enterprise) system rather that starting out from scratch. You will be guided though the process of carving out your actual domain and learn why it is almost always better to design a solid monolith before even considering microservices. You will also learn why practices like testing, logging and proper naming are so very important.",
+          "presenters": [
+            {
+              "name": "J Højgaard",
+              "twitterAlias": "hgaard",
+              "website": "https://blog.hgaard.dk/",
+              "bio": "I'm a Danish polyglot aspiring software developer based in Brisbane. I do web, security and cross-platform mobile development and everything in-between."
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "Ionic, ngrx and Angular: building web and mobile apps with one code base",
+          "abstract": "Ionic is amazing and boringly easy. If you already know Angular, you can get an app on the App Store in record time.\nCome learn how to build an Angular web app, an Ionic mobile app and maximise the code re-use between the two with ngrx and custom npm packages. We will help you get your head around ngrx and the redux pattern and share with you a bunch of tips and tricks to save you time and avoid common pitfalls. At the end of this talk you will know how to create web and mobile apps with maximum code reuse.",
+          "presenters": [
+            {
+              "name": "D Hunter",
+              "twitterAlias": "dunchunter",
+              "website": "http://duncanhunter.com.au/",
+              "bio": "Duncan Hunter loves working in awesome teams to make awesome software. He works for SSW as a Software Architect based in Brisbane Australia."
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "Deep Learning : Bleeding edge machine learning for Skynet era",
+          "abstract": "Have you ever wondered how Google Street View obfuscates car plate numbers, how self-driving cars can identify objects throughout the journey? Many applications are deep learning powered even if we are not aware of that. Deep learning is a branch of advanced machine techniques basically neural-net based that try to mimic human/biological cognition systems.\nIn this talk you will see how deep learning techniques evolved from binary perceptron to very complex implementations with dozens or even hundreds of layers. We will see practical examples in vision, natural language processing and recommendation engines. You will learn how to develop production-ready deep learning powered applications without the need to have a PhD in linear algebra and calculus.",
+          "presenters": [
+            {
+              "name": "Y Mohamed"
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "12:15",
+      "sessions": [
+        {
+          "title": "Help your users fall into the pit of success",
+          "abstract": "People are bombarded with new apps and services in modern life. If someone tries an app but doesn’t quickly understand its value, they won't be back. This translates to lost attention, lower sales and increased support tickets. It's hard enough to get people to try new things so we can't let the opportunity slip by.\nThe good news is that there are things we can do to help our users fall into the pit of success so they grok the value of the products we build. In this talk, Rob Pearson, software engineer at Octopus Deploy and part-time indie, will discuss how you can build and improve the user onboarding experience for your apps and services. Based on lessons learned building user onboarding experiences for Octopus and his own projects, he'll describe how to figure out the 'aha moment' for your apps, how to ‘sell the dream’ to motivate your users to get started and finally how to keep them motivated to finish the path to success.\nThe goal of this talk is to help developers understand user onboarding and how it can be applied to the apps they're building right now!",
+          "presenters": [
+            {
+              "name": "R Pearson",
+              "twitterAlias": "robpearson",
+              "bio": "Husband. Father. Canuck. Aussie. Programmer. @OctopusDeploy by day. Cocoa at night."
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "Typescript: Powerful metaprogramming using decorators",
+          "abstract": "Have you ever wanted to introduce cross-cutting concerns to your JavaScript objects? Perhaps you didn't even know this was possible!\nFor instance logging of parameters passed to all functions, declarative validation rules, performance monitoring, what about declarative i18n or l10n?\nIn this talk, we are going to cover one of the coolest features of the TypeScript lang that makes this possible: Decorators.\nTypescript decorators are an experimental feature that lets you annotate and act upon those annotations extending in a generic fashion the state and behaviour of your Typescript classes.\nCome along to this journey and prepare yourself to be amazed.",
+          "presenters": [
+            {
+              "name": "J Febres",
+              "twitterAlias": "jaimefebres",
+              "website": "https://blog.fullsnackdev.com/",
+              "bio": "Peruvian, developer, partner and father. ❤️ @chivi_drawing  💻 @readify"
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "In from the cold: Finally making Linux and .NET get along",
+          "abstract": ".NET Core has finally arrived and is soon to hit 2.0, bringing vastly improved Linux compatibility and support for more distributions. Has the promised age of truly cross-platform .NET and real Linux support finally come?\nThis talk will be drawing on years of experience working with .NET technologies on Linux platforms (including Mono), as well as working with the latest .NET Core stack. In this session, I will be covering a brief history of .NET on Linux bringing us to today’s new cross-platform stack, including how to get started with .NET Core on Linux platforms.\nI’ll also be looking at how you can integrate .NET apps and services into Linux, including simple deployment, testing and packaging strategies, as well as looking at how to integrate .NET with common Linux services including systemd, dbus and GTK. Finally, I will be showing how to build a complete pipeline to build, deliver and run .NET apps entirely on Linux.\nThis talk will start with the high-level essentials of working with .NET technologies on Linux while also covering the deeper technical details so is perfect for any level of Linux user, but will be especially useful to .NET users.",
+          "presenters": [
+            {
+              "name": "A Chapman",
+              "twitterAlias": "agc93",
+              "website": "https://agchapman.com/",
+              "bio": "InfoSec engineer, .NET junkie, occasional photographer and F1 fan. I write code, just not necessarily good code. Red Hatter, but all opinions are my own."
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "14:00",
+      "sessions": [
+        {
+          "title": "Evergreen Skills for Software Developers",
+          "abstract": "What is worth learning? What can you learn now and use forever?\nJoseph and Leon have made terrible mistakes, have gone down blind alleys, have seen things that can't be unseen, and learned many things that are not worth knowing. But they've bounced back and picked up some helpful insights: now they can give you specific and bankable skills you can learn once and reuse for your entire career. They have enough material to fill a book but have condensed it into a surprising presentation that is sure to educate and entertain.",
+          "presenters": [
+            {
+              "name": "L Bambrick",
+              "twitterAlias": "secretGeek",
+              "website": "http://secretgeek.net/",
+              "bio": "Perpetual beginner. Unreliable narrator. Writing a book http://YourFirstProduct.com . Creator of http://TimeSnapper.com  http://NimbleText.com"
+            },
+            {
+              "name": "J Cooney",
+              "twitterAlias": "josephcooney",
+              "website": "https://jcooney.net/",
+              "bio": "I'm a software developer living in Brisbane, Australia. Microsoft WPF MVP 2007 - 2013"
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "So Now I Have A Container? What Now?!",
+          "abstract": "This is not the same container 101 talk you've seen a dozen times.\nThe point of this talk is how to ship a container to production, once you've built it.\nWe'll containerize a .net core app, debug locally, set up continuous deployment, set up a container cluster and deploy to it.",
+          "presenters": [
+            {
+              "name": "T Passos",
+              "twitterAlias": "thiagospassos",
+              "website": "https://passos.com.au/",
+              "bio": "Love technology, dancing and I get unfriendly when I'm hungry."
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "Blockchain, I'm pretty sure it's stupid",
+          "abstract": "Why are organisations going nuts about Blockchain? I get why this might work for cryptocurrencies, but why do banks think this is a good idea?!\nThis session will have few code demos, preferring to focus on architecture (aka hand waving) and the business case for the technology but from a developer's perspective.\nWhy do industries think this particular technology is a good idea? and why do software engineers think these industries are being stupid (hint: they might be right)? and why don't they solve these problems with technology that is less stupid?",
+          "presenters": [
+            {
+              "name": "M Walter"
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "14:55",
+      "sessions": [
+        {
+          "title": "DDD, CQRS, and ORMs - Finding the sweet spot",
+          "abstract": "DDD helps us tame the inherent complexity of non-trivial software development. CQRS supports the same goal goal, while providing other tangible benefits like optimisation and scalability. ORMs take the heavy lifting out of transalting between the worlds of Object Oriented software and relational persistance layers.\nFinding the sweet spot between these approaches can be a challenge. Some popular ORMs (cough Entity Framework cough) place burdensome constraints on DDD implementations, causing them to bend and contort in weird and less-than-wonderful ways. They can also be sub-optimal for CQRS concerns. CQRS at times is viewed as introducing unwarranted overhead and complexity where it isn't needed.\nIn this session we will explore a less-than-wonderful domain model that utilises a single ORM for all of its concerns, and then look at how we can break it apart utilizing a CQRS approach that employs the best tool for the job for each concern, while keeping complexity to a minimum.",
+          "presenters": [
+            {
+              "name": "A Best",
+              "twitterAlias": "_andrewb",
+              "bio": "Semi-professional satirist, appreciator of scotch, Principal Consultant at Readify."
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "Excellent Teams and How to Build Them",
+          "abstract": "Ever wondered why some teams work well together and why some don’t, even when they have great people on them? Ever asked what the difference between management and leadership is?\nAfter attending this session, you will have an understanding of servant leadership and psychological safety and how you can apply these to your teams, as well as some experience based thoughts on recruitment to find great people.",
+          "presenters": [
+            {
+              "name": "A Dean",
+              "twitterAlias": "msamandadean",
+              "bio": "Senior test manager, photographer, singer, dancer, et cetera. Nevertheless, she persisted."
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "Terraforming the world. One cloud at a time.",
+          "abstract": "Have you ever wondered what it would be like to have your development, staging and production infrastructure versioned and deployed along with your applications?\nWould you like the ability to stand up a new world as needed?\nCome on a journey as I rub some DevOps on a Production Infrastructure and application deployment with Terraform, Octopus Deploy and Jenkins.",
+          "presenters": [
+            {
+              "name": "J Cade",
+              "twitterAlias": "jcade83",
+              "website": "http://www.jeremycade.com/",
+              "bio": "Software Engineer, Baseball Coach, Husband, Father of 3, 柴犬, professional trouble maker."
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "16:05",
+      "sessions": [
+        {
+          "title": "Functional Core, Imperative Shell: How all good software architectures are actually the same",
+          "abstract": "Clean Architecture and Gary Bernhardt's functional core, imperative shell. They are all the same. This presentation will simplify and clarify an architecture that so many people have \"discovered\" independently. It is an architecture that decouples an application's core logic from the services it uses. It allows an application to be equally driven by users, programs, automated tests or batch scripts.",
+          "presenters": [
+            {
+              "name": "L McLennan",
+              "twitterAlias": "liammclennan",
+              "website": "https://withouttheloop.com/",
+              "bio": "I like to build things https://github.com/liammclennan . Allegro con brio"
+            }
+          ],
+          "room": "Red Track"
+        },
+        {
+          "title": "Zen and the art of automated gardening",
+          "abstract": "Self care is important. Gardening is therapeutic and allows you to grow healthy food or beautiful flowers. As tech folk, getting away from the computer is important, but sometimes gardening is deemed too hard. It takes time during daylight hours which we might not have. You have to weed, think about plants and nutrition, space and most importantly watering. In Queensland this really can be the make or break of your gardening, as the heat in summer and the dryness in winter means you can lose plants and have little success.\nHaving spent the last 2 years building and maintaining an aquaponics system, Vanessa has first hand experience in a better way. A system that runs on water and fish, and produces amazing crops of vegetables. It uses less space, requires no weeding or soil and uses much less water than conventional gardening. It requires very little maintenance. Nothing is hooked up to a sensor nor run by app. The only containers are recycled and house the fish. This is hands on and screen free gardening. Any comparison to a tech scenario will be from your own interpretation, this is a gardening talk.",
+          "presenters": [
+            {
+              "name": "V Love",
+              "twitterAlias": "fly401",
+              "bio": "My tweets will be mostly (in order): my dogs, gardening, food pix and World of Warcraft"
+            }
+          ],
+          "room": "Orange Track"
+        },
+        {
+          "title": "TDD is bananas",
+          "abstract": "Do we really understand why we practice Test Driven Design (TDD) or are we simply copying patterns without understanding the reason - \"Monkey see, monkey do?\"\nLet's talk about some of the positives and negatives of TDD and explore techniques that can help us write fewer tests while retaining the same - if not greater - degree of confidence in our code.\nWe'll cover some common pitfalls along the way and identify the characteristics of good test suites... and the impact that they can have on our codebases.",
+          "presenters": [
+            {
+              "name": "S Morris"
+            }
+          ],
+          "room": "Blue Track"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-02",
+      "time": "17:00",
+      "sessions": [
+        {
+          "title": "TBA",
+          "abstract": "TBA",
+          "presenters": [
+            {
+              "name": "TBA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

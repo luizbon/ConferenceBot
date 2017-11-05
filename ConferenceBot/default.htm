@@ -16,7 +16,7 @@
     <link href="https://unpkg.com/botframework-webchat/botchat-fullwindow.css" rel="stylesheet" />
     <style>
         .wc-header {
-            background-color: #008000;
+            background-color: #b11818;
         }
 
             .wc-header span {
@@ -24,7 +24,7 @@
             }
 
             .wc-header:before {
-                content: "DDD Perth Bot"
+                content: "DDD Brisbane Bot"
             }
 
         .wc-upload {
@@ -36,24 +36,12 @@
         }
 
         .wc-message-from-me .wc-message-content {
-            background-color: #008000;
+            background-color: #b11818;
         }
 
         .wc-message-from-me svg.wc-message-callout path {
-            fill: #008800;
+            fill: #b11818;
         }
-
-        /*.wc-message-from-bot {
-            margin-left: 45px;
-        }
-
-            .wc-message-from-bot > .wc-message-content:before {
-                content: url('public/images/dddperth.png');
-                position: absolute;
-                left: -45px;
-                top: 10px;
-                float: left;
-            }*/
     </style>
 </head>
 <body style="font-family: 'Segoe UI'">
@@ -62,7 +50,7 @@
     <script>
         BotChat.App({
             directLine: {
-                secret: '8JEk7hxQi0g.cwA.7cI.nVftlagr_0xtsqqNGIr70pDtXpECrktLQiQp1tI1mjo',
+                secret: 'J2Fh4Nhzr14.cwA.Y6A.xsP7UEguf1Y_RAo53O_2Q8rPrbdn-34LEzRf7RYPYHs',
                 domain: 'https://webchat.botframework.com/v3/directline',
                 webSocket: false
             },
@@ -71,8 +59,8 @@
                 name: "You"
             },
             bot: {
-                id: 'DDDPerth17',
-                name: "DDD Perth Bot"
+                id: 'DDDBrisbane17',
+                name: "DDD Brisbane Bot"
             },
             resize: 'window'
         }, document.getElementById("bot"));

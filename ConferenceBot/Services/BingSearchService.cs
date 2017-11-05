@@ -10,7 +10,7 @@ namespace ConferenceBot.Services
 {
     public class BindSearchService
     {
-        private const string Endpoint = "https://api.cognitive.microsoft.com/bing/v5.0/search";
+        private const string Endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/search";
         private readonly string _bingSearchApiKey;
 
         public BindSearchService()
@@ -22,7 +22,7 @@ namespace ConferenceBot.Services
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _bingSearchApiKey);
-            httpClient.DefaultRequestHeaders.Add("X-Search-Location", $"lat:{DDDPerth17.Lat};long:{DDDPerth17.Long};re:100");
+            httpClient.DefaultRequestHeaders.Add("X-Search-Location", $"lat:{DDDBrisbane17.Lat};long:{DDDBrisbane17.Long};re:100");
 
             return httpClient;
         }
@@ -31,7 +31,7 @@ namespace ConferenceBot.Services
         {
             using (var client = GetClient())
             {
-                var result = await client.GetStringAsync($"{Endpoint}?q={query} loc:Perth&count=10&mkt=en-AU&responseFilter=Webpages&safeSearch=strict");
+                var result = await client.GetStringAsync($"{Endpoint}?q={query}&count=10&mkt=en-AU&responseFilter=Webpages&safeSearch=strict");
                 return JsonConvert.DeserializeObject<WebResult>(result);
             }
         }

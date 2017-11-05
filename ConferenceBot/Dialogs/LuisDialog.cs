@@ -62,7 +62,7 @@ namespace ConferenceBot.Dialogs
             await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
             await context.SendTyping();
 
-            var timeslots = DDDPerth17.Data.Timeslots;
+            var timeslots = DDDBrisbane17.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
                 timeslots = timeslots.FindKeynote();
@@ -143,7 +143,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var actions = DDDPerth17.Rooms.Select(room => new CardAction
+            var actions = DDDBrisbane17.Rooms.Select(room => new CardAction
             {
                 Title = room,
                 Type = ActionTypes.ImBack,
@@ -166,9 +166,9 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var initials = DDDPerth17.Speakers.GroupBy(s => s.ToLower()[0]);
+            var initials = DDDBrisbane17.Speakers.GroupBy(s => s.ToLower()[0]);
 
-            await context.PostAsync($"There are {DDDPerth17.Speakers.Length} speakers, I'll group them by initials");
+            await context.PostAsync($"There are {DDDBrisbane17.Speakers.Length} speakers, I'll group them by initials");
 
             foreach (var initial in initials)
             {
@@ -176,8 +176,8 @@ namespace ConferenceBot.Dialogs
                 await context.PostAsync(string.Join("\n\n", initial));
             }
 
-            var speakerIndex = new Random().Next(0, DDDPerth17.Speakers.Length);
-            await context.PostAsync($"Try asking: When is {DDDPerth17.Speakers[speakerIndex]}'s talk?");
+            var speakerIndex = new Random().Next(0, DDDBrisbane17.Speakers.Length);
+            await context.PostAsync($"Try asking: When is {DDDBrisbane17.Speakers[speakerIndex]}'s talk?");
 
             context.Wait(MessageReceived);
         }
@@ -219,12 +219,12 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindVenue")]
         public async Task FindVenue(IDialogContext context, LuisResult result)
         {
-            var location = $"{DDDPerth17.Lat},{DDDPerth17.Long}";
+            var location = $"{DDDBrisbane17.Lat},{DDDBrisbane17.Long}";
             var googleApiKey = ConfigurationManager.AppSettings["GoogleApiKey"];
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
 
-            var card = new HeroCard("DDD Perth", "Perth Convention and Exhibition Centre")
+            var card = new HeroCard("DDD Brisbane", "Advanced Engineering Building at the University of Queensland St Lucia Campus")
             {
                 Images = new List<CardImage>
                 {
@@ -237,7 +237,7 @@ namespace ConferenceBot.Dialogs
                         Title = "Get Directions",
                         Type = ActionTypes.OpenUrl,
                         Value =
-                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDPerth17.Lat}!4d{DDDPerth17.Long}"
+                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDBrisbane17.Lat}!4d{DDDBrisbane17.Long}"
                     }
                 }
             };
@@ -267,12 +267,12 @@ namespace ConferenceBot.Dialogs
 
         private static async Task ShowHelp(IBotToUser context)
         {
-            var speakerIndex = new Random().Next(0, DDDPerth17.Speakers.Length);
-            var roomIndex = new Random().Next(0, DDDPerth17.Rooms.Length);
+            var speakerIndex = new Random().Next(0, DDDBrisbane17.Speakers.Length);
+            var roomIndex = new Random().Next(0, DDDBrisbane17.Rooms.Length);
             await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +
-                                    $"Try asking: When is {DDDPerth17.Speakers[speakerIndex]}'s talk?\n\n" +
+                                    $"Try asking: When is {DDDBrisbane17.Speakers[speakerIndex]}'s talk?\n\n" +
                                     "or\n\n" +
-                                    $"What's happening on {DDDPerth17.Rooms[roomIndex]}?\n\n" +
+                                    $"What's happening on {DDDBrisbane17.Rooms[roomIndex]}?\n\n" +
                                     "or\n\n" +
                                     "What's going on at 3PM?");
         }
