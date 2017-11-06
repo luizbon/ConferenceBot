@@ -41,14 +41,14 @@ namespace ConferenceBot.Extensions
         {
             var result = new List<Timeslot>();
 
-            var days = timeslots.Select(t => t.Date.Date).Distinct();
+            var days = timeslots.Select(t => t.Date.Date).Distinct().ToList();
 
-            if (isNext)
+            if (isNext && days.Count > 1)
             {
                 var today = TimeZoneInfo
                     .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
                     .Date;
-                days = days.Where(d => d.Date == today);
+                days = days.Where(d => d.Date == today).ToList();
             }
 
             foreach (var day in days)
