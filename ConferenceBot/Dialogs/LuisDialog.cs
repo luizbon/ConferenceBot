@@ -71,13 +71,13 @@ namespace ConferenceBot.Dialogs
                 timeslots = timeslots.FindLocknote();
 
             if (result.TryFindEntity(SpeakerFilter, out EntityRecommendation speaker))
-                timeslots = timeslots.FindSpeaker(speaker.Entity);
-
+                timeslots = timeslots.FindSpeaker(speaker.GetListResolution());
+            
             if (result.TryFindEntity(TitleFilter, out EntityRecommendation title))
                 timeslots = timeslots.FindTitle(title.Entity);
 
             if (result.TryFindEntity(RoomFilter, out EntityRecommendation room))
-                timeslots = timeslots.FindRoom(room.Entity);
+                timeslots = timeslots.FindRoom(room.GetListResolution());
 
             if (result.TryFindTime(TimeFilter, NextFilter, out TimeSpan time))
                 timeslots = timeslots.FindTime(time, true);

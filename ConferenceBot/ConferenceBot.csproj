@@ -153,6 +153,7 @@
     <Compile Include="Cards\SessionCard.cs" />
     <Compile Include="Dialogs\TimeslotFilterDialog.cs" />
     <Compile Include="Extensions\DialogContextExtensions.cs" />
+    <Compile Include="Extensions\EntityRecommentationExtensions.cs" />
     <Compile Include="Extensions\LuisResultExtensions.cs" />
     <Compile Include="Extensions\TimeslotExtensions.cs" />
     <Compile Include="Global.asax.cs">
