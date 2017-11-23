@@ -5,11 +5,13 @@
       "time": "9:00",
       "sessions": [
         {
-          "title": "TBA",
-          "abstract": "TBA",
+          "title": "Ready for Next",
+          "abstract": "This year, we celebrate 10 years of the iPhone: a device that remodelled awkward business PDAs into pervasive internet access. For a significant portion of society, they’re now embedded into everything we do. I struggle to buy a coffee now if my phone is flat, and no coffee = no function. In this talk, we’ll explore what the next wave of technology upsets might be, and what skills we’ll need to level up at to stay on the front of that wave.",
           "presenters": [
             {
-              "name": "TBA"
+              "name": "Tatham Oddie",
+              "twitterAlias": "tathamoddie",
+              "website": "https://tath.am/",
             }
           ]
         }
