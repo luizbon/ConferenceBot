@@ -285,11 +285,12 @@
       "time": "17:00",
       "sessions": [
         {
-          "title": "TBA",
-          "abstract": "TBA",
+          "title": "10 Years of Teaching Kids to Code",
+          "abstract": "In this talk, TKP Director Lynn Langit will share learnings from creating open source TKPJava and TKPIoT courseware and working with teams to teach teachers and kids world-wide.",
           "presenters": [
             {
-              "name": "TBA"
+              "name": "Lynn Langit",
+              "twitterAlias": "lynnlangit"
             }
           ]
         }
