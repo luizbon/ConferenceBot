@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceBot", "Conference
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{36A488BC-BD7D-4D69-BB65-D89C9017D485}"
 	ProjectSection(SolutionItems) = preProject
-		ConferenceBot.json = ConferenceBot.json
+		DDDSydney18.json = DDDSydney18.json
 	EndProjectSection
 EndProject
 Global
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77B564A1-1FC1-477C-8A4C-DB09133B0BF5}
 	EndGlobalSection
 EndGlobal

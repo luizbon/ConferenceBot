@@ -18,7 +18,7 @@ namespace ConferenceBot.Extensions
                     .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
                     .TimeOfDay;
 
-                var firstOrDefault = DDDSydney17.Data.Timeslots
+                var firstOrDefault = DddSydney18.Data.Timeslots
                     .FirstOrDefault(x => x.Time >= currentTimeSpan);
 
                 time = firstOrDefault?.Time ?? currentTimeSpan;

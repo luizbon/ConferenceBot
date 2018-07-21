@@ -8,15 +8,15 @@ using Newtonsoft.Json;
 
 namespace ConferenceBot.Data
 {
-    public class DDDSydney17
+    public class DddSydney18
     {
-        public static Conference Data => ToConference(JsonConvert.DeserializeObject<DDDSydney17>(File.ReadAllText(
-            HttpContext.Current.Request.MapPath("~\\Data\\dddSydney17.json"))));
+        public static Conference Data => ToConference(JsonConvert.DeserializeObject<DddSydney18>(File.ReadAllText(
+            HttpContext.Current.Request.MapPath("~\\Data\\dddSydney18.json"))));
 
         public static string Lat = "-33.883228";
         public static string Long = "151.201808";
 
-        private static Conference ToConference(DDDSydney17 dddSydney)
+        private static Conference ToConference(DddSydney18 dddSydney)
         {
             return new Conference
             {

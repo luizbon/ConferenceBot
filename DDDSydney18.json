@@ -71,71 +71,138 @@
       "name": "speaker",
       "subLists": [
         {
-          "canonicalForm": "Tatham Oddie",
+          "canonicalForm": "Michael John Pena",
           "list": [
-            "tatham",
-            "oddie"
-          ]
-        },
-        {
-          "canonicalForm": "Hadi Eskandari",
-          "list": [
-            "hadi",
-            "eskandari"
-          ]
-        },
-        {
-          "canonicalForm": "Azadeh Khojandi",
-          "list": [
-            "Azadeh",
-            "Khojandi",
-            "az",
-            "azadeh",
-            "khojandi"
-          ]
-        },
-        {
-          "canonicalForm": "Meligy",
-          "list": []
-        },
-        {
-          "canonicalForm": "John Di Zhang",
-          "list": [
+            "michael",
             "john",
-            "di zhang",
-            "zhang"
+            "pena"
           ]
         },
         {
-          "canonicalForm": "Dom Raniszewski",
+          "canonicalForm": "Thiago Passos",
           "list": [
-            "Dom",
-            "Raniszewski",
-            "Dominik",
-            "dom",
-            "raniszewski",
-            "dominik"
+            "thiago",
+            "passos"
           ]
         },
         {
-          "canonicalForm": "Hossam Barakat",
+          "canonicalForm": "Liz Gilleran",
           "list": [
-            "hossam",
-            "barakat"
+            "liz",
+            "gilleran"
           ]
         },
         {
-          "canonicalForm": "Jason Stangroome",
+          "canonicalForm": "Hailey Martin",
+          "list": [
+            "hailey",
+            "martin"
+          ]
+        },
+        {
+          "canonicalForm": "Georgie Luhur Cooke",
+          "list": [
+            "georgie",
+            "luhur",
+            "cooke"
+          ]
+        },
+        {
+          "canonicalForm": "Klee Thomas",
+          "list": [
+            "klee",
+            "thomas"
+          ]
+        },
+        {
+          "canonicalForm": "Caspar Yuill",
+          "list": [
+            "caspar",
+            "yuill"
+          ]
+        },
+        {
+          "canonicalForm": "Nelly Sattari",
+          "list": [
+            "nelly",
+            "sattari"
+          ]
+        },
+        {
+          "canonicalForm": "Ben Cull",
+          "list": [
+            "ben",
+            "cull"
+          ]
+        },
+        {
+          "canonicalForm": "Jernej Kavka",
+          "list": [
+            "jernej",
+            "kavka"
+          ]
+        },
+        {
+          "canonicalForm": "Mark Boehm",
+          "list": [
+            "mark",
+            "boehm"
+          ]
+        },
+        {
+          "canonicalForm": "Fiona McCawley",
+          "list": [
+            "fiona",
+            "mccawley"
+          ]
+        },
+        {
+          "canonicalForm": "Alex Swan",
+          "list": [
+            "alex",
+            "swan"
+          ]
+        },
+        {
+          "canonicalForm": "Rob Crowley",
+          "list": [
+            "rob",
+            "crowley"
+          ]
+        },
+        {
+          "canonicalForm": "Amanda Dean",
+          "list": [
+            "amanda",
+            "dean"
+          ]
+        },
+        {
+          "canonicalForm": "Jason Taylor",
           "list": [
             "jason",
-            "stangroome"
+            "taylor"
           ]
         },
         {
-          "canonicalForm": "Nick Randolph",
+          "canonicalForm": "Damian Brady",
           "list": [
-            "nick",
-            "randolph"
+            "damian",
+            "brady"
+          ]
+        },
+        {
+          "canonicalForm": "Ben McPhail",
+          "list": [
+            "ben",
+            "mcphail"
+          ]
+        },
+        {
+          "canonicalForm": "Damian Karzon",
+          "list": [
+            "damian",
+            "karzon"
           ]
         },
         {
@@ -146,49 +213,48 @@
           ]
         },
         {
-          "canonicalForm": "Alistair Chapman",
+          "canonicalForm": "Michael Ridland",
           "list": [
-            "alistair",
-            "chapman"
+            "michael",
+            "ridland"
           ]
         },
         {
-          "canonicalForm": "Danjel Malik",
+          "canonicalForm": "Meggan Turner",
           "list": [
-            "danjel",
-            "malik"
+            "meggan",
+            "turner"
           ]
         },
         {
-          "canonicalForm": "Klee Thomas & Anjali Wadhwa",
+          "canonicalForm": "Aria Zanganeh",
           "list": [
-            "klee",
-            "klee thomas",
-            "thomas",
-            "anjali wadhwa",
-            "anjali",
-            "wadhwa"
+            "aria",
+            "zanganeh"
           ]
         },
         {
-          "canonicalForm": "Hesham Amin",
+          "canonicalForm": "Brendan Richards",
           "list": [
-            "hesham",
-            "amin"
+            "brendan",
+            "richards"
           ]
         },
         {
-          "canonicalForm": "Paul Glavich",
+          "canonicalForm": "Monica Ella Regalado, Sophie Gardner",
           "list": [
-            "paul",
-            "glavich"
+            "monica",
+            "ella",
+            "regalado",
+            "sophie",
+            "gardner"
           ]
         },
         {
-          "canonicalForm": "Jason Taylor",
+          "canonicalForm": "Jigyasa Rathour",
           "list": [
-            "jason",
-            "taylor"
+            "jigyasa",
+            "rathour"
           ]
         }
       ]

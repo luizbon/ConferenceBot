@@ -58,7 +58,7 @@ namespace ConferenceBot.Dialogs
             await context.PostAsync("So you are looking for a talk?\n\nLet's see what I have here.");
             await context.SendTyping();
 
-            var timeslots = DDDSydney17.Data.Timeslots;
+            var timeslots = DddSydney18.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
                 timeslots = timeslots.FindKeynote();
@@ -98,7 +98,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var rooms = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions)
+            var rooms = DddSydney18.Data.Timeslots.SelectMany(t => t.Sessions)
                 .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).OrderBy(s => s.Room.Name).Select(s => s.Room.Name)
                 .Distinct();
 
@@ -125,7 +125,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var speakers = DDDSydney17.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
+            var speakers = DddSydney18.Data.Timeslots.SelectMany(t => t.Sessions).OrderBy(s => s.Presenter.Name)
                 .Select(s => s.Presenter.Name).Distinct();
 
             var actions = speakers.Select(speaker => new CardAction
@@ -185,7 +185,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindVenue")]
         public async Task FindVenue(IDialogContext context, LuisResult result)
         {
-            var location = $"{DDDSydney17.Lat},{DDDSydney17.Long}";
+            var location = $"{DddSydney18.Lat},{DddSydney18.Long}";
             var googleApiKey = ConfigurationManager.AppSettings["GoogleApiKey"];
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
@@ -204,7 +204,7 @@ namespace ConferenceBot.Dialogs
                         Title = "Get Directions",
                         Type = ActionTypes.OpenUrl,
                         Value =
-                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DDDSydney17.Lat}!4d{DDDSydney17.Long}"
+                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{DddSydney18.Lat}!4d{DddSydney18.Long}"
                     }
                 }
             };
