@@ -223,6 +223,25 @@ namespace ConferenceBot.Dialogs
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("SmallTalk")]
+        public async Task SmallTalk(IDialogContext context, LuisResult result)
+        {
+            await context.SendTyping();
+            var qnA = new QnAService(Data.SmallTalk.QnAMakerSubscriptionId);
+            var searchResult = await qnA.Search(result.Query);
+
+            if (searchResult != null && searchResult.Score >= 20)
+            {
+                var replyList = Data.SmallTalk.Data[searchResult.Answer];
+                var random = new Random();
+                await context.PostAsync(replyList[random.Next(replyList.Length)]);
+            }
+            else
+            {
+                await None(context, result);
+            }
+        }
+
         private static async Task ShowHelp(IBotToUser context)
         {
             await context.PostAsync("You can ask me about talks, rooms and speakers.\n\n" +

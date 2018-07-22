@@ -9,13 +9,16 @@ namespace ConferenceBot.Services
 {
     public class QnAService
     {
-        private readonly Uri _baseUri = new Uri("https://westus.api.cognitive.microsoft.com/qnamaker/v1.0");
+        private readonly Uri _baseUri = new Uri("https://ddd-sydney-18-qna.azurewebsites.net/qnamaker");
         private readonly UriBuilder _builder;
         private readonly string _qnamakerSubscriptionKey;
 
-        public QnAService()
+        public QnAService() : this(ConfigurationManager.AppSettings["KnowledgeBaseId"])
         {
-            var knowledgebaseId = ConfigurationManager.AppSettings["KnowledgeBaseId"];
+        }
+
+        public QnAService(string knowledgebaseId)
+        {
             _qnamakerSubscriptionKey = ConfigurationManager.AppSettings["QnASubscriptionKey"];
             _builder = new UriBuilder($"{_baseUri}/knowledgebases/{knowledgebaseId}/generateAnswer");
         }
@@ -41,7 +44,7 @@ namespace ConferenceBot.Services
                     return null;
 
                 var result = await response.Content.ReadAsStringAsync();
-                
+
                 return JsonConvert.DeserializeObject<QnAMakerResult>(result);
             }
         }

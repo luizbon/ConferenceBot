@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{36A488BC-BD7D-4D69-BB65-D89C9017D485}"
 	ProjectSection(SolutionItems) = preProject
 		DDDSydney18.json = DDDSydney18.json
+		smalltalkkb.tsv = smalltalkkb.tsv
 	EndProjectSection
 EndProject
 Global

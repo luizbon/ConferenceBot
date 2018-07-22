@@ -118,6 +118,7 @@
     <Compile Include="Cards\BingSearchCard.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Data\DddSydney18.cs" />
+    <Compile Include="Data\SmallTalk.cs" />
     <Compile Include="Dialogs\LuisDialog.cs" />
     <Compile Include="Cards\SessionCard.cs" />
     <Compile Include="Extensions\DialogContextExtensions.cs" />
@@ -147,6 +148,7 @@
     <Content Include="Data\dddSydney18.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\smalltalk.json" />
     <None Include="Properties\PublishProfiles\dddSydney17 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
