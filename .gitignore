@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 ConferenceBot/Properties/PublishProfiles/
+Web.debug.config

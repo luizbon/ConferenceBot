@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
+using System.Linq;
 using System.Net.Http;
+using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using ConferenceBot.Model.QnA;
 using Newtonsoft.Json;
@@ -26,12 +28,12 @@ namespace ConferenceBot.Services
         private HttpClient GetClient()
         {
             var httpCliet = new HttpClient();
-            httpCliet.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _qnamakerSubscriptionKey);
+            httpCliet.DefaultRequestHeaders.Add("authorization", $"EndpointKey {_qnamakerSubscriptionKey}");
 
             return httpCliet;
         }
 
-        public async Task<QnAMakerResult> Search(string query)
+        public async Task<AnswerResult> Search(string query)
         {
             using (var client = GetClient())
             {
@@ -43,9 +45,9 @@ namespace ConferenceBot.Services
                 if (!response.IsSuccessStatusCode)
                     return null;
 
-                var result = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<QnAAnswer>(await response.Content.ReadAsStringAsync());
 
-                return JsonConvert.DeserializeObject<QnAMakerResult>(result);
+                return result.Answers.Any() ? result.Answers.First() : new AnswerResult();
             }
         }
     }

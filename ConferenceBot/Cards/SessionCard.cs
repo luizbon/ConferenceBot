@@ -20,7 +20,6 @@ namespace ConferenceBot.Cards
                         AddSessionContainer(session),
                         AddSpeakerContainer(session.Presenter)
                     },
-                    BackgroundImage = session.Room.BackgroundImage
                 }
                 into card
                 select new Attachment
