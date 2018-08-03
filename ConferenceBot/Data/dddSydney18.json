@@ -1,332 +1,335 @@
 ﻿{
-  "timeslots": [
-    {
-      "time": "9:00",
-      "sessions": [
-        {
-          "SessionTitle": "TBC",
-          "PresenterName": "TBC",
-          "SessionAbstract": "TBC",
-          "PresenterBio": "TBC"
-        }
-      ] 
-    },
-    {
-      "time": "10:20",
-      "sessions": [
-        {
-          "SessionTitle": "Blockchain, Cloud and DevOps",
-          "PresenterName": "Michael John Pena",
-          "SessionAbstract": "Blockchain is more than just Bitcoin and cryptocurrencies, it can be used as a consortium platform for your decentralised distributed systems with immutability by default.\nIn this session, the speaker will explain and demo how to set up your private Blockchain network in the cloud using Microsoft Azure. It will then be followed up by setting up the build and release pipeline of your \"Smart Contracts\" in VSTS (Visual Studio Team Services). Lastly, the audience will learn some roadmap strategy on how to deploy the contracts on Main (Public) Networks.",
-          "PresenterTwitterAlias": "mjtpena",
-          "PresenterBio": "Michael is an experienced Technical Consultant currently working with Readify in Sydney, Australia, a Microsoft MVP in Windows and a certified professional with more than 5 years of working experience ranging from Mobile, Cloud, Web, DevOps and Blockchain. \nMichael is a former CTO and Director of his Microsoft-partner company and has worked with various Microsoft clients and consulting partners delivering valued Consulting, Delivery, Training, Technical Presales and Support services. He is also a Microsoft Student Partner alumnus and has worked in Microsoft during his internship working with Windows RT. \nMichael also enjoys mentoring, attending conferences and user group meetups. \nHe is now in a pursuit of learning more about Blockchain and Artificial Intelligence.",
-          "PresenterWebsite": "https://medium.com/@mjtpena",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "Azure Functions Aren't Enterprisy, Are They?",
-          "PresenterName": "Thiago Passos",
-          "SessionAbstract": "Starting with Azure Functions is easy, but how do they fit together in an enterprise context? \nIn this talk, I'm gonna show you how to set up continuous integration and delivery and how to manage different environments and versions!\nNow go back to your company and be a serverless rock star!",
-          "PresenterTwitterAlias": "thiagospassos",
-          "PresenterBio": "Thiago is passionate about technology and learning new skills. He's got over 15 years of experience, mainly with the Microsoft stack. He's currently in love with Angular and Azure.",
-          "PresenterWebsite": "https://passos.com.au/",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "5 Lessons for how Machine Learning Engineers can work with UX Designers",
-          "PresenterName": "Liz Gilleran",
-          "SessionAbstract": "User Experience Design and Machine Learning are often treated as oil and water: sometimes ending up together in certain situations but never mixing properly. As more products begin to incorporate this technology, increasingly the two will have find ways to work together in order to serve our users in positive ways. In this talk I detail my journey into understanding this new technology, as a designer, and how I have sought to bring engineers working with machine learning into the UX process. I will also detail upcoming challenges in the practice, including recent academic and industry research into this area of human data design/interaction.",
-          "PresenterTwitterAlias": "lizlingc",
-          "PresenterBio": "Liz began at NICTA in 2015 (later CSIRO Data61) as a UX designer with no real clue about what machine learning was and has been rapidly learning about ML and other data heavy technology ever since. Passionate about good design, she is also currently studying user evaluation methods of data visualisation as part of a PhD at UNSW.",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "DevOps Is Everyone's Job",
-          "PresenterName": "Hailey Martin",
-          "SessionAbstract": "DevOps has become something of a buzzword around the tech industry in the past few years, and many people have a misguided idea of what it really entails. In this presentation, I'll talk about what DevOps is not: it's not build pipelines, it's not managing infrastructure as code, it's not the cloud, it's not a secret Ops team who kind of exist in some twilight zone between Ops and Dev. DevOps is a culture and a way of approaching software development, and whether you know it or not, you're a part of it (or at least you should be!).",
-          "PresenterBio": "Hailey is a DevOps Engineer at nib Health Funds, though she secretly wishes her title was something cooler like \"DevOps Witch\" or \"Engineer of Chaos\". She enjoys building tools for developers to make their lives easier, engineering servers that manage themselves, and over-using party parrot emojis in Slack.",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "10:45",
-      "sessions": [
-        {
-          "SessionTitle": "Your blog ≠ everyone else’s blog",
-          "PresenterName": "Georgie Luhur Cooke",
-          "SessionAbstract": "There are many questions and concerns around blogging. Where do I start? How do I maintain it? Do I have to post every day? Every week? What do I write about? I don’t know. I’m bored of writing. No one is going to like what I write. What is the point?\nBlogging is a terrific way of helping you with your personal development and provides you with a lot of material for reflection. Whether you are a student or have been working in the tech industry for a long time, blogging is something you can start at any time.\nAt the end of the day, your blog is yours and yours alone. People have many concerns about blogging that stop them from getting started or continuing their journey. Let’s overcome these roadblocks and get you inspired to blog.",
-          "PresenterTwitterAlias": "georgiecel",
-          "PresenterBio": "Georgie is a user interface engineer at Campaign Monitor and also co-organises the codebar Sydney meetup. She cares deeply about accessibility and semantic code, and is always keen to learn. She really enjoys blogging and writing about many topics, and is extremely passionate about bringing up other women in tech. In her spare time she is probably at the gym, drinking tea, or blogging.",
-          "PresenterWebsite": "http://hey.georgie.nu/",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ] 
-    },
-    {
-      "time": "11:05",
-      "break": true
-    },
-    {
-      "time": "11:10",
-      "sessions": [
-        {
-          "SessionTitle": "What Even Is Agile!?",
-          "PresenterName": "Klee Thomas",
-          "SessionAbstract": "You’ve just jumped into a job and they’re telling you that they do this agile thing and talking about sprinting all while sitting hunched over a keyboard scoffing down burger rings and pop tarts. It’s safe to say that agile software development is fairly far away from a high school physical education class. So what is agile? Does it have a capital letter or not? How is it different to just writing code? \nThis talk will answer those questions and more, going in to how agile came about, how some of the things that you take for granted as a junior dev are products of the ubiquity of agile in the software development industry.",
-          "PresenterTwitterAlias": "kleeut",
-          "PresenterBio": "Klee is a Software Developer working at nib and organiser of the Newcastle Coders Group.\nHe is an Agile and Clean Code advocate who loves to talk about what we can do to build better quality, maintainable software.\nOutside of software development Klee is a fan of Martial Arts, Netflix and spending time with his wife and cats.",
-          "PresenterWebsite": "https://kleeut.com/",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "Clean Architecture with ASP.NET Core 2.1",
-          "PresenterName": "Jason Taylor",
-          "SessionAbstract": "The explosive growth of web frameworks and the demands of users have changed the approach to building web applications. Many challenges exist, and getting started can be a daunting prospect. Let's change that now.\nThis talk provides practical guidance and recommendations. We will cover architecture, technologies, tools, and frameworks. We will examine strategies for organizing your projects, folders and files. We will design a system that is simple to build and maintain - all the way from development to production. You leave this talk inspired and prepared to take your enterprise application development to the next level.",
-          "PresenterTwitterAlias": "jasongtau",
-          "PresenterBio": "Jason is an SSW Solution Architect and full stack developer with over 17 years professional experience. He is currently specializing in teaching and building awesome applications utilizing ASP.NET Core, EF Core and Angular. Jason loves a challenge and is skilled at progressing from a proposal into a well-defined, coded, and tested solution.",
-          "PresenterWebsite": "http://www.codingflow.net/",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "How we know what we know: Using philosophy and ethnography to define the limits of AI",
-          "PresenterName": "Caspar Yuill",
-          "SessionAbstract": "How do we know when we’re getting meaningful information from our data, as opposed to distracting noise? Or worse, missing information that could be incredibly valuable?\nIn this talk, strategist and philosophy grad Caspar Yuill discusses the three ways we form hypotheses from observations, what data scientists can learn about culture from ethnographers, and why defining what we don’t and can’t know actually gets us closer to the truth of our world.\nThese principles are essential for defining, designing, and building machine learning programs, data science, and all kinds of research projects.",
-          "PresenterBio": "Caspar Yuill graduated with a double major in philosophy and psychology, and after a brief existential crisis, found his way into advertising. He's interested in the ways people perceive the world, influences on their decision-making, and how we can turn data into information.\nSince then, he's designed campaigns for companies like Dropbox and Vodafone, and conducted research for BWS and Commbank.",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "Fancy becoming a front-end developer? Get to know the tools and concepts first!",
-          "PresenterName": "Nelly Sattari",
-          "SessionAbstract": "Frontend developers need to know the cool tools and web related concepts to build their static websites. For modern websites understanding SASS and compilation, NPM packages, Javascript (ES6), bundling (webpack), task runners (gulp), HTML5 and local dev servers are essential. In particular juniors developers will see all the concepts in one demo code.",
-          "PresenterTwitterAlias": "nelly_sattari",
-          "PresenterBio": "I am a developer who has been always in IT industry in my whole career. Sitecore in my main focus along with leading the frontend side of the CMS website.   Quite interested in sharing my knowledge . I do run brown bags at my works and I am a quite active member of meetups and user groups.",
-          "PresenterWebsite": "http://nellysattari.ghost.io/",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "12:00",
-      "break": true,
-      "title": "Lunch"
-    },
-    {
-      "time": "13:00",
-      "sessions": [
-        {
-          "SessionTitle": "This Startup Life: A Developer's Mistakes and Tips",
-          "PresenterName": "Ben Cull",
-          "SessionAbstract": "It's been 552 days since I had the arguably dumb idea of trying my hand at a startup. Little did I know the sheer volume of learning I'd be doing in the future, from basics like cashflow and forecasts to life lessons like always be talking to new people. In this talk I tell the story of how I went from a full time .NET Developer, to a struggling and then mildly successful startup owner. We'll explore how I made the transition from full time employment to self-employment; we'll look at many of the mistakes I've made and how to avoid them; and we'll go through some practical tips to get you started on your own startup journey. My first tip? Learn from other people's experiences!",
-          "PresenterTwitterAlias": "BenWhoLikesBeer",
-          "PresenterBio": "Ben Cull has left the comfortable consultant lifestyle at SSW Australia for the untamed mountains and treacherous valleys of the startup world with his payments platform, Pinch Payments.\nHe has extensive experience developing enterprise web solutions, but is now free to apply his efforts to the bleeding edge of today's technologies. He wrestles with Alphas, fights with betas, and reminisces with RTMs so that you don't have to. You can find him talking at conferences around the world about his favourite topics: Payments, Web, and Beer.\nOh boy the beer! If you get caught anywhere near him, you'll definitely get into a discussion about either beer or brewing :)",
-          "PresenterWebsite": "http://benjii.me/",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "Making unit tests simple again with .Net Core and EF Core",
-          "PresenterName": "Jernej Kavka",
-          "SessionAbstract": "Unit testing can be hard especially when databases are involved.\nIn this talk, JK will teach you how to include EF Core to simplify testing of “Will this actually work on a real DB” while keeping the tests self-contained and repeatable.\nAlso walk away knowing how cool the combination of EF Core in-memory and the SQLite DB provider is.",
-          "PresenterBio": "With around 10 years of experience in software engineering Jernej has worked on full-stack .Net development, mobile applications, and cognitive services. He worked on some of Australia's largest corporates with great customer satisfaction.",
-          "PresenterTwitterAlias": "jernej_kavka",
-          "PresenterWebsite": "https://jkdev.me/",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "When the Devil is in the detail: understanding the Pareto Principle and how it applies to UX design",
-          "PresenterName": "Mark Boehm",
-          "SessionAbstract": "The Pareto Principle (also known as the 80/20 rule) states that roughly 80% of the effects result from 20% of the causes. It’s a reminder that the relationship between inputs and outputs is never really balanced. This is true of design effort too — often a small fraction of design decisions are responsible for the great majority of user experience issues with a product. But it’s easy to forget this when a designer is embedded in an agile development team and encouraged to maintain a consistent velocity.\nIn this talk I’ll cover two examples from my own experience where getting the details right really mattered. And I’ll share techniques I’ve learned to help UX designers and teams recognise and respond to the Pareto Principle in action.",
-          "PresenterBio": "I’m a seasoned UX Designer with a background in psychology, and I currently lead the Design team at PALO IT Australia. Over the years I've acquired a broad set of techniques and a knack for bringing them together to solve a business problem. Unfortunately I’ve also acquired a distaste for bad design — which makes what I do not just a job, but a personal mission. I'm not happy unless I'm learning, and thankfully in design there's a new lesson everyday.",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "An Introduction to Elixir",
-          "PresenterName": "Fiona McCawley",
-          "SessionAbstract": "This session aims to give an overview of some introductory concepts including\n- basic types and operators\n- pattern matching\n- keyword lists and maps\n",
-          "PresenterBio": "I completed the Web Developer Immersive course at General Assembly a year ago, and since then I have been working as a developer using Elixir at Expert360, an online marketplace for freelance consultants.",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "13:25",
-      "sessions": [
-        {
-          "SessionTitle": "Nobody asked you, Brenda",
-          "PresenterName": "Alex Swan",
-          "SessionAbstract": "A junior developer’s life is often spent in terrified isolation, nothing between our keyboards and our brains except a gap in knowledge and the fear that we’ll exposed for what we believe ourselves to be - useless. How can we make these first few years easier? This talk will discuss how to develop patterns of resilience, how to celebrate our progress, and how to help others to help us.",
-          "PresenterTwitterAlias": "alxswan",
-          "PresenterBio": "After a long journey from law school through operations management, Alex found her calling in 2015 when she took the Web Development Immersive at GA. She is now a front end developer at Ansarada, building products that help businesses get ready for their most important events. Alex is passionate about mentoring and growing junior developers, raising awareness of mental health in the workplace, and amplifying the voices of women in tech. After hours, she is a karaoke enthusiast and broadway musical tragic.",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "13:45",
-      "break": true
-    },
-    {
-      "time": "13:50",
-      "sessions": [
-        {
-          "SessionTitle": "Service Meshes - Powering the next wave of microservice architectures",
-          "PresenterName": "Rob Crowley",
-          "SessionAbstract": "Microservices and containers have transformed application design and deployment patterns. Modern cloud native architectures - which underpin many of the world's groundbreaking tech companies such as Uber, Netflix and Airbnb - afford unparalleled levels of agility and scale but are not without trade-offs. In applications comprising hundreds of services (and thousands of service instances), concerns such as security, operability and observability pose significant challenges. Supporting compensating capabilities such as circuit breakers, retry policies and service discovery in each microservice adds undesirable code bloat and impacts our ability to choose the best language for the problem at hand should the required libraries not be available.\nIn this session, we will take an in-depth look at the service mesh pattern; the benefits that a decentralized microservice management approach brings; the best practices that have evolved; and most importantly what you need to know to effectively leverage a service mesh in your architecture:\n- How to determine the suitability of a service mesh for your application context. Don't just drink the cloud native Kool-Aid!\n- Disambiguate the overlapping responsibilities of an API gateway and service mesh in a modern architecture and demonstrate how they can be used in harmony.\n- How a service mesh enables choosing the best tool or language for a given service without being constrained by the availability of libraries for each platform. Effectively it's a weight loss plan for your microservices.\n- What techniques to apply when transitioning to a service mesh based architecture.\nAdditionally, we will take a hands-on look at what is involved to build and manage a microservice architecture leveraging Kubernetes and Istio, a leading open source service mesh. By the end of the session, you will not only understand the concepts underpinning the service mesh pattern but also have the knowledge to put them into practice.",
-          "PresenterTwitterAlias": "robdcrowley",
-          "PresenterBio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. Rob is an active member of the Perth IT community and regularly shares his ideas at various Meetups and conferences around Australia and internationally. He is also a co-organiser of DDD Perth, the largest IT conference in Western Australia.",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "Modern testing for modern developers",
-          "PresenterName": "Amanda Dean",
-          "SessionAbstract": "Just like development tries to move away from ineffective and inefficient approaches, testing has evolved since the days of heavyweight, formal test cases, and large test teams working in isolation. Testing is no longer the exclusive task of testers, but instead is becoming a whole team responsibility, perhaps with the assistance of a test coach.\nAs such, developers need an understanding of modern test techniques, and how they can use them across the development lifecycle. These include exploratory testing, using customer risks to drive your testing, and what to invest your human test effort on in a world where you automate everything\nAt the end of this talk, audience members will have an understanding of, including applications and benefits of:\n* Manual, human testing\n* Risk-based testing\n* Exploratory testing\n* Automated testing\n* The benefits of all these, and how these can all be used together in waterfall, agile and DevOps environments",
-          "PresenterTwitterAlias": "msamandadean",
-          "PresenterBio": "Amanda is a test manager who works with teams and people to help them better test their software and networks. She is passionate about testing, and about the people within technology, particularly around building and transforming people, teams and practices. Since she fell into testing nine years ago, she has gained a diverse range of experience including fields such as satellite internet, health insurance and alcohol manufacturing, which has led to a relatively eclectic approach to testing and technology.\nAmanda is an active member of the Melbourne, Australia tech community, and never passes up an opportunity to learn something new.",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "Intro to Machine Learning",
-          "PresenterName": "Damian Brady",
-          "SessionAbstract": "What exactly is machine learning? And more importantly, will I understand the answer without doing a Masters and a PhD? Sure!\nJoin me, a fellow AI/ML-newbie, as I walk through what machine learning is, how it can be applied in your applications, and how you can actually create predictive models without accumulating a massive HELP debt in the process.\nWe'll start at the basics by talking about what machine learning can and can't do, but by the end, we'll have a working example of something actually usable. Chock full of examples and a totally non-scary amount of maths, this is the session for you if you're new to ML.",
-          "PresenterBio": "Damian works for Microsoft as a Cloud Developer Advocate, specializing in DevOps.\nHe's an Australian speaker, author, and developer recently based in Toronto, Canada, but now back home! Formerly a Microsoft MVP and Octopus Deploy developer, he regularly speaks at conferences, User Groups, and other events around the world. But most of the time you'll find him talking to developers and IT Pros to help them get the most out of their DevOps strategies.",
-          "PresenterTwitterAlias": "damovisa",
-          "PresenterWebsite": "https://damovisa.me/",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "Introduction into Serverless or: How to run a simple chatbot side project for cheap",
-          "PresenterName": "Ben McPhail",
-          "SessionAbstract": "Software architecture is evolving at an incredibly fast pace.\nOriginally websites were built on expensive physical on-premise servers, then virtual machines in the cloud, then microservices and now there is a relatively new kid on the block, Serverless Architecture. Serverless Architecture allows you to pay for only what you use, when you use it which is becoming an attractive solution for simple side projects.\nBut what are the pros and cons?\nDo you have to learn a new language?\nHow difficult is it to get started?\nIn this session I'll answer all these questions and explain how we got to these exciting times. I'll demonstrate how to build an awesome slack bot and also help shed some light on where Serverless Architecture is going in the future!",
-          "PresenterBio": "Ben is a Full Stack Developer at Present Company. Over the course of his career he has built web apps, iOS and Android app, Chatbots and big data analysis solutions for a range of clients using a plethora of languages and frameworks.\nHe's currently interested in microservices, serverless architecture and generally exploring the wonderful world of cloud computing!",
-          "PresenterTwitterAlias": "benm_c137",
-          "PresenterWebsite": "http://www.benmcphail.com/",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "14:40",
-      "break": true
-    },
-    {
-      "time": "15:10",
-      "sessions": [
-        {
-          "SessionTitle": "Real World Xamarin.Forms",
-          "PresenterName": "Damian Karzon",
-          "SessionAbstract": "More than your typical Xamarin.Forms sample, let's take a deeper look at what's involved in building a real world cross platform app. From project structure and framework to testability (Xamarin.UITests on AppCenter) to Platform querks and UI across iOS, Android and UWP.",
-          "PresenterTwitterAlias": "dkarzon",
-          "PresenterBio": ".NET web developer -> Windows Phone Dev -> Android dev -> Xamarin dev.",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "When Serverless Meets Containers",
-          "PresenterName": "Justin Yoo",
-          "SessionAbstract": "One of benefits using serverless architecture is \"no need to worry about infrastructure management\". On the other hand, container technology is about \"no need to worry about setting up infrastructure\". They are two different directions of evolving cloud services. Now, they get together and play together. Actually they get along each other quite seamlessly.\nAt the end of this session, audiences will learn 1) why we need containers for serverless applications, 2) how this is possible in Azure Functions, 3) how Azure Functions applications can be deployed to AWS, and 4) what other considerations we need to bring in for this combination.",
-          "PresenterTwitterAlias": "justinchronicle",
-          "PresenterWebsite": "https://devkimchi.com/",
-          "PresenterBio": "Justin is a double-awarded Microsoft MVP in both Azure and Visual Studio since 2015. He is very interested in serverless technologies including Azure Functions and Logic Apps, and tries to find a better way of doing things right and getting things done.",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "Machine Learning with CoreML & Azure Cognitive Services",
-          "PresenterName": "Michael Ridland",
-          "SessionAbstract": "Trying to decide between using a Cloud AI or Local? Now you have the best of both worlds. Custom Vision Service recently introduced classifier export with support for CoreML. You can use the Cloud to build quality classifiers with very small training datasets and export those Models to be run locally on iOS devices. We'll show you how to can easily add real time image classification to your mobile applications.",
-          "PresenterBio": "Michael Ridland, Xamarin MVP, Community Blogger and the founder of XAM Consulting. A Xamarin fan since the monotouch days and a even bigger Xamarin.Forms fan since it's release. Michael has been leading Xamarin projects years and delivered enterprise apps of the highest quality in the market. Michael (and his team) are the creators of a few Xamarin.Forms components including the FreshMvvm Framework, SlideOverKit and FreshEssentials. You can find him over at michaelridland.com and twitter.com/rid00z.",
-          "PresenterTwitterAlias": "rid00z",
-          "PresenterWebsite": "http://www.michaelridland.com/",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "When Your Code Does a Number on You: Navigating Numbers in JavaScript",
-          "PresenterName": "Meggan Turner",
-          "SessionAbstract": "What happens when the numbers you’re working with are too big for JavaScript? How do numbers behave beyond JavaScript’s integer limit?\nIn a talk which promises to be more interesting than your typical high school math class, I’ll be bringing you down the rabbit hole that is numbers in JavaScript. We’ll explore how they’re implemented, how we can best write, format, convert & calculate them, and what to do when we’re forced to handle really big (or really small) numbers.",
-          "PresenterBio": "Meggan is a Front End Developer at Jaxsta, a music startup dedicated to providing credit where credit is due. A weekend warrior, when she’s not coding you can find her climbing cliff faces, jumping off bridges, and swimming with sharks, amongst other things. She also really likes dogs.",
-          "PresenterTwitterAlias": "megganeturner",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "15:55",
-      "break": true
-    },
-    {
-      "time": "16:00",
-      "sessions": [
-        {
-          "SessionTitle": "Want to time travel with me to see future of the CMS and eCommerce?",
-          "PresenterName": "Aria Zanganeh",
-          "SessionAbstract": "E-Commerce is only going to become even more advanced in the days ahead, with new technologies making online shopping safer and even more convenient. For example, Cortana, Microsoft’s virtual assistance tool can be combined with Artificial Intelligence, Virtual Reality, and headless CMS/e-commerce API to enable future shoppers to shop without going to malls or even looking at a screen!\nIn the last couple of years, I have worked on many digital transformation projects that have enabled clients to expose their services via new digital channels. In turn, this has helped them to find more potential customers, win more business and facilitate customer journeys. \nOngoing technological advances make this a great time for young developers to consider a career in these emerging areas that will deliver next-generation online user experiences. My session draws upon my expertise and experience to provide a preview of how content management systems and e-commerce can be integrated to create some amazing possibilities. Come, discover the future and make a better-informed decision about how you can help create it.",
-          "PresenterWebsite": "http://azanganeh.com/",
-          "PresenterBio": "I am a technologist, working on cms and e-commerce practices and delivered many successful and complex solutions. I always love to provide a more innovative solution and deliver future solution today and love to share my ideas with my colleges. In the time of writing this biography, I'm the only Episerver EMVP in the Asia Pacific and regular speaker and blogger.",
-          "RoomColor": "Red",
-          "Room": "CB06.03.28 - GUTHRIE"
-        },
-        {
-          "SessionTitle": "Full Stack Rx - Using Redux Patterns on the Server Side with .Net Core, and SignalR",
-          "PresenterName": "Brendan Richards",
-          "SessionAbstract": "Imagine you had something really important to tell everyone but weren't allowed to speak up until asked.\nThat's how all web servers and WebAPIs with their HTTP Request/Response cycle operate.\nSignalR, built on WebSockets, changes this client-server relationship from \"speak only when spoken to\" to a fully bi-directional communication.\nThis is amazing, but can also generate a lot of asynchronous events. Fortunately, we've got some great tools for handling asynchronous events....\nLike many developers, Brendan first started using the Redux and Observable patterns developing client-side JavaScript / Typescript Single Page Apps.\nBut Rx and Redux libraries exist for many languages.\nThis talk explores implementing Redux behind a SignalR hub on an ASP.Net Core web server, adding predictable state management to the real-time capabilities of SignalR.",
-          "PresenterTwitterAlias": "BrendanSSW",
-          "PresenterWebsite": "http://blog.nobadthing.com/",
-          "PresenterBio": "Brendan is a Solution Architect at SSW Brisbane and has been delivering successful web projects across diverse platforms and technologies since 1999.\nHe currently spends most of his day coding for clients with occasional breaks to deliver training  SSW FirebootCamp or speak at .Net User Groups and Hackdays.\nA few of his favorite things include Linux, Open Source, .NET Core, Angular, ngrx and Elastic Search.",
-          "RoomColor": "Blue",
-          "Room": "CB06.03.022 - LECTURE"
-        },
-        {
-          "SessionTitle": "Learning to love the chaos: creating partnerships between teams",
-          "PresenterName": "Monica Ella Regalado, Sophie Gardner",
-          "SessionAbstract": "Creating a successful interdisciplinary team isn’t just about having the right people. It's also about establishing a culture of empathy and learning to create partnerships through communication. It can be challenging because there are a lot of different voices from different backgrounds, each with a different set of priorities and problem solving approaches. Through our experience of working in companies, agencies and startups we’ve had the chance to work with many teams: some highly successful and some we’d rather forget ever happened.\nThis talk looks at how to get the most out of working with other roles. Turn your design and engineering partnerships into friendships; learn to work with researchers and actually have fun doing so; get your PM to do your work for you; and the secret to working with content writers.",
-          "PresenterBio": "Monica is a people nerd. User experience researcher @ Google. Previously worked in inclusive design, non-profit, government, universities, and other areas. Don’t be a stranger: @SalMonicaElla (Twitter).\nSophie is a user experience designer at Google. Part time AI researcher at The University of Sydney design lab and full time lover of cheese and beer 🍻.",
-          "PresenterTwitterAlias": "SalMonicaElla",
-          "RoomColor": "Green",
-          "Room": "CB06.03.056 - COLLABORATIVE"
-        },
-        {
-          "SessionTitle": "Creative coding - Adventures in Wonderland",
-          "PresenterName": "Daisy Smith",
-          "SessionAbstract": "Pushing the boundaries and experimenting is a large part to the growing creative coding community. What does this look like though? Let’s explore code as a tool to creating beautiful interactive experiences.\nWe’ll learn to use code to explore our own creativity, learn about the different tools available and the many possibilities that open up when we get creative. As personal projects, a potential career path, or as a fun way to learn essential skills, creative coding is for everyone.",
-          "PresenterBio": "Daisy is currently working as a front-end developer at Domain and in her free time explores the world of creative coding. She started her career as a \"Fiver\" at Google's Creative Lab where she was part of a team experimenting with technology and creative ideas. She spent last year working in London, as a creative developer for Stink Studios and Wonderbly. Most of all, she loves everything to do with design, creativity and all things interactive.",
-          "PresenterTwitterAlias": "daisysmells",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    },
-    {
-      "time": "16:25",
-      "sessions": [
-        {
-          "SessionTitle": "LESS is always MORE - The simple rules of shipping quality software",
-          "PresenterName": "Jigyasa Rathour",
-          "SessionAbstract": "As a society, we're moving faster than ever. Designing new experiences often in globally distributed teams. However, more and more organisations are making the software delivery overly complex and bureaucratic (especially medium to large organisations). With the recent spotlight on financial services, we're creating more hoops and approvals to ship out products efficiently. I've had experience leading multiple multi-million dollar, large scale programs of work, some have succeeded and some failed miserably. My experience has allowed me to come up with my list of simple rules to design and ship products/experiences, effectively by keeping it sweet and SIMPLE!",
-          "PresenterBio": "I'm a young, driven leader in financial services with a vision to continuously improve the environment I'm operating in and leave behind positive, long lasting transformation. I've dabbled in a few roles in Digital and Data and Analytics and currently a Delivery Manager with a team of 40 people. Outside of work, I'm a health enthusiast, thoroughly enjoy food (the reason why I go to the gym in the first place!) and annual traveller to new locations. I made a promise to myself 5 years ago to see a new country every year and so far... that promise is well kept! :)",
-          "RoomColor": "Orange",
-          "Room": "CB06.03 - CLASSROOMS"
-        }
-      ]
-    }
-  ]
-}
+    "timeslots": [
+      {
+        "time": "9:00",
+        "sessions": [
+            {
+              "SessionTitle": "Intro to Machine Learning",
+              "PresenterName": "Damian Brady",
+              "SessionAbstract": "What exactly is machine learning? And more importantly, will I understand the answer without doing a Masters and a PhD? Sure!\nJoin me, a fellow AI/ML-newbie, as I walk through what machine learning is, how it can be applied in your applications, and how you can actually create predictive models without accumulating a massive HELP debt in the process.\nWe'll start at the basics by talking about what machine learning can and can't do, but by the end, we'll have a working example of something actually usable. Chock full of examples and a totally non-scary amount of maths, this is the session for you if you're new to ML.",
+              "PresenterBio": "Damian works for Microsoft as a Cloud Developer Advocate, specializing in DevOps.\nHe's an Australian speaker, author, and developer recently based in Toronto, Canada, but now back home! Formerly a Microsoft MVP and Octopus Deploy developer, he regularly speaks at conferences, User Groups, and other events around the world. But most of the time you'll find him talking to developers and IT Pros to help them get the most out of their DevOps strategies.",
+              "PresenterTwitterAlias": "damovisa",
+              "PresenterWebsite": "https://damovisa.me/",
+              "RoomColor": "Green",
+              "Room": "CB06.03.056 - COLLABORATIVE"
+            }] 
+      },
+      {
+        "time": "10:20",
+        "sessions": [
+          {
+            "SessionTitle": "Blockchain, Cloud and DevOps",
+            "PresenterName": "Michael John Pena",
+            "SessionAbstract": "Blockchain is more than just Bitcoin and cryptocurrencies, it can be used as a consortium platform for your decentralised distributed systems with immutability by default.\nIn this session, the speaker will explain and demo how to set up your private Blockchain network in the cloud using Microsoft Azure. It will then be followed up by setting up the build and release pipeline of your \"Smart Contracts\" in VSTS (Visual Studio Team Services). Lastly, the audience will learn some roadmap strategy on how to deploy the contracts on Main (Public) Networks.",
+            "PresenterTwitterAlias": "mjtpena",
+            "PresenterBio": "Michael is an experienced Technical Consultant currently working with Readify in Sydney, Australia, a Microsoft MVP in Windows and a certified professional with more than 5 years of working experience ranging from Mobile, Cloud, Web, DevOps and Blockchain. \nMichael is a former CTO and Director of his Microsoft-partner company and has worked with various Microsoft clients and consulting partners delivering valued Consulting, Delivery, Training, Technical Presales and Support services. He is also a Microsoft Student Partner alumnus and has worked in Microsoft during his internship working with Windows RT. \nMichael also enjoys mentoring, attending conferences and user group meetups. \nHe is now in a pursuit of learning more about Blockchain and Artificial Intelligence.",
+            "PresenterWebsite": "https://medium.com/@mjtpena",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "Azure Functions Aren't Enterprisy, Are They?",
+            "PresenterName": "Thiago Passos",
+            "SessionAbstract": "Starting with Azure Functions is easy, but how do they fit together in an enterprise context? \nIn this talk, I'm gonna show you how to set up continuous integration and delivery and how to manage different environments and versions!\nNow go back to your company and be a serverless rock star!",
+            "PresenterTwitterAlias": "thiagospassos",
+            "PresenterBio": "Thiago is passionate about technology and learning new skills. He's got over 15 years of experience, mainly with the Microsoft stack. He's currently in love with Angular and Azure.",
+            "PresenterWebsite": "https://passos.com.au/",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "5 Lessons for how Machine Learning Engineers can work with UX Designers",
+            "PresenterName": "Liz Gilleran",
+            "SessionAbstract": "User Experience Design and Machine Learning are often treated as oil and water: sometimes ending up together in certain situations but never mixing properly. As more products begin to incorporate this technology, increasingly the two will have find ways to work together in order to serve our users in positive ways. In this talk I detail my journey into understanding this new technology, as a designer, and how I have sought to bring engineers working with machine learning into the UX process. I will also detail upcoming challenges in the practice, including recent academic and industry research into this area of human data design/interaction.",
+            "PresenterTwitterAlias": "lizlingc",
+            "PresenterBio": "Liz began at NICTA in 2015 (later CSIRO Data61) as a UX designer with no real clue about what machine learning was and has been rapidly learning about ML and other data heavy technology ever since. Passionate about good design, she is also currently studying user evaluation methods of data visualisation as part of a PhD at UNSW.",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "DevOps Is Everyone's Job",
+            "PresenterName": "Hailey Martin",
+            "SessionAbstract": "DevOps has become something of a buzzword around the tech industry in the past few years, and many people have a misguided idea of what it really entails. In this presentation, I'll talk about what DevOps is not: it's not build pipelines, it's not managing infrastructure as code, it's not the cloud, it's not a secret Ops team who kind of exist in some twilight zone between Ops and Dev. DevOps is a culture and a way of approaching software development, and whether you know it or not, you're a part of it (or at least you should be!).",
+            "PresenterBio": "Hailey is a DevOps Engineer at nib Health Funds, though she secretly wishes her title was something cooler like \"DevOps Witch\" or \"Engineer of Chaos\". She enjoys building tools for developers to make their lives easier, engineering servers that manage themselves, and over-using party parrot emojis in Slack.",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "10:45",
+        "sessions": [
+          {
+            "SessionTitle": "Your blog ≠ everyone else’s blog",
+            "PresenterName": "Georgie Luhur Cooke",
+            "SessionAbstract": "There are many questions and concerns around blogging. Where do I start? How do I maintain it? Do I have to post every day? Every week? What do I write about? I don’t know. I’m bored of writing. No one is going to like what I write. What is the point?\nBlogging is a terrific way of helping you with your personal development and provides you with a lot of material for reflection. Whether you are a student or have been working in the tech industry for a long time, blogging is something you can start at any time.\nAt the end of the day, your blog is yours and yours alone. People have many concerns about blogging that stop them from getting started or continuing their journey. Let’s overcome these roadblocks and get you inspired to blog.",
+            "PresenterTwitterAlias": "georgiecel",
+            "PresenterBio": "Georgie is a user interface engineer at Campaign Monitor and also co-organises the codebar Sydney meetup. She cares deeply about accessibility and semantic code, and is always keen to learn. She really enjoys blogging and writing about many topics, and is extremely passionate about bringing up other women in tech. In her spare time she is probably at the gym, drinking tea, or blogging.",
+            "PresenterWebsite": "http://hey.georgie.nu/",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ] 
+      },
+      {
+        "time": "11:05",
+        "break": true
+      },
+      {
+        "time": "11:10",
+        "sessions": [
+          {
+            "SessionTitle": "What Even Is Agile!?",
+            "PresenterName": "Klee Thomas",
+            "SessionAbstract": "You’ve just jumped into a job and they’re telling you that they do this agile thing and talking about sprinting all while sitting hunched over a keyboard scoffing down burger rings and pop tarts. It’s safe to say that agile software development is fairly far away from a high school physical education class. So what is agile? Does it have a capital letter or not? How is it different to just writing code? \nThis talk will answer those questions and more, going in to how agile came about, how some of the things that you take for granted as a junior dev are products of the ubiquity of agile in the software development industry.",
+            "PresenterTwitterAlias": "kleeut",
+            "PresenterBio": "Klee is a Software Developer working at nib and organiser of the Newcastle Coders Group.\nHe is an Agile and Clean Code advocate who loves to talk about what we can do to build better quality, maintainable software.\nOutside of software development Klee is a fan of Martial Arts, Netflix and spending time with his wife and cats.",
+            "PresenterWebsite": "https://kleeut.com/",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "Clean Architecture with ASP.NET Core 2.1",
+            "PresenterName": "Jason Taylor",
+            "SessionAbstract": "The explosive growth of web frameworks and the demands of users have changed the approach to building web applications. Many challenges exist, and getting started can be a daunting prospect. Let's change that now.\nThis talk provides practical guidance and recommendations. We will cover architecture, technologies, tools, and frameworks. We will examine strategies for organizing your projects, folders and files. We will design a system that is simple to build and maintain - all the way from development to production. You leave this talk inspired and prepared to take your enterprise application development to the next level.",
+            "PresenterTwitterAlias": "jasongtau",
+            "PresenterBio": "Jason is an SSW Solution Architect and full stack developer with over 17 years professional experience. He is currently specializing in teaching and building awesome applications utilizing ASP.NET Core, EF Core and Angular. Jason loves a challenge and is skilled at progressing from a proposal into a well-defined, coded, and tested solution.",
+            "PresenterWebsite": "http://www.codingflow.net/",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "How we know what we know: Using philosophy and ethnography to define the limits of AI",
+            "PresenterName": "Caspar Yuill",
+            "SessionAbstract": "How do we know when we’re getting meaningful information from our data, as opposed to distracting noise? Or worse, missing information that could be incredibly valuable?\nIn this talk, strategist and philosophy grad Caspar Yuill discusses the three ways we form hypotheses from observations, what data scientists can learn about culture from ethnographers, and why defining what we don’t and can’t know actually gets us closer to the truth of our world.\nThese principles are essential for defining, designing, and building machine learning programs, data science, and all kinds of research projects.",
+            "PresenterBio": "Caspar Yuill graduated with a double major in philosophy and psychology, and after a brief existential crisis, found his way into advertising. He's interested in the ways people perceive the world, influences on their decision-making, and how we can turn data into information.\nSince then, he's designed campaigns for companies like Dropbox and Vodafone, and conducted research for BWS and Commbank.",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "Fancy becoming a front-end developer? Get to know the tools and concepts first!",
+            "PresenterName": "Nelly Sattari",
+            "SessionAbstract": "Frontend developers need to know the cool tools and web related concepts to build their static websites. For modern websites understanding SASS and compilation, NPM packages, Javascript (ES6), bundling (webpack), task runners (gulp), HTML5 and local dev servers are essential. In particular juniors developers will see all the concepts in one demo code.",
+            "PresenterTwitterAlias": "nelly_sattari",
+            "PresenterBio": "I am a developer who has been always in IT industry in my whole career. Sitecore in my main focus along with leading the frontend side of the CMS website.   Quite interested in sharing my knowledge . I do run brown bags at my works and I am a quite active member of meetups and user groups.",
+            "PresenterWebsite": "http://nellysattari.ghost.io/",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "12:00",
+        "break": true,
+        "title": "Lunch"
+      },
+      {
+        "time": "13:00",
+        "sessions": [
+          {
+            "SessionTitle": "This Startup Life: A Developer's Mistakes and Tips",
+            "PresenterName": "Ben Cull",
+            "SessionAbstract": "It's been 552 days since I had the arguably dumb idea of trying my hand at a startup. Little did I know the sheer volume of learning I'd be doing in the future, from basics like cashflow and forecasts to life lessons like always be talking to new people. In this talk I tell the story of how I went from a full time .NET Developer, to a struggling and then mildly successful startup owner. We'll explore how I made the transition from full time employment to self-employment; we'll look at many of the mistakes I've made and how to avoid them; and we'll go through some practical tips to get you started on your own startup journey. My first tip? Learn from other people's experiences!",
+            "PresenterTwitterAlias": "BenWhoLikesBeer",
+            "PresenterBio": "Ben Cull has left the comfortable consultant lifestyle at SSW Australia for the untamed mountains and treacherous valleys of the startup world with his payments platform, Pinch Payments.\nHe has extensive experience developing enterprise web solutions, but is now free to apply his efforts to the bleeding edge of today's technologies. He wrestles with Alphas, fights with betas, and reminisces with RTMs so that you don't have to. You can find him talking at conferences around the world about his favourite topics: Payments, Web, and Beer.\nOh boy the beer! If you get caught anywhere near him, you'll definitely get into a discussion about either beer or brewing :)",
+            "PresenterWebsite": "http://benjii.me/",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "Making unit tests simple again with .Net Core and EF Core",
+            "PresenterName": "Jernej Kavka",
+            "SessionAbstract": "Unit testing can be hard especially when databases are involved.\nIn this talk, JK will teach you how to include EF Core to simplify testing of “Will this actually work on a real DB” while keeping the tests self-contained and repeatable.\nAlso walk away knowing how cool the combination of EF Core in-memory and the SQLite DB provider is.",
+            "PresenterBio": "With around 10 years of experience in software engineering Jernej has worked on full-stack .Net development, mobile applications, and cognitive services. He worked on some of Australia's largest corporates with great customer satisfaction.",
+            "PresenterTwitterAlias": "jernej_kavka",
+            "PresenterWebsite": "https://jkdev.me/",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "When the Devil is in the detail: understanding the Pareto Principle and how it applies to UX design",
+            "PresenterName": "Mark Boehm",
+            "SessionAbstract": "The Pareto Principle (also known as the 80/20 rule) states that roughly 80% of the effects result from 20% of the causes. It’s a reminder that the relationship between inputs and outputs is never really balanced. This is true of design effort too — often a small fraction of design decisions are responsible for the great majority of user experience issues with a product. But it’s easy to forget this when a designer is embedded in an agile development team and encouraged to maintain a consistent velocity.\nIn this talk I’ll cover two examples from my own experience where getting the details right really mattered. And I’ll share techniques I’ve learned to help UX designers and teams recognise and respond to the Pareto Principle in action.",
+            "PresenterBio": "I’m a seasoned UX Designer with a background in psychology, and I currently lead the Design team at PALO IT Australia. Over the years I've acquired a broad set of techniques and a knack for bringing them together to solve a business problem. Unfortunately I’ve also acquired a distaste for bad design — which makes what I do not just a job, but a personal mission. I'm not happy unless I'm learning, and thankfully in design there's a new lesson everyday.",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "An Introduction to Elixir",
+            "PresenterName": "Fiona McCawley",
+            "SessionAbstract": "This session aims to give an overview of some introductory concepts including\n- basic types and operators\n- pattern matching\n- keyword lists and maps\n",
+            "PresenterBio": "I completed the Web Developer Immersive course at General Assembly a year ago, and since then I have been working as a developer using Elixir at Expert360, an online marketplace for freelance consultants.",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "13:25",
+        "sessions": [
+          {
+            "SessionTitle": "Nobody asked you, Brenda",
+            "PresenterName": "Alex Swan",
+            "SessionAbstract": "A junior developer’s life is often spent in terrified isolation, nothing between our keyboards and our brains except a gap in knowledge and the fear that we’ll exposed for what we believe ourselves to be - useless. How can we make these first few years easier? This talk will discuss how to develop patterns of resilience, how to celebrate our progress, and how to help others to help us.",
+            "PresenterTwitterAlias": "alxswan",
+            "PresenterBio": "After a long journey from law school through operations management, Alex found her calling in 2015 when she took the Web Development Immersive at GA. She is now a front end developer at Ansarada, building products that help businesses get ready for their most important events. Alex is passionate about mentoring and growing junior developers, raising awareness of mental health in the workplace, and amplifying the voices of women in tech. After hours, she is a karaoke enthusiast and broadway musical tragic.",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "13:45",
+        "break": true
+      },
+      {
+        "time": "13:50",
+        "sessions": [
+          {
+            "SessionTitle": "Service Meshes - Powering the next wave of microservice architectures",
+            "PresenterName": "Rob Crowley",
+            "SessionAbstract": "Microservices and containers have transformed application design and deployment patterns. Modern cloud native architectures - which underpin many of the world's groundbreaking tech companies such as Uber, Netflix and Airbnb - afford unparalleled levels of agility and scale but are not without trade-offs. In applications comprising hundreds of services (and thousands of service instances), concerns such as security, operability and observability pose significant challenges. Supporting compensating capabilities such as circuit breakers, retry policies and service discovery in each microservice adds undesirable code bloat and impacts our ability to choose the best language for the problem at hand should the required libraries not be available.\nIn this session, we will take an in-depth look at the service mesh pattern; the benefits that a decentralized microservice management approach brings; the best practices that have evolved; and most importantly what you need to know to effectively leverage a service mesh in your architecture:\n- How to determine the suitability of a service mesh for your application context. Don't just drink the cloud native Kool-Aid!\n- Disambiguate the overlapping responsibilities of an API gateway and service mesh in a modern architecture and demonstrate how they can be used in harmony.\n- How a service mesh enables choosing the best tool or language for a given service without being constrained by the availability of libraries for each platform. Effectively it's a weight loss plan for your microservices.\n- What techniques to apply when transitioning to a service mesh based architecture.\nAdditionally, we will take a hands-on look at what is involved to build and manage a microservice architecture leveraging Kubernetes and Istio, a leading open source service mesh. By the end of the session, you will not only understand the concepts underpinning the service mesh pattern but also have the knowledge to put them into practice.",
+            "PresenterTwitterAlias": "robdcrowley",
+            "PresenterBio": "Rob is a software consultant, developer and team lead with a passion for delivering systems that perform at scale. Rob has over 15 years of experience building distributed systems on the web stack and has read more RFCs than he cares to admit. Rob is an active member of the Perth IT community and regularly shares his ideas at various Meetups and conferences around Australia and internationally. He is also a co-organiser of DDD Perth, the largest IT conference in Western Australia.",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "Modern testing for modern developers",
+            "PresenterName": "Amanda Dean",
+            "SessionAbstract": "Just like development tries to move away from ineffective and inefficient approaches, testing has evolved since the days of heavyweight, formal test cases, and large test teams working in isolation. Testing is no longer the exclusive task of testers, but instead is becoming a whole team responsibility, perhaps with the assistance of a test coach.\nAs such, developers need an understanding of modern test techniques, and how they can use them across the development lifecycle. These include exploratory testing, using customer risks to drive your testing, and what to invest your human test effort on in a world where you automate everything\nAt the end of this talk, audience members will have an understanding of, including applications and benefits of:\n* Manual, human testing\n* Risk-based testing\n* Exploratory testing\n* Automated testing\n* The benefits of all these, and how these can all be used together in waterfall, agile and DevOps environments",
+            "PresenterTwitterAlias": "msamandadean",
+            "PresenterBio": "Amanda is a test manager who works with teams and people to help them better test their software and networks. She is passionate about testing, and about the people within technology, particularly around building and transforming people, teams and practices. Since she fell into testing nine years ago, she has gained a diverse range of experience including fields such as satellite internet, health insurance and alcohol manufacturing, which has led to a relatively eclectic approach to testing and technology.\nAmanda is an active member of the Melbourne, Australia tech community, and never passes up an opportunity to learn something new.",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "Data lakes beyond clusters",
+            "PresenterName": "Dom Raniszewski",
+            "SessionAbstract": "Data lakes leveraging clusters established their place in advanced analytics. Does cluster approach have to be necessary? Can we remove the maintenance of clusters and infrastructure costs from the analytical work?\nDuring this session I'm going to demonstrate a different approach to building data lakes. Using Azure Data Lake as an example I will show to run and manage  on-demand experiments from scratch in minutes using languages and tools we already know",
+            "PresenterBio": "Dom is a developer with over 15 years of experience. Through most of his career he was working as a software development consultant. He's currently a Lead Consultant in Data & Analytics practice at Readify, Sydney.\nHe has experience in general computer science, software development, machine learning and cloud data engineering. His main interest are sustainable software delivery practices, data-driven cultures and systems thinking.",
+            "PresenterTwitterAlias": "DominikRan",
+            "PresenterWebsite": "http://devblog.xyz/",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "Introduction into Serverless or: How to run a simple chatbot side project for cheap",
+            "PresenterName": "Ben McPhail",
+            "SessionAbstract": "Software architecture is evolving at an incredibly fast pace.\nOriginally websites were built on expensive physical on-premise servers, then virtual machines in the cloud, then microservices and now there is a relatively new kid on the block, Serverless Architecture. Serverless Architecture allows you to pay for only what you use, when you use it which is becoming an attractive solution for simple side projects.\nBut what are the pros and cons?\nDo you have to learn a new language?\nHow difficult is it to get started?\nIn this session I'll answer all these questions and explain how we got to these exciting times. I'll demonstrate how to build an awesome slack bot and also help shed some light on where Serverless Architecture is going in the future!",
+            "PresenterBio": "Ben is a Full Stack Developer at Present Company. Over the course of his career he has built web apps, iOS and Android app, Chatbots and big data analysis solutions for a range of clients using a plethora of languages and frameworks.\nHe's currently interested in microservices, serverless architecture and generally exploring the wonderful world of cloud computing!",
+            "PresenterTwitterAlias": "benm_c137",
+            "PresenterWebsite": "http://www.benmcphail.com/",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "14:40",
+        "break": true
+      },
+      {
+        "time": "15:10",
+        "sessions": [
+          {
+            "SessionTitle": "Real World Xamarin.Forms",
+            "PresenterName": "Damian Karzon",
+            "SessionAbstract": "More than your typical Xamarin.Forms sample, let's take a deeper look at what's involved in building a real world cross platform app. From project structure and framework to testability (Xamarin.UITests on AppCenter) to Platform querks and UI across iOS, Android and UWP.",
+            "PresenterTwitterAlias": "dkarzon",
+            "PresenterBio": ".NET web developer -> Windows Phone Dev -> Android dev -> Xamarin dev.",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "When Serverless Meets Containers",
+            "PresenterName": "Justin Yoo",
+            "SessionAbstract": "One of benefits using serverless architecture is \"no need to worry about infrastructure management\". On the other hand, container technology is about \"no need to worry about setting up infrastructure\". They are two different directions of evolving cloud services. Now, they get together and play together. Actually they get along each other quite seamlessly.\nAt the end of this session, audiences will learn 1) why we need containers for serverless applications, 2) how this is possible in Azure Functions, 3) how Azure Functions applications can be deployed to AWS, and 4) what other considerations we need to bring in for this combination.",
+            "PresenterTwitterAlias": "justinchronicle",
+            "PresenterWebsite": "https://devkimchi.com/",
+            "PresenterBio": "Justin is a double-awarded Microsoft MVP in both Azure and Visual Studio since 2015. He is very interested in serverless technologies including Azure Functions and Logic Apps, and tries to find a better way of doing things right and getting things done.",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "Machine Learning with CoreML & Azure Cognitive Services",
+            "PresenterName": "Michael Ridland",
+            "SessionAbstract": "Trying to decide between using a Cloud AI or Local? Now you have the best of both worlds. Custom Vision Service recently introduced classifier export with support for CoreML. You can use the Cloud to build quality classifiers with very small training datasets and export those Models to be run locally on iOS devices. We'll show you how to can easily add real time image classification to your mobile applications.",
+            "PresenterBio": "Michael Ridland, Xamarin MVP, Community Blogger and the founder of XAM Consulting. A Xamarin fan since the monotouch days and a even bigger Xamarin.Forms fan since it's release. Michael has been leading Xamarin projects years and delivered enterprise apps of the highest quality in the market. Michael (and his team) are the creators of a few Xamarin.Forms components including the FreshMvvm Framework, SlideOverKit and FreshEssentials. You can find him over at michaelridland.com and twitter.com/rid00z.",
+            "PresenterTwitterAlias": "rid00z",
+            "PresenterWebsite": "http://www.michaelridland.com/",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "When Your Code Does a Number on You: Navigating Numbers in JavaScript",
+            "PresenterName": "Meggan Turner",
+            "SessionAbstract": "What happens when the numbers you’re working with are too big for JavaScript? How do numbers behave beyond JavaScript’s integer limit?\nIn a talk which promises to be more interesting than your typical high school math class, I’ll be bringing you down the rabbit hole that is numbers in JavaScript. We’ll explore how they’re implemented, how we can best write, format, convert & calculate them, and what to do when we’re forced to handle really big (or really small) numbers.",
+            "PresenterBio": "Meggan is a Front End Developer at Jaxsta, a music startup dedicated to providing credit where credit is due. A weekend warrior, when she’s not coding you can find her climbing cliff faces, jumping off bridges, and swimming with sharks, amongst other things. She also really likes dogs.",
+            "PresenterTwitterAlias": "megganeturner",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "15:55",
+        "break": true
+      },
+      {
+        "time": "16:00",
+        "sessions": [
+          {
+            "SessionTitle": "Want to time travel with me to see future of the CMS and eCommerce?",
+            "PresenterName": "Aria Zanganeh",
+            "SessionAbstract": "E-Commerce is only going to become even more advanced in the days ahead, with new technologies making online shopping safer and even more convenient. For example, Cortana, Microsoft’s virtual assistance tool can be combined with Artificial Intelligence, Virtual Reality, and headless CMS/e-commerce API to enable future shoppers to shop without going to malls or even looking at a screen!\nIn the last couple of years, I have worked on many digital transformation projects that have enabled clients to expose their services via new digital channels. In turn, this has helped them to find more potential customers, win more business and facilitate customer journeys. \nOngoing technological advances make this a great time for young developers to consider a career in these emerging areas that will deliver next-generation online user experiences. My session draws upon my expertise and experience to provide a preview of how content management systems and e-commerce can be integrated to create some amazing possibilities. Come, discover the future and make a better-informed decision about how you can help create it.",
+            "PresenterWebsite": "http://azanganeh.com/",
+            "PresenterBio": "I am a technologist, working on cms and e-commerce practices and delivered many successful and complex solutions. I always love to provide a more innovative solution and deliver future solution today and love to share my ideas with my colleges. In the time of writing this biography, I'm the only Episerver EMVP in the Asia Pacific and regular speaker and blogger.",
+            "RoomColor": "Red",
+            "Room": "CB06.03.28 - GUTHRIE"
+          },
+          {
+            "SessionTitle": "Full Stack Rx - Using Redux Patterns on the Server Side with .Net Core, and SignalR",
+            "PresenterName": "Brendan Richards",
+            "SessionAbstract": "Imagine you had something really important to tell everyone but weren't allowed to speak up until asked.\nThat's how all web servers and WebAPIs with their HTTP Request/Response cycle operate.\nSignalR, built on WebSockets, changes this client-server relationship from \"speak only when spoken to\" to a fully bi-directional communication.\nThis is amazing, but can also generate a lot of asynchronous events. Fortunately, we've got some great tools for handling asynchronous events....\nLike many developers, Brendan first started using the Redux and Observable patterns developing client-side JavaScript / Typescript Single Page Apps.\nBut Rx and Redux libraries exist for many languages.\nThis talk explores implementing Redux behind a SignalR hub on an ASP.Net Core web server, adding predictable state management to the real-time capabilities of SignalR.",
+            "PresenterTwitterAlias": "BrendanSSW",
+            "PresenterWebsite": "http://blog.nobadthing.com/",
+            "PresenterBio": "Brendan is a Solution Architect at SSW Brisbane and has been delivering successful web projects across diverse platforms and technologies since 1999.\nHe currently spends most of his day coding for clients with occasional breaks to deliver training  SSW FirebootCamp or speak at .Net User Groups and Hackdays.\nA few of his favorite things include Linux, Open Source, .NET Core, Angular, ngrx and Elastic Search.",
+            "RoomColor": "Blue",
+            "Room": "CB06.03.022 - LECTURE"
+          },
+          {
+            "SessionTitle": "Learning to love the chaos: creating partnerships between teams",
+            "PresenterName": "Monica Ella Regalado, Sophie Gardner",
+            "SessionAbstract": "Creating a successful interdisciplinary team isn’t just about having the right people. It's also about establishing a culture of empathy and learning to create partnerships through communication. It can be challenging because there are a lot of different voices from different backgrounds, each with a different set of priorities and problem solving approaches. Through our experience of working in companies, agencies and startups we’ve had the chance to work with many teams: some highly successful and some we’d rather forget ever happened.\nThis talk looks at how to get the most out of working with other roles. Turn your design and engineering partnerships into friendships; learn to work with researchers and actually have fun doing so; get your PM to do your work for you; and the secret to working with content writers.",
+            "PresenterBio": "Monica is a people nerd. User experience researcher @ Google. Previously worked in inclusive design, non-profit, government, universities, and other areas. Don’t be a stranger: @SalMonicaElla (Twitter).\nSophie is a user experience designer at Google. Part time AI researcher at The University of Sydney design lab and full time lover of cheese and beer 🍻.",
+            "PresenterTwitterAlias": "SalMonicaElla",
+            "RoomColor": "Green",
+            "Room": "CB06.03.056 - COLLABORATIVE"
+          },
+          {
+            "SessionTitle": "Creative coding - Adventures in Wonderland",
+            "PresenterName": "Daisy Smith",
+            "SessionAbstract": "Pushing the boundaries and experimenting is a large part to the growing creative coding community. What does this look like though? Let’s explore code as a tool to creating beautiful interactive experiences.\nWe’ll learn to use code to explore our own creativity, learn about the different tools available and the many possibilities that open up when we get creative. As personal projects, a potential career path, or as a fun way to learn essential skills, creative coding is for everyone.",
+            "PresenterBio": "Daisy is currently working as a front-end developer at Domain and in her free time explores the world of creative coding. She started her career as a \"Fiver\" at Google's Creative Lab where she was part of a team experimenting with technology and creative ideas. She spent last year working in London, as a creative developer for Stink Studios and Wonderbly. Most of all, she loves everything to do with design, creativity and all things interactive.",
+            "PresenterTwitterAlias": "daisysmells",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      },
+      {
+        "time": "16:25",
+        "sessions": [
+          {
+            "SessionTitle": "LESS is always MORE - The simple rules of shipping quality software",
+            "PresenterName": "Jigyasa Rathour",
+            "SessionAbstract": "As a society, we're moving faster than ever. Designing new experiences often in globally distributed teams. However, more and more organisations are making the software delivery overly complex and bureaucratic (especially medium to large organisations). With the recent spotlight on financial services, we're creating more hoops and approvals to ship out products efficiently. I've had experience leading multiple multi-million dollar, large scale programs of work, some have succeeded and some failed miserably. My experience has allowed me to come up with my list of simple rules to design and ship products/experiences, effectively by keeping it sweet and SIMPLE!",
+            "PresenterBio": "I'm a young, driven leader in financial services with a vision to continuously improve the environment I'm operating in and leave behind positive, long lasting transformation. I've dabbled in a few roles in Digital and Data and Analytics and currently a Delivery Manager with a team of 40 people. Outside of work, I'm a health enthusiast, thoroughly enjoy food (the reason why I go to the gym in the first place!) and annual traveller to new locations. I made a promise to myself 5 years ago to see a new country every year and so far... that promise is well kept! :)",
+            "RoomColor": "Orange",
+            "Room": "CB06.03 - CLASSROOMS"
+          }
+        ]
+      }
+    ]
+  }
