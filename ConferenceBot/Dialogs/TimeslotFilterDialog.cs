@@ -16,7 +16,7 @@ namespace ConferenceBot.Dialogs
     {
         private readonly SessionIdentifier[] _sessionIdentifiers;
 
-        private Timeslot[] Timeslots => NdcSydney17.Data.Timeslots.FromSessionIdentifiers(_sessionIdentifiers);
+        private Timeslot[] Timeslots => NdcSydney.Data.Timeslots.FromSessionIdentifiers(_sessionIdentifiers);
 
         public readonly Dictionary<string, IList<SerializableCardAction>> FilterActions = new Dictionary<string, IList<SerializableCardAction>>();
 

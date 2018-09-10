@@ -19,7 +19,7 @@ namespace ConferenceBot.Extensions
                     .ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"))
                     .TimeOfDay;
 
-                var firstOrDefault = NdcSydney17.Data.Timeslots
+                var firstOrDefault = NdcSydney.Data.Timeslots
                     .FirstOrDefault(x => x.Date.TimeOfDay >= currentTimeSpan);
 
                 time = firstOrDefault?.Date.TimeOfDay ?? currentTimeSpan;
@@ -56,7 +56,7 @@ namespace ConferenceBot.Extensions
 
             var options = new Options
             {
-                Clock = () => NdcSydney17.Data.Timeslots.Where(t => t.Date.Date >= today).Min(t => t.Date.Date)
+                Clock = () => NdcSydney.Data.Timeslots.Where(t => t.Date.Date >= today).Min(t => t.Date.Date)
             };
 
             var parser = new Parser(options);
@@ -76,7 +76,7 @@ namespace ConferenceBot.Extensions
             if (!result.TryFindEntity(dateTimeFilter, out EntityRecommendation dateEntity))
                 return false;
 
-            var value = (string)JArray.Parse(dateEntity.Resolution["values"].ToString())[0]["value"];
+            var value = (string)((dynamic)dateEntity.Resolution["values"])[0]["value"];
 
             dateTime = TimeZoneInfo
                 .ConvertTime(DateTime.Parse(value), TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));

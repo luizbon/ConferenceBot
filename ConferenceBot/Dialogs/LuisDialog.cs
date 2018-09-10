@@ -135,7 +135,7 @@ namespace ConferenceBot.Dialogs
 
         private static Timeslot[] FilterTimeslots(LuisResult result, out bool isNext)
         {
-            var timeslots = NdcSydney17.Data.Timeslots;
+            var timeslots = NdcSydney.Data.Timeslots;
 
             if (result.TryFindEntity(KeynoteFilter, out EntityRecommendation _))
                 timeslots = timeslots.FindKeynote();
@@ -189,7 +189,7 @@ namespace ConferenceBot.Dialogs
             {
                 var sessionIdentifiers = await result;
 
-                await SendPresenters(context, NdcSydney17.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
+                await SendPresenters(context, NdcSydney.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
             }
             catch (Exception)
             {
@@ -216,7 +216,7 @@ namespace ConferenceBot.Dialogs
             {
                 var sessionIdentifiers = await result;
 
-                await SendTalks(context, NdcSydney17.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
+                await SendTalks(context, NdcSydney.Data.Timeslots.FromSessionIdentifiers(sessionIdentifiers));
             }
             catch (Exception)
             {
@@ -229,7 +229,7 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListRooms")]
         public async Task ListRooms(IDialogContext context, LuisResult result)
         {
-            var actions = NdcSydney17.Rooms.Select(room => new CardAction
+            var actions = NdcSydney.Rooms().Select(room => new CardAction
             {
                 Title = room,
                 Type = ActionTypes.ImBack,
@@ -252,9 +252,9 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("ListSpeakers")]
         public async Task ListSpeakers(IDialogContext context, LuisResult result)
         {
-            var initials = NdcSydney17.Speakers.GroupBy(s => s.ToLower()[0]);
+            var initials = NdcSydney.Speakers().GroupBy(s => s.ToLower()[0]);
 
-            await context.PostAsync($"There are {NdcSydney17.Speakers.Length} speakers, I'll group them by initials");
+            await context.PostAsync($"There are {NdcSydney.Speakers().Length} speakers, I'll group them by initials");
 
             foreach (var initial in initials)
             {
@@ -262,8 +262,8 @@ namespace ConferenceBot.Dialogs
                 await context.PostAsync(string.Join("\n\n", initial));
             }
 
-            var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
-            await context.PostAsync($"Try asking: When is {NdcSydney17.Speakers[speakerIndex]}'s talk?");
+            var speakerIndex = new Random().Next(0, NdcSydney.Speakers().Length);
+            await context.PostAsync($"Try asking: When is {NdcSydney.Speakers()[speakerIndex]}'s talk?");
 
             context.Wait(MessageReceived);
         }
@@ -305,13 +305,13 @@ namespace ConferenceBot.Dialogs
         [LuisIntent("FindVenue")]
         public async Task FindVenue(IDialogContext context, LuisResult result)
         {
-            var location = $"{NdcSydney17.Lat},{NdcSydney17.Long}";
+            var location = $"{NdcSydney.Lat},{NdcSydney.Long}";
             var googleApiKey = ConfigurationManager.AppSettings["GoogleApiKey"];
             var mapUrl =
                 $"https://maps.googleapis.com/maps/api/staticmap?center={location}&zoom=17&size=600x300&maptype=roadmap&markers=color:red%7Clabel:DDD%7C{location}&key={googleApiKey}";
 
             var card = new HeroCard("NDC Sydney", "Hilton Sydney",
-                "NDC Sydney 2017 is set to happen 14-18 August at Hilton Sydney.")
+                "NDC Sydney 2018 is set to happen 17-21 September at Hilton Sydney.")
             {
                 Images = new List<CardImage>
                 {
@@ -324,7 +324,7 @@ namespace ConferenceBot.Dialogs
                         Title = "Get Directions",
                         Type = ActionTypes.OpenUrl,
                         Value =
-                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{NdcSydney17.Lat}!4d{NdcSydney17.Long}"
+                            $"https://www.google.com.au/maps/dir//{location}/@{location},19z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMzPCsDUyJzU5LjYiUyAxNTHCsDEyJzA2LjUiRQ!3b1!8m2!3d{NdcSydney.Lat}!4d{NdcSydney.Long}"
                     }
                 }
             };
@@ -363,54 +363,20 @@ namespace ConferenceBot.Dialogs
 
         private static async Task ShowHelp(IDialogContext context)
         {
-            var speakerIndex = new Random().Next(0, NdcSydney17.Speakers.Length);
-            var roomIndex = new Random().Next(0, NdcSydney17.Rooms.Length);
+            var speakerIndex = new Random().Next(0, NdcSydney.Speakers().Length);
+            var roomIndex = new Random().Next(0, NdcSydney.Rooms().Length);
 
 
             var message = context.CreateMessage();
 
-            var card = new AdaptiveCard
-            {
-                Body = new List<CardElement>
-                {
-                    new TextBlock
-                    {
-                        Text = "Please ask me about talks, rooms and speakers.",
-                        Size = TextSize.Medium
-                    },
-                    new TextBlock
-                    {
-                        Text = "Here are some examples of what you can ask.",
-                        Size = TextSize.Medium
-                    },
-                    
-                },
-                Actions = new List<ActionBase>
-                {
-                    new SubmitAction
-                    {
-                        Title = "Speaker Example",
-                        Data = $"When is {NdcSydney17.Speakers[speakerIndex]}'s talk?"
-                    },
-                    new SubmitAction
-                    {
-                        Title = "Room Example",
-                        Data = $"What's happening on {NdcSydney17.Rooms[roomIndex]} today?"
-                    },
-                    new SubmitAction
-                    {
-                        Title = "Time Example",
-                        Data = "What's going on at 3PM today?"
-                    }
-                }
-            };
+            var helpCard = new HelpCard(NdcSydney.Speakers()[speakerIndex], NdcSydney.Rooms()[roomIndex]);
 
             message.Attachments = new List<Attachment>
             {
                 new Attachment
                 {
                     ContentType = AdaptiveCard.ContentType,
-                    Content = card
+                    Content = helpCard
                 }
             };
 

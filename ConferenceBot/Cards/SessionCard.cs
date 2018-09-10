@@ -23,34 +23,39 @@ namespace ConferenceBot.Cards
 
         private static AdaptiveCard CreateAdaptiveCard(Session session, Timeslot timeslot)
         {
-            var body = new List<CardElement>
+            var cardAndAction = AddSessionContainer(session);
+            var body = new List<AdaptiveElement>
             {
                 AddRoomContainer(session.Room, timeslot),
-                AddSessionContainer(session)
+                cardAndAction.Card
             };
 
-            body.AddRange(session.Presenters.Select(PresenterCard.AddPresenterContainer));
+            body.AddRange(session.Presenters.Select((presenter) => PresenterCard.AddPresenterContainer(presenter).Card));
 
             return new AdaptiveCard
             {
-                Body = body
+                Speak = session.Title,
+                Body = body,
+                Actions = new List<AdaptiveAction>
+                {
+                    cardAndAction.Action
+                }
             };
         }
-        
 
-        public static Container AddSessionContainer(Session session)
+
+        public static CardAndAction AddSessionContainer(Session session)
         {
-            var container = new Container
+            var container = new AdaptiveContainer
             {
-                Speak = session.Title,
-                Separation = SeparationStyle.Strong,
-                Items = new List<CardElement>
+                Separator = true,
+                Spacing = AdaptiveSpacing.Large,
+                Items = new List<AdaptiveElement>
                 {
-                    new TextBlock
+                    new AdaptiveTextBlock(session.Title)
                     {
-                        Text = session.Title,
-                        Weight = TextWeight.Bolder,
-                        Size = TextSize.Medium,
+                        Weight = AdaptiveTextWeight.Bolder,
+                        Size = AdaptiveTextSize.Medium,
                         Wrap = true
                     }
                 }
@@ -58,88 +63,79 @@ namespace ConferenceBot.Cards
 
             var fullContainer = AddExtraInfoSessionContainer(session);
 
-            var actions = new ActionSet
-            {
-                Actions = new List<ActionBase>
-                {
-                    new ShowCardAction
+            var action =
+                    new AdaptiveShowCardAction()
                     {
                         Title = "More Info",
                         Card = new AdaptiveCard
                         {
-                            Body = new List<CardElement>
+                            Body = new List<AdaptiveElement>
                             {
                                 fullContainer
                             }
                         }
-                    }
-                }
-            };
+                    };
 
-            container.Items.Add(actions);
-
-            return container;
+            return new CardAndAction { Card = container, Action = action };
         }
 
-        public static Container AddExtraInfoSessionContainer(Session session)
+        public static AdaptiveContainer AddExtraInfoSessionContainer(Session session)
         {
-            var container = new Container();
+            var container = new AdaptiveContainer();
 
             for (var i = 0; i < session.Abstract.Length; i++)
             {
-                var separation = SeparationStyle.Default;
+                var spacing = AdaptiveSpacing.Default;
                 if (i > 0 && session.Abstract[i].StartsWith("*") && session.Abstract[i - 1].StartsWith("*"))
-                    separation = SeparationStyle.None;
+                    spacing = AdaptiveSpacing.None;
 
-                container.Items.Add(new TextBlock
+                container.Items.Add(new AdaptiveTextBlock(session.Abstract[i])
                 {
                     Text = session.Abstract[i],
-                    Weight = i > 0 && session.Abstract.Length > 1 ? TextWeight.Normal : TextWeight.Bolder,
+                    Weight = i > 0 && session.Abstract.Length > 1 ? AdaptiveTextWeight.Normal : AdaptiveTextWeight.Bolder,
                     Wrap = true,
-                    Separation = separation,
+                    Separator = false,
+                    Spacing = spacing,
                     IsSubtle = i > 0,
-                    HorizontalAlignment = HorizontalAlignment.Stretch
+                    HorizontalAlignment = AdaptiveHorizontalAlignment.Stretch
                 });
             }
 
             return container;
         }
 
-        private static Container AddRoomContainer(Room room, Timeslot timeslot)
+        private static AdaptiveContainer AddRoomContainer(Room room, Timeslot timeslot)
         {
-            var container = new Container
+            var container = new AdaptiveContainer
             {
-                Speak = room.Name,
-                Items = new List<CardElement>
+                Items = new List<AdaptiveElement>
                 {
-                    new ColumnSet
+                    new AdaptiveColumnSet()
                     {
-                        Columns = new List<Column>
+                        Columns = new List<AdaptiveColumn>
                         {
-                            new Column
+                            new AdaptiveColumn()
                             {
-                                Size = "auto",
+                                Width = AdaptiveColumnWidth.Auto.ToLower(),
                                 Items =
                                 {
-                                    new TextBlock
+                                    new AdaptiveTextBlock(room.Name)
                                     {
-                                        Text = room.Name,
-                                        Weight = TextWeight.Bolder,
-                                        Size = TextSize.ExtraLarge
+                                        Weight = AdaptiveTextWeight.Bolder,
+                                        Size = AdaptiveTextSize.ExtraLarge
                                     }
                                 }
                             },
-                            new Column
+                            new AdaptiveColumn()
                             {
-                                Size = "stretch",
+                                Width = AdaptiveColumnWidth.Stretch.ToLower(),
                                 Items =
                                 {
-                                    new TextBlock
+                                    new AdaptiveTextBlock($"{timeslot.Date:ddd HH\\:mm}")
                                     {
-                                        Text = $"{timeslot.Date:ddd HH\\:mm}",
-                                        HorizontalAlignment = HorizontalAlignment.Right,
-                                        Weight = TextWeight.Bolder,
-                                        Size = TextSize.ExtraLarge
+                                        HorizontalAlignment = AdaptiveHorizontalAlignment.Right,
+                                        Weight = AdaptiveTextWeight.Bolder,
+                                        Size = AdaptiveTextSize.ExtraLarge
                                     }
                                 }
                             }

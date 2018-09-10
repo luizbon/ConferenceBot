@@ -1,34 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 using ConferenceBot.Model;
+using ConferenceBot.Services;
 using Newtonsoft.Json;
 
 namespace ConferenceBot.Data
 {
-    public class NdcSydney17
+    public class NdcSydney
     {
-        public static Conference Data => ToConference(JsonConvert.DeserializeObject<NdcSydney17>(File.ReadAllText(
-            HttpContext.Current.Request.MapPath("~\\Data\\NDCSydney17.json"))));
+        private static NdcSydney _data;
+
+        public static async Task LoadData()
+        {
+            _data = await BlobService.DownloadAsync();
+        }
+
+        public static Conference Data => ToConference(_data);
 
         public static string Lat = "-33.8718413";
         public static string Long = "151.2078864";
 
-        public static string[] Speakers = Data.Timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters)
+        public static Func<string[]> Speakers = () => Data.Timeslots.SelectMany(t => t.Sessions).SelectMany(s => s.Presenters)
             .Select(p => p.Name).Distinct().OrderBy(speaker => speaker.Replace(" ", "")).ToArray();
 
-        public static string[] Rooms = Data.Timeslots.SelectMany(t => t.Sessions)
+        public static Func<string[]> Rooms = () => Data.Timeslots.SelectMany(t => t.Sessions)
             .Where(s => !string.IsNullOrWhiteSpace(s.Room.Name)).Select(s => s.Room.Name)
             .Distinct().OrderBy(room => room).ToArray();
 
-        private static Conference ToConference(NdcSydney17 dddSydney)
+
+        private static Conference ToConference(NdcSydney ndcSydney)
         {
+            if(ndcSydney == null)
+                return new Conference();
+
             return new Conference
             {
-                Timeslots = dddSydney.Timeslots.Select(ToTimeslot).ToArray()
+                Timeslots = ndcSydney.Timeslots.Select(ToTimeslot).ToArray()
             };
         }
 
@@ -56,7 +65,7 @@ namespace ConferenceBot.Data
                 {
                     Name = session.Room ?? " "
                 },
-                
+
             };
         }
 

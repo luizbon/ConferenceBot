@@ -25,56 +25,62 @@ namespace ConferenceBot.Cards
 
         private static AdaptiveCard CreatePresenterCard(Presenter presenter, Timeslot[] timeslots = null)
         {
-            var body = new List<CardElement>
+            var cardAndAction = AddPresenterContainer(presenter);
+
+            var body = new List<AdaptiveElement>
             {
-                AddPresenterContainer(presenter)
+                cardAndAction.Card
             };
 
             if (timeslots != null)
             {
-                body.AddRange(timeslots.SelectMany(t => t.Sessions).Where(s => s.Presenters.Any(p => p.Name == presenter.Name)).Select(SessionCard.AddSessionContainer));
+                body.AddRange(timeslots.SelectMany(t => t.Sessions).Where(s => s.Presenters.Any(p => p.Name == presenter.Name)).Select((session) => SessionCard.AddSessionContainer(session).Card));
             }
 
             return new AdaptiveCard
             {
-                Body = body
+                Speak = presenter.Name,
+                Body = body,
+                Actions = new List<AdaptiveAction>
+                {
+                    cardAndAction.Action
+                }
             };
         }
 
-        public static Container AddPresenterContainer(Presenter presenter)
+        public static CardAndAction AddPresenterContainer(Presenter presenter)
         {
-            var container = new Container
+            var container = new AdaptiveContainer
             {
-                Speak = presenter.Name,
-                Separation = SeparationStyle.Strong,
-                Items = new List<CardElement>
+                Separator = true,
+                Spacing = AdaptiveSpacing.Large,
+                Items = new List<AdaptiveElement>
                 {
-                    new ColumnSet
+                    new AdaptiveColumnSet
                     {
-                        Columns = new List<Column>
+                        Columns = new List<AdaptiveColumn>
                         {
-                            new Column
+                            new AdaptiveColumn
                             {
-                                Size = ColumnSize.Auto,
-                                Items = new List<CardElement>
+                                Width = AdaptiveColumnWidth.Auto,
+                                Items = new List<AdaptiveElement>
                                 {
-                                    new Image
+                                    new AdaptiveImage(presenter.ImageUrl)
                                     {
-                                        Url = presenter.ImageUrl,
-                                        Style = ImageStyle.Person
+                                        Style = AdaptiveImageStyle.Person,
+                                        Size = AdaptiveImageSize.Medium
                                     }
                                 }
                             },
-                            new Column
+                            new AdaptiveColumn
                             {
-                                Size = ColumnSize.Stretch,
-                                Items = new List<CardElement>
+                                Width = AdaptiveColumnWidth.Stretch,
+                                Items = new List<AdaptiveElement>
                                 {
-                                    new TextBlock
+                                    new AdaptiveTextBlock(presenter.Name)
                                     {
-                                        Text = presenter.Name,
-                                        Weight = TextWeight.Bolder,
-                                        Size = TextSize.Medium
+                                        Weight = AdaptiveTextWeight.Bolder,
+                                        Size = AdaptiveTextSize.Medium
                                     }
                                 }
                             }
@@ -84,82 +90,71 @@ namespace ConferenceBot.Cards
             };
 
             container.Items.Add(
-                new TextBlock
+                new AdaptiveTextBlock(presenter.Tag)
                 {
-                    Text = presenter.Tag,
                     IsSubtle = true,
-                    Separation = SeparationStyle.None,
-                    HorizontalAlignment = HorizontalAlignment.Right
+                    Separator = false,
+                    Spacing = AdaptiveSpacing.None,
+                    HorizontalAlignment = AdaptiveHorizontalAlignment.Right
                 });
 
-            var actions = new ActionSet
-            {
-                Actions = new List<ActionBase>
-                    {
-                        new ShowCardAction
+            var actions =
+                        new AdaptiveShowCardAction()
                         {
                             Title = "More Info",
                             Card = CreateExtraInfoCard(presenter)
-                        }
-                    }
-            };
+                        };
 
-            container.Items.Add(actions);
-
-            return container;
+            return new CardAndAction { Card = container, Action = actions };
         }
 
         private static AdaptiveCard CreateExtraInfoCard(Presenter presenter)
         {
-            var container = new Container();
+            var container = new AdaptiveContainer();
             foreach (var bioLine in presenter.Bio)
-                container.Items.Add(new TextBlock
+                container.Items.Add(new AdaptiveTextBlock(bioLine)
                 {
-                    Text = bioLine,
                     Wrap = true,
-                    Separation = SeparationStyle.Default,
+                    Separator = false,
+                    Spacing = AdaptiveSpacing.Default,
                     IsSubtle = true,
-                    HorizontalAlignment = HorizontalAlignment.Stretch
+                    HorizontalAlignment = AdaptiveHorizontalAlignment.Stretch
                 });
 
             var twitterUrl = "https://twitter.com/intent/tweet?hashtags=ndcsydney&via=luizbon";
             if (!string.IsNullOrWhiteSpace(presenter.TwitterAlias))
                 twitterUrl += $"&screen_name={presenter.TwitterAlias}";
 
-            var actions = new ActionSet
-            {
-                Actions = new List<ActionBase>
+            var actions = new List<AdaptiveAction>
                     {
-                        new OpenUrlAction
+                        new AdaptiveOpenUrlAction
                         {
                             Title = "Tweet",
-                            Url = twitterUrl
+                            UrlString = twitterUrl
                         }
-                    }
-            };
+                    };
 
             if (!string.IsNullOrWhiteSpace(presenter.Website))
-                actions.Actions.Add(new OpenUrlAction
+                actions.Add(new AdaptiveOpenUrlAction
                 {
                     Title = "Website",
-                    Url = presenter.Website
+                    UrlString = presenter.Website
                 });
 
             if (!string.IsNullOrWhiteSpace(presenter.Email))
-                actions.Actions.Add(new OpenUrlAction
+                actions.Add(new AdaptiveOpenUrlAction
                 {
                     Title = "Email",
-                    Url = $"mailto:{presenter.Email}"
+                    UrlString = $"mailto:{presenter.Email}"
                 });
-
-            container.Items.Add(actions);
 
             return new AdaptiveCard
             {
-                Body = new List<CardElement>
+                Body = new List<AdaptiveElement>
                 {
                     container
-                }
+                },
+                Actions = actions
             };
         }
     }
